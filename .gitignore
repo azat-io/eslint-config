@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+
+# Build
+dist/
+
+# Editor
+.vscode/
+.vim/
+
+# Misc
+.DS_Store
