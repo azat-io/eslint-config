@@ -15,7 +15,7 @@
     "release:version": "bumpp package.json base/package.json typescript/package.json react/package.json --execute=\"pnpm release:changelog && git add changelog.md\" --commit \"build: publish v%s\" --tag --all",
     "lint": "eslint **/*.{js,ts}",
     "test:types": "tsc --noEmit --pretty",
-    "test": "pnpm run build && pnpm run lint && pnpm run test:types"
+    "test": "pnpm run lint && pnpm run test:types"
   },
   "devDependencies": {
     "@azat-io/eslint-config-typescript": "workspace:^",
