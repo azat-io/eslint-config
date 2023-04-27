@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/azat-io/eslint-config/compare/v0.2.0...v0.3.0) (2023-04-27)
+
+
+### Bug Fixes
+
+* **typescript:** fix list of required dependencies ([e6cfc28](https://github.com/azat-io/eslint-config/commit/e6cfc286f51552ca956c83d1553c22114376422f))
+
+
+
 # 0.2.0 (2023-04-27)
 
 
