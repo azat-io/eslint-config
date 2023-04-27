@@ -10,9 +10,9 @@
     "build": "pnpm --recursive run build",
     "release": "pnpm release:check && pnpm release:version && pnpm release:publish",
     "release:changelog": "conventional-changelog -p angular --infile changelog.md --same-file",
-    "release:check": "pnpm test && pnpm run build && pnpm run docs",
+    "release:check": "pnpm test && pnpm run build",
     "release:publish": "pnpm --recursive publish",
-    "release:version": "bumpp package.json base/package.json react/package.json typescript/package.json --execute=\"pnpm release:changelog && git add changelog.md\" --commit \"build: publish v%s\" --tag --all",
+    "release:version": "bumpp package.json base/package.json typescript/package.json react/package.json --execute=\"pnpm release:changelog && git add changelog.md\" --commit \"build: publish v%s\" --tag --all",
     "lint": "eslint **/*.{js,ts}",
     "test:types": "tsc --noEmit --pretty",
     "test": "pnpm run build && pnpm run lint && pnpm run test:types"
