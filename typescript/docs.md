@@ -161,24 +161,6 @@ interface Security {
 }
 ```
 
-### naming-convention
-
-Enforce naming conventions for everything across a codebase.
-
-```ts
-// bad
-const sClass = 'S'
-let GetSClassCharacters = () =>
-  characters.filter(({ characterClass }) => characterClass === sClass)
-```
-
-```ts
-// good
-const S_CLASS = 'S'
-let getSClassCharacters = () =>
-  characters.filter(({ characterClass }) => characterClass === S_CLASS)
-```
-
 ### no-duplicate-type-constituents
 
 Disallow duplicate constituents of union or intersection types.

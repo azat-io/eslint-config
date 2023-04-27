@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 import path from 'path'
 
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'index.js'),
+      entry: path.resolve(__dirname, 'index.ts'),
       fileName: format => `index.${format}.js`,
-      formats: ['cjs', 'esm'],
+      formats: ['cjs', 'es'],
     },
     rollupOptions: {
       external: [
@@ -22,4 +23,15 @@ export default defineConfig({
       ],
     },
   },
+  plugins: [
+    dts({
+      outputDir: path.join(__dirname, 'dist'),
+      root: path.join(__dirname, '..'),
+      entryRoot: __dirname,
+      include: [
+        path.join(__dirname, '..', 'env.d.ts'),
+        path.join(__dirname, 'index.ts'),
+      ],
+    }),
+  ],
 })

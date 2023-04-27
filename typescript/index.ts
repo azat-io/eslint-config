@@ -31,28 +31,6 @@ export default defineFlatConfig([
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/method-signature-style': 'error',
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          selector: 'default',
-          format: ['camelCase'],
-          leadingUnderscore: 'allow',
-          trailingUnderscore: 'allow',
-        },
-        {
-          selector: 'variable',
-          format: ['camelCase'],
-        },
-        {
-          selector: 'variable',
-          modifiers: ['const'],
-          format: ['UPPER_CASE'],
-        },
-        {
-          selector: 'typeLike',
-          format: ['PascalCase'],
-        },
-      ],
       '@typescript-eslint/no-duplicate-type-constituents': 'error',
       '@typescript-eslint/no-empty-interface': 'error',
       '@typescript-eslint/no-explicit-any': 'error',
@@ -175,6 +153,13 @@ export default defineFlatConfig([
       'space-infix-ops': 'off',
 
       'import/no-commonjs': 'error',
+    },
+
+    settings: {
+      'import/resolver': {
+        typescript: true,
+        node: true,
+      },
     },
   },
 ])

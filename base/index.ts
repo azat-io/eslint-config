@@ -10,6 +10,9 @@ import globals from 'globals'
 
 export default defineFlatConfig([
   {
+    ignores: ['**/node_modules/**', '**/dist/**', '.git/**'],
+  },
+  {
     languageOptions: {
       ecmaVersion: 2023,
       sourceType: 'module',

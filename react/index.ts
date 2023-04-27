@@ -16,7 +16,7 @@ export default defineFlatConfig([
     },
 
     rules: {
-      'jsx-quotes': ['error', 'double'],
+      'jsx-quotes': ['error', 'prefer-double'],
 
       'react/boolean-prop-naming': [
         'error',

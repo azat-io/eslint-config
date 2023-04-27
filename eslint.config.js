@@ -1,1 +1,1 @@
-module.exports = require('@azat-io/eslint-config')
+module.exports = require('@azat-io/eslint-config-typescript')
