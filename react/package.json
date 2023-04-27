@@ -5,6 +5,14 @@
   "repository": "azat-io/eslint-config",
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "config",
+    "code-styles",
+    "linter",
+    "react"
+  ],
   "scripts": {
     "build": "vite build"
   },
