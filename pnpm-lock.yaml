@@ -108,6 +108,9 @@ importers:
 
   typescript:
     dependencies:
+      '@azat-io/eslint-config':
+        specifier: workspace:^
+        version: link:../base
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.59.1
         version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
@@ -118,12 +121,6 @@ importers:
         specifier: ^3.5.5
         version: 3.5.5(@typescript-eslint/parser@5.59.1)(eslint-plugin-import@2.27.5)(eslint@8.39.0)
     devDependencies:
-      '@azat-io/eslint-config':
-        specifier: workspace:^
-        version: link:../base
-      '@azat-io/eslint-config-react':
-        specifier: workspace:^
-        version: link:../react
       eslint:
         specifier: ^8.39.0
         version: 8.39.0
