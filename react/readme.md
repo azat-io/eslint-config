@@ -6,7 +6,7 @@
 
 Shareable ESLint config for JavaScript projects.
 
-See [docs](./docs.md) for a list of all rules.
+See [docs](https://github.com/azat-io/eslint-config/blob/main/react/docs.md) for a list of all rules.
 
 ## Installation
 
