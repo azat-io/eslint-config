@@ -5,8 +5,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.join(__dirname, 'index.js'),
-      fileName: () => 'index.js',
-      formats: ['cjs'],
+      fileName: format => `index.${format}.js`,
+      formats: ['cjs', 'esm'],
     },
     rollupOptions: {
       external: [

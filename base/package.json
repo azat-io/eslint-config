@@ -16,7 +16,8 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.js"
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js"
     },
     "./package.json": "./package.json"
   },
