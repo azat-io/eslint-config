@@ -29,7 +29,6 @@ export default defineFlatConfig([
       '@typescript-eslint/consistent-type-definitions': 'error',
       '@typescript-eslint/consistent-type-exports': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/method-signature-style': 'error',
       '@typescript-eslint/no-duplicate-type-constituents': 'error',
       '@typescript-eslint/no-empty-interface': 'error',

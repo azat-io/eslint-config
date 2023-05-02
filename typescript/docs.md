@@ -129,20 +129,6 @@ import type { ScoutRegimentMember } from 'scout-regiment'
 import { sashaBraus, connySpringer } from 'scout-regiment'
 ```
 
-### explicit-function-return-type
-
-Require explicit return types on functions and class methods.
-
-```ts
-// bad
-let exileAshitaka = () => {}
-```
-
-```ts
-// good
-let exileAshitaka = (): void => {}
-```
-
 ### method-signature-style
 
 Enforce using property signature for functions.
