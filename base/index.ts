@@ -223,7 +223,6 @@ export default defineFlatConfig([
       'no-sparse-arrays': 'error',
       'no-tabs': 'error',
       'no-template-curly-in-string': 'error',
-      'no-throw-literal': 'error',
       'no-trailing-spaces': 'error',
       'no-undef': 'error',
       'no-undef-init': 'error',

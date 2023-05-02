@@ -1189,10 +1189,6 @@ Disallow template literal placeholder syntax in regular strings.
 
 Disallow `this`/`super` before calling `super()` in constructors.
 
-### no-throw-literal
-
-Disallow throwing literals as exceptions.
-
 ### no-trailing-spaces
 
 Disallow trailing whitespace at the end of lines.

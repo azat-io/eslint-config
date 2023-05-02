@@ -52,7 +52,6 @@ export default defineFlatConfig([
       '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-dupe-class-members': 'error',
       '@typescript-eslint/no-implied-eval': 'error',
-      '@typescript-eslint/no-throw-literal': 'error',
       '@typescript-eslint/no-unused-expressions': [
         'error',
         {
@@ -131,7 +130,6 @@ export default defineFlatConfig([
       'no-array-constructor': 'off',
       'no-dupe-class-members': 'off',
       'no-implied-eval': 'off',
-      'no-throw-literal': 'off',
       'no-unused-expressions': 'off',
       'no-unused-vars': 'off',
       'no-use-before-define': 'off',
