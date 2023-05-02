@@ -308,20 +308,6 @@ Disallow duplicate properties in JSX.
 <Student name="Shinichi Izumi" />
 ```
 
-### jsx-no-leaked-render
-
-Disallow problematic leaked values from being rendered.
-
-```tsx
-// bad
-{0 && <MobPsycho />}
-```
-
-```tsx
-// good
-{stressLevel && <MobPsycho />}
-```
-
 ### jsx-no-target-blank
 
 Disallow `target="_blank"` attribute without `rel="noreferrer"`.

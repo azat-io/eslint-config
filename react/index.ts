@@ -65,7 +65,6 @@ export default defineFlatConfig([
       'react/jsx-key': 'error',
       'react/jsx-no-comment-textnodes': 'error',
       'react/jsx-no-duplicate-props': 'error',
-      'react/jsx-no-leaked-render': 'error',
       'react/jsx-no-target-blank': 'error',
       'react/jsx-no-undef': 'error',
       'react/jsx-no-useless-fragment': 'error',
