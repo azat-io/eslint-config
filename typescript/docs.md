@@ -312,3 +312,7 @@ let characters = require('steins-gate')
 // good
 import characters from 'steins-gate'
 ```
+
+### no-unresolved
+
+Ensure imports point to a file/module that can be resolved.

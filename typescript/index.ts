@@ -153,12 +153,15 @@ export default defineFlatConfig([
       'space-infix-ops': 'off',
 
       'import/no-commonjs': 'error',
+      'import/no-unresolved': 'error',
     },
 
     settings: {
       'import/resolver': {
         typescript: true,
-        node: true,
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
       },
     },
   },

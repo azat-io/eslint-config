@@ -393,7 +393,6 @@ export default defineFlatConfig([
       ],
       'import/no-named-default': 'error',
       'import/no-self-import': 'error',
-      'import/no-unresolved': 'error',
       'import/no-useless-path-segments': 'error',
       'import/no-webpack-loader-syntax': 'error',
       'import/order': [

@@ -19,7 +19,9 @@ pnpm add --save-dev eslint @azat-io/eslint-config-react
 2. Create ESLint configuration file `eslint.config.js`:
 
 ```js
-module.exports = require('@azat-io/eslint-config-react')
+import eslintConfig from '@azat-io/eslint-config-react'
+
+export default eslintConfig
 ```
 
 3. Add script for package.json:

@@ -1954,10 +1954,6 @@ import Shigure from 'fruits-basket'
 
 Forbid a module from importing itself.
 
-### no-unresolved
-
-Ensure imports point to a file/module that can be resolved.
-
 ### no-useless-path-segments
 
 Forbid unnecessary path segments in import and require statements.

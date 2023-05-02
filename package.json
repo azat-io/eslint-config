@@ -2,6 +2,7 @@
   "name": "@azat-io/eslint-config-monorepo",
   "description": "ESLint shareable config",
   "version": "0.3.0",
+  "type": "module",
   "private": true,
   "repository": "azat-io/eslint-config",
   "author": "Azat S. <to@azat.io>",

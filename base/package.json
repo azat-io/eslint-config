@@ -2,6 +2,7 @@
   "name": "@azat-io/eslint-config",
   "description": "ESLint shareable config",
   "version": "0.3.0",
+  "type": "module",
   "repository": "azat-io/eslint-config",
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
