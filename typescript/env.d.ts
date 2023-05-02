@@ -74,3 +74,10 @@ declare module 'eslint-plugin-react-hooks' {
   let plugin: Plugin
   export default plugin
 }
+
+declare module 'eslint-plugin-testing-library' {
+  import type { Plugin } from 'eslint-define-config'
+
+  let plugin: Plugin
+  export default plugin
+}

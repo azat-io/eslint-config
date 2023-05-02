@@ -1,4 +1,5 @@
 import typescriptConfig from '@azat-io/eslint-config-typescript'
+import testingLibrary from 'eslint-plugin-testing-library'
 import { defineFlatConfig } from 'eslint-define-config'
 import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
@@ -6,6 +7,7 @@ import react from 'eslint-plugin-react'
 
 export default defineFlatConfig([
   ...typescriptConfig,
+
   {
     files: ['**/*.jsx', '**/*.tsx'],
 
@@ -97,6 +99,44 @@ export default defineFlatConfig([
       'jsx-a11y/heading-has-content': 'error',
       'jsx-a11y/no-aria-hidden-on-focusable': 'error',
       'jsx-a11y/prefer-tag-over-role': 'error',
+    },
+  },
+
+  {
+    files: [
+      '**/test/*.js',
+      '**/test/*.ts',
+      '**/test/*.jsx',
+      '**/test/*.tsx',
+      '**/*.test.js',
+      '**/*.test.ts',
+      '**/*.test.jsx',
+      '**/*.test.tsx',
+    ],
+
+    plugins: {
+      'testing-library': testingLibrary,
+    },
+
+    rules: {
+      'testing-library/await-async-query': 'error',
+      'testing-library/await-async-utils': 'error',
+      'testing-library/no-await-sync-events': 'error',
+      'testing-library/no-await-sync-query': 'error',
+      'testing-library/no-container': 'error',
+      'testing-library/no-debugging-utils': 'error',
+      'testing-library/no-dom-import': 'error',
+      'testing-library/no-global-regexp-flag-in-query': 'error',
+      'testing-library/no-render-in-setup': 'error',
+      'testing-library/no-unnecessary-act': 'error',
+      'testing-library/no-wait-for-empty-callback': 'error',
+      'testing-library/no-wait-for-multiple-assertions': 'error',
+      'testing-library/no-wait-for-side-effects': 'error',
+      'testing-library/prefer-find-by': 'error',
+      'testing-library/prefer-presence-queries': 'error',
+      'testing-library/prefer-query-by-disappearance': 'error',
+      'testing-library/prefer-screen-queries': 'error',
+      'testing-library/prefer-user-event': 'error',
     },
   },
 ])

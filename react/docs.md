@@ -178,12 +178,12 @@ Disallow to add spaces inside of curly braces in JSX.
 
 ```tsx
 // bad
-<Hero name={ name } />;
+<Hero name={ name } />
 ```
 
 ```tsx
 // good
-<Hero name={name} />;
+<Hero name={name} />
 ```
 
 ### jsx-equals-spacing
@@ -300,12 +300,12 @@ Disallow duplicate properties in JSX.
 
 ```tsx
 // bad
-<Student name="Shinichi Izumi" name="Migi" />;
+<Student name="Shinichi Izumi" name="Migi" />
 ```
 
 ```tsx
 // good
-<Student name="Shinichi Izumi" />;
+<Student name="Shinichi Izumi" />
 ```
 
 ### jsx-no-leaked-render
@@ -515,3 +515,248 @@ Enforce that `aria-hidden="true"` is not set on focusable elements.
 
 Enforce to use semantic DOM elements over the ari role property.
 
+## Testing library rules
+
+### await-async-query
+
+Ensure that promises returned by async queries are handled properly.
+
+```ts
+// bad
+let hunters = findAllByRole('hunter')
+```
+
+```ts
+// good
+let hunters = await findAllByRole('hunter')
+```
+
+### await-async-utils
+
+Ensure that promises returned by async utils are handled properly.
+
+```ts
+// bad
+test('something incorrectly', async () => {
+  let [ownerElement, evangelionElement] = waitFor(
+    () => [
+      getByLabelText(container, 'Owner'),
+      getByLabelText(container, 'Evangelion'),
+    ],
+    { container }
+  )
+})
+```
+
+```ts
+// good
+test('something incorrectly', async () => {
+  let [ownerElement, evangelionElement] = await waitFor(
+    () => [
+      getByLabelText(container, 'Owner'),
+      getByLabelText(container, 'Evangelion'),
+    ],
+    { container }
+  )
+})
+```
+
+### no-await-sync-events
+
+Disallow unnecessary await for sync events.
+
+```ts
+// bad
+let abyssLevels = async () => {
+  await userEvent.tab()
+}
+```
+
+```ts
+// good
+let abyssLevels = () => {
+  userEvent.tab()
+}
+```
+
+### no-await-sync-query
+
+Disallow unnecessary `await` for sync queries:
+
+- `getBy*`
+- `getByAll*`
+- `queryBy*`
+- `queryAllBy*`
+
+```ts
+// bad
+let button = await getByText('One punch button')
+```
+
+```ts
+// good
+let button = getByText('One punch button')
+```
+
+### no-container
+
+Disallow the use of `container` methods.
+
+```tsx
+// bad
+let { container } = render(<GiovannisIsland />)
+let father = container.querySelector('#tatsuo-senou')
+```
+
+```tsx
+// good
+render(<GiovannisIsland />)
+let father = container.getByLabelText('Tatsuo Senou')
+```
+
+### no-debugging-utils
+
+Disallow the use of debugging utilities like `debug`.
+
+### no-dom-import
+
+Disallow importing from DOM Testing Library.
+
+### no-global-regexp-flag-in-query
+
+Disallow the use of the global RegExp flag (/g) in queries.
+
+```ts
+// bad
+screen.getByText(/odd-taxi-passenger/gi)
+```
+
+```ts
+// good
+screen.getByText(/odd-taxi-passenger/i)
+```
+
+### no-render-in-setup
+
+Disallow the use of `render` in testing frameworks setup functions.
+
+### no-unnecessary-act
+
+Disallow wrapping Testing Library utils or empty callbacks in `act`.
+
+### no-wait-for-empty-callback
+
+Disallow empty callbacks for `waitFor` and `waitForElementToBeRemoved`.
+
+```ts
+// bad
+await waitFor(() => {})
+```
+
+```ts
+// good
+await waitFor(() => {
+  screen.getByText('Suzume Iwato')
+})
+```
+
+### no-wait-for-multiple-assertions
+
+Disallow the use of multiple `expect` calls inside `waitFor`.
+
+### no-wait-for-side-effects
+
+Disallow the use of side effects in `waitFor`.
+
+```ts
+// bad
+await waitFor(() => {
+  fireEvent.keyDown(input, { key: 'ArrowDown' })
+  expect(hero.name).toBe('Saitama')
+})
+```
+
+```ts
+// good
+fireEvent.keyDown(input, { key: 'ArrowDown' })
+
+await waitFor(() => {
+  expect(hero.name).toBe('Saitama')
+})
+```
+
+### prefer-find-by
+
+Suggest to use `find(All)By*` query instead of `waitFor` + `get(All)By*` to wait for elements.
+
+```ts
+// bad
+let startBebop = await waitFor(() =>
+  screen.getByRole('button', { name: 'Start' })
+)
+```
+
+```ts
+// good
+let startBebop = await findByText('Start')
+```
+
+### prefer-presence-queries
+
+Ensure appropriate `get*`/`query*` queries are used with their respective matchers.
+
+```ts
+// bad
+expect(screen.queryByText('Mushi-Shi')).toBeInTheDocument()
+```
+
+```ts
+// good
+expect(screen.getByText('Mushi-Shi')).toBeInTheDocument()
+```
+
+### prefer-query-by-disappearance
+
+Suggest using `queryBy*` queries when waiting for disappearance.
+
+```ts
+await waitForElementToBeRemoved(screen.getByText('Parasyte'))
+```
+
+```ts
+await waitForElementToBeRemoved(screen.queryByText('Parasyte'))
+```
+
+### prefer-screen-queries
+
+Suggest to use `screen` while querying.
+
+```tsx
+// bad
+let { getByText } = render(<MugenTrain />)
+getByText('Enmu')
+```
+
+```tsx
+// good
+render(<MugenTrain />)
+screen.getByText('Enmu')
+```
+
+### prefer-user-event
+
+Suggest to use `userEvent` over `fireEvent` for simulating user interactions.
+
+```ts
+// bad
+import { fireEvent } from '@testing-library/dom'
+
+fireEvent.click(screen.getByText('Run chainsaw'))
+```
+
+```ts
+// good
+import userEvent from '@testing-library/user-event'
+
+userEvent.click(screen.getByText('Run chainsaw'))
+```

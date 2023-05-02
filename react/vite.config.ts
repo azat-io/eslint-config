@@ -12,6 +12,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         '@azat-io/eslint-config-typescript',
+        'eslint-plugin-testing-library',
         'eslint-plugin-react-hooks',
         'eslint-plugin-jsx-a11y',
         'eslint-plugin-react',
@@ -23,7 +24,6 @@ export default defineConfig({
       outputDir: path.join(__dirname, 'dist'),
       root: path.join(__dirname, '..'),
       entryRoot: __dirname,
-      copyDtsFiles: true,
       include: [
         path.join(__dirname, '..', 'env.d.ts'),
         path.join(__dirname, 'index.ts'),
