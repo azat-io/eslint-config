@@ -143,6 +143,7 @@ export default defineFlatConfig([
       'key-spacing': 'off',
       'lines-between-class-members': 'off',
       'no-extra-parens': 'off',
+      'no-undef': 'off',
       'object-curly-spacing': 'off',
       quotes: 'off',
       semi: 'off',
