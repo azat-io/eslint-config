@@ -374,20 +374,6 @@ Disallow multiple spaces between inline JSX props.
 <Odokawa role="taxi driver" />
 ```
 
-### jsx-space-before-closing
-
-Enforce spacing before closing bracket in JSX.
-
-```tsx
-// bad
-<TerrorInResonance/>
-```
-
-```tsx
-// good
-<TerrorInResonance />
-```
-
 ### jsx-tag-spacing
 
 Enforce whitespace in and around the JSX opening and closing brackets.

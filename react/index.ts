@@ -69,7 +69,6 @@ export default defineFlatConfig([
       'react/jsx-no-useless-fragment': 'error',
       'react/jsx-pascal-case': 'error',
       'react/jsx-props-no-multi-spaces': 'error',
-      'react/jsx-space-before-closing': 'error',
       'react/jsx-tag-spacing': 'error',
       'react/jsx-uses-vars': 'error',
       'react/no-children-prop': 'error',
