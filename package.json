@@ -1,7 +1,7 @@
 {
   "name": "@azat-io/eslint-config-monorepo",
   "description": "ESLint shareable config",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "private": true,
   "repository": "azat-io/eslint-config",

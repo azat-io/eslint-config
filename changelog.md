@@ -1,3 +1,13 @@
+# [0.4.0](https://github.com/azat-io/eslint-config/compare/v0.3.0...v0.4.0) (2023-05-02)
+
+
+### Features
+
+* remove no-throw-literal rule ([66e8a4b](https://github.com/azat-io/eslint-config/commit/66e8a4b596bc76047f47c4ff47a0ef7825b086ec))
+* support esm eslint config ([538121e](https://github.com/azat-io/eslint-config/commit/538121ef6cbb1236a0d1527900a452ac6ace1a7c))
+
+
+
 # [0.3.0](https://github.com/azat-io/eslint-config/compare/v0.2.0...v0.3.0) (2023-04-27)
 
 
