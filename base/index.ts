@@ -378,7 +378,6 @@ export default defineFlatConfig([
       'import/export': 'error',
       'import/first': 'error',
       'import/named': 'error',
-      'import/no-anonymous-default-export': 'error',
       'import/no-duplicates': 'error',
       'import/no-empty-named-blocks': 'error',
       'import/no-extraneous-dependencies': [

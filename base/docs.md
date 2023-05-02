@@ -1887,10 +1887,6 @@ import { kanta } from '/Users/azat/Developer/app/giovanni-no-shima'
 import { kanta } from './giovanni-no-shima'
 ```
 
-### no-anonymous-default-export
-
-Forbid anonymous values as default exports.
-
 ### no-duplicates
 
 Forbid repeated import of the same module in multiple places.
