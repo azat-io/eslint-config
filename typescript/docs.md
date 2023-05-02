@@ -217,20 +217,6 @@ findBebopSpaceship()?.start()!
 findBebopSpaceship()?.start()
 ```
 
-### no-non-null-assertion
-
-Disallow non-null assertions using the `!` postfix operator.
-
-```ts
-// bad
-let hasSword = berserk.inventory?.includes('sword')
-```
-
-```ts
-// good
-let hasSword = berserk.inventory?.includes('sword') ?? false
-```
-
 ### no-require-imports
 
 Disallow invocation of `require()`.
