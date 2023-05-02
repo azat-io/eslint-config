@@ -109,7 +109,6 @@ export default defineFlatConfig([
           after: true,
         },
       ],
-      indent: ['error', 2],
       'key-spacing': [
         'error',
         {

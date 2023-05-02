@@ -364,28 +364,6 @@ function * stressMob() {
 }
 ```
 
-### indent
-
-Set indentation style to 2 spaces.
-
-```js
-// bad
-let chairmanElectionResults = {
-    pariston: 249,
-    cheadle: 42,
-    ickshonpe: 26,
-}
-```
-
-```js
-// good
-let chairmanElectionResults = {
-  pariston: 249,
-  cheadle: 42,
-  ickshonpe: 26,
-}
-```
-
 ### key-spacing
 
 Require to add no space before colon and add space after colon.

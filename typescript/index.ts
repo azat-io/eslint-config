@@ -96,7 +96,6 @@ export default defineFlatConfig([
         },
       ],
       '@typescript-eslint/func-call-spacing': ['error', 'never'],
-      '@typescript-eslint/indent': ['error', 2],
       '@typescript-eslint/key-spacing': [
         'error',
         {
@@ -139,7 +138,6 @@ export default defineFlatConfig([
       'comma-dangle': 'off',
       'comma-spacing': 'off',
       'func-call-spacing': 'off',
-      indent: 'off',
       'key-spacing': 'off',
       'lines-between-class-members': 'off',
       'no-extra-parens': 'off',
