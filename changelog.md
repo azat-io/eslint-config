@@ -1,3 +1,24 @@
+# [0.5.0](https://github.com/azat-io/eslint-config/compare/v0.4.0...v0.5.0) (2023-05-02)
+
+
+### Bug Fixes
+
+* adapt space-before-function-paren rule for prettier ([0f34288](https://github.com/azat-io/eslint-config/commit/0f342882bca091c7798e693cfd81b3217ad9806d))
+
+
+### Features
+
+* **base:** disable no-anonymous-default-export rule ([5f702e8](https://github.com/azat-io/eslint-config/commit/5f702e84e5060a203ff79c3211126bd363c4778a))
+* disable indent rule in favor of prettier ([123e1ee](https://github.com/azat-io/eslint-config/commit/123e1ee16080a2a1ec96c8619cb5fe7b16b77bbc))
+* **react:** add testing-library eslint plugin ([c6f985e](https://github.com/azat-io/eslint-config/commit/c6f985e76d7bd5ce8e4ba569faad427bdbd8401a))
+* **react:** disable jsx-no-leaked-render rule ([b76a467](https://github.com/azat-io/eslint-config/commit/b76a46703c742582c93287532f9880d8171e9daf))
+* **react:** remove deprecated jsx-space-before-closing rule ([6ba3607](https://github.com/azat-io/eslint-config/commit/6ba36074ceadf3a1d352dacee4c32d4a6cf8637d))
+* **typescript:** disable explicit-function-return-type rule ([ca92de0](https://github.com/azat-io/eslint-config/commit/ca92de0501c0722daa3b1a198ac0848ff1fc6445))
+* **typescript:** disable no-non-null-assertion rule ([28d2dda](https://github.com/azat-io/eslint-config/commit/28d2ddae0a77bf85571e9ca65d35d57b2e4cb4ff))
+* **typescript:** disable no-undef rule ([b1a3000](https://github.com/azat-io/eslint-config/commit/b1a3000b6ccc53837d83dc672498c4b60ae0a472))
+
+
+
 # [0.4.0](https://github.com/azat-io/eslint-config/compare/v0.3.0...v0.4.0) (2023-05-02)
 
 
