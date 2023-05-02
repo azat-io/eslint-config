@@ -120,7 +120,14 @@ export default defineFlatConfig([
       ],
       '@typescript-eslint/semi': ['error', 'never'],
       '@typescript-eslint/space-before-blocks': ['error', 'always'],
-      '@typescript-eslint/space-before-function-paren': ['error', 'always'],
+      '@typescript-eslint/space-before-function-paren': [
+        'error',
+        {
+          anonymous: 'never',
+          named: 'never',
+          asyncArrow: 'always',
+        },
+      ],
       '@typescript-eslint/space-infix-ops': 'error',
 
       'dot-notation': 'off',
