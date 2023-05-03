@@ -128,7 +128,12 @@ export default defineFlatConfig([
     rules: {
       'testing-library/await-async-query': 'error',
       'testing-library/await-async-utils': 'error',
-      'testing-library/no-await-sync-events': 'error',
+      'testing-library/no-await-sync-events': [
+        'error',
+        {
+          eventModules: ['fire-event'],
+        },
+      ],
       'testing-library/no-await-sync-query': 'error',
       'testing-library/no-container': 'error',
       'testing-library/no-debugging-utils': 'error',
