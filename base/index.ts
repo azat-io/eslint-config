@@ -255,8 +255,10 @@ export default defineFlatConfig([
       'no-unused-vars': [
         'error',
         {
-          args: 'after-used',
-          vars: 'all',
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
         },
       ],
       'no-use-before-define': [
