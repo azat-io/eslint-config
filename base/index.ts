@@ -170,7 +170,15 @@ export default defineFlatConfig([
       'no-implied-eval': 'error',
       'no-import-assign': 'error',
       'no-invalid-regexp': 'error',
-      'no-irregular-whitespace': 'error',
+      'no-irregular-whitespace': [
+        'error',
+        {
+          skipComments: true,
+          skipRegExps: true,
+          skipStrings: true,
+          skipTemplates: true,
+        },
+      ],
       'no-iterator': 'error',
       'no-labels': [
         'error',
