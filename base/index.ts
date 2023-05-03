@@ -461,7 +461,12 @@ export default defineFlatConfig([
       'unicorn/no-unnecessary-await': 'error',
       'unicorn/no-unused-properties': 'error',
       'unicorn/no-useless-spread': 'error',
-      'unicorn/no-useless-undefined': 'error',
+      'unicorn/no-useless-undefined': [
+        'error',
+        {
+          checkArguments: false,
+        },
+      ],
       'unicorn/prefer-add-event-listener': 'error',
       'unicorn/prefer-array-index-of': 'error',
       'unicorn/prefer-array-some': 'error',
