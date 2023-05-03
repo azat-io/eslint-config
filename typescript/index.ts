@@ -92,6 +92,9 @@ export default defineFlatConfig([
           imports: 'always-multiline',
           exports: 'always-multiline',
           functions: 'always-multiline',
+          enums: 'always-multiline',
+          generics: 'always-multiline',
+          tuples: 'always-multiline',
         },
       ],
       '@typescript-eslint/comma-spacing': [
