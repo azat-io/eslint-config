@@ -9,7 +9,7 @@ export default defineFlatConfig([
   ...typescriptConfig,
 
   {
-    files: ['**/*.jsx', '**/*.tsx'],
+    files: ['**/*.jsx', '**/*.tsx', '**/*.js', '**/*.ts'],
 
     languageOptions: {
       parserOptions: {
