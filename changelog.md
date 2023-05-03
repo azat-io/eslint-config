@@ -1,3 +1,13 @@
+## [0.6.1](https://github.com/azat-io/eslint-config/compare/v0.6.0...v0.6.1) (2023-05-03)
+
+
+### Bug Fixes
+
+* **react:** add support for js and ts files to react config ([4560f1a](https://github.com/azat-io/eslint-config/commit/4560f1a0f6c3960902b89e7fd54f62ffb1af7f99))
+* **typescript:** support typescript types by comma-dangle rule ([3905801](https://github.com/azat-io/eslint-config/commit/3905801627a76b6069e3575cca6dfd4a5703c100))
+
+
+
 # [0.6.0](https://github.com/azat-io/eslint-config/compare/v0.5.0...v0.6.0) (2023-05-03)
 
 
