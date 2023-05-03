@@ -1,3 +1,20 @@
+# [0.6.0](https://github.com/azat-io/eslint-config/compare/v0.5.0...v0.6.0) (2023-05-03)
+
+
+### Bug Fixes
+
+* allow to use non-breaking space in strings ([2c60546](https://github.com/azat-io/eslint-config/commit/2c6054602a26d99a74e470ac500b8c3679e6a857))
+* **base:** allow to pass undefined as function argument ([a442ba7](https://github.com/azat-io/eslint-config/commit/a442ba7c6ccb77a928e11f26eb25c39538afaf05))
+* **react:** disable checking event methods for user-event ([b35b212](https://github.com/azat-io/eslint-config/commit/b35b2123d2e6185502c2f0fb984baa43c5e25b41))
+* **react:** fix react version not specified warning ([5015051](https://github.com/azat-io/eslint-config/commit/50150518dff996fcd523a5b081dd55bfc48fe859))
+
+
+### Features
+
+* add ignore pattern for unused variables ([c0d796b](https://github.com/azat-io/eslint-config/commit/c0d796bdf381493531d30f35dc8b4904a1fb83e0))
+
+
+
 # [0.5.0](https://github.com/azat-io/eslint-config/compare/v0.4.0...v0.5.0) (2023-05-02)
 
 
