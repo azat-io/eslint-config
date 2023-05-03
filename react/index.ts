@@ -11,6 +11,14 @@ export default defineFlatConfig([
   {
     files: ['**/*.jsx', '**/*.tsx'],
 
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+
     plugins: {
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
@@ -136,6 +144,12 @@ export default defineFlatConfig([
       'testing-library/prefer-query-by-disappearance': 'error',
       'testing-library/prefer-screen-queries': 'error',
       'testing-library/prefer-user-event': 'error',
+    },
+
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
 ])
