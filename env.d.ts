@@ -81,3 +81,17 @@ declare module 'eslint-plugin-testing-library' {
   let plugin: Plugin
   export default plugin
 }
+
+declare module 'eslint-plugin-vue' {
+  import type { Plugin } from 'eslint-define-config'
+
+  let plugin: Plugin
+  export default plugin
+}
+
+declare module 'vue-eslint-parser' {
+  import type { Parser } from 'eslint-define-config'
+
+  let parser: Parser
+  export default parser
+}
