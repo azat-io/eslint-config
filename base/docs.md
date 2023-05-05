@@ -1574,6 +1574,27 @@ if (tokyoGodfathers.hasChild) {
 }
 ```
 
+### padding-line-between-statements
+
+Require padding lines between statements
+
+```js
+// bad
+let getDoesNotExistName = () => {
+  let name = 'Mei Misaki'
+  return name
+}
+```
+
+```js
+// good
+let getDoesNotExistName = () => {
+  let name = 'Mei Misaki'
+
+  return name
+}
+```
+
 ### prefer-destructuring
 
 Require destructuring from arrays and objects.

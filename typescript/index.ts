@@ -76,6 +76,49 @@ export default defineFlatConfig([
         },
       ],
       '@typescript-eslint/no-useless-constructor': 'error',
+      '@typescript-eslint/padding-line-between-statements': [
+        'error',
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: ['multiline-const', 'multiline-let', 'multiline-expression'],
+        },
+        {
+          blankLine: 'always',
+          prev: ['multiline-const', 'multiline-let', 'multiline-expression'],
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: 'block',
+        },
+        {
+          blankLine: 'always',
+          prev: 'block',
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: 'block-like',
+        },
+        {
+          blankLine: 'always',
+          prev: 'block-like',
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: 'return',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: ['interface', 'type'],
+        },
+      ],
       '@typescript-eslint/block-spacing': ['error', 'always'],
       '@typescript-eslint/brace-style': [
         'error',
@@ -159,6 +202,7 @@ export default defineFlatConfig([
       'no-extra-parens': 'off',
       'no-undef': 'off',
       'object-curly-spacing': 'off',
+      'padding-line-between-statements': 'off',
       quotes: 'off',
       semi: 'off',
       'space-before-blocks': 'off',

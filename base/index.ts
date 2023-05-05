@@ -314,6 +314,44 @@ export default defineFlatConfig([
           classes: 'never',
         },
       ],
+      'padding-line-between-statements': [
+        'error',
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: ['multiline-const', 'multiline-let', 'multiline-expression'],
+        },
+        {
+          blankLine: 'always',
+          prev: ['multiline-const', 'multiline-let', 'multiline-expression'],
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: 'block',
+        },
+        {
+          blankLine: 'always',
+          prev: 'block',
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: 'block-like',
+        },
+        {
+          blankLine: 'always',
+          prev: 'block-like',
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: 'return',
+        },
+      ],
       'prefer-destructuring': 'error',
       'prefer-exponentiation-operator': 'error',
       'prefer-promise-reject-errors': 'error',
