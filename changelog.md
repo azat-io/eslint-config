@@ -1,3 +1,17 @@
+## [0.6.2](https://github.com/azat-io/eslint-config/compare/v0.6.1...v0.6.2) (2023-05-05)
+
+
+### Bug Fixes
+
+* allow to use no paddings before return ([8ecda63](https://github.com/azat-io/eslint-config/commit/8ecda63797d6b970462b5fa9bc1c82c58ae90fe2))
+
+
+### Features
+
+* add padding-line-between-statements rule ([f916f6e](https://github.com/azat-io/eslint-config/commit/f916f6e79d6fb046556cce42196b1dcaf9ec8e9f))
+
+
+
 ## [0.6.1](https://github.com/azat-io/eslint-config/compare/v0.6.0...v0.6.1) (2023-05-03)
 
 
