@@ -347,7 +347,7 @@ export default defineFlatConfig([
           next: '*',
         },
         {
-          blankLine: 'always',
+          blankLine: 'any',
           prev: '*',
           next: 'return',
         },
