@@ -22,7 +22,6 @@ export default defineConfig({
       outputDir: path.join(__dirname, 'dist'),
       root: path.join(__dirname, '..'),
       entryRoot: __dirname,
-      copyDtsFiles: true,
       include: [
         path.join(__dirname, '..', 'env.d.ts'),
         path.join(__dirname, 'index.ts'),
