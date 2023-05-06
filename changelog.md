@@ -1,3 +1,17 @@
+## [0.6.3](https://github.com/azat-io/eslint-config/compare/v0.6.2...v0.6.3) (2023-05-06)
+
+
+### Bug Fixes
+
+* **react:** fix react version not specified warning ([090fe6f](https://github.com/azat-io/eslint-config/commit/090fe6f17e129a13e82275cbda405dc923917dee))
+
+
+### Features
+
+* **base:** disable vitest expect-expect rule ([78fd65e](https://github.com/azat-io/eslint-config/commit/78fd65e3ca6225065e678e23d514cfa718d13aea))
+
+
+
 ## [0.6.2](https://github.com/azat-io/eslint-config/compare/v0.6.1...v0.6.2) (2023-05-05)
 
 
