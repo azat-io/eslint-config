@@ -107,6 +107,12 @@ export default defineFlatConfig([
       'jsx-a11y/no-aria-hidden-on-focusable': 'error',
       'jsx-a11y/prefer-tag-over-role': 'error',
     },
+
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
 
   {
@@ -149,12 +155,6 @@ export default defineFlatConfig([
       'testing-library/prefer-query-by-disappearance': 'error',
       'testing-library/prefer-screen-queries': 'error',
       'testing-library/prefer-user-event': 'error',
-    },
-
-    settings: {
-      react: {
-        version: 'detect',
-      },
     },
   },
 ])
