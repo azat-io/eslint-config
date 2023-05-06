@@ -2387,25 +2387,6 @@ Forbidden `.spec` test file pattern.
 
 Prefer `it` over `test`.
 
-### expect-expect
-
-Enforce having expectation in test body.
-
-```js
-// bad
-it('myLogic', () => {
-	chihiroOgino.visit('Amusement park')
-})
-```
-
-```js
-// good
-it('myLogic', () => {
-	chihiroOgino.visit('Amusement park')
-  expect(ghosts.get()).not.toHaveLength(0)
-})
-```
-
 ### no-alias-methods
 
 Disallow alias methods.

@@ -522,7 +522,6 @@ export default defineFlatConfig([
 
       'vitest/consistent-test-filename': 'error',
       'vitest/consistent-test-it': ['error', { fn: 'it' }],
-      'vitest/expect-expect': 'error',
       'vitest/no-alias-methods': 'error',
       'vitest/no-commented-out-tests': 'error',
       'vitest/no-conditional-expect': 'error',
