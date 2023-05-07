@@ -5,8 +5,8 @@ import path from 'path'
 export default defineConfig({
   build: {
     lib: {
+      fileName: format => `index.${format === 'es' ? 'mjs' : 'js'}`,
       entry: path.join(__dirname, 'index.ts'),
-      fileName: format => `index.${format}.js`,
       formats: ['cjs', 'es'],
     },
     rollupOptions: {

@@ -2,7 +2,6 @@
   "name": "@azat-io/eslint-config-typescript",
   "description": "ESLint shareable config for TypeScript",
   "version": "0.7.1",
-  "type": "module",
   "repository": "azat-io/eslint-config",
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
@@ -25,8 +24,8 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.cjs.js",
-      "import": "./dist/index.es.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json"
