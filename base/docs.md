@@ -2140,6 +2140,198 @@ let passExam = async () => {
 
 Check number of arguments are passed to Promise functions.
 
+## SonarJS rules
+
+### cognitive-complexity
+
+Set maximum authorized complexity of function to 15.
+
+### no-collapsible-if
+
+Collapse `if` statements if statements can be merged.
+
+```js
+// bad
+if (isEntranceExamPassed) {
+  if (familyInterview.status === 'Success') {
+    edenAcademy.invite(student)
+  }
+}
+```
+
+```js
+// good
+if (isEntranceExamPassed && familyInterview.status === 'Success') {
+  edenAcademy.invite(student)
+}
+```
+
+### no-duplicated-branches
+
+Disallow for branches in a conditional structure to the same implementation.
+
+```js
+// bad
+if (name === 'Gon') {
+  addHero(name)
+} else if (name === 'Hisoka') {
+  addHero(name)
+}
+```
+
+```js
+// good
+if (['Gon', 'Hisoka'].includes(name)) {
+  addHero(name)
+}
+```
+
+### no-extra-arguments
+
+Disallow to add extra arguments to functions.
+
+### no-identical-conditions
+
+Disallow to add identical conditions in `if-else-if` and `switch-case` statements.
+
+```js
+// bad
+if (author === 'Makoto Shinkai') {
+  addMovie('Suzume')
+} else if (author === 'Hayao Miyazaki') {
+  addMovie('The Wind Rises')
+} else if (author === 'Makoto Shinkai') {
+  addMovie('Weathering with You')
+}
+```
+
+### no-identical-functions
+
+Disallow to add identical functions.
+
+### no-ignored-return
+
+Disallow to add functions that doesn't have no side effects.
+
+```js
+// bad
+'Luffy D. Monkey'.lastIndexOf('u')
+```
+
+```js
+// good
+let char = 'Luffy D. Monkey'.lastIndexOf('u')
+```
+
+### no-inverted-boolean-check
+
+Disallow to add inverted boolean check.
+
+```js
+// bad
+if (!(shinobiAssassin === 'Gabimaru')) {
+  // ...
+}
+```
+
+```js
+// good
+if (shinobiAssassin !== 'Gabimaru') {
+  // ...
+}
+```
+
+### no-redundant-boolean
+
+Disallow redundant boolean check.
+
+```js
+// bad
+if (isHunter === true) {}
+```
+
+```js
+// good
+if (isHunter) {}
+```
+
+### no-same-line-conditional
+
+Conditionals should start on new lines.
+
+### no-small-switch
+
+Allow to use `switch` statements if it has at least 3 `case` clauses.
+
+```js
+// bad
+switch (name) {
+  case 'Gabi Braun':
+    setPlaceOfBirth('Liberio')
+    break
+  case 'Sasha Blouse':
+    setPlaceOfBirth('Daupa District')
+    break
+}
+```
+
+```js
+// good
+if (name === 'Gabi Braun') {
+  setPlaceOfBirth('Liberio')
+} else if (name === 'Sasha Blouse') {
+  setPlaceOfBirth('Daupa District')
+}
+```
+
+### no-unused-collection
+
+Disallow to add unused arrays.
+
+### no-use-of-empty-return-value
+
+Disallow to assign values to variables from void return functions.
+
+### prefer-immediate-return
+
+Local variables should not be declared and then immediately returned or thrown.
+
+```js
+// bad
+let sayHello = (firstName, lastName) => {
+  let greeting = `Hello ${firstName} ${lastName}!`
+  return greeting
+}
+sayHello('Shouya', 'Ishida')
+```
+
+```js
+// good
+let sayHello = (firstName, lastName) =>
+  `Hello ${firstName} ${lastName}!`
+
+sayHello('Shouya', 'Ishida')
+```
+
+### prefer-single-boolean-return
+
+Return of boolean literal statements wrapped into `if-then-else` flow should be simplified.
+
+```js
+// bad
+let checkForHunterLicense = role => {
+  if (role === 'Hunter') {
+    return true
+  }
+  return false
+}
+```
+
+```js
+// good
+let checkForHunterLicense = role => role === 'Hunter'
+```
+
 ## Unicorn rules
 
 ### better-regex

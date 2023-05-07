@@ -46,6 +46,9 @@ importers:
       eslint-plugin-promise:
         specifier: ^6.1.1
         version: 6.1.1(eslint@8.40.0)
+      eslint-plugin-sonarjs:
+        specifier: ^0.19.0
+        version: 0.19.0(eslint@8.40.0)
       eslint-plugin-unicorn:
         specifier: ^47.0.0
         version: 47.0.0(eslint@8.40.0)
@@ -2036,6 +2039,15 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
+    dev: false
+
+  /eslint-plugin-sonarjs@0.19.0(eslint@8.40.0):
+    resolution: {integrity: sha512-6+s5oNk5TFtVlbRxqZN7FIGmjdPCYQKaTzFPmqieCmsU1kBYDzndTeQav0xtQNwZJWu5awWfTGe8Srq9xFOGnw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      eslint: 8.40.0
     dev: false
 
   /eslint-plugin-testing-library@5.10.3(eslint@8.40.0)(typescript@5.0.4):

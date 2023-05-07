@@ -15,6 +15,7 @@ export default defineConfig({
         'eslint-plugin-prefer-let',
         'eslint-plugin-promise',
         'eslint-plugin-unicorn',
+        'eslint-plugin-sonarjs',
         'eslint-plugin-import',
         'eslint-plugin-vitest',
         '@babel/eslint-parser',

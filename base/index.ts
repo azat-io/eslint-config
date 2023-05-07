@@ -4,6 +4,7 @@ import preferLet from 'eslint-plugin-prefer-let'
 import eslintImport from 'eslint-plugin-import'
 import promise from 'eslint-plugin-promise'
 import unicorn from 'eslint-plugin-unicorn'
+import sonarjs from 'eslint-plugin-sonarjs'
 import vitest from 'eslint-plugin-vitest'
 import n from 'eslint-plugin-n'
 import globals from 'globals'
@@ -28,6 +29,7 @@ export default defineFlatConfig([
       'prefer-let': preferLet,
       import: eslintImport,
       promise,
+      sonarjs,
       unicorn,
       vitest,
       n,
@@ -490,6 +492,22 @@ export default defineFlatConfig([
       'promise/prefer-await-to-callbacks': 'error',
       'promise/prefer-await-to-then': 'error',
       'promise/valid-params': 'error',
+
+      'sonarjs/cognitive-complexity': 'error',
+      'sonarjs/no-collapsible-if': 'error',
+      'sonarjs/no-duplicated-branches': 'error',
+      'sonarjs/no-extra-arguments': 'error',
+      'sonarjs/no-identical-conditions': 'error',
+      'sonarjs/no-identical-functions': 'error',
+      'sonarjs/no-ignored-return': 'error',
+      'sonarjs/no-inverted-boolean-check': 'error',
+      'sonarjs/no-redundant-boolean': 'error',
+      'sonarjs/no-same-line-conditional': 'error',
+      'sonarjs/no-small-switch': 'error',
+      'sonarjs/no-unused-collection': 'error',
+      'sonarjs/no-use-of-empty-return-value': 'error',
+      'sonarjs/prefer-immediate-return': 'error',
+      'sonarjs/prefer-single-boolean-return': 'error',
 
       'unicorn/better-regex': 'error',
       'unicorn/catch-error-name': 'error',
