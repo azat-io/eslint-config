@@ -1,3 +1,23 @@
+# [0.7.0](https://github.com/azat-io/eslint-config/compare/v0.6.3...v0.7.0) (2023-05-07)
+
+
+### Bug Fixes
+
+* fix vite-plugin-dts build warnings ([7f74e6a](https://github.com/azat-io/eslint-config/commit/7f74e6a37c7e3af95e81fbcd02ddf883469ab58e))
+
+
+### Features
+
+* **base:** add sonarjs plugin ([dd1a783](https://github.com/azat-io/eslint-config/commit/dd1a783383863ce028012d69ba2ff081fe26f3a1))
+* update vitest plugin ([841dfcc](https://github.com/azat-io/eslint-config/commit/841dfcc7868b46d818d864e8fd659f858f1edef0))
+
+
+### Performance Improvements
+
+* use vitest plugin only for test files ([e976abc](https://github.com/azat-io/eslint-config/commit/e976abc0f69490bfee1899c20f29e22d37b58a30))
+
+
+
 ## [0.6.3](https://github.com/azat-io/eslint-config/compare/v0.6.2...v0.6.3) (2023-05-06)
 
 
