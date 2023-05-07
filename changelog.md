@@ -1,3 +1,12 @@
+## [0.7.1](https://github.com/azat-io/eslint-config/compare/v0.7.0...v0.7.1) (2023-05-07)
+
+
+### Bug Fixes
+
+* disable cognitive-complexity rule ([b60526c](https://github.com/azat-io/eslint-config/commit/b60526cb6d2ff51f3f2197198f082cfc66b56b17))
+
+
+
 # [0.7.0](https://github.com/azat-io/eslint-config/compare/v0.6.3...v0.7.0) (2023-05-07)
 
 
