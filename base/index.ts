@@ -493,7 +493,6 @@ export default defineFlatConfig([
       'promise/prefer-await-to-then': 'error',
       'promise/valid-params': 'error',
 
-      'sonarjs/cognitive-complexity': 'error',
       'sonarjs/no-collapsible-if': 'error',
       'sonarjs/no-duplicated-branches': 'error',
       'sonarjs/no-extra-arguments': 'error',

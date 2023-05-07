@@ -2142,10 +2142,6 @@ Check number of arguments are passed to Promise functions.
 
 ## SonarJS rules
 
-### cognitive-complexity
-
-Set maximum authorized complexity of function to 15.
-
 ### no-collapsible-if
 
 Collapse `if` statements if statements can be merged.
