@@ -537,7 +537,26 @@ export default defineFlatConfig([
       'unicorn/prefer-string-replace-all': 'error',
       'unicorn/prefer-string-slice': 'error',
       'unicorn/prefer-string-starts-ends-with': 'error',
+    },
+  },
 
+  {
+    files: [
+      '**/test/*.js',
+      '**/test/*.ts',
+      '**/test/*.jsx',
+      '**/test/*.tsx',
+      '**/*.test.js',
+      '**/*.test.ts',
+      '**/*.test.jsx',
+      '**/*.test.tsx',
+    ],
+
+    plugins: {
+      vitest,
+    },
+
+    rules: {
       'vitest/consistent-test-filename': 'error',
       'vitest/consistent-test-it': ['error', { fn: 'it' }],
       'vitest/no-alias-methods': 'error',
