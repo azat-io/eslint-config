@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/azat-io/eslint-config/compare/v0.7.1...v0.8.0) (2023-05-07)
+
+
+### Bug Fixes
+
+* fix commonjs support ([2024da2](https://github.com/azat-io/eslint-config/commit/2024da24f2c479fdfaf468b545acc8dce0cb6329))
+
+
+
 ## [0.7.1](https://github.com/azat-io/eslint-config/compare/v0.7.0...v0.7.1) (2023-05-07)
 
 
