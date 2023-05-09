@@ -1,0 +1,4 @@
+{
+  "pre-commit": "pnpm run lint",
+  "commit-msg": "pnpm exec commitlint -e \"$@\""
+}
