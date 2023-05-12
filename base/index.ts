@@ -139,7 +139,12 @@ export default defineFlatConfig([
       'no-class-assign': 'error',
       'no-compare-neg-zero': 'error',
       'no-cond-assign': 'error',
-      'no-console': 'error',
+      'no-console': [
+        'error',
+        {
+          allow: ['warn', 'error'],
+        },
+      ],
       'no-const-assign': 'error',
       'no-constant-condition': 'error',
       'no-control-regex': 'error',
