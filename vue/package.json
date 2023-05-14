@@ -1,0 +1,49 @@
+{
+  "name": "@azat-io/eslint-config-vue",
+  "description": "ESLint shareable config for Vue",
+  "version": "0.6.1",
+  "type": "module",
+  "repository": "azat-io/eslint-config",
+  "author": "Azat S. <to@azat.io>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "config",
+    "code-styles",
+    "linter",
+    "vue"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "./dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "eslint": "^8.39.0"
+  },
+  "dependencies": {
+    "@azat-io/eslint-config-typescript": "workspace:^",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint-plugin-vue": "^9.11.1",
+    "vue-eslint-parser": "^9.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "eslint-define-config": "^1.20.0",
+    "vite": "^4.3.5",
+    "vite-plugin-dts": "^2.3.0"
+  }
+}
