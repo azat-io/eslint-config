@@ -2111,10 +2111,6 @@ Disallow to use promises inside of callbacks
 
 Enforce consistent param names and ordering when creating new promises.
 
-### prefer-await-to-callbacks
-
-Prefer `async`/`await` to the callback pattern.
-
 ### prefer-await-to-then
 
 Prefer `await` to `then()`/`catch()`/`finally()` for reading Promise values.

@@ -494,7 +494,6 @@ export default defineFlatConfig([
       'promise/no-nesting': 'error',
       'promise/no-promise-in-callback': 'error',
       'promise/param-names': 'error',
-      'promise/prefer-await-to-callbacks': 'error',
       'promise/prefer-await-to-then': 'error',
       'promise/valid-params': 'error',
 
