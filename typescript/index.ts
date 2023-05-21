@@ -209,7 +209,6 @@ export default defineFlatConfig([
       'space-before-function-paren': 'off',
       'space-infix-ops': 'off',
 
-      'import/no-commonjs': 'error',
       'import/no-unresolved': 'error',
     },
 
