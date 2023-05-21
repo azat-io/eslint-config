@@ -1,3 +1,14 @@
+## [0.8.1](https://github.com/azat-io/eslint-config/compare/v0.8.0...v0.8.1) (2023-05-21)
+
+
+### Bug Fixes
+
+* allow console.warn and console.error ([92694bf](https://github.com/azat-io/eslint-config/commit/92694bff22ec84e0e38824fb76be616581163698))
+* disable promise prefer-await-to-callbacks rule ([1ba9d95](https://github.com/azat-io/eslint-config/commit/1ba9d95b58daf1cbe8f02b67423511f521b72911))
+* remove no-commonjs rule ([1f5a513](https://github.com/azat-io/eslint-config/commit/1f5a5135a22357668ff406a181b9175ec0a6d34b))
+
+
+
 # [0.8.0](https://github.com/azat-io/eslint-config/compare/v0.7.1...v0.8.0) (2023-05-07)
 
 
