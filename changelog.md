@@ -1,3 +1,12 @@
+## [0.8.3](https://github.com/azat-io/eslint-config/compare/v0.8.2...v0.8.3) (2023-05-22)
+
+
+### Bug Fixes
+
+* **typescript:** support no-shadow and no-redeclare rules typescript config ([7f471af](https://github.com/azat-io/eslint-config/commit/7f471afa51d5a9b147bfea5bb2b2d8df456c9330))
+
+
+
 ## [0.8.2](https://github.com/azat-io/eslint-config/compare/v0.8.1...v0.8.2) (2023-05-22)
 
 

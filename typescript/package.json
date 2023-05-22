@@ -1,7 +1,7 @@
 {
   "name": "@azat-io/eslint-config-typescript",
   "description": "ESLint shareable config for TypeScript",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "repository": "azat-io/eslint-config",
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
