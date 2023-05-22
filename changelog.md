@@ -1,3 +1,13 @@
+## [0.8.2](https://github.com/azat-io/eslint-config/compare/v0.8.1...v0.8.2) (2023-05-22)
+
+
+### Features
+
+* add no-redeclare rule ([0f2e7c3](https://github.com/azat-io/eslint-config/commit/0f2e7c371ceb1c28c128d0a932536ca3698cbbb6))
+* add no-shadow rule ([4538251](https://github.com/azat-io/eslint-config/commit/453825130821f8df8d601855c6fcaee85f4a2aa9))
+
+
+
 ## [0.8.1](https://github.com/azat-io/eslint-config/compare/v0.8.0...v0.8.1) (2023-05-21)
 
 
