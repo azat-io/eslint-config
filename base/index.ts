@@ -224,6 +224,7 @@ export default defineFlatConfig([
       'no-obj-calls': 'error',
       'no-octal': 'error',
       'no-octal-escape': 'error',
+      'no-redeclare': 'error',
       'no-regex-spaces': 'error',
       'no-return-assign': ['error', 'except-parens'],
       'no-self-assign': [

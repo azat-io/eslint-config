@@ -1087,6 +1087,16 @@ Disallow calling global object properties as functions.
 
 Disallow octal literals
 
+### no-redeclare
+
+Disallow variable redeclaration.
+
+```js
+// bad
+let me = 'Shinichi'
+let me = 'Migi'
+```
+
 ### no-octal-escape
 
 Disallow octal escape sequences in string literals.
