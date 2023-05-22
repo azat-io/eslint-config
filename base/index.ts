@@ -234,6 +234,7 @@ export default defineFlatConfig([
         },
       ],
       'no-self-compare': 'error',
+      'no-shadow': 'error',
       'no-shadow-restricted-names': 'error',
       'no-sparse-arrays': 'error',
       'no-tabs': 'error',

@@ -1152,6 +1152,19 @@ Disallow assignments where both sides are exactly the same.
 
 Disallow comparisons where both sides are exactly the same.
 
+### no-shadow
+
+Disallow variable declarations from shadowing variables declared in the outer scope.
+
+```js
+// bad
+let user = 'Eren Jaeger'
+
+let protectCity = () => {
+  let user = 'Attack Titan'
+}
+```
+
 ### no-shadow-restricted-names
 
 Disallow identifiers from shadowing restricted names.
