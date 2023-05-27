@@ -22,7 +22,7 @@
     "@azat-io/eslint-config-typescript": "workspace:^",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
-    "@types/node": "^20.2.1",
+    "@types/node": "^20.2.5",
     "bumpp": "^9.1.0",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.41.0",
