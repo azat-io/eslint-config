@@ -1,3 +1,12 @@
+## [0.8.4](https://github.com/azat-io/eslint-config/compare/v0.8.3...v0.8.4) (2023-06-02)
+
+
+### Bug Fixes
+
+* require to add space before function parentheses ([448c152](https://github.com/azat-io/eslint-config/commit/448c152ccb469e71766fd8f133c115a5f5cad6cf))
+
+
+
 ## [0.8.3](https://github.com/azat-io/eslint-config/compare/v0.8.2...v0.8.3) (2023-05-22)
 
 
