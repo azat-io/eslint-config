@@ -386,8 +386,8 @@ export default defineFlatConfig([
       'space-before-function-paren': [
         'error',
         {
-          anonymous: 'never',
-          named: 'never',
+          anonymous: 'always',
+          named: 'always',
           asyncArrow: 'always',
         },
       ],

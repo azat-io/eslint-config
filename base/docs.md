@@ -1740,11 +1740,11 @@ if (numberOwner === 'Hisoka Morow') {
 
 ### space-before-function-paren
 
-Require to add space before `function` definition opening parenthesis.
+Disallow to add space before `function` definition opening parenthesis.
 
 ```js
 // bad
-function getStudentName(id) {
+function getStudentName (id) {
   let student = findStudentById(id)
   return student.name ?? 'Mei Misaki'
 }
@@ -1752,7 +1752,7 @@ function getStudentName(id) {
 
 ```js
 // good
-function getStudentName (id) {
+function getStudentName(id) {
   let student = findStudentById(id)
   return student.name ?? 'Mei Misaki'
 }
