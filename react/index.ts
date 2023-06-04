@@ -28,8 +28,6 @@ export default defineFlatConfig([
     },
 
     rules: {
-      'jsx-quotes': ['error', 'prefer-double'],
-
       'react/boolean-prop-naming': [
         'error',
         {
@@ -49,7 +47,6 @@ export default defineFlatConfig([
         },
       ],
       'react/jsx-boolean-value': 'error',
-      'react/jsx-child-element-spacing': 'error',
       'react/jsx-closing-bracket-location': 'error',
       'react/jsx-closing-tag-location': 'error',
       'react/jsx-curly-brace-presence': [
@@ -79,7 +76,6 @@ export default defineFlatConfig([
       'react/jsx-no-undef': 'error',
       'react/jsx-no-useless-fragment': 'error',
       'react/jsx-pascal-case': 'error',
-      'react/jsx-props-no-multi-spaces': 'error',
       'react/jsx-tag-spacing': 'error',
       'react/jsx-uses-vars': 'error',
       'react/no-children-prop': 'error',

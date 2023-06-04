@@ -125,44 +125,6 @@ let spirited_away
 let spiritedAway
 ```
 
-### comma-dangle
-
-Require to add trailing commas when the last element or property is in a different line.
-
-```js
-// bad
-let titans = [
-  'Founding Titan',
-  'Beast Titan',
-  'Armored Titan',
-  'Colossal Titan'
-]
-```
-
-```js
-// good
-let titans = [
-  'Founding Titan',
-  'Beast Titan',
-  'Armored Titan',
-  'Colossal Titan',
-]
-```
-
-### comma-spacing
-
-Disallow spaces before commas and require after.
-
-```js
-// bad
-let team = ['Tanjiro' ,'Nezuko' ,'Zenitsu' ,'Inosuke']
-```
-
-```js
-// good
-let team = ['Tanjiro', 'Nezuko', 'Zenitsu', 'Inosuke']
-```
-
 ### comma-style
 
 Require to add comma after and on the same line.
@@ -981,22 +943,6 @@ Disallow labeled statements
 
 Disallow mixed binary operators.
 
-### no-multi-spaces
-
-Disallow multiple spaces.
-
-```js
-// bad
-if (  user.name === 'Odokawa' &&  user.role === 'Taxi driver'   ) {
-}
-```
-
-```js
-// good
-if (user.name === 'Odokawa' && user.role === 'Taxi driver') {
-}
-```
-
 ### no-multi-str
 
 Disallow multiline strings.
@@ -1189,10 +1135,6 @@ Disallow template literal placeholder syntax in regular strings.
 ### no-this-before-super
 
 Disallow `this`/`super` before calling `super()` in constructors.
-
-### no-trailing-spaces
-
-Disallow trailing whitespace at the end of lines.
 
 ### no-undef
 
@@ -1484,20 +1426,6 @@ let name = 'Shinji Ikari'
 
 Disallow `void` operators
 
-### no-whitespace-before-property
-
-Disallow whitespace before properties.
-
-```js
-// bad
-zenitsuAgatsuma .godspeed() .thunderclap()
-```
-
-```js
-// good
-zenitsuAgatsuma.godspeed().thunderclap()
-```
-
 ### no-with
 
 Disallow `with` statements.
@@ -1678,100 +1606,6 @@ let mushishi = {
 }
 ```
 
-### quotes
-
-Require to use single quotes.
-
-```js
-// bad
-let graceFieldMama = "Isabella"
-```
-
-```js
-// bad
-let graceFieldMama = 'Isabella'
-```
-
-### rest-spread-spacing
-
-Disallow to add space before rest and spread operators.
-
-```js
-// bad
-marleyArmy.add(... titans)
-```
-
-```js
-// good
-marleyArmy.add(...titans)
-```
-
-### semi
-
-Disallow to use semicolons.
-
-```js
-// bad
-let users = ['Gon Freecss', 'Killua Zoldyck', 'Leorio Paradinight'];
-```
-
-```js
-// good
-let users = ['Gon Freecss', 'Killua Zoldyck', 'Leorio Paradinight']
-```
-
-### space-before-blocks
-
-Require to add space before code blocks.
-
-```js
-// bad
-if (numberOwner === 'Hisoka Morow'){
-  setExamPhase(5)
-}
-```
-
-```js
-// good
-if (numberOwner === 'Hisoka Morow') {
-  setExamPhase(5)
-}
-```
-
-### space-before-function-paren
-
-Disallow to add space before `function` definition opening parenthesis.
-
-```js
-// bad
-function getStudentName (id) {
-  let student = findStudentById(id)
-  return student.name ?? 'Mei Misaki'
-}
-```
-
-```js
-// good
-function getStudentName(id) {
-  let student = findStudentById(id)
-  return student.name ?? 'Mei Misaki'
-}
-```
-
-### space-in-parens
-
-Disallow to add spaces in function parenthesis.
-
-```js
-// bad
-cowboyBebop.addFuel( 200 )
-```
-
-```js
-// good
-cowboyBebop.addFuel( 200 )
-```
-
 ### space-infix-ops
 
 Require to add spaces around infix operators.
@@ -1779,10 +1613,6 @@ Require to add spaces around infix operators.
 ### space-unary-ops
 
 Require to add space after word unary operators and not to add after non word operator.
-
-### spaced-comment
-
-Require to add space after `//` or `/*` in a comment.
 
 ### template-curly-spacing
 

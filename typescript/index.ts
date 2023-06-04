@@ -129,26 +129,6 @@ export default defineFlatConfig([
           allowSingleLine: true,
         },
       ],
-      '@typescript-eslint/comma-dangle': [
-        'error',
-        {
-          arrays: 'always-multiline',
-          objects: 'always-multiline',
-          imports: 'always-multiline',
-          exports: 'always-multiline',
-          functions: 'always-multiline',
-          enums: 'always-multiline',
-          generics: 'always-multiline',
-          tuples: 'always-multiline',
-        },
-      ],
-      '@typescript-eslint/comma-spacing': [
-        'error',
-        {
-          before: false,
-          after: true,
-        },
-      ],
       '@typescript-eslint/func-call-spacing': ['error', 'never'],
       '@typescript-eslint/key-spacing': [
         'error',
@@ -166,24 +146,6 @@ export default defineFlatConfig([
       ],
       '@typescript-eslint/no-extra-parens': ['error', 'functions'],
       '@typescript-eslint/object-curly-spacing': ['error', 'always'],
-      '@typescript-eslint/quotes': [
-        'error',
-        'single',
-        {
-          avoidEscape: true,
-          allowTemplateLiterals: false,
-        },
-      ],
-      '@typescript-eslint/semi': ['error', 'never'],
-      '@typescript-eslint/space-before-blocks': ['error', 'always'],
-      '@typescript-eslint/space-before-function-paren': [
-        'error',
-        {
-          anonymous: 'always',
-          named: 'always',
-          asyncArrow: 'always',
-        },
-      ],
       '@typescript-eslint/space-infix-ops': 'error',
 
       'dot-notation': 'off',
@@ -198,8 +160,6 @@ export default defineFlatConfig([
       'no-useless-constructor': 'off',
       'block-spacing': 'off',
       'brace-style': 'off',
-      'comma-dangle': 'off',
-      'comma-spacing': 'off',
       'func-call-spacing': 'off',
       'key-spacing': 'off',
       'lines-between-class-members': 'off',
@@ -207,10 +167,6 @@ export default defineFlatConfig([
       'no-undef': 'off',
       'object-curly-spacing': 'off',
       'padding-line-between-statements': 'off',
-      quotes: 'off',
-      semi: 'off',
-      'space-before-blocks': 'off',
-      'space-before-function-paren': 'off',
       'space-infix-ops': 'off',
 
       'import/no-unresolved': 'error',

@@ -67,23 +67,6 @@ export default defineFlatConfig([
           ignoreGlobals: true,
         },
       ],
-      'comma-dangle': [
-        'error',
-        {
-          arrays: 'always-multiline',
-          objects: 'always-multiline',
-          imports: 'always-multiline',
-          exports: 'always-multiline',
-          functions: 'always-multiline',
-        },
-      ],
-      'comma-spacing': [
-        'error',
-        {
-          before: false,
-          after: true,
-        },
-      ],
       'comma-style': ['error', 'last'],
       'computed-property-spacing': [
         'error',
@@ -205,7 +188,6 @@ export default defineFlatConfig([
           allowSamePrecedence: true,
         },
       ],
-      'no-multi-spaces': 'error',
       'no-multi-str': 'error',
       'no-multiple-empty-lines': [
         'error',
@@ -239,7 +221,6 @@ export default defineFlatConfig([
       'no-sparse-arrays': 'error',
       'no-tabs': 'error',
       'no-template-curly-in-string': 'error',
-      'no-trailing-spaces': 'error',
       'no-undef': 'error',
       'no-undef-init': 'error',
       'no-unexpected-multiline': 'error',
@@ -288,7 +269,6 @@ export default defineFlatConfig([
       'no-useless-return': 'error',
       'no-var': 'error',
       'no-void': 'error',
-      'no-whitespace-before-property': 'error',
       'no-with': 'error',
       'object-curly-spacing': ['error', 'always'],
       'object-property-newline': [
@@ -372,46 +352,12 @@ export default defineFlatConfig([
       ],
       'prefer-rest-params': 'error',
       'quote-props': ['error', 'as-needed'],
-      quotes: [
-        'error',
-        'single',
-        {
-          avoidEscape: true,
-          allowTemplateLiterals: false,
-        },
-      ],
-      'rest-spread-spacing': ['error', 'never'],
-      semi: ['error', 'never'],
-      'space-before-blocks': ['error', 'always'],
-      'space-before-function-paren': [
-        'error',
-        {
-          anonymous: 'always',
-          named: 'always',
-          asyncArrow: 'always',
-        },
-      ],
-      'space-in-parens': ['error', 'never'],
       'space-infix-ops': 'error',
       'space-unary-ops': [
         'error',
         {
           words: true,
           nonwords: false,
-        },
-      ],
-      'spaced-comment': [
-        'error',
-        'always',
-        {
-          line: {
-            markers: ['*package', '!', '/', ',', '='],
-          },
-          block: {
-            balanced: true,
-            markers: ['*package', '!', ',', ':', '::', 'flow-include'],
-            exceptions: ['*'],
-          },
         },
       ],
       'template-curly-spacing': ['error', 'never'],

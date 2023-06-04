@@ -2,22 +2,6 @@
 
 This config extends `@azat-io/eslint-config-typescript`.
 
-## Base rules
-
-### jsx-quotes
-
-Require to use double quotes in JSX attributes.
-
-```tsx
-// bad
-<Implant name='Sandevistan' />
-```
-
-```tsx
-// good
-<Implant name="Sandevistan" />
-```
-
 ## React rules
 
 ### boolean-prop-naming
@@ -111,10 +95,6 @@ let Bebop: FC = () => <Spaceship isRed={true} />
 // good
 let Bebop: FC = () => <Spaceship isRed />
 ```
-
-### jsx-child-element-spacing
-
-Enforce spaces inside of curly braces in JSX attributes and expressions.
 
 ### jsx-closing-bracket-location
 
@@ -344,20 +324,6 @@ Enforce PascalCase for user-defined JSX components.
 ```tsx
 // good
 <WeatheringWithYou />
-```
-
-### jsx-props-no-multi-spaces
-
-Disallow multiple spaces between inline JSX props.
-
-```tsx
-// bad
-<Odokawa    role="taxi driver" />
-```
-
-```tsx
-// good
-<Odokawa role="taxi driver" />
 ```
 
 ### jsx-tag-spacing
