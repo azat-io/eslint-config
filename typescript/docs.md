@@ -4,10 +4,6 @@ This config extends `@azat-io/eslint-config`.
 
 ## TypeScript rules
 
-### adjacent-overload-signatures
-
-Require that function overload signatures be consecutive.
-
 ### array-type
 
 Require consistently using either `T[]` or `Array<T>` for arrays.

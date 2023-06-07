@@ -22,7 +22,6 @@ export default defineFlatConfig([
     },
 
     rules: {
-      '@typescript-eslint/adjacent-overload-signatures': 'error',
       '@typescript-eslint/array-type': 'error',
       '@typescript-eslint/await-thenable': 'error',
       '@typescript-eslint/consistent-generic-constructors': 'error',

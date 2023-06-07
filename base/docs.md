@@ -1811,33 +1811,6 @@ Forbid webpack loader syntax in imports.
 import colors from 'style!css!./theme.css';
 ```
 
-### order
-
-Set a convention in module import order.
-
-```js
-// bad
-import { wallMaria, wallRose } from '~/lib/walls'
-import { eldiaPeople } from 'eldia'
-import type { Titan } from 'attack-on-titan'
-import { marleyPeople } from 'marley'
-import './equipment'
-import { erenYeager, mikasaAckerman } from '~/survey-corps/data'
-```
-
-```js
-// good
-import type { Titan } from 'attack-on-titan'
-
-import { marleyPeople } from 'marley'
-import { eldiaPeople } from 'eldia'
-
-import { erenYeager, mikasaAckerman } from '~/survey-corps/data'
-import { wallMaria, wallRose } from '~/lib/walls'
-
-import './equipment'
-```
-
 ## N rules
 
 ### handle-callback-err

@@ -11,6 +11,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
+        'eslint-plugin-perfectionist/configs/recommended-line-length',
         'eslint-plugin-prefer-arrow',
         'eslint-plugin-prefer-let',
         'eslint-plugin-promise',

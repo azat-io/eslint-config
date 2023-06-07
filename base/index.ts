@@ -1,3 +1,4 @@
+import perfectionistLineLength from 'eslint-plugin-perfectionist/configs/recommended-line-length'
 import { defineFlatConfig } from 'eslint-define-config'
 import preferArrow from 'eslint-plugin-prefer-arrow'
 import preferLet from 'eslint-plugin-prefer-let'
@@ -402,24 +403,6 @@ export default defineFlatConfig([
       'import/no-self-import': 'error',
       'import/no-useless-path-segments': 'error',
       'import/no-webpack-loader-syntax': 'error',
-      'import/order': [
-        'error',
-        {
-          groups: [
-            ['type'],
-            ['builtin', 'external'],
-            ['internal'],
-            ['parent', 'sibling', 'index'],
-          ],
-          pathGroups: [
-            {
-              pattern: '~/**',
-              group: 'internal',
-            },
-          ],
-          'newlines-between': 'always',
-        },
-      ],
 
       'n/handle-callback-err': ['error', '^(err|error)$'],
       'n/no-deprecated-api': 'error',
@@ -537,4 +520,5 @@ export default defineFlatConfig([
       'vitest/valid-expect': 'error',
     },
   },
+  perfectionistLineLength,
 ])
