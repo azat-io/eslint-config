@@ -1,3 +1,17 @@
+# [1.0.0](https://github.com/azat-io/eslint-config/compare/v0.8.4...v1.0.0) (2023-06-07)
+
+
+### Bug Fixes
+
+* remove rules supported by prettier ([18a810b](https://github.com/azat-io/eslint-config/commit/18a810b55215d5e0f354120bd9bda2cc4861f84b))
+
+
+### Features
+
+* use eslint-plugin-perfectionist ([044959d](https://github.com/azat-io/eslint-config/commit/044959d8fef2acff50e252b8a238be933cd38eea))
+
+
+
 ## [0.8.4](https://github.com/azat-io/eslint-config/compare/v0.8.3...v0.8.4) (2023-06-02)
 
 
