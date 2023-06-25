@@ -10,13 +10,7 @@ export default defineConfig({
       formats: ['cjs', 'es'],
     },
     rollupOptions: {
-      external: [
-        '@azat-io/eslint-config-typescript',
-        'eslint-plugin-testing-library',
-        'eslint-plugin-react-hooks',
-        'eslint-plugin-jsx-a11y',
-        'eslint-plugin-react',
-      ],
+      external: (id: string) => !id.startsWith('.') && !path.isAbsolute(id),
     },
   },
   plugins: [

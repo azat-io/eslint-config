@@ -10,19 +10,7 @@ export default defineConfig({
       formats: ['cjs', 'es'],
     },
     rollupOptions: {
-      external: [
-        'eslint-plugin-perfectionist/configs/recommended-line-length',
-        'eslint-plugin-prefer-arrow',
-        'eslint-plugin-prefer-let',
-        'eslint-plugin-promise',
-        'eslint-plugin-unicorn',
-        'eslint-plugin-sonarjs',
-        'eslint-plugin-import',
-        'eslint-plugin-vitest',
-        '@babel/eslint-parser',
-        'eslint-plugin-n',
-        'globals',
-      ],
+      external: (id: string) => !id.startsWith('.') && !path.isAbsolute(id),
     },
   },
   plugins: [

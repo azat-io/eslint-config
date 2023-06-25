@@ -165,6 +165,7 @@ export default defineFlatConfig([
         'error',
         {
           skipComments: true,
+          skipJSXText: true,
           skipRegExps: true,
           skipStrings: true,
           skipTemplates: true,

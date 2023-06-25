@@ -10,11 +10,7 @@ export default defineConfig({
       formats: ['cjs', 'es'],
     },
     rollupOptions: {
-      external: [
-        '@typescript-eslint/eslint-plugin',
-        '@typescript-eslint/parser',
-        '@azat-io/eslint-config',
-      ],
+      external: (id: string) => !id.startsWith('.') && !path.isAbsolute(id),
     },
   },
   plugins: [
