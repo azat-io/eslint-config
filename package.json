@@ -13,7 +13,7 @@
     "release:changelog": "conventional-changelog -p angular --infile changelog.md --same-file",
     "release:check": "pnpm test && pnpm run build",
     "release:publish": "pnpm --recursive publish",
-    "release:version": "bumpp package.json base/package.json typescript/package.json react/package.json --execute=\"pnpm release:changelog && git add changelog.md\" --commit \"build: publish v%s\" --tag --all",
+    "release:version": "changelogen --output changelog.md --release --push",
     "lint": "eslint **/*.{js,ts}",
     "test:types": "tsc --noEmit --pretty",
     "test": "pnpm run lint && pnpm run test:types"
@@ -23,8 +23,7 @@
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@types/node": "^20.3.1",
-    "bumpp": "^9.1.1",
-    "conventional-changelog-cli": "^3.0.0",
+    "changelogen": "^0.5.3",
     "eslint": "^8.43.0",
     "simple-git-hooks": "^2.8.1",
     "typescript": "^5.0.4"

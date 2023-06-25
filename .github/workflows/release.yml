@@ -13,13 +13,19 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-
-      - name: create release
-        id: release_tag
-        uses: yyx990803/release-tag@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          body: |
-            Please refer to [changelog.md](https://github.com/${{ github.repository }}/blob/main/changelog.md) for details.
+          fetch-depth: 0
+
+      - name: install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: install node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - run: pnpx changelogithub
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
