@@ -218,44 +218,6 @@ Require to add prefix for component methods used as event handlers with `handle`
 <CyberpunkBody onChange={handleChange} />
 ```
 
-### jsx-indent-props
-
-Set props indentation style to 2 spaces.
-
-```tsx
-// bad
-<Godzilla
-height={80}
-length={180}
-/>
-```
-
-```tsx
-// good
-<Godzilla
-  height={80}
-  length={180}
-/>
-```
-
-### jsx-indent
-
-Set indentation style to 2 spaces.
-
-```tsx
-// bad
-<Takaramachi>
-<Tekkonkinkreet />
-</Takaramachi>
-```
-
-```tsx
-// good
-<Takaramachi>
-  <Tekkonkinkreet />
-</Takaramachi>
-```
-
 ### jsx-key
 
 Disallow missing `key` props in iterators/collection literals.

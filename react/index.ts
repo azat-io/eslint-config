@@ -67,8 +67,6 @@ export default defineFlatConfig([
       ],
       'react/jsx-fragments': 'error',
       'react/jsx-handler-names': 'error',
-      'react/jsx-indent-props': ['error', 2],
-      'react/jsx-indent': ['error', 2],
       'react/jsx-key': 'error',
       'react/jsx-no-comment-textnodes': 'error',
       'react/jsx-no-duplicate-props': 'error',
