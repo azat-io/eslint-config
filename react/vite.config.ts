@@ -15,7 +15,7 @@ export default defineConfig({
   },
   plugins: [
     dts({
-      outputDir: path.join(__dirname, 'dist'),
+      outDir: path.join(__dirname, 'dist'),
       root: path.join(__dirname, '..'),
       entryRoot: __dirname,
       include: [

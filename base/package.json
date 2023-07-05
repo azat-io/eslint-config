@@ -46,7 +46,7 @@
     "globals": "^13.20.0"
   },
   "devDependencies": {
-    "eslint": "^8.43.0",
+    "eslint": "^8.44.0",
     "eslint-define-config": "^1.21.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^16.0.1",
@@ -58,6 +58,6 @@
     "eslint-plugin-unicorn": "^47.0.0",
     "eslint-plugin-vitest": "^0.2.6",
     "vite": "^4.3.9",
-    "vite-plugin-dts": "^2.3.0"
+    "vite-plugin-dts": "^3.1.0"
   }
 }
