@@ -22,9 +22,9 @@
     "@azat-io/eslint-config-typescript": "workspace:^",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
-    "@types/node": "^20.3.3",
+    "@types/node": "^20.4.2",
     "changelogen": "^0.5.4",
-    "eslint": "^8.44.0",
+    "eslint": "^8.45.0",
     "simple-git-hooks": "^2.8.1",
     "typescript": "^5.1.6"
   }
