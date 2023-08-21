@@ -4,7 +4,7 @@ export default [
   ...config,
   {
     rules: {
-      'perfectionist/sort-objects': 'off'
-    }
+      'perfectionist/sort-objects': 'off',
+    },
   },
 ]

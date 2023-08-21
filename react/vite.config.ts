@@ -10,7 +10,10 @@ export default defineConfig({
       formats: ['cjs', 'es'],
     },
     rollupOptions: {
-      external: (id: string) => !id.startsWith('.') && !path.isAbsolute(id) && id !== 'eslint-define-config'
+      external: (id: string) =>
+        !id.startsWith('.') &&
+        !path.isAbsolute(id) &&
+        id !== 'eslint-define-config',
     },
   },
   plugins: [

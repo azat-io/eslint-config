@@ -10,13 +10,13 @@
   "scripts": {
     "build": "pnpm --recursive run build",
     "release": "pnpm release:check && pnpm release:version && pnpm release:publish",
-    "release:changelog": "conventional-changelog -p angular --infile changelog.md --same-file",
     "release:check": "pnpm test && pnpm run build",
     "release:publish": "pnpm --recursive publish",
-    "release:version": "changelogen --output changelog.md --release --push",
-    "lint": "eslint **/*.{js,ts}",
+    "release:version": "changelogen --output changelog.md --release --push && prettier --write changelog.md",
+    "test:format": "prettier --check \"**/*.{js,ts,json,md,yml}\"",
+    "test:js": "eslint **/*.{js,ts}",
     "test:types": "tsc --noEmit --pretty",
-    "test": "pnpm run lint && pnpm run test:types"
+    "test": "pnpm run /^test:/"
   },
   "devDependencies": {
     "@azat-io/eslint-config-typescript": "workspace:^",
@@ -25,6 +25,7 @@
     "@types/node": "^20.4.8",
     "changelogen": "^0.5.4",
     "eslint": "^8.46.0",
+    "prettier": "^3.0.2",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.1.6"
   }
