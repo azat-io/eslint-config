@@ -10,6 +10,10 @@ This repo contains the following packages:
 - [`@azat-io/eslint-config-typescript`](https://github.com/azat-io/eslint-config/tree/main/typescript)
 - [`@azat-io/eslint-config-react`](https://github.com/azat-io/eslint-config/tree/main/react)
 
+## See also
+
+- [`@azat-io/stylelint-config`](https://github.com/azat-io/stylelint-config)
+
 ## License
 
 MIT &copy; [Azat S.](https://azat.io)
