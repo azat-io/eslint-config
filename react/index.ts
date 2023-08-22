@@ -128,7 +128,7 @@ export default defineFlatConfig([
     },
 
     rules: {
-      'testing-library/await-async-query': 'error',
+      'testing-library/await-async-queries': 'error',
       'testing-library/await-async-utils': 'error',
       'testing-library/no-await-sync-events': [
         'error',
@@ -136,12 +136,12 @@ export default defineFlatConfig([
           eventModules: ['fire-event'],
         },
       ],
-      'testing-library/no-await-sync-query': 'error',
+      'testing-library/no-await-sync-queries': 'error',
       'testing-library/no-container': 'error',
       'testing-library/no-debugging-utils': 'error',
       'testing-library/no-dom-import': 'error',
       'testing-library/no-global-regexp-flag-in-query': 'error',
-      'testing-library/no-render-in-setup': 'error',
+      'testing-library/no-render-in-lifecycle': 'error',
       'testing-library/no-unnecessary-act': 'error',
       'testing-library/no-wait-for-empty-callback': 'error',
       'testing-library/no-wait-for-multiple-assertions': 'error',

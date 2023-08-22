@@ -431,7 +431,7 @@ Enforce to use semantic DOM elements over the ari role property.
 
 ## Testing library rules
 
-### await-async-query
+### await-async-queries
 
 Ensure that promises returned by async queries are handled properly.
 
@@ -493,7 +493,7 @@ let abyssLevels = () => {
 }
 ```
 
-### no-await-sync-query
+### no-await-sync-queries
 
 Disallow unnecessary `await` for sync queries:
 
@@ -550,9 +550,9 @@ screen.getByText(/odd-taxi-passenger/gi)
 screen.getByText(/odd-taxi-passenger/i)
 ```
 
-### no-render-in-setup
+### no-render-in-lifecycle
 
-Disallow the use of `render` in testing frameworks setup functions.
+Disallow the use of `render` in testing frameworks lifecycle functions.
 
 ### no-unnecessary-act
 
