@@ -31,25 +31,25 @@
     "./package.json": "./package.json"
   },
   "peerDependencies": {
-    "eslint": "^8.38.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^16.0.1",
-    "eslint-plugin-perfectionist": "^1.4.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.0.2",
+    "eslint-plugin-perfectionist": "^1.5.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prefer-let": "^3.0.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.19.0",
-    "eslint-plugin-unicorn": "^47.0.0",
-    "eslint-plugin-vitest": "^0.2.6"
+    "eslint-plugin-sonarjs": "^0.20.0",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-vitest": "^0.2.8"
   },
   "dependencies": {
-    "globals": "^13.20.0"
+    "globals": "^13.21.0"
   },
   "devDependencies": {
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "eslint-define-config": "^1.23.0",
-    "eslint-plugin-import": "^2.28.0",
-    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.0.2",
     "eslint-plugin-perfectionist": "^1.5.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prefer-let": "^3.0.1",
@@ -58,6 +58,6 @@
     "eslint-plugin-unicorn": "^48.0.1",
     "eslint-plugin-vitest": "^0.2.8",
     "vite": "^4.4.9",
-    "vite-plugin-dts": "^3.5.1"
+    "vite-plugin-dts": "^3.5.2"
   }
 }
