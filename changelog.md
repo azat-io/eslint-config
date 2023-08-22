@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.0
+
+[compare changes](https://undefined/undefined/compare/v1.1.1...v1.2.0)
+
+### 🚀 Features
+
+- Update testing-library plugin (da5fa49)
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.1.1
 
 [compare changes](https://undefined/undefined/compare/v1.1.0...v1.1.1)
