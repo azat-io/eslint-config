@@ -558,22 +558,6 @@ Disallow the use of `render` in testing frameworks lifecycle functions.
 
 Disallow wrapping Testing Library utils or empty callbacks in `act`.
 
-### no-wait-for-empty-callback
-
-Disallow empty callbacks for `waitFor` and `waitForElementToBeRemoved`.
-
-```ts
-// bad
-await waitFor(() => {})
-```
-
-```ts
-// good
-await waitFor(() => {
-  screen.getByText('Suzume Iwato')
-})
-```
-
 ### no-wait-for-multiple-assertions
 
 Disallow the use of multiple `expect` calls inside `waitFor`.

@@ -143,7 +143,6 @@ export default defineFlatConfig([
       'testing-library/no-global-regexp-flag-in-query': 'error',
       'testing-library/no-render-in-lifecycle': 'error',
       'testing-library/no-unnecessary-act': 'error',
-      'testing-library/no-wait-for-empty-callback': 'error',
       'testing-library/no-wait-for-multiple-assertions': 'error',
       'testing-library/no-wait-for-side-effects': 'error',
       'testing-library/prefer-find-by': 'error',
