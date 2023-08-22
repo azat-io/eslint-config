@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.1
+
+[compare changes](https://undefined/undefined/compare/v1.2.0...v1.2.1)
+
+### 🐞 Bug Fixes
+
+- Remove no-wait-for-empty-callback rule (a019369)
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.2.0
 
 [compare changes](https://undefined/undefined/compare/v1.1.1...v1.2.0)
