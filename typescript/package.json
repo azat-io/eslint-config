@@ -59,7 +59,7 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prefer-let": "^3.0.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.20.0",
+    "eslint-plugin-sonarjs": "^0.21.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "eslint-plugin-vitest": "^0.2.8",
     "vite": "^4.4.9",
