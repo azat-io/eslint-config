@@ -4,7 +4,7 @@
 
 ![Version](https://img.shields.io/npm/v/@azat-io/eslint-config-react.svg?color=brightgreen)
 
-Shareable ESLint config for JavaScript projects.
+Shareable ESLint config for React projects.
 
 See [docs](https://github.com/azat-io/eslint-config/blob/main/react/docs.md) for a list of all rules.
 
