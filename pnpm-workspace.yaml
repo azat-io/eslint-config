@@ -1,4 +1,5 @@
 packages:
+  - 'astro'
   - 'base'
   - 'react'
   - 'typescript'
