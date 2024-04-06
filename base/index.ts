@@ -73,7 +73,6 @@ export default defineFlatConfig([
           properties: true,
         },
       ],
-      'new-parens': 'error',
       'no-array-constructor': 'error',
       'no-async-promise-executor': 'error',
       'no-caller': 'error',
@@ -111,9 +110,7 @@ export default defineFlatConfig([
       'no-extend-native': 'error',
       'no-extra-bind': 'error',
       'no-extra-boolean-cast': 'error',
-      'no-extra-parens': ['error', 'functions'],
       'no-fallthrough': 'error',
-      'no-floating-decimal': 'error',
       'no-func-assign': 'error',
       'no-global-assign': 'error',
       'no-implied-eval': 'error',
@@ -137,23 +134,10 @@ export default defineFlatConfig([
           allowSwitch: false,
         },
       ],
-      'no-mixed-operators': [
-        'error',
-        {
-          groups: [
-            ['===', '!==', '>', '>=', '<', '<='],
-            ['&&', '||', '??'],
-            ['in', 'instanceof'],
-          ],
-          allowSamePrecedence: true,
-        },
-      ],
       'no-multi-str': 'error',
       'no-nested-ternary': 'error',
       'no-new': 'error',
       'no-new-func': 'error',
-      'no-new-object': 'error',
-      'no-new-symbol': 'error',
       'no-new-wrappers': 'error',
       'no-obj-calls': 'error',
       'no-octal': 'error',
@@ -238,7 +222,6 @@ export default defineFlatConfig([
         },
       ],
       'prefer-rest-params': 'error',
-      'quote-props': ['error', 'as-needed'],
       'use-isnan': [
         'error',
         {
@@ -250,13 +233,6 @@ export default defineFlatConfig([
         'error',
         {
           requireStringLiterals: true,
-        },
-      ],
-      'wrap-iife': [
-        'error',
-        'any',
-        {
-          functionPrototypeMethods: true,
         },
       ],
       yoda: ['error', 'never'],

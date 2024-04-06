@@ -194,20 +194,6 @@ let femaleTitan = new titan('Annie Leonhart', 'Female Titan')
 let femaleTitan = new Titan('Annie Leonhart', 'Female Titan')
 ```
 
-### new-parens
-
-Require to use parentheses when invoking a constructor with no arguments.
-
-```js
-// bad
-let cyberImplant = new Implant
-```
-
-```js
-// good
-let cyberImplant = new Implant()
-```
-
 ### no-array-constructor
 
 Disallow to use `Array` constructors.
@@ -588,20 +574,6 @@ if (!caveRaider.isWhiteWhistles) {
 }
 ```
 
-### no-extra-parens
-
-Disallow unnecessary parentheses.
-
-```js
-// bad
-typeof (hero)
-```
-
-```js
-// good
-typeof hero
-```
-
 ### no-fallthrough
 
 Disallow fallthrough of `case` statements.
@@ -629,10 +601,6 @@ switch(name) {
     break
 }
 ```
-
-### no-floating-decimal
-
-Disallow leading or trailing decimal points in numeric literals.
 
 ### no-func-assign
 
@@ -701,10 +669,6 @@ Disallow the use of the `__iterator__` property.
 
 Disallow labeled statements
 
-### no-mixed-operators
-
-Disallow mixed binary operators.
-
 ### no-multi-str
 
 Disallow multiline strings.
@@ -736,30 +700,6 @@ let bartender = new Bartender('Decim')
 ### no-new-func
 
 Disallow new operators with the `Function` object.
-
-### no-new-object
-
-Disallow `Object` constructors.
-
-```js
-// bad
-let student = new Student({
-  name: 'Shōko Nishimiya',
-  birthday: 'June 7th'
-})
-```
-
-```js
-// good
-let student = {
-  name: 'Shōko Nishimiya',
-  birthday: 'June 7th'
-}
-```
-
-### no-new-symbol
-
-Disallow `new` operators with the `Symbol` object.
 
 ### no-new-wrappers
 
@@ -1252,26 +1192,6 @@ Disallow to use `RegExp` constructor in favor of regular expression literals.
 
 Require to use rest parameters instead of `arguments`.
 
-### quote-props
-
-Disallow to add quotes around object literal property names that are not strictly required.
-
-```js
-// bad
-let mushishi = {
-  'name': 'Ginko'
-  'is-alive': true
-}
-```
-
-```js
-// good
-let mushishi = {
-  name: 'Ginko'
-  'is-alive': true
-}
-```
-
 ### use-isnan
 
 Require calls to `isNaN()` when checking for `NaN`.
@@ -1303,10 +1223,6 @@ typeof meruemName === 'strnig'
 // good
 typeof meruemName === 'string'
 ```
-
-### wrap-iife
-
-Require to add parentheses around immediate function invocations.
 
 ### yoda
 

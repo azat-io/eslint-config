@@ -77,9 +77,6 @@ export default defineFlatConfig([
         },
       ],
       '@typescript-eslint/no-useless-constructor': 'error',
-      '@typescript-eslint/block-spacing': ['error', 'always'],
-      '@typescript-eslint/func-call-spacing': ['error', 'never'],
-      '@typescript-eslint/no-extra-parens': ['error', 'functions'],
 
       'dot-notation': 'off',
       'no-array-constructor': 'off',
@@ -91,9 +88,7 @@ export default defineFlatConfig([
       'no-unused-vars': 'off',
       'no-use-before-define': 'off',
       'no-useless-constructor': 'off',
-      'block-spacing': 'off',
       'func-call-spacing': 'off',
-      'no-extra-parens': 'off',
       'no-undef': 'off',
 
       'import/no-unresolved': 'error',
