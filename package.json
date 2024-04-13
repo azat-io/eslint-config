@@ -20,13 +20,13 @@
   },
   "devDependencies": {
     "@azat-io/eslint-config-typescript": "workspace:^",
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@types/node": "^20.8.2",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@types/node": "^20.12.7",
     "changelogen": "^0.5.5",
-    "eslint": "^8.50.0",
-    "prettier": "^3.0.3",
-    "simple-git-hooks": "^2.9.0",
-    "typescript": "^5.2.2"
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.5"
   }
 }
