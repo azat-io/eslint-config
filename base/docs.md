@@ -1493,27 +1493,6 @@ Disallow to use promises inside of callbacks
 
 Enforce consistent param names and ordering when creating new promises.
 
-### prefer-await-to-then
-
-Prefer `await` to `then()`/`catch()`/`finally()` for reading Promise values.
-
-```js
-// bad
-let passExam = () => {
-  return tunnelPhase.then(viscaForestPhase).then(trickTowerPhase)
-}
-```
-
-```js
-// good
-let passExam = async () => {
-  let tunnelPhaseResult = await tunnelPhase()
-  let viscaForestPhaseResult = await viscaForestPhase(tunnelPhaseResult)
-  let trickTowerPhaseResult = await trickTowerPhase(viscaForestPhaseResult)
-  return trickTowerPhaseResult
-}
-```
-
 ### valid-params
 
 Check number of arguments are passed to Promise functions.
@@ -1559,10 +1538,6 @@ if (['Gon', 'Hisoka'].includes(name)) {
   addHero(name)
 }
 ```
-
-### no-extra-arguments
-
-Disallow to add extra arguments to functions.
 
 ### no-identical-conditions
 
@@ -1657,14 +1632,6 @@ if (name === 'Gabi Braun') {
   setPlaceOfBirth('Daupa District')
 }
 ```
-
-### no-unused-collection
-
-Disallow to add unused arrays.
-
-### no-use-of-empty-return-value
-
-Disallow to assign values to variables from void return functions.
 
 ### prefer-immediate-return
 

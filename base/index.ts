@@ -279,12 +279,10 @@ export default defineFlatConfig([
       'promise/no-nesting': 'error',
       'promise/no-promise-in-callback': 'error',
       'promise/param-names': 'error',
-      'promise/prefer-await-to-then': 'error',
       'promise/valid-params': 'error',
 
       'sonarjs/no-collapsible-if': 'error',
       'sonarjs/no-duplicated-branches': 'error',
-      'sonarjs/no-extra-arguments': 'error',
       'sonarjs/no-identical-conditions': 'error',
       'sonarjs/no-identical-functions': 'error',
       'sonarjs/no-ignored-return': 'error',
@@ -292,8 +290,6 @@ export default defineFlatConfig([
       'sonarjs/no-redundant-boolean': 'error',
       'sonarjs/no-same-line-conditional': 'error',
       'sonarjs/no-small-switch': 'error',
-      'sonarjs/no-unused-collection': 'error',
-      'sonarjs/no-use-of-empty-return-value': 'error',
       'sonarjs/prefer-immediate-return': 'error',
       'sonarjs/prefer-single-boolean-return': 'error',
 
