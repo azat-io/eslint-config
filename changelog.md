@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.8.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.7.1...v1.8.0)
+
+### 🚀 Features
+
+- Remove deprecated rules ([3d08ce3](https://github.com/azat-io/eslint-config/commit/3d08ce3))
+- Remove sonarjs rules ([2656180](https://github.com/azat-io/eslint-config/commit/2656180))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.7.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.7.0...v1.7.1)
