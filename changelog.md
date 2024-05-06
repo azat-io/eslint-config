@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.8.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.8.0...v1.8.1)
+
+### 🐞 Bug Fixes
+
+- Disable some a11y rules for astro ([43a4030](https://github.com/azat-io/eslint-config/commit/43a4030))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.8.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.7.1...v1.8.0)
