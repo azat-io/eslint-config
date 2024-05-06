@@ -50,8 +50,6 @@ export default defineFlatConfig([
       'jsx-a11y/aria-proptypes': 'error',
       'jsx-a11y/aria-role': 'error',
       'jsx-a11y/heading-has-content': 'error',
-      'jsx-a11y/no-aria-hidden-on-focusable': 'error',
-      'jsx-a11y/prefer-tag-over-role': 'error',
     },
   },
 
