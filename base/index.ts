@@ -1,5 +1,7 @@
-import perfectionistLineLength from 'eslint-plugin-perfectionist/configs/recommended-line-length'
+import type { FlatESLintConfig } from 'eslint-define-config'
+
 import { defineFlatConfig } from 'eslint-define-config'
+import perfectionist from 'eslint-plugin-perfectionist'
 import preferArrow from 'eslint-plugin-prefer-arrow'
 import nodeImport from 'eslint-plugin-node-import'
 import preferLet from 'eslint-plugin-prefer-let'
@@ -370,5 +372,5 @@ export default defineFlatConfig([
       'vitest/valid-expect': 'error',
     },
   },
-  perfectionistLineLength,
+  perfectionist.configs['recommended-line-length'] as FlatESLintConfig,
 ])
