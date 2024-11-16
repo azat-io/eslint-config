@@ -1,0 +1,34 @@
+{
+  "dictionaries": ["css", "html", "node", "npm", "typescript"],
+  "useGitignore": true,
+  "language": "en",
+  "ignorePaths": [
+    ".github",
+    "changelog.md",
+    "license",
+    "pnpm-lock.yaml",
+    "tsconfig.json"
+  ],
+  "words": [
+    "azat",
+    "canonicalurl",
+    "changelogithub",
+    "curlies",
+    "fetchcontent",
+    "getentrybyslug",
+    "lookarounds",
+    "nanostores",
+    "nonconstructor",
+    "nonoctal",
+    "nums",
+    "proptypes",
+    "scopedslots",
+    "sonarjs",
+    "subclassing",
+    "namepaths",
+    "nuxt",
+    "qwik",
+    "textnodes",
+    "thenables"
+  ]
+}

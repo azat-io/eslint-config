@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+.nvmrc
+
+# Build
+.eslint-config-inspector/
+dist/
+
+# Editor
+.vscode/
+.vim/
+.idea/
+
+# Misc
+.DS_Store
