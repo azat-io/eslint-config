@@ -1,4 +1,6 @@
-import eslintConfig from './dist/index.mjs'
+import type { Linter } from 'eslint'
+
+import eslintConfig from '.'
 
 export default eslintConfig({
   perfectionist: true,
@@ -10,4 +12,4 @@ export default eslintConfig({
   qwik: true,
   node: true,
   vue: true,
-})
+}) satisfies Linter.Config[]
