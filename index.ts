@@ -35,14 +35,33 @@ type RawConfigOptions = {
 
 export type ConfigOptions = Required<ConfigOptionFlags>
 
-export default ({
+export default async ({
   extends: customExtends = {} as Linter.Config,
   ...rawConfig
-}: RawConfigOptions = {}): Linter.Config[] => {
+}: RawConfigOptions = {}): Promise<Linter.Config[]> => {
   let config: Required<ConfigOptionFlags> = {} as Required<ConfigOptionFlags>
   for (let configName of CONFIG_OPTIONS) {
     config[configName] = rawConfig[configName] ?? false
   }
+
+  let configFunctions = [
+    core,
+    a11y,
+    react,
+    node,
+    typescript,
+    vitest,
+    astro,
+    svelte,
+    qwik,
+    vue,
+    packageJson,
+    perfectionist,
+  ]
+
+  let configs = await Promise.all(
+    configFunctions.map(createConfigFunction => createConfigFunction(config)),
+  )
 
   return [
     {
@@ -70,20 +89,7 @@ export default ({
         '**/tmp/**',
       ],
     },
-    ...[
-      core,
-      node,
-      a11y,
-      react,
-      typescript,
-      vitest,
-      astro,
-      svelte,
-      qwik,
-      vue,
-      packageJson,
-      perfectionist,
-    ].map(createConfigFunction => createConfigFunction(config)),
+    ...configs,
     ...(Array.isArray(customExtends) ? customExtends : [customExtends]),
   ]
 }

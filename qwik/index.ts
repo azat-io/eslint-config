@@ -11,14 +11,16 @@
 
 import type { Linter } from 'eslint'
 
-import qwikPlugin from 'eslint-plugin-qwik'
-
 import type { ConfigOptions } from '..'
 
-export let qwik = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let qwik = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.qwik) {
     return {}
   }
+
+  let qwikPlugin = await interopDefault(import('eslint-plugin-qwik'))
 
   let files = ['**/*.jsx']
 

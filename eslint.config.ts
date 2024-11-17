@@ -12,4 +12,4 @@ export default eslintConfig({
   qwik: true,
   node: true,
   vue: true,
-}) satisfies Linter.Config[]
+}) satisfies Promise<Linter.Config[]>

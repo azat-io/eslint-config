@@ -11,17 +11,19 @@
 
 import type { Linter } from 'eslint'
 
-import {
-  plugin as typescriptPlugin,
-  parser as typescriptParser,
-} from 'typescript-eslint'
-
 import type { ConfigOptions } from '..'
 
-export let typescript = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let typescript = async (
+  config: ConfigOptions,
+): Promise<Linter.Config> => {
   if (!config.typescript) {
     return {}
   }
+
+  let { parser: typescriptParser, plugin: typescriptPlugin } =
+    await interopDefault(import('typescript-eslint'))
 
   let files = ['**/*.ts', '**/*.cts', '**/*.mts']
 

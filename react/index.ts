@@ -11,17 +11,22 @@
 
 import type { Linter } from 'eslint'
 
-import reactCompilerPlugin from 'eslint-plugin-react-compiler'
-import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import reactPerfPlugin from 'eslint-plugin-react-perf'
-import reactPlugin from 'eslint-plugin-react'
-
 import type { ConfigOptions } from '..'
 
-export let react = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.react) {
     return {}
   }
+
+  let [reactCompilerPlugin, reactHooksPlugin, reactPerfPlugin, reactPlugin] =
+    await Promise.all([
+      interopDefault(import('eslint-plugin-react-compiler')),
+      interopDefault(import('eslint-plugin-react-hooks')),
+      interopDefault(import('eslint-plugin-react-perf')),
+      interopDefault(import('eslint-plugin-react')),
+    ] as const)
 
   let files = ['**/*.jsx']
 

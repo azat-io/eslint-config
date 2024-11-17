@@ -11,22 +11,28 @@
 
 import type { Linter } from 'eslint'
 
-import { parser as typescriptParser } from 'typescript-eslint'
-import astroParser from 'astro-eslint-parser'
-import astroPlugin from 'eslint-plugin-astro'
 import path from 'node:path'
 
 import type { ConfigOptions } from '..'
 
-export let astro = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let astro = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.astro) {
     return {}
   }
+
+  let [astroPlugin, astroParser] = await Promise.all([
+    interopDefault(import('eslint-plugin-astro')),
+    interopDefault(import('astro-eslint-parser')),
+  ] as const)
 
   let files = ['**/*.astro']
   let additionalParserOptions = {}
 
   if (config.typescript) {
+    let typescriptParser = await interopDefault(import('typescript-eslint'))
+
     additionalParserOptions = {
       ...additionalParserOptions,
       parser: typescriptParser,

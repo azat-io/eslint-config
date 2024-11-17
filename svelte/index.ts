@@ -11,21 +11,27 @@
 
 import type { Linter } from 'eslint'
 
-import { parser as typescriptParser } from 'typescript-eslint'
-import svelteParser from 'svelte-eslint-parser'
-import sveltePlugin from 'eslint-plugin-svelte'
-
 import type { ConfigOptions } from '..'
 
-export let svelte = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.svelte) {
     return {}
   }
 
   let files = ['**/*.svelte']
+
+  let [sveltePlugin, svelteParser] = await Promise.all([
+    interopDefault(import('eslint-plugin-svelte')),
+    interopDefault(import('svelte-eslint-parser')),
+  ] as const)
+
   let additionalParserOptions = {}
 
   if (config.typescript) {
+    let typescriptParser = await interopDefault(import('typescript-eslint'))
+
     additionalParserOptions = {
       ...additionalParserOptions,
       parser: typescriptParser,

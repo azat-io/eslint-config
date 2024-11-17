@@ -11,14 +11,16 @@
 
 import type { Linter } from 'eslint'
 
-import nPlugin from 'eslint-plugin-n'
-
 import type { ConfigOptions } from '..'
 
-export let node = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let node = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.node) {
     return {}
   }
+
+  let nPlugin = await interopDefault(import('eslint-plugin-n'))
 
   let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 

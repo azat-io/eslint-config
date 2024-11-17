@@ -11,14 +11,20 @@
 
 import type { Linter } from 'eslint'
 
-import perfectionistPlugin from 'eslint-plugin-perfectionist'
-
 import type { ConfigOptions } from '..'
 
-export let perfectionist = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let perfectionist = async (
+  config: ConfigOptions,
+): Promise<Linter.Config> => {
   if (!config.perfectionist) {
     return {}
   }
+
+  let perfectionistPlugin = await interopDefault(
+    import('eslint-plugin-perfectionist'),
+  )
 
   let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 

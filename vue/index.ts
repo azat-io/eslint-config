@@ -11,21 +11,26 @@
 
 import type { Linter } from 'eslint'
 
-import { parser as typescriptParser } from 'typescript-eslint'
-import vuePlugin from 'eslint-plugin-vue'
-import vueParser from 'vue-eslint-parser'
-
 import type { ConfigOptions } from '..'
 
-export let vue = (config: ConfigOptions): Linter.Config => {
+import { interopDefault } from '../utils'
+
+export let vue = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.vue) {
     return {}
   }
+
+  let [vuePlugin, vueParser] = await Promise.all([
+    interopDefault(import('eslint-plugin-vue')),
+    interopDefault(import('vue-eslint-parser')),
+  ] as const)
 
   let files = ['**/*.vue']
   let additionalParserOptions = {}
 
   if (config.typescript) {
+    let typescriptParser = await interopDefault(import('typescript-eslint'))
+
     additionalParserOptions = {
       ...additionalParserOptions,
       parser: typescriptParser,
