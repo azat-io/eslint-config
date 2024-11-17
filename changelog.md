@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.1.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.1.0...v2.1.1)
+
+### 🐞 Bug Fixes
+
+- Fix loading typescript parser ([ca0f129](https://github.com/azat-io/eslint-config/commit/ca0f129))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.1.0
 
 ### 🚀 Features
