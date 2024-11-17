@@ -31,7 +31,9 @@ export let astro = async (config: ConfigOptions): Promise<Linter.Config> => {
   let additionalParserOptions = {}
 
   if (config.typescript) {
-    let typescriptParser = await interopDefault(import('typescript-eslint'))
+    let { parser: typescriptParser } = await interopDefault(
+      import('typescript-eslint'),
+    )
 
     additionalParserOptions = {
       ...additionalParserOptions,
