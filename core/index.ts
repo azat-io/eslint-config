@@ -779,11 +779,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
       /**
-       * Reports if a default is named and exported but is not found in the
-       * referenced module.
-       */
-      'import-x/default': 'error',
-      /**
        * Forbid any invalid exports.
        */
       'import-x/export': 'error',
@@ -791,16 +786,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Require all imports appear before other statements.
        */
       'import-x/first': 'error',
-      /**
-       * Verify that all named imports are part of the set of named exports in
-       * the referenced module.
-       */
-      'import-x/named': 'error',
-      /**
-       * Enforce names exist at the time they are dereferenced, when imported as
-       * a full namespace.
-       */
-      'import-x/namespace': 'error',
       /**
        * Enforce having one or more empty lines after the last top-level import
        * statement or require call.
@@ -836,10 +821,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'import-x/no-import-module-exports': 'error',
       /**
-       * Report use of an exported name as a property on the default export.
-       */
-      'import-x/no-named-as-default-member': 'error',
-      /**
        * Forbid named default exports..
        */
       'import-x/no-named-default': 'error',
@@ -847,18 +828,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Forbid a module from importing itself.
        */
       'import-x/no-self-import': 'error',
-      /**
-       * Ensure that imported module can be resolved to a module on the local
-       * filesystem.
-       */
-      'import-x/no-unresolved': [
-        'error',
-        config.astro
-          ? {
-              ignore: ['^astro:(assets|content|transitions)'],
-            }
-          : {},
-      ],
       /**
        * Forbid unnecessary path segments in import and require statements.
        */
@@ -1912,10 +1881,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
     },
 
     settings: {
-      'import-x/resolver': {
-        node: true,
-        typescript: config.typescript,
-      },
       jsdoc: {
         mode: 'jsdoc',
       },
