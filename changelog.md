@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.1.2
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.1.1...v2.1.2)
+
+### 🐞 Bug Fixes
+
+- Fix regexp case conflict ([738982b](https://github.com/azat-io/eslint-config/commit/738982b))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.1.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.1.0...v2.1.1)
