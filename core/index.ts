@@ -1097,9 +1097,9 @@ export let core = (config: ConfigOptions): Linter.Config => {
         'error',
         {
           caseInsensitive: 'lowercase',
-          controlEscape: 'lowercase',
+          controlEscape: 'uppercase',
           hexadecimalEscape: 'lowercase',
-          unicodeEscape: 'lowercase',
+          unicodeEscape: 'uppercase',
         },
       ],
       /**
