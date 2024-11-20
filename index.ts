@@ -25,15 +25,15 @@ const CONFIG_OPTIONS = [
   'vue',
 ] as const
 
-type ConfigOptionKeys = (typeof CONFIG_OPTIONS)[number]
-
-type ConfigOptionFlags = Record<ConfigOptionKeys, boolean>
+export type ConfigOptions = Required<ConfigOptionFlags>
 
 type RawConfigOptions = {
   extends?: Linter.Config[] | Linter.Config
 } & Partial<ConfigOptionFlags>
 
-export type ConfigOptions = Required<ConfigOptionFlags>
+type ConfigOptionFlags = Record<ConfigOptionKeys, boolean>
+
+type ConfigOptionKeys = (typeof CONFIG_OPTIONS)[number]
 
 export default async ({
   extends: customExtends = {} as Linter.Config,

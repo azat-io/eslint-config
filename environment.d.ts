@@ -33,13 +33,6 @@ declare module 'eslint-plugin-package-json' {
   export = plugin
 }
 
-declare module 'eslint-plugin-perfectionist' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
 declare module 'eslint-plugin-prefer-arrow' {
   import type { ESLint } from 'eslint'
 

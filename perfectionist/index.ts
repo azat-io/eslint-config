@@ -69,6 +69,10 @@ export let perfectionist = async (
        */
       'perfectionist/sort-classes': ['error'],
       /**
+       * Enforce sorted decorators.
+       */
+      'perfectionist/sort-decorators': ['error'],
+      /**
        * Enforce sorted TypeScript enums.
        */
       'perfectionist/sort-enums': ['error'],
@@ -76,6 +80,10 @@ export let perfectionist = async (
        * Enforce sorted exports.
        */
       'perfectionist/sort-exports': ['error'],
+      /**
+       * Enforce sorted heritage clauses.
+       */
+      'perfectionist/sort-heritage-clauses': ['error'],
       /**
        * Enforce sorted imports.
        */
@@ -96,6 +104,10 @@ export let perfectionist = async (
        * Enforce sorted Map elements.
        */
       'perfectionist/sort-maps': ['error'],
+      /**
+       * Enforce sorted module members.
+       */
+      'perfectionist/sort-modules': ['error'],
       /**
        * Enforce sorted named exports.
        */
