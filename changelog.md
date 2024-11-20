@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.2.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.1.2...v2.2.0)
+
+### 🚀 Features
+
+- Update eslint-plugin-perfectionist to v4.0.3 ([09aace1](https://github.com/azat-io/eslint-config/commit/09aace1))
+- Update typescript-eslint to v8.15.0 ([c7c34f4](https://github.com/azat-io/eslint-config/commit/c7c34f4))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.1.2
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.1.1...v2.1.2)
