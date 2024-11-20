@@ -113,9 +113,7 @@ export let typescript = async (
       /**
        * Enforce dot notation whenever possible.
        */
-      '@typescript-eslint/dot-notation':
-        // https://github.com/typescript-eslint/typescript-eslint/pull/10339
-        'off',
+      '@typescript-eslint/dot-notation': 'error',
       /**
        * Require explicit return types on functions and class methods.
        */
@@ -472,6 +470,11 @@ export let typescript = async (
        * Enforce that `this` is used when only `this` type is returned.
        */
       '@typescript-eslint/prefer-return-this-type': 'error',
+      /**
+       * Enforce that `get()` types should be assignable to their equivalent
+       * `set()` type.
+       */
+      '@typescript-eslint/related-getter-setter-pairs': 'error',
       /**
        * Require `Array#sort` and `Array#toSorted` calls to always provide a
        * `compareFunction`.
