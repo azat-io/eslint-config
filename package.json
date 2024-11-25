@@ -63,7 +63,7 @@
     "eslint-plugin-perfectionist": "^4.0.3",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prefer-let": "^4.0.0",
-    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-promise": "^7.2.0",
     "eslint-plugin-qwik": "^1.10.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-compiler": "19.0.0-beta-a7bf2bd-20241110",

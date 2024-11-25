@@ -1074,6 +1074,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'promise/param-names': 'error',
       /**
+       * Prefer `catch` to `then(a, b)`/`then(null, b)` for handling errors.
+       */
+      'promise/prefer-catch': 'error',
+      /**
        * Disallow use of non-standard Promise static methods.
        */
       'promise/spec-only': 'error',
