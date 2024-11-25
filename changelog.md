@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.3.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.2.0...v2.3.0)
+
+### 🚀 Features
+
+- Add promise/prefer-catch rule ([3464afb](https://github.com/azat-io/eslint-config/commit/3464afb))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.2.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.1.2...v2.2.0)
