@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.4.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.3.0...v2.4.0)
+
+### 🚀 Features
+
+- Move from decorated sonarjs rules to original ([26896b8](https://github.com/azat-io/eslint-config/commit/26896b8))
+- Update eslint plugins ([33e0232](https://github.com/azat-io/eslint-config/commit/33e0232))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.3.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.2.0...v2.3.0)
