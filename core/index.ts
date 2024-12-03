@@ -80,6 +80,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
 
     rules: {
       /**
+       * Require property getters and setters to come in pairs.
+       */
+      'accessor-pairs': 'error',
+      /**
        * Enforce `return` statements in callbacks of array methods.
        */
       'array-callback-return': [
@@ -510,6 +514,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Disallow confusing multiline expressions.
        */
       'no-unexpected-multiline': 'error',
+      /**
+       * Disallow infinite loops.
+       */
+      'no-unmodified-loop-condition': 'error',
       /**
        * Disallow ternary operators when simpler alternatives exist.
        */
@@ -1391,10 +1399,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
       'regexp/use-ignore-case': 'error',
 
       /**
-       * Require property getters and setters to come in pairs.
-       */
-      'sonarjs/accessor-pairs': 'error',
-      /**
        * Require parameters to be passed in the correct order.
        */
       'sonarjs/arguments-order': 'error',
@@ -1446,10 +1450,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'sonarjs/no-ignored-return': 'error',
       /**
-       * Disallow infinite loops.
-       */
-      'sonarjs/no-infinite-loop': 'error',
-      /**
        * Disallow to add inverted boolean check.
        */
       'sonarjs/no-inverted-boolean-check': 'error',
@@ -1491,10 +1491,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Require to have initial value in array `reduce` method.
        */
       'sonarjs/reduce-initial-value': 'error',
-      /**
-       * Prefer to use optional chaining.
-       */
-      'sonarjs/sonar-prefer-optional-chain': 'error',
 
       /**
        * Improve regexp by making them shorter, consistent, and safer.
