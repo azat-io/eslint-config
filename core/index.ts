@@ -118,6 +118,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
         },
       ],
       /**
+       * Enforce that class methods utilize `this` or use `static` methods.
+       */
+      'class-methods-use-this': 'error',
+      /**
        * Require `return` statements to either always or never specify values.
        */
       'consistent-return': 'error',

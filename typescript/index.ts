@@ -83,6 +83,10 @@ export let typescript = async (
        */
       '@typescript-eslint/class-literal-property-style': 'error',
       /**
+       * Enforce that class methods utilize `this` or use `static` methods.
+       */
+      '@typescript-eslint/class-methods-use-this': 'error',
+      /**
        * Enforce specifying generic type arguments on constructor name of a
        * constructor call.
        */
@@ -509,6 +513,7 @@ export let typescript = async (
        * The code problems checked by this ESLint rule is automatically checked
        * by the TypeScript compiler.
        */
+      'class-methods-use-this': 'off',
       'consistent-return': 'off',
       'default-param-last': 'off',
       'dot-notation': 'off',
