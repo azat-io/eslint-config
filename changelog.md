@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.7.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.6.0...v2.7.0)
+
+### 🚀 Features
+
+- Add class-methods-use-this rule ([7fb4a35](https://github.com/azat-io/eslint-config/commit/7fb4a35))
+- Update eslint plugins ([1fcb164](https://github.com/azat-io/eslint-config/commit/1fcb164))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.6.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.5.0...v2.6.0)
