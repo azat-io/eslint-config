@@ -465,6 +465,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'no-prototype-builtins': 'error',
       /**
+       * Disallow variable redeclaration.
+       */
+      'no-redeclare': 'error',
+      /**
        * Disallow multiple spaces in regular expressions.
        */
       'no-regex-spaces': 'error',
