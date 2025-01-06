@@ -1543,6 +1543,11 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/escape-case': 'error',
       /**
+       * Enforce explicitly comparing the `length` or `size` property of a
+       * value.
+       */
+      'unicorn/explicit-length-check': 'error',
+      /**
        * Enforce kebab case style for filenames.
        */
       'unicorn/filename-case': [
