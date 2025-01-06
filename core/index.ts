@@ -150,6 +150,11 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       eqeqeq: 'error',
       /**
+       * Enforce `for` loop update clause moving the counter in the right
+       * direction.
+       */
+      'for-direction': 'error',
+      /**
        * Disallow named function expressions.
        */
       'func-names': ['error', 'never'],
