@@ -1853,6 +1853,15 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/prefer-structured-clone': 'error',
       /**
+       * Prefer `switch` over multiple `else-if`.
+       */
+      'unicorn/prefer-switch': [
+        'error',
+        {
+          minimumCases: 3,
+        },
+      ],
+      /**
        * Prefer top-level await over top-level promises and async function
        * calls.
        */
