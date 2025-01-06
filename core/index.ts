@@ -159,6 +159,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'func-names': ['error', 'never'],
       /**
+       * Enforce return statements in getters.
+       */
+      'getter-return': 'error',
+      /**
        * Enforce minimum identifier lengths.
        */
       'id-length': [
