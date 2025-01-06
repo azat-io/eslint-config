@@ -67,7 +67,7 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
     /**
      * Validate required properties in a `package.json`.
      */
-    'package-json/valid-package-def': 'error',
+    'package-json/valid-package-definition': 'error',
     /**
      * Validate the `version` property.
      */
