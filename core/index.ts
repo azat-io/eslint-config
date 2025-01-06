@@ -1543,6 +1543,18 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/escape-case': 'error',
       /**
+       * Enforce kebab case style for filenames.
+       */
+      'unicorn/filename-case': [
+        'error',
+        {
+          cases: {
+            kebabCase: true,
+            pascalCase: true,
+          },
+        },
+      ],
+      /**
        * Enforce the use of `new` for all builtins, except `String`, `Number`,
        * `Boolean`, `Symbol` and `BigInt`.
        */
