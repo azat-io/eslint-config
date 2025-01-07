@@ -1914,6 +1914,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/require-number-to-fixed-digits-argument': 'error',
       /**
+       * Fix whitespace-insensitive template indentation.
+       */
+      'unicorn/template-indent': 'error',
+      /**
        * Enforce consistent case for text encoding identifiers.
        */
       'unicorn/text-encoding-identifier-case': 'error',
