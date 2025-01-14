@@ -1,5 +1,25 @@
 # Changelog
 
+## v2.10.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.9.0...v2.10.0)
+
+### 🚀 Features
+
+- Add for-direction rule ([362beed](https://github.com/azat-io/eslint-config/commit/362beed))
+- Add getter-return rule ([898fb62](https://github.com/azat-io/eslint-config/commit/898fb62))
+- Add no-redeclare rule ([f7ff4c4](https://github.com/azat-io/eslint-config/commit/f7ff4c4))
+- Add prefer-switch rule ([331d4eb](https://github.com/azat-io/eslint-config/commit/331d4eb))
+- Add filename-case rule ([24e4fa5](https://github.com/azat-io/eslint-config/commit/24e4fa5))
+- Add explicit-length-check rule ([5ec7ae1](https://github.com/azat-io/eslint-config/commit/5ec7ae1))
+- Add template-indent rule ([c759991](https://github.com/azat-io/eslint-config/commit/c759991))
+- Update eslint plugins ([34b1003](https://github.com/azat-io/eslint-config/commit/34b1003))
+- Add no-misused-spread rule ([244bc9e](https://github.com/azat-io/eslint-config/commit/244bc9e))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.9.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.8.0...v2.9.0)
