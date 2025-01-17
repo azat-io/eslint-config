@@ -356,6 +356,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'no-import-assign': 'error',
       /**
+       * Disallow inline comments after code.
+       */
+      'no-inline-comments': 'error',
+      /**
        * Disallow invalid regular expression strings in `RegExp` constructors.
        */
       'no-invalid-regexp': 'error',
