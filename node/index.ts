@@ -61,7 +61,7 @@ export let node = async (config: ConfigOptions): Promise<Linter.Config> => {
       /**
        * Require error handling in callbacks.
        */
-      'node/handle-callback-err': ['error', '^(err|error)$'],
+      'node/handle-callback-err': ['error', 'error'],
       /**
        * Require correct usage of hashbang comments.
        */
