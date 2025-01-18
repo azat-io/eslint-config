@@ -45,6 +45,8 @@ export let astro = async (config: ConfigOptions): Promise<Linter.Config> => {
   }
 
   return {
+    name: 'azat-io/astro/rules',
+
     files,
 
     languageOptions: {

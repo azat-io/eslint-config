@@ -27,6 +27,8 @@ export let a11y = (config: ConfigOptions): Linter.Config => {
   }
 
   return {
+    name: 'azat-io/a11y/rules',
+
     files,
 
     plugins: {

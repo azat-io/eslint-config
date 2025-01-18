@@ -53,6 +53,8 @@ export let perfectionist = async (
   }
 
   return {
+    name: 'azat-io/perfectionist/rules',
+
     files,
 
     plugins: {

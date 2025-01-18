@@ -88,8 +88,16 @@ export default async ({
         '**/.tmp/**',
         '**/tmp/**',
       ],
+      name: 'azat-io/core/ignores',
     },
     ...configs,
-    ...(Array.isArray(customExtends) ? customExtends : [customExtends]),
+    ...(Array.isArray(customExtends)
+      ? customExtends
+      : [
+          {
+            name: 'azat-io/custom-extends',
+            ...customExtends,
+          },
+        ]),
   ]
 }

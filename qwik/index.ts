@@ -29,6 +29,8 @@ export let qwik = async (config: ConfigOptions): Promise<Linter.Config> => {
   }
 
   return {
+    name: 'azat-io/qwik/rules',
+
     files,
 
     plugins: {

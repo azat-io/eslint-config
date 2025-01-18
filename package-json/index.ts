@@ -17,6 +17,8 @@ import jsoncParser from 'jsonc-eslint-parser'
 import type { ConfigOptions } from '..'
 
 export let packageJson = (_config: ConfigOptions): Linter.Config => ({
+  name: 'azat-io/package-json/rules',
+
   files: ['**/package.json'],
 
   plugins: {

@@ -49,6 +49,8 @@ export let node = async (config: ConfigOptions): Promise<Linter.Config> => {
   }
 
   return {
+    name: 'azat-io/node/rules',
+
     files,
 
     plugins: {

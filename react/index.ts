@@ -35,6 +35,8 @@ export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
   }
 
   return {
+    name: 'azat-io/react/rules',
+
     files,
 
     plugins: {

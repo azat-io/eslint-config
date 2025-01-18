@@ -43,6 +43,8 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
   }
 
   return {
+    name: 'azat-io/svelte/rules',
+
     files,
 
     languageOptions: {

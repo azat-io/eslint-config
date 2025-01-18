@@ -42,6 +42,8 @@ export let vue = async (config: ConfigOptions): Promise<Linter.Config> => {
   }
 
   return {
+    name: 'azat-io/vue/rules',
+
     files,
 
     languageOptions: {
