@@ -270,11 +270,6 @@ export let typescript = async (
         },
       ],
       /**
-       * Disallow using the spread operator when it might cause unexpected
-       * behavior.
-       */
-      '@typescript-eslint/no-misused-spread': 'error',
-      /**
        * Disallow enums from having both number and string members.
        */
       '@typescript-eslint/no-mixed-enums': 'error',
