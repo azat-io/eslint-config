@@ -31,6 +31,11 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
 
   rules: {
     /**
+     * Checks that the `files` property of a `package.json` doesn't contain any
+     * redundant or unnecessary file entries.
+     */
+    'package-json/no-redundant-files': 'error',
+    /**
      * Enforce the package.json ordering convention.
      */
     'package-json/order-properties': [
