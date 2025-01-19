@@ -445,6 +445,10 @@ export let typescript = async (
        */
       'typescript/prefer-function-type': 'error',
       /**
+       * Require all enum members to be literal values.
+       */
+      'typescript/prefer-literal-enum-member': 'error',
+      /**
        * Enforce using the nullish coalescing operator instead of logical
        * assignments or chaining.
        */
