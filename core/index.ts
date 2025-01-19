@@ -596,6 +596,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
         },
       ],
       /**
+       * Disallow unused labels.
+       */
+      'no-unused-labels': 'error',
+      /**
        * Disallow unused private class members.
        */
       'no-unused-private-class-members': 'error',
