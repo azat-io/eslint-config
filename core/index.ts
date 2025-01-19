@@ -69,7 +69,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
     },
 
     plugins: {
-      '@eslint-community/eslint-comments': eslintCommentsPlugin,
+      'eslint-comments': eslintCommentsPlugin,
       'import-x': importXPlugin,
       jsdoc: jsdocPlugin,
       'prefer-arrow': preferArrowPlugin,
@@ -782,27 +782,27 @@ export let core = (config: ConfigOptions): Linter.Config => {
       /**
        * Require a `eslint-enable` comment for every `eslint-disable` comment.
        */
-      '@eslint-community/eslint-comments/disable-enable-pair': 'error',
+      'eslint-comments/disable-enable-pair': 'error',
       /**
        * Disallow a `eslint-enable` comment for multiple `eslint-disable` comments.
        */
-      '@eslint-community/eslint-comments/no-aggregating-enable': 'error',
+      'eslint-comments/no-aggregating-enable': 'error',
       /**
        * Disallow duplicate `eslint-disable` comments.
        */
-      '@eslint-community/eslint-comments/no-duplicate-disable': 'error',
+      'eslint-comments/no-duplicate-disable': 'error',
       /**
        * Disallow `eslint-disable` comments without rule names.
        */
-      '@eslint-community/eslint-comments/no-unlimited-disable': 'error',
+      'eslint-comments/no-unlimited-disable': 'error',
       /**
        * Disallow unused `eslint-disable` comments.
        */
-      '@eslint-community/eslint-comments/no-unused-disable': 'error',
+      'eslint-comments/no-unused-disable': 'error',
       /**
        * Disallow unused `eslint-enable` comments.
        */
-      '@eslint-community/eslint-comments/no-unused-enable': 'error',
+      'eslint-comments/no-unused-enable': 'error',
 
       /**
        * Require that type-only named specifiers be written only as part of
