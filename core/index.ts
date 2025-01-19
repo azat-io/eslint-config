@@ -401,6 +401,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
         },
       ],
       /**
+       * Disallow unnecessary nested blocks.
+       */
+      'no-lone-blocks': 'error',
+      /**
        * Disallow function declarations that contain unsafe references inside
        * loop statements.
        */
