@@ -200,6 +200,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
         },
       ],
       /**
+       * Disallow the use of `alert`, `confirm`, and `prompt`.
+       */
+      'no-alert': 'error',
+      /**
        * Disallow `Array` constructors.
        */
       'no-array-constructor': 'error',
