@@ -529,6 +529,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'no-this-before-super': 'error',
       /**
+       * Disallow throwing literals as exceptions.
+       */
+      'no-throw-literal': 'error',
+      /**
        * Disallow the use of undeclared variables unless mentioned in
        * `\/*global *\/` comments.
        */
