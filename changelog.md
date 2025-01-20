@@ -1,5 +1,30 @@
 # Changelog
 
+## v2.11.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.10.0...v2.11.0)
+
+### 🚀 Features
+
+- Add no-inline-comments rule ([d225b01](https://github.com/azat-io/eslint-config/commit/d225b01))
+- Remove conflicting no-misused-spread rule ([f463d30](https://github.com/azat-io/eslint-config/commit/f463d30))
+- Update eslint plugins ([b69512e](https://github.com/azat-io/eslint-config/commit/b69512e))
+- **package-json:** Add no-redundant-files rule ([7a8731c](https://github.com/azat-io/eslint-config/commit/7a8731c))
+- **core:** Add no-alert rule ([4f244e3](https://github.com/azat-io/eslint-config/commit/4f244e3))
+- **core:** Add no-lone-blocks rule ([636d621](https://github.com/azat-io/eslint-config/commit/636d621))
+- **core:** Add no-throw-literal rule ([8083bbd](https://github.com/azat-io/eslint-config/commit/8083bbd))
+- **core:** Add no-unused-labels rule ([502a5db](https://github.com/azat-io/eslint-config/commit/502a5db))
+- **typescript:** Add prefer-literal-enum-member rule ([87837d9](https://github.com/azat-io/eslint-config/commit/87837d9))
+- Update eslint plugins ([305c32b](https://github.com/azat-io/eslint-config/commit/305c32b))
+
+### 🐞 Bug Fixes
+
+- Update error param name in handle-callback-err rule ([4774820](https://github.com/azat-io/eslint-config/commit/4774820))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.10.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.9.0...v2.10.0)
