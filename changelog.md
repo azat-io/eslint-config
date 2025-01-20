@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.11.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.11.0...v2.11.1)
+
+### 🐞 Bug Fixes
+
+- Remove conflicting no-inline-comments rule ([e477647](https://github.com/azat-io/eslint-config/commit/e477647))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.11.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.10.0...v2.11.0)
