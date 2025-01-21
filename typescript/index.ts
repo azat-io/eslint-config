@@ -449,6 +449,11 @@ export let typescript = async (
        */
       'typescript/prefer-literal-enum-member': 'error',
       /**
+       * Require using `namespace` keyword over `module` keyword to declare
+       * custom TypeScript modules.
+       */
+      'typescript/prefer-namespace-keyword': 'error',
+      /**
        * Enforce using the nullish coalescing operator instead of logical
        * assignments or chaining.
        */
