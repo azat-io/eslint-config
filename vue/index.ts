@@ -125,10 +125,6 @@ export let vue = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'vue/html-end-tags': 'error',
       /**
-       * Enforce self-closing style.
-       */
-      'vue/html-self-closing': 'error',
-      /**
        * Prevent variables used in JSX to be marked as unused.
        */
       'vue/jsx-uses-vars': 'error',
