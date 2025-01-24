@@ -89,10 +89,6 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'svelte/derived-has-same-inputs-outputs': 'error',
       /**
-       * Enforce self-closing style.
-       */
-      'svelte/html-self-closing': 'error',
-      /**
        * Prevent calling the same reactive statement twice in a microtask.
        */
       'svelte/infinite-reactive-loop': 'error',
