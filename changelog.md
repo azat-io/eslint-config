@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.12.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.11.1...v2.12.0)
+
+### 🚀 Features
+
+- **typescript:** Add prefer-namespace-keyword rule ([5b784dc](https://github.com/azat-io/eslint-config/commit/5b784dc))
+- **svelte:** Remove html-self-closing rule ([80d1479](https://github.com/azat-io/eslint-config/commit/80d1479))
+- **vue:** Remove html-self-closing rule ([f70558e](https://github.com/azat-io/eslint-config/commit/f70558e))
+- Update eslint plugins ([60063f4](https://github.com/azat-io/eslint-config/commit/60063f4))
+- **package-json:** Add no-empty-fields rule ([276e440](https://github.com/azat-io/eslint-config/commit/276e440))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.11.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.11.0...v2.11.1)
