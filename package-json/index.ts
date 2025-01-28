@@ -31,6 +31,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
 
   rules: {
     /**
+     * Verify that the values in `package.json` are not empty.
+     */
+    'package-json/no-empty-fields': 'error',
+    /**
      * Checks that the `files` property of a `package.json` doesn't contain any
      * redundant or unnecessary file entries.
      */
