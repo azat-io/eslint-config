@@ -59,6 +59,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
       },
     ],
     /**
+     * Enforce the presence of an `author` property in a `package.json` file.
+     */
+    'package-json/require-author': 'error',
+    /**
      * Enforce a consistent order of dependencies in package.json.
      */
     'package-json/sort-collections': 'error',
