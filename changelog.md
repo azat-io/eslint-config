@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.13.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.12.0...v2.13.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([44741b8](https://github.com/azat-io/eslint-config/commit/44741b8))
+- **package-json:** Add require-author rule ([5bdbc8c](https://github.com/azat-io/eslint-config/commit/5bdbc8c))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.12.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.11.1...v2.12.0)
