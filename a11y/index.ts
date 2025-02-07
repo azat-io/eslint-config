@@ -16,7 +16,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import type { ConfigOptions } from '..'
 
 export let a11y = (config: ConfigOptions): Linter.Config => {
-  if (!(config.react || config.qwik)) {
+  if (!config.react && !config.qwik) {
     return {}
   }
 
