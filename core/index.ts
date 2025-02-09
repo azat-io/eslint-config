@@ -14,6 +14,7 @@ import type { Linter } from 'eslint'
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
 import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
 import preferLetPlugin from 'eslint-plugin-prefer-let'
+import deMorganPlugin from 'eslint-plugin-de-morgan'
 import importXPlugin from 'eslint-plugin-import-x'
 import promisePlugin from 'eslint-plugin-promise'
 import sonarjsPlugin from 'eslint-plugin-sonarjs'
@@ -69,6 +70,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
     },
 
     plugins: {
+      'de-morgan': deMorganPlugin,
       'eslint-comments': eslintCommentsPlugin,
       'import-x': importXPlugin,
       jsdoc: jsdocPlugin,
@@ -790,6 +792,17 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Disallow "Yoda" conditions.
        */
       yoda: ['error', 'never'],
+
+      /**
+       * Transforms the negation of a conjunction into the equivalent
+       * disjunction of negations according to De Morgan’s first law.
+       */
+      'de-morgan/no-negated-conjunction': 'error',
+      /**
+       * Transforms the negation of a disjunction into the equivalent
+       * conjunction of negations according to De Morgan’s second law.
+       */
+      'de-morgan/no-negated-disjunction': 'error',
 
       /**
        * Require a `eslint-enable` comment for every `eslint-disable` comment.
