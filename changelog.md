@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.14.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.13.0...v2.14.0)
+
+### 🚀 Features
+
+- **core:** Add de-morgan plugin ([b81f016](https://github.com/azat-io/eslint-config/commit/b81f016))
+- Update eslint plugins ([13dd777](https://github.com/azat-io/eslint-config/commit/13dd777))
+- **package-json:** Add require-keywords rule ([3aa843b](https://github.com/azat-io/eslint-config/commit/3aa843b))
+- **package-json:** Add require-name rule ([b398519](https://github.com/azat-io/eslint-config/commit/b398519))
+- **package-json:** Add require-version rule ([881ef1a](https://github.com/azat-io/eslint-config/commit/881ef1a))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.13.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.12.0...v2.13.0)
