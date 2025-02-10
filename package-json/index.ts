@@ -71,6 +71,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/require-name': 'error',
     /**
+     * Enforce the presence of an `version` property in a `package.json` file.
+     */
+    'package-json/require-version': 'error',
+    /**
      * Enforce a consistent order of dependencies in package.json.
      */
     'package-json/sort-collections': 'error',
