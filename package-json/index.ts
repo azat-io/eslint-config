@@ -67,6 +67,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/require-keywords': 'error',
     /**
+     * Enforce the presence of an `name` property in a `package.json` file.
+     */
+    'package-json/require-name': 'error',
+    /**
      * Enforce a consistent order of dependencies in package.json.
      */
     'package-json/sort-collections': 'error',
