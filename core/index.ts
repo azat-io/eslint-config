@@ -1549,6 +1549,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/catch-error-name': 'error',
       /**
+       * Prefer passing `Date` directly to the constructor when cloning.
+       */
+      'unicorn/consistent-date-clone': 'error',
+      /**
        * Use destructured variables over properties.
        */
       'unicorn/consistent-destructuring': 'error',
