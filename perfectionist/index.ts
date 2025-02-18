@@ -13,7 +13,7 @@ import type { Linter } from 'eslint'
 
 import type { ConfigOptions } from '..'
 
-import { interopDefault } from '../utils'
+import { interopDefault } from '../utilities'
 
 export let perfectionist = async (
   config: ConfigOptions,

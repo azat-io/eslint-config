@@ -1622,7 +1622,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
       /**
        * Require `Array.isArray()` instead of `instanceof Array`.
        */
-      'unicorn/no-instanceof-array': 'error',
+      'unicorn/no-instanceof-builtins': 'error',
       /**
        * Disallow invalid options in `fetch()` and `new Request()`.
        */
