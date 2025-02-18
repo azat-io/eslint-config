@@ -1642,6 +1642,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/no-length-as-slice-end': 'error',
       /**
+       * Disallow named usage of default import and export.
+       */
+      'unicorn/no-named-default': 'error',
+      /**
        * Disallow negated conditions.
        */
       'unicorn/no-negated-condition': 'error',
