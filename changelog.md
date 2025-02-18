@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.15.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.14.0...v2.15.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([721ba3c](https://github.com/azat-io/eslint-config/commit/721ba3c))
+- **core:** Add consistent-date-clone rule ([23b3e7f](https://github.com/azat-io/eslint-config/commit/23b3e7f))
+- **core:** Add no-named-default rule ([8ff6ff7](https://github.com/azat-io/eslint-config/commit/8ff6ff7))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.14.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.13.0...v2.14.0)
