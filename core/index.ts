@@ -903,10 +903,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'jsdoc/check-alignment': 'error',
       /**
-       * Report invalid alignment of JSDoc block lines.
-       */
-      'jsdoc/check-line-alignment': 'error',
-      /**
        * Ensure that parameter names in JSDoc are matched by corresponding items
        * in the function declaration.
        */
@@ -1056,11 +1052,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Ensure that if a `@yields` is present that a `yield`.
        */
       'jsdoc/require-yields-check': 'error',
-      /**
-       * Sort tags by a specified sequence according to tag name, optionally
-       * adding line breaks between tag groups.
-       */
-      'jsdoc/sort-tags': 'error',
       /**
        * Requires all types/namepaths to be valid JSDoc, Closure compiler, or
        * TypeScript types.
