@@ -903,10 +903,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'jsdoc/check-alignment': 'error',
       /**
-       * Report invalid padding inside JSDoc blocks.
-       */
-      'jsdoc/check-indentation': 'error',
-      /**
        * Report invalid alignment of JSDoc block lines.
        */
       'jsdoc/check-line-alignment': 'error',
@@ -1065,10 +1061,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * adding line breaks between tag groups.
        */
       'jsdoc/sort-tags': 'error',
-      /**
-       * Enforce lines between tags.
-       */
-      'jsdoc/tag-lines': 'error',
       /**
        * Requires all types/namepaths to be valid JSDoc, Closure compiler, or
        * TypeScript types.
