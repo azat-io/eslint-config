@@ -121,10 +121,6 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'svelte/no-dupe-use-directives': 'error',
       /**
-       * Disallow dynamic slot name.
-       */
-      'svelte/no-dynamic-slot-name': 'error',
-      /**
        * Disallow wrapping single reactive statements in curly braces.
        */
       'svelte/no-extra-reactive-curlies': 'error',
