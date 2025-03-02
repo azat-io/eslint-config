@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.17.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.16.0...v2.17.0)
+
+### 🚀 Features
+
+- Remove prettier related jsdoc rules ([7bfc89e](https://github.com/azat-io/eslint-config/commit/7bfc89e))
+- **svelte:** Remove deprecated no-dynamic-slot-name rule ([89eec4b](https://github.com/azat-io/eslint-config/commit/89eec4b))
+- Update eslint plugins ([2fb039a](https://github.com/azat-io/eslint-config/commit/2fb039a))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.16.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.15.0...v2.16.0)
