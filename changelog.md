@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.18.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.17.0...v2.18.0)
+
+### 🚀 Features
+
+- Remove prettier related jsdoc rules ([c6cdb60](https://github.com/azat-io/eslint-config/commit/c6cdb60))
+- Use gitignore config ([e37b69d](https://github.com/azat-io/eslint-config/commit/e37b69d))
+- Switch to esm only ([3c1f100](https://github.com/azat-io/eslint-config/commit/3c1f100))
+- Update eslint plugins ([6afaaa5](https://github.com/azat-io/eslint-config/commit/6afaaa5))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.17.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.16.0...v2.17.0)
