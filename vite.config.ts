@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import path from 'node:path'
 
-let removeCommentsPlugin = (): Plugin => ({
+let removeComments = (): Plugin => ({
   generateBundle: (_options, bundle): void => {
     let chunks = Object.values(bundle).filter(chunk => chunk.type === 'chunk')
     for (let chunk of chunks) {
@@ -19,11 +19,10 @@ let removeCommentsPlugin = (): Plugin => ({
 export default defineConfig({
   build: {
     lib: {
-      fileName: (format, entryName) =>
-        `${entryName}${format === 'cjs' ? '.cjs' : '.mjs'}`,
       entry: path.resolve(import.meta.dirname, 'index.ts'),
+      fileName: (_format, entryName) => `${entryName}.js`,
       name: '@azat-io/eslint-config',
-      formats: ['cjs', 'es'],
+      formats: ['es'],
     },
     rollupOptions: {
       output: {
@@ -41,6 +40,6 @@ export default defineConfig({
         path.join(import.meta.dirname, 'index.ts'),
       ],
     }),
-    removeCommentsPlugin(),
+    removeComments(),
   ],
 })
