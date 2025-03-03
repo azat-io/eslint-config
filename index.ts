@@ -1,5 +1,7 @@
 import type { Linter } from 'eslint'
 
+import gitignore from 'eslint-config-flat-gitignore'
+
 import { perfectionist } from './perfectionist'
 import { packageJson } from './package-json'
 import { typescript } from './typescript'
@@ -64,32 +66,7 @@ export default async ({
   )
 
   return [
-    {
-      ignores: [
-        '**/.eslint-config-inspector/**',
-        '**/vite.config.*.timestamp-*',
-        '**/.vitepress/cache/**',
-        '**/node_modules/**',
-        '**/.svelte-kit/**',
-        '**/coverage/**',
-        '**/.history/**',
-        '**/.netlify/**',
-        '**/.vercel/**',
-        '**/.output/**',
-        '**/.astro/**',
-        '**/output/**',
-        '**/.cache/**',
-        '**/.temp/**',
-        '**/build/**',
-        '**/.nuxt/**',
-        '**/.next/**',
-        '**/dist/**',
-        '**/temp/**',
-        '**/.tmp/**',
-        '**/tmp/**',
-      ],
-      name: 'azat-io/core/ignores',
-    },
+    gitignore(),
     ...configs,
     ...(Array.isArray(customExtends)
       ? customExtends
