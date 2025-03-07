@@ -673,7 +673,12 @@ export let core = (config: ConfigOptions): Linter.Config => {
       /**
        * Disallow `void` operators.
        */
-      'no-void': 'error',
+      'no-void': [
+        'error',
+        {
+          allowAsStatement: true,
+        },
+      ],
       /**
        * Disallow `with` statements.
        */
