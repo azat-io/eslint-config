@@ -1,6 +1,7 @@
 import type { Linter } from 'eslint'
 
 import gitignore from 'eslint-config-flat-gitignore'
+import { defineConfig } from 'eslint/config'
 
 import { perfectionist } from './perfectionist'
 import { packageJson } from './package-json'
@@ -65,7 +66,7 @@ export default async ({
     configFunctions.map(createConfigFunction => createConfigFunction(config)),
   )
 
-  return [
+  return defineConfig([
     gitignore(),
     ...configs,
     ...(Array.isArray(customExtends)
@@ -76,5 +77,5 @@ export default async ({
             ...customExtends,
           },
         ]),
-  ]
+  ])
 }
