@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.19.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.18.0...v2.19.0)
+
+### 🚀 Features
+
+- Allow to use void operator as statement ([461465d](https://github.com/azat-io/eslint-config/commit/461465d))
+- Use define config eslint helper ([e4676d8](https://github.com/azat-io/eslint-config/commit/e4676d8))
+- Update eslint plugins ([64ddf0b](https://github.com/azat-io/eslint-config/commit/64ddf0b))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.18.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.17.0...v2.18.0)
