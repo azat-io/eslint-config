@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.20.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.19.0...v2.20.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([0dfa576](https://github.com/azat-io/eslint-config/commit/0dfa576))
+- **package-json:** Add require-engines rule ([c4cb1e5](https://github.com/azat-io/eslint-config/commit/c4cb1e5))
+- **core:** Add prefer-string-raw rule ([fb49cc3](https://github.com/azat-io/eslint-config/commit/fb49cc3))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.19.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.18.0...v2.19.0)
