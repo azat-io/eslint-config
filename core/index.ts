@@ -1876,6 +1876,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/prefer-spread': 'error',
       /**
+       * Prefer using the `String.raw` tag to avoid escaping `\`.
+       */
+      'unicorn/prefer-string-raw': 'error',
+      /**
        * Prefer `String#replaceAll()` over regex searches with the global flag.
        */
       'unicorn/prefer-string-replace-all': 'error',
