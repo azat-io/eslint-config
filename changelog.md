@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.23.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.22.0...v2.23.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([ce7fddc](https://github.com/azat-io/eslint-config/commit/ce7fddc))
+- Allow to use undefined in unit tests ([a0cdaf4](https://github.com/azat-io/eslint-config/commit/a0cdaf4))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.22.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.21.0...v2.22.0)
