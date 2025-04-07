@@ -200,6 +200,11 @@ export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
        * Require promises that have expectations in their chain to be valid.
        */
       'vitest/valid-expect-in-promise': 'error',
+
+      /**
+       * Allow to use undefined in unit tests.
+       */
+      'no-undefined': 'error',
     },
 
     settings: {
