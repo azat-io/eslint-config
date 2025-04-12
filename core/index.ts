@@ -1933,6 +1933,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
             rel: (['astro', 'react', 'svelte', 'vue'] as const).some(
               configName => config[configName],
             ),
+            var: true,
           },
         },
       ],
