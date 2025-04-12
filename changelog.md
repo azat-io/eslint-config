@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.24.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.23.0...v2.24.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([11d7b42](https://github.com/azat-io/eslint-config/commit/11d7b42))
+
+### 🐞 Bug Fixes
+
+- **core:** Allow var word usage ([440656d](https://github.com/azat-io/eslint-config/commit/440656d))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.23.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.22.0...v2.23.0)
