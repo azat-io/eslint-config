@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.24.2
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.24.1...v2.24.2)
+
+### 🐞 Bug Fixes
+
+- Remove no-undefined rule for tests ([18fc1d9](https://github.com/azat-io/eslint-config/commit/18fc1d9))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.24.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.24.0...v2.24.1)
