@@ -540,10 +540,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'no-undef-init': 'error',
       /**
-       * Disallow the use of `undefined` as an identifier.
-       */
-      'no-undefined': 'error',
-      /**
        * Disallow confusing multiline expressions.
        */
       'no-unexpected-multiline': 'error',
