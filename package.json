@@ -1,6 +1,6 @@
 {
   "name": "@azat-io/eslint-config",
-  "version": "2.24.0",
+  "version": "2.24.1",
   "description": "ESLint shareable config",
   "keywords": [
     "eslint",

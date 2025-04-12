@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.24.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.24.0...v2.24.1)
+
+### 🐞 Bug Fixes
+
+- Allow capitalized var word usage ([dca1efe](https://github.com/azat-io/eslint-config/commit/dca1efe))
+- Remove no-undefined rule ([0a7183b](https://github.com/azat-io/eslint-config/commit/0a7183b))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.24.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.23.0...v2.24.0)
