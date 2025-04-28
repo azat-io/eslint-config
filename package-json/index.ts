@@ -63,6 +63,11 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/require-author': 'error',
     /**
+     * Enforce the presence of a `description` property in a `package.json`
+     * file.
+     */
+    'package-json/require-description': 'error',
+    /**
      * Enforce the presence of an `engines` property in a `package.json` file.
      */
     'package-json/require-engines': 'error',
