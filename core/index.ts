@@ -1671,6 +1671,11 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/no-unnecessary-array-flat-depth': 'error',
       /**
+       * Disallow using `.length` or `Infinity` as the deleteCount or skipCount
+       * argument of `Array#{splice,toSpliced}()`.
+       */
+      'unicorn/no-unnecessary-array-splice-count': 'error',
+      /**
        * Disallow awaiting non-promise values.
        */
       'unicorn/no-unnecessary-await': 'error',
