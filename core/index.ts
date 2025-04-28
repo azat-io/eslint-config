@@ -1801,6 +1801,11 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/prefer-global-this': 'error',
       /**
+       * Prefer `import.meta.{dirname,filename}` over legacy techniques for
+       * getting file paths.
+       */
+      'unicorn/prefer-import-meta-properties': 'error',
+      /**
        * Prefer `.includes()` over `.indexOf()` and `Array#some()` when checking
        * for existence or non-existence.
        */
