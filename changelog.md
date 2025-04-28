@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.27.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.26.0...v2.27.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([220dd3a](https://github.com/azat-io/eslint-config/commit/220dd3a))
+- **package-json:** Add require-description rule ([4df8fbe](https://github.com/azat-io/eslint-config/commit/4df8fbe))
+- **core:** Add prefer-import-meta-properties rule ([69950c7](https://github.com/azat-io/eslint-config/commit/69950c7))
+- **core:** Add no-unnecessary-array-flat-depth rule ([9cdd126](https://github.com/azat-io/eslint-config/commit/9cdd126))
+- **core:** Add no-unnecessary-array-splice-count rule ([216aded](https://github.com/azat-io/eslint-config/commit/216aded))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.26.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.25.0...v2.26.0)
