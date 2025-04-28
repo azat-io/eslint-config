@@ -1667,6 +1667,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/no-typeof-undefined': 'error',
       /**
+       * Disallow using `1` as the depth argument of `Array#flat()`.
+       */
+      'unicorn/no-unnecessary-array-flat-depth': 'error',
+      /**
        * Disallow awaiting non-promise values.
        */
       'unicorn/no-unnecessary-await': 'error',
