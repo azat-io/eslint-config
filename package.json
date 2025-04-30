@@ -45,6 +45,7 @@
     "test": "pnpm run /^test:/",
     "test:format": "prettier --check \"**/*.{js,ts,json,md,yml}\"",
     "test:js": "eslint .",
+    "test:packages": "pnpm dedupe --check",
     "test:spelling": "cspell \"**/*\"",
     "test:types": "tsc --noEmit --pretty"
   },
