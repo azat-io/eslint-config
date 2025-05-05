@@ -331,6 +331,11 @@ export let typescript = async (
        */
       'typescript/no-unnecessary-type-constraint': 'error',
       /**
+       * Disallow conversion idioms when they do not change the type or value of
+       * the expression.
+       */
+      'typescript/no-unnecessary-type-conversion': 'error',
+      /**
        * Disallow type parameters that aren't used multiple times.
        */
       'typescript/no-unnecessary-type-parameters': 'error',
