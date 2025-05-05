@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.28.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.27.0...v2.28.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([495e28f](https://github.com/azat-io/eslint-config/commit/495e28f))
+- **vue:** Add define-props-destructuring rule ([7921c60](https://github.com/azat-io/eslint-config/commit/7921c60))
+- **typescript:** Add no-unnecessary-type-conversion rule ([de2803b](https://github.com/azat-io/eslint-config/commit/de2803b))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.27.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.26.0...v2.27.0)
