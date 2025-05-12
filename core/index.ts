@@ -243,7 +243,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
       'no-console': [
         'error',
         {
-          allow: ['error', 'warn', 'info'],
+          allow: ['error', 'warn', 'info', 'table'],
         },
       ],
       /**
