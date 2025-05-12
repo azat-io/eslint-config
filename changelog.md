@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.29.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.28.0...v2.29.0)
+
+### 🚀 Features
+
+- Allow to use console table ([8de53e5](https://github.com/azat-io/eslint-config/commit/8de53e5))
+- Update eslint plugins ([9f3995f](https://github.com/azat-io/eslint-config/commit/9f3995f))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.28.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.27.0...v2.28.0)
