@@ -1592,10 +1592,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'unicorn/no-array-method-this-argument': 'error',
       /**
-       * Enforce combining multiple `Array#push()` into one call.
-       */
-      'unicorn/no-array-push-push': 'error',
-      /**
        * Disallow using `await` in Promise method parameters.
        */
       'unicorn/no-await-in-promise-methods': 'error',
@@ -1620,11 +1616,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * an expression.
        */
       'unicorn/no-invalid-remove-event-listener': 'error',
-      /**
-       * Disallow using `.length` as the end argument of
-       * `{Array,String,TypedArray}#slice()`.
-       */
-      'unicorn/no-length-as-slice-end': 'error',
       /**
        * Disallow named usage of default import and export.
        */
@@ -1679,6 +1670,11 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Disallow awaiting non-promise values.
        */
       'unicorn/no-unnecessary-await': 'error',
+      /**
+       * Disallow using `.length` or `Infinity` as the end argument of
+       * `{Array,String,TypedArray}#slice()`.
+       */
+      'unicorn/no-unnecessary-slice-end': 'error',
       /**
        * Disallow unreadable array destructuring.
        */
@@ -1880,6 +1876,12 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Prefer using `Set#size` instead of `Array#length`.
        */
       'unicorn/prefer-set-size': 'error',
+      /**
+       * Enforce combining multiple `Array#push()`,
+       * `Element#classList.{add,remove}()`, and `importScripts()` into one
+       * call.
+       */
+      'unicorn/prefer-single-call': 'error',
       /**
        * Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`,
        * `Array#{slice,toSpliced}()` and `String#split('')`.
