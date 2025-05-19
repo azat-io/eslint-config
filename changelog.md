@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.30.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.29.0...v2.30.0)
+
+### 🚀 Features
+
+- Replace deprecated unicorn rules ([0a93bb2](https://github.com/azat-io/eslint-config/commit/0a93bb2))
+- Update eslint plugins ([8a7099d](https://github.com/azat-io/eslint-config/commit/8a7099d))
+- **svelte:** Add no-add-event-listener rule ([30d700d](https://github.com/azat-io/eslint-config/commit/30d700d))
+- **svelte:** Add require-event-prefix rule ([07dda1e](https://github.com/azat-io/eslint-config/commit/07dda1e))
+- **svelte:** Add prefer-writable-derived rule ([7cf525d](https://github.com/azat-io/eslint-config/commit/7cf525d))
+- **svelte:** Add no-top-level-browser-globals rule ([039dd28](https://github.com/azat-io/eslint-config/commit/039dd28))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.29.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.28.0...v2.29.0)
