@@ -93,6 +93,10 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'svelte/infinite-reactive-loop': 'error',
       /**
+       * Warns against the use of `addEventListener`.
+       */
+      'svelte/no-add-event-listener': 'error',
+      /**
        * Disallow the use of `{@debug}`.
        */
       'svelte/no-at-debug-tags': 'error',
