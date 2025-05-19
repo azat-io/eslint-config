@@ -197,6 +197,10 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'svelte/require-each-key': 'error',
       /**
+       * Require component event names to start with “on”.
+       */
+      'svelte/require-event-prefix': 'error',
+      /**
        * Disallow to use of the store itself as an operand. Need to use $ prefix
        * or get function.
        */
