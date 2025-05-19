@@ -193,6 +193,10 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'svelte/prefer-style-directive': 'error',
       /**
+       * Prefer using writable `$derived` instead of `$state` and `$effect`.
+       */
+      'svelte/prefer-writable-derived': 'error',
+      /**
        * Require keyed `{#each}` blocks.
        */
       'svelte/require-each-key': 'error',
