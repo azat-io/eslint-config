@@ -168,6 +168,10 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'svelte/no-target-blank': 'error',
       /**
+       * Disallow using top-level browser global variables.
+       */
+      'svelte/no-top-level-browser-globals': 'error',
+      /**
        * Disallow unknown `style:property`.
        */
       'svelte/no-unknown-style-directive-property': 'error',
