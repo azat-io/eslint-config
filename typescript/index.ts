@@ -510,6 +510,10 @@ export let typescript = async (
        */
       'typescript/restrict-template-expressions': 'error',
       /**
+       * Require switch-case statements to be exhaustive.
+       */
+      'typescript/switch-exhaustiveness-check': 'error',
+      /**
        * Disallow certain triple slash directives in favor of ES6-style import
        * declarations.
        */
