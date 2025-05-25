@@ -68,6 +68,15 @@ export default async ({
 
   return defineConfig([
     gitignore(),
+    {
+      ignores: [
+        /**
+         * Ignores files for benchmarks by ESLint Rule Benchmark:
+         * https://github.com/azat-io/eslint-rule-benchmark
+         */
+        'benchmark/**/*',
+      ],
+    },
     ...configs,
     ...(Array.isArray(customExtends)
       ? customExtends
