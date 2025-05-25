@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.31.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.30.0...v2.31.0)
+
+### 🚀 Features
+
+- **typescript:** Add switch-exhaustiveness-check rule ([cfe718e](https://github.com/azat-io/eslint-config/commit/cfe718e))
+
+### 🐞 Bug Fixes
+
+- Ignore eslint rule benchmark test files ([c5c9a13](https://github.com/azat-io/eslint-config/commit/c5c9a13))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.30.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.29.0...v2.30.0)
