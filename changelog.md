@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.32.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.31.0...v2.32.0)
+
+### 🚀 Features
+
+- **core:** Remove switch-exhaustiveness-check rule ([e83e760](https://github.com/azat-io/eslint-config/commit/e83e760))
+- Update eslint plugins ([102a087](https://github.com/azat-io/eslint-config/commit/102a087))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.31.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.30.0...v2.31.0)
