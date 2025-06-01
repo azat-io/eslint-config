@@ -76,6 +76,7 @@ export default async ({
          */
         'benchmark/**/*',
       ],
+      name: 'azat-io/benchmark/ignores',
     },
     ...configs,
     ...(Array.isArray(customExtends)
