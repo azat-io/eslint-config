@@ -91,7 +91,7 @@
     "changelogithub": "^13.14.0",
     "clean-publish": "^5.2.0",
     "cspell": "^9.0.2",
-    "eslint": "^9.27.0",
+    "eslint": "^9.28.0",
     "prettier": "^3.5.3",
     "simple-git-hooks": "^2.13.0",
     "svelte": "^5.33.2",
@@ -100,7 +100,7 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
-    "eslint": ">=9.22.0"
+    "eslint": ">=9.28.0"
   },
   "engines": {
     "node": ">=18.0.0"

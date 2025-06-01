@@ -531,6 +531,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'no-throw-literal': 'error',
       /**
+       * Disallow let or var variables that are read but never assigned.
+       */
+      'no-unassigned-vars': 'error',
+      /**
        * Disallow the use of undeclared variables unless mentioned in
        * `\/*global *\/` comments.
        */
