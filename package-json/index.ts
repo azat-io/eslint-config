@@ -80,6 +80,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/require-name': 'error',
     /**
+     * Enforce the presence of a `type` property in a `package.json` file.
+     */
+    'package-json/require-type': 'error',
+    /**
      * Enforce the presence of an `version` property in a `package.json` file.
      */
     'package-json/require-version': 'error',
