@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.33.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.32.0...v2.33.0)
+
+### 🚀 Features
+
+- Support node v24 ([562be3a](https://github.com/azat-io/eslint-config/commit/562be3a))
+- **core:** Add no-unassigned-vars rule ([6847924](https://github.com/azat-io/eslint-config/commit/6847924))
+- Update eslint plugins ([d401460](https://github.com/azat-io/eslint-config/commit/d401460))
+- **package-json:** Add require-type rule ([1212c15](https://github.com/azat-io/eslint-config/commit/1212c15))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.32.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.31.0...v2.32.0)
