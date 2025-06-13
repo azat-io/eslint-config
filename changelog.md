@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.34.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.33.0...v2.34.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([4133e9e](https://github.com/azat-io/eslint-config/commit/4133e9e))
+- **vitest:** Add prefer-importing-vitest-globals rule ([5ef0c5b](https://github.com/azat-io/eslint-config/commit/5ef0c5b))
+- **package-json:** Add valid-bin rule ([945a221](https://github.com/azat-io/eslint-config/commit/945a221))
+- **package-json:** Add valid-author rule ([e8912c4](https://github.com/azat-io/eslint-config/commit/e8912c4))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.33.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.32.0...v2.33.0)
