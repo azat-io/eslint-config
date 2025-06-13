@@ -145,6 +145,10 @@ export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'vitest/prefer-hooks-on-top': 'error',
       /**
+       * Prefer importing Vitest globals.
+       */
+      'vitest/prefer-importing-vitest-globals': 'error',
+      /**
        * Enforce lowercase titles.
        */
       'vitest/prefer-lowercase-title': 'error',
