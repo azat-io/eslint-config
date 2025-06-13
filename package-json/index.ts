@@ -96,6 +96,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/unique-dependencies': 'error',
     /**
+     * Validate the `bin` property.
+     */
+    'package-json/valid-bin': 'error',
+    /**
      * Validate the path for `file:` and `link:` dependencies in a
      * `package.json`.
      */
