@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.35.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.34.0...v2.35.0)
+
+### 🚀 Features
+
+- **package-json:** Remove deprecated valid-local-dependency rule ([90ea236](https://github.com/azat-io/eslint-config/commit/90ea236))
+- Update eslint plugins ([936849f](https://github.com/azat-io/eslint-config/commit/936849f))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.34.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.33.0...v2.34.0)
