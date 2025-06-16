@@ -104,11 +104,6 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/valid-bin': 'error',
     /**
-     * Validate the path for `file:` and `link:` dependencies in a
-     * `package.json`.
-     */
-    'package-json/valid-local-dependency': 'error',
-    /**
      * Validate the `name` property.
      */
     'package-json/valid-name': 'error',
