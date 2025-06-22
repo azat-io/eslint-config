@@ -67,7 +67,9 @@ export default async ({
   )
 
   return defineConfig([
-    gitignore(),
+    gitignore({
+      strict: false,
+    }),
     {
       ignores: [
         /**
