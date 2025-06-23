@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.36.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.35.0...v2.36.0)
+
+### 🚀 Features
+
+- Add ability to use eslint config with no gitignore ([50bf8fe](https://github.com/azat-io/eslint-config/commit/50bf8fe))
+- Update eslint plugins ([8b10221](https://github.com/azat-io/eslint-config/commit/8b10221))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.35.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.34.0...v2.35.0)
