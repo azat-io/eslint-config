@@ -35,12 +35,7 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
     /**
      * Bans a list of dependencies from being used.
      */
-    'depend/ban-dependencies': [
-      'error',
-      {
-        allowed: ['eslint-plugin-react'],
-      },
-    ],
+    'depend/ban-dependencies': 'error',
 
     /**
      * Verify that the values in `package.json` are not empty.

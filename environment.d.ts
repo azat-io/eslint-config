@@ -54,14 +54,14 @@ declare module 'eslint-plugin-promise' {
   export = plugin
 }
 
-declare module 'eslint-plugin-react' {
+declare module 'eslint-plugin-react-compiler' {
   import type { ESLint } from 'eslint'
 
   let plugin: ESLint.Plugin
   export = plugin
 }
 
-declare module 'eslint-plugin-react-compiler' {
+declare module 'eslint-plugin-react-dom' {
   import type { ESLint } from 'eslint'
 
   let plugin: ESLint.Plugin
@@ -75,7 +75,35 @@ declare module 'eslint-plugin-react-hooks' {
   export = plugin
 }
 
+declare module 'eslint-plugin-react-hooks-extra' {
+  import type { ESLint } from 'eslint'
+
+  let plugin: ESLint.Plugin
+  export = plugin
+}
+
+declare module 'eslint-plugin-react-naming-convention' {
+  import type { ESLint } from 'eslint'
+
+  let plugin: ESLint.Plugin
+  export = plugin
+}
+
 declare module 'eslint-plugin-react-perf' {
+  import type { ESLint } from 'eslint'
+
+  let plugin: ESLint.Plugin
+  export = plugin
+}
+
+declare module 'eslint-plugin-react-web-api' {
+  import type { ESLint } from 'eslint'
+
+  let plugin: ESLint.Plugin
+  export = plugin
+}
+
+declare module 'eslint-plugin-react-x' {
   import type { ESLint } from 'eslint'
 
   let plugin: ESLint.Plugin

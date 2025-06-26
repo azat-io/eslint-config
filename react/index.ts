@@ -20,13 +20,25 @@ export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
     return {}
   }
 
-  let [reactCompilerPlugin, reactHooksPlugin, reactPerfPlugin, reactPlugin] =
-    await Promise.all([
-      interopDefault(import('eslint-plugin-react-compiler')),
-      interopDefault(import('eslint-plugin-react-hooks')),
-      interopDefault(import('eslint-plugin-react-perf')),
-      interopDefault(import('eslint-plugin-react')),
-    ] as const)
+  let [
+    reactCompilerPlugin,
+    reactDomPlugin,
+    reactHooksPlugin,
+    reactHooksExtraPlugin,
+    reactNamingConventionPlugin,
+    reactPerfPlugin,
+    reactWebApiPlugin,
+    reactXPlugin,
+  ] = await Promise.all([
+    interopDefault(import('eslint-plugin-react-compiler')),
+    interopDefault(import('eslint-plugin-react-dom')),
+    interopDefault(import('eslint-plugin-react-hooks')),
+    interopDefault(import('eslint-plugin-react-hooks-extra')),
+    interopDefault(import('eslint-plugin-react-naming-convention')),
+    interopDefault(import('eslint-plugin-react-perf')),
+    interopDefault(import('eslint-plugin-react-web-api')),
+    interopDefault(import('eslint-plugin-react-x')),
+  ] as const)
 
   let files = ['**/*.jsx']
 
@@ -40,226 +52,92 @@ export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
     files,
 
     plugins: {
-      react: reactPlugin,
       'react-compiler': reactCompilerPlugin,
+      'react-dom': reactDomPlugin,
       'react-hooks': reactHooksPlugin,
+      'react-hooks-extra': reactHooksExtraPlugin,
+      'react-naming-convention': reactNamingConventionPlugin,
       'react-perf': reactPerfPlugin,
+      'react-web-api': reactWebApiPlugin,
+      'react-x': reactXPlugin,
     },
 
     rules: {
       /**
-       * Disallow usage of `button` elements without an explicit `type` attribute.
-       */
-      'react/button-has-type': 'error',
-      /**
-       * Enforce using `onChange` or `readonly` attribute when `checked` is used.
-       */
-      'react/checked-requires-onchange-or-readonly': 'error',
-      /**
-       * Disallow certain propTypes.
-       */
-      'react/forbid-prop-types': 'error',
-      /**
-       * Require all forwardRef components include a ref parameter.
-       */
-      'react/forward-ref-uses-ref': 'error',
-      /**
-       * Require function components to be arrow function.
-       */
-      'react/function-component-definition': [
-        'error',
-        {
-          namedComponents: 'arrow-function',
-        },
-      ],
-      /**
-       * Ensure symmetric naming of useState hook value and setter variables.
-       */
-      'react/hook-use-state': [
-        'error',
-        {
-          allowDestructuredState: true,
-        },
-      ],
-      /**
-       * Enforce boolean attributes notation in JSX.
-       */
-      'react/jsx-boolean-value': 'error',
-      /**
-       * Disallow unnecessary JSX expressions when literals alone are
-       * sufficient.
-       */
-      'react/jsx-curly-brace-presence': [
-        'error',
-        {
-          children: 'never',
-          propElementValues: 'always',
-          props: 'never',
-        },
-      ],
-      /**
-       * Require to use shorthand for React fragments.
-       */
-      'react/jsx-fragments': 'error',
-      /**
-       * Disallow missing `key` props in iterators/collection literals.
-       */
-      'react/jsx-key': 'error',
-      /**
-       * Disallow comments from being inserted as text nodes.
-       */
-      'react/jsx-no-comment-textnodes': 'error',
-      /**
-       * Disallows JSX context provider values from taking values that will
-       * cause needless rerenders.
-       */
-      'react/jsx-no-constructed-context-values': 'error',
-      /**
-       * Disallow duplicate properties in JSX.
-       */
-      'react/jsx-no-duplicate-props': 'error',
-      /**
-       * Disallow problematic leaked values from being rendered.
-       */
-      'react/jsx-no-leaked-render': 'error',
-      /**
-       * Disallow `target="_blank"` attribute without `rel="noreferrer"`.
-       */
-      'react/jsx-no-target-blank': 'error',
-      /**
-       * Disallow undeclared variables in JSX.
-       */
-      'react/jsx-no-undef': 'error',
-      /**
-       * Disallow unnecessary fragments.
-       */
-      'react/jsx-no-useless-fragment': 'error',
-      /**
-       * Enforce PascalCase for user-defined JSX components.
-       */
-      'react/jsx-pascal-case': 'error',
-      /**
-       * Disallow variables used in JSX to be incorrectly marked as unused.
-       */
-      'react/jsx-uses-vars': 'error',
-      /**
-       * Disallow usage of Array index in keys.
-       */
-      'react/no-array-index-key': 'error',
-      /**
-       * Lifecycle methods should be methods on the prototype, not class fields.
-       */
-      'react/no-arrow-function-lifecycle': 'error',
-      /**
-       * Disallow passing of children as props.
-       */
-      'react/no-children-prop': 'error',
-      /**
-       * Disallow when a DOM element is using both children and
-       * `dangerouslySetInnerHTML`.
-       */
-      'react/no-danger-with-children': 'error',
-      /**
-       * Disallow usage of deprecated methods.
-       */
-      'react/no-deprecated': 'error',
-      /**
-       * Disallow usage of `setState` in `componentDidMount`.
-       */
-      'react/no-did-mount-set-state': 'error',
-      /**
-       * Disallow usage of `setState` in `componentDidUpdate`.
-       */
-      'react/no-did-update-set-state': 'error',
-      /**
-       * Disallow direct mutation of `this.state`.
-       */
-      'react/no-direct-mutation-state': 'error',
-      /**
-       * Disallow usage of `findDOMNode`.
-       */
-      'react/no-find-dom-node': 'error',
-      /**
-       * Disallow usage of invalid attributes.
-       */
-      'react/no-invalid-html-attribute': 'error',
-      /**
-       * Disallow usage of `isMounted`.
-       */
-      'react/no-is-mounted': 'error',
-      /**
-       * Enforce that namespaces are not used in React elements.
-       */
-      'react/no-namespace': 'error',
-      /**
-       * Disallow usage of `shouldComponentUpdate` when extending
-       * `React.PureComponent`.
-       */
-      'react/no-redundant-should-component-update': 'error',
-      /**
-       * Disallow usage of the return value of `ReactDOM.render`.
-       */
-      'react/no-render-return-value': 'error',
-      /**
-       * Disallow using string references.
-       */
-      'react/no-string-refs': 'error',
-      /**
-       * Disallow `this` from being used in stateless functional components.
-       */
-      'react/no-this-in-sfc': 'error',
-      /**
-       * Disallow common typos.
-       */
-      'react/no-typos': 'error',
-      /**
-       * Disallow unescaped HTML entities from appearing in markup.
-       */
-      'react/no-unescaped-entities': 'error',
-      /**
-       * Disallow usage of unknown DOM property.
-       */
-      'react/no-unknown-property': 'error',
-      /**
-       * Disallow declaring unused methods of component class.
-       */
-      'react/no-unused-class-component-methods': 'error',
-      /**
-       * Disallow definitions of unused state.
-       */
-      'react/no-unused-state': 'error',
-      /**
-       * Disallow usage of `setState` in `componentWillUpdate`.
-       */
-      'react/no-will-update-set-state': 'error',
-      /**
-       * Enforce ES5 or ES6 class for returning value in render function.
-       */
-      'react/require-render-return': 'error',
-      /**
-       * Disallow extra closing tags for components without children.
-       */
-      'react/self-closing-comp': [
-        'error',
-        {
-          component: true,
-          html: true,
-        },
-      ],
-      /**
-       * Enforce style prop value is an object.
-       */
-      'react/style-prop-object': 'error',
-      /**
-       * Disallow void DOM elements (e.g. `<img />`, `<br />`) from receiving
-       * children.
-       */
-      'react/void-dom-elements-no-children': 'error',
-
-      /**
        * Find problematic React code by the React compiler.
        */
       'react-compiler/react-compiler': 'error',
+
+      /**
+       * Disallow `children` in void DOM elements.
+       */
+      'react-dom/no-children-in-void-dom-elements': 'error',
+      /**
+       * Disallow `dangerouslySetInnerHTML`.
+       */
+      'react-dom/no-dangerously-set-innerhtml': 'error',
+      /**
+       * Disallow `dangerouslySetInnerHTML` and children at the same time.
+       */
+      'react-dom/no-dangerously-set-innerhtml-with-children': 'error',
+      /**
+       * Disallow `findDOMNode`.
+       */
+      'react-dom/no-find-dom-node': 'error',
+      /**
+       * Disallow `flushSync`.
+       */
+      'react-dom/no-flush-sync': 'error',
+      /**
+       * Replaces usages of `ReactDom.hydrate()` with `hydrateRoot()`.
+       */
+      'react-dom/no-hydrate': 'error',
+      /**
+       * Enforces explicit `type` attribute for `button` elements.
+       */
+      'react-dom/no-missing-button-type': 'error',
+      /**
+       * Enforces explicit `sandbox` attribute for `iframe` elements.
+       */
+      'react-dom/no-missing-iframe-sandbox': 'error',
+      /**
+       * Enforces the absence of a `namespace` in React elements.
+       */
+      'react-dom/no-namespace': 'error',
+      /**
+       * 	Replaces usages of `ReactDom.render()` with
+       * `createRoot(node).render()`.
+       */
+      'react-dom/no-render': 'error',
+      /**
+       * Disallow the return value of `ReactDOM.render`.
+       */
+      'react-dom/no-render-return-value': 'error',
+      /**
+       * Disallow `javascript:` URLs as attribute values.
+       */
+      'react-dom/no-script-url': 'error',
+      /**
+       * Disallow usage of unknown `DOM` property.
+       */
+      'react-dom/no-unknown-property': 'error',
+      /**
+       * Enforces `sandbox` attribute for `iframe` elements is not set to unsafe
+       * combinations.
+       */
+      'react-dom/no-unsafe-iframe-sandbox': 'error',
+      /**
+       * Disallow `target="_blank"` without `rel="noreferrer noopener"`.
+       */
+      'react-dom/no-unsafe-target-blank': 'error',
+      /**
+       * Replaces usages of `useFormState` with `useActionState`.
+       */
+      'react-dom/no-use-form-state': 'error',
+      /**
+       * Disallow `children` in void DOM elements.
+       */
+      'react-dom/no-void-elements-with-children': 'error',
 
       /**
        * Check effect dependencies.
@@ -269,11 +147,59 @@ export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
        * Check rules of Hooks.
        */
       'react-hooks/rules-of-hooks': 'error',
+
+      /**
+       * Disallow direct calls to the `set` function of `useState` in
+       * `useEffect`.
+       */
+      'react-hooks-extra/no-direct-set-state-in-use-effect': 'error',
+      /**
+       * Disallow direct calls to the `set` function of `useState` in
+       * `useLayoutEffect`.
+       */
+      'react-hooks-extra/no-direct-set-state-in-use-layout-effect': 'error',
+      /**
+       * Disallow unnecessary usage of `useCallback`.
+       */
+      'react-hooks-extra/no-unnecessary-use-callback': 'error',
+      /**
+       * Disallow unnecessary usage of `useMemo`.
+       */
+      'react-hooks-extra/no-unnecessary-use-memo': 'error',
+      /**
+       * Enforces that a function with the `use` prefix should use at least one
+       * hook inside of it.
+       */
+      'react-hooks-extra/no-unnecessary-use-prefix': 'error',
+      /**
+       * Enforces function calls made inside `useState` to be wrapped in an
+       * initializer function.
+       */
+      'react-hooks-extra/prefer-use-state-lazy-initialization': 'error',
+
+      /**
+       * Enforces naming conventions for components.
+       */
+      'react-naming-convention/component-name': 'error',
+      /**
+       * Enforces context name to be a valid component name with the suffix
+       * `Context`.
+       */
+      'react-naming-convention/context-name': 'error',
+      /**
+       * Enforces consistent use of the JSX file extension.
+       */
+      'react-naming-convention/filename-extension': 'error',
+      /**
+       * Enforces destructuring and symmetric naming of `useState` hook value
+       * and setter.
+       */
+      'react-naming-convention/use-state': 'error',
+
       /**
        * Prevent JSX that are local to the current method from being used as
        * values of JSX props.
        */
-
       'react-perf/jsx-no-jsx-as-prop': 'error',
       /**
        * Prevent Arrays that are local to the current method from being used as
@@ -290,6 +216,177 @@ export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
        * values of JSX props.
        */
       'react-perf/jsx-no-new-object-as-prop': 'error',
+
+      /**
+       * Prevents leaked `AbsoluteOrientationSensor`.
+       */
+      'react-web-api/no-leaked-absolute-orientation-sensor': 'error',
+      /**
+       * Prevents leaked `AmbientLightSensor`.
+       */
+      'react-web-api/no-leaked-ambient-light-sensor': 'error',
+      /**
+       * Prevents leaked `requestAnimationFrame`.
+       */
+      'react-web-api/no-leaked-animation-frame': 'error',
+      /**
+       * Prevents leaked `BroadcastChannel`.
+       */
+      'react-web-api/no-leaked-broadcast-channel': 'error',
+      /**
+       * Prevents leaked `addEventListener`.
+       */
+      'react-web-api/no-leaked-event-listener': 'error',
+      /**
+       * Prevents leaked `EventSource`.
+       */
+      'react-web-api/no-leaked-event-source': 'error',
+      /**
+       * Prevents leaked `Geolocation.watchPosition()`.
+       */
+      'react-web-api/no-leaked-geolocation': 'error',
+      /**
+       * Prevents leaked `GravitySensor`.
+       */
+      'react-web-api/no-leaked-gravity-sensor': 'error',
+      /**
+       * Prevents leaked `Gyroscope`.
+       */
+      'react-web-api/no-leaked-gyroscope': 'error',
+      /**
+       * Prevents leaked `requestIdleCallback`.
+       */
+      'react-web-api/no-leaked-idle-callback': 'error',
+      /**
+       * Prevents leaked `IntersectionObserver`.
+       */
+      'react-web-api/no-leaked-intersection-observer': 'error',
+      /**
+       * Prevents leaked `setInterval`.
+       */
+      'react-web-api/no-leaked-interval': 'error',
+      /**
+       * Prevents leaked `LinearAccelerationSensor`.
+       */
+      'react-web-api/no-leaked-linear-acceleration-sensor': 'error',
+      /**
+       * Prevents leaked `Magnetometer`.
+       */
+      'react-web-api/no-leaked-magnetometer': 'error',
+      /**
+       * Prevents leaked `MutationObserver`.
+       */
+      'react-web-api/no-leaked-mutation-observer': 'error',
+      /**
+       * Prevents leaked `OrientationSensor`.
+       */
+      'react-web-api/no-leaked-orientation-sensor': 'error',
+      /**
+       * Prevents leaked `PerformanceObserver`.
+       */
+      'react-web-api/no-leaked-performance-observer': 'error',
+      /**
+       * Prevents leaked `Accelerometer`.
+       */
+      'react-web-api/no-leaked-relative-accelerometer': 'error',
+      /**
+       * Prevents leaked `ResizeObserver`.
+       */
+      'react-web-api/no-leaked-resize-observer': 'error',
+      /**
+       * Prevents leaked `setTimeout`.
+       */
+      'react-web-api/no-leaked-timeout': 'error',
+      /**
+       * Prevents leaked `WebSocket`.
+       */
+      'react-web-api/no-leaked-websocket': 'error',
+
+      /**
+       * Enforces that the `key` attribute is placed before the spread attribute
+       * in JSX elements.
+       */
+      'react-x/jsx-key-before-spread': 'error',
+      /**
+       * Disallow duplicate props in JSX.
+       */
+      'react-x/jsx-no-duplicate-props': 'error',
+      /**
+       * Disallow IIFE in JSX.
+       */
+      'react-x/jsx-no-iife': 'error',
+      /**
+       * Disallow undefined variables in JSX.
+       */
+      'react-x/jsx-no-undef': 'error',
+      /**
+       * Marks React variables as used when JSX is used.
+       */
+      'react-x/jsx-uses-react': 'error',
+      /**
+       * Marks variables used in JSX elements as used.
+       */
+      'react-x/jsx-uses-vars': 'error',
+      /**
+       * Disallow access to state in setState updater.
+       */
+      'react-x/no-access-state-in-setstate': 'error',
+      /**
+       * Disallow array index as key in JSX.
+       */
+      'react-x/no-array-index-key': 'error',
+      /**
+       * Disallow class components except for Error Boundaries.
+       */
+      'react-x/no-class-component': 'error',
+      /**
+       * Disallow complex conditional rendering in JSX expressions.
+       */
+      'react-x/no-complex-conditional-rendering': 'error',
+      /**
+       * Disallow usage of componentWillMount.
+       */
+      'react-x/no-component-will-mount': 'error',
+      /**
+       * Disallow usage of componentWillReceiveProps.
+       */
+      'react-x/no-component-will-receive-props': 'error',
+      /**
+       * Disallow usage of componentWillUpdate.
+       */
+      'react-x/no-component-will-update': 'error',
+      /**
+       * Disallow duplicate key in JSX.
+       */
+      'react-x/no-duplicate-key': 'error',
+      /**
+       * Disallow nested component definitions.
+       */
+      'react-x/no-nested-component-definitions': 'error',
+      /**
+       * Warns usage of UNSAFE_componentWillUpdate in class components.
+       */
+      'react-x/no-unsafe-component-will-update': 'error',
+      /**
+       * Disallow use of unstable context API.
+       */
+      'react-x/no-unstable-context-value': 'error',
+      /**
+       * Warns unused class component state.
+       */
+      'react-x/no-unused-state': 'error',
+      /**
+       * Disallow usage of useContext; enforce use (React 19).
+       */
+      'react-x/no-use-context': 'error',
+      /**
+       * Disallow useless fragments.
+       */
+      'react-x/no-useless-fragment': 'error',
+      /**
+       * Enforces React is imported via a namespace import.
+       */
+      'react-x/prefer-react-namespace-import': 'error',
     },
 
     settings: {
