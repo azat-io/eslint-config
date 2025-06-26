@@ -126,6 +126,7 @@ This config uses the following plugins:
 - [@vitest/eslint-plugin](https://github.com/vitest-dev/eslint-plugin-vitest)
 - [eslint-plugin-astro](https://github.com/ota-meshi/eslint-plugin-astro)
 - [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan)
+- [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
 - [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)
 - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)

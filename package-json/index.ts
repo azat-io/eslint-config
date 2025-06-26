@@ -13,6 +13,7 @@ import type { Linter } from 'eslint'
 
 import packageJsonPlugin from 'eslint-plugin-package-json'
 import jsoncParser from 'jsonc-eslint-parser'
+import depend from 'eslint-plugin-depend'
 
 import type { ConfigOptions } from '..'
 
@@ -22,6 +23,7 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
   files: ['**/package.json'],
 
   plugins: {
+    depend,
     'package-json': packageJsonPlugin,
   },
 
@@ -30,6 +32,16 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
   },
 
   rules: {
+    /**
+     * Bans a list of dependencies from being used.
+     */
+    'depend/ban-dependencies': [
+      'error',
+      {
+        allowed: ['eslint-plugin-react'],
+      },
+    ],
+
     /**
      * Verify that the values in `package.json` are not empty.
      */
