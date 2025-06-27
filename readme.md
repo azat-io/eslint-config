@@ -8,7 +8,7 @@
   width="160"
 />
 
-[![Version](https://img.shields.io/npm/v/@azat-io/eslint-config.svg?color=4a32c3&labelColor=26272b)](https://npmjs.com/package/@azat-io/eslint-configt)
+[![Version](https://img.shields.io/npm/v/@azat-io/eslint-config.svg?color=4a32c3&labelColor=26272b)](https://npmjs.com/package/@azat-io/eslint-config)
 [![GitHub License](https://img.shields.io/badge/license-MIT-232428.svg?color=4a32c3&labelColor=26272b)](https://github.com/azat-io/eslint-config/blob/main/license.md)
 
 A comprehensive and flexible ESLint configuration that supports a wide range of frameworks and environments. Easily integrate clean, consistent code standards across projects by enabling settings for specific tools and libraries.
