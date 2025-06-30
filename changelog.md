@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.37.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.36.0...v2.37.0)
+
+### 🚀 Features
+
+- **package-json:** Add eslint-plugin-depend plugin ([86bc7cd](https://github.com/azat-io/eslint-config/commit/86bc7cd))
+- **react:** Replace eslint-plugin-react with modern alternatives ([99785eb](https://github.com/azat-io/eslint-config/commit/99785eb))
+- Update eslint plugins ([afc5f45](https://github.com/azat-io/eslint-config/commit/afc5f45))
+- **vitest:** Add prefer-called-once rule ([93ff092](https://github.com/azat-io/eslint-config/commit/93ff092))
+- **vitest:** Add warn-todo rule ([c35dbff](https://github.com/azat-io/eslint-config/commit/c35dbff))
+- **vitest:** Add prefer-expect-assertions rule ([92c1c43](https://github.com/azat-io/eslint-config/commit/92c1c43))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.36.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.35.0...v2.36.0)
