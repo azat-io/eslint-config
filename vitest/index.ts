@@ -117,6 +117,10 @@ export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'vitest/no-test-return-statement': 'error',
       /**
+       * Enforce using `toBeCalledOnce()` or `toHaveBeenCalledOnce()`.
+       */
+      'vitest/prefer-called-once': 'error',
+      /**
        * Enforce using `toBeCalledWith()` or `toHaveBeenCalledWith()`.
        */
       'vitest/prefer-called-with': 'error',
