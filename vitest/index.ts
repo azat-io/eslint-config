@@ -208,6 +208,10 @@ export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
        * Require promises that have expectations in their chain to be valid.
        */
       'vitest/valid-expect-in-promise': 'error',
+      /**
+       * Disallow `.todo` usage.
+       */
+      'vitest/warn-todo': 'error',
     },
 
     settings: {
