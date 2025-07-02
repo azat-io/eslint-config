@@ -152,6 +152,10 @@ This config uses the following plugins:
 - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 
+## See also
+
+- [`@azat-io/stylelint-config`](https://github.com/azat-io/stylelint-config)
+
 ## License
 
 MIT &copy; [Azat S.](https://azat.io)
