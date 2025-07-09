@@ -88,6 +88,7 @@
     "vue-eslint-parser": "^10.1.4"
   },
   "devDependencies": {
+    "@azat-io/typescript-config": "^1.0.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/config-inspector": "^1.1.0",

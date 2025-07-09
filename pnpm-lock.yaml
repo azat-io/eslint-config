@@ -117,6 +117,9 @@ importers:
         specifier: ^10.1.4
         version: 10.1.4(eslint@9.30.0(jiti@2.4.2))
     devDependencies:
+      '@azat-io/typescript-config':
+        specifier: ^1.0.0
+        version: 1.0.0(typescript@5.8.3)
       '@commitlint/cli':
         specifier: ^19.8.1
         version: 19.8.1(@types/node@24.0.7)(typescript@5.8.3)
@@ -174,6 +177,12 @@ packages:
 
   '@astrojs/compiler@2.12.2':
     resolution: {integrity: sha512-w2zfvhjNCkNMmMMOn5b0J8+OmUaBL1o40ipMvqcG6NRpdC+lKxmTi48DT8Xw0SzJ3AfmeFLB45zXZXtmbsjcgw==}
+
+  '@azat-io/typescript-config@1.0.0':
+    resolution: {integrity: sha512-kreUDQS/49MaN7h4Kuba9hs8ze4yNu2rmA16X26q2eqFR9EF4lAn7oYtUsX0vb2Jy6ATJmWTZDdxVKDhfQjSfA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      typescript: ^5.8.0
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -3961,6 +3970,10 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.28
 
   '@astrojs/compiler@2.12.2': {}
+
+  '@azat-io/typescript-config@1.0.0(typescript@5.8.3)':
+    dependencies:
+      typescript: 5.8.3
 
   '@babel/code-frame@7.27.1':
     dependencies:
