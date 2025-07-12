@@ -137,10 +137,6 @@ export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'vitest/prefer-equality-matcher': 'error',
       /**
-       * Enforce using expect assertions instead of callbacks.
-       */
-      'vitest/prefer-expect-assertions': 'error',
-      /**
        * Enforce using `expect().resolves` over `expect(await ...)` syntax.
        */
       'vitest/prefer-expect-resolves': 'error',
