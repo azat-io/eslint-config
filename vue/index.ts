@@ -109,7 +109,12 @@ export let vue = async (config: ConfigOptions): Promise<Linter.Config> => {
       /**
        * Enforce consistent style for props destructuring.
        */
-      'vue/define-props-destructuring': ['error', 'always'],
+      'vue/define-props-destructuring': [
+        'error',
+        {
+          destructure: 'always',
+        },
+      ],
       /**
        * Enforce or forbid the use of the `scoped` attribute in SFC top level
        * style tags.
