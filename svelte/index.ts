@@ -197,6 +197,11 @@ export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
        */
       'svelte/prefer-style-directive': 'error',
       /**
+       * Disallow using mutable instances of built-in classes where a reactive
+       * alternative is provided by svelte/reactivity.
+       */
+      'svelte/prefer-svelte-reactivity': 'error',
+      /**
        * Prefer using writable `$derived` instead of `$state` and `$effect`.
        */
       'svelte/prefer-writable-derived': 'error',
