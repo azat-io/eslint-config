@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.38.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.37.0...v2.38.0)
+
+### 🚀 Features
+
+- **vitest:** Remove prefer-expect-assertions rule ([bed54a5](https://github.com/azat-io/eslint-config/commit/bed54a5))
+- Update eslint plugins ([bf9f014](https://github.com/azat-io/eslint-config/commit/bf9f014))
+- **package-json:** Add valid-scripts rule ([1de5233](https://github.com/azat-io/eslint-config/commit/1de5233))
+- **svelte:** Add prefer-svelte-reactivity rule ([e3f8409](https://github.com/azat-io/eslint-config/commit/e3f8409))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.37.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.36.0...v2.37.0)
