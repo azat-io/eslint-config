@@ -119,6 +119,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/valid-package-definition': 'error',
     /**
+     * Validate the `scripts` property.
+     */
+    'package-json/valid-scripts': 'error',
+    /**
      * Validate the `version` property.
      */
     'package-json/valid-version': 'error',
