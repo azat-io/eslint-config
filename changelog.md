@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.39.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.38.0...v2.39.0)
+
+### 🚀 Features
+
+- Remove prefer-arrow plugin ([ed72372](https://github.com/azat-io/eslint-config/commit/ed72372))
+- Update eslint plugins ([6d0918b](https://github.com/azat-io/eslint-config/commit/6d0918b))
+- **package-json:** Add valid-license rule ([b5893ba](https://github.com/azat-io/eslint-config/commit/b5893ba))
+- Move to declaration func style ([a11a0df](https://github.com/azat-io/eslint-config/commit/a11a0df))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.38.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.37.0...v2.38.0)
