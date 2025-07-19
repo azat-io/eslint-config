@@ -133,7 +133,6 @@ This config uses the following plugins:
 - [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n)
 - [eslint-plugin-package-json](https://github.com/JoshuaKGoldberg/eslint-plugin-package-json)
 - [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist)
-- [eslint-plugin-prefer-arrow](https://github.com/TristonJ/eslint-plugin-prefer-arrow)
 - [eslint-plugin-prefer-let](https://github.com/thefrontside/javascript/tree/v3/packages/eslint-plugin-prefer-let)
 - [eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise)
 - [eslint-plugin-qwik](https://github.com/QwikDev/qwik/tree/main/packages/eslint-plugin-qwik)

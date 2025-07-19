@@ -50,9 +50,6 @@ importers:
       eslint-plugin-perfectionist:
         specifier: ^4.15.0
         version: 4.15.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
-      eslint-plugin-prefer-arrow:
-        specifier: ^1.2.3
-        version: 1.2.3(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-prefer-let:
         specifier: ^4.0.0
         version: 4.0.0
@@ -2116,11 +2113,6 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       eslint: '>=8.45.0'
-
-  eslint-plugin-prefer-arrow@1.2.3:
-    resolution: {integrity: sha512-J9I5PKCOJretVuiZRGvPQxCbllxGAV/viI20JO3LYblAodofBxyMnZAJ+WGeClHgANnSJberTNoFWWjrWKBuXQ==}
-    peerDependencies:
-      eslint: '>=2.0.0'
 
   eslint-plugin-prefer-let@4.0.0:
     resolution: {integrity: sha512-X4ep5PMO1320HKaNC9DM5+p6XvOhwv+RcqGjhv3aiw9iAtHhiFtdIUB5l0Zya0iM22ys2BGKzrNI9Xpw/ZHooQ==}
@@ -6270,10 +6262,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  eslint-plugin-prefer-arrow@1.2.3(eslint@9.31.0(jiti@2.4.2)):
-    dependencies:
-      eslint: 9.31.0(jiti@2.4.2)
 
   eslint-plugin-prefer-let@4.0.0:
     dependencies:

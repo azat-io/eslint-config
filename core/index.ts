@@ -12,7 +12,6 @@
 import type { Linter, ESLint } from 'eslint'
 
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
-import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
 import preferLetPlugin from 'eslint-plugin-prefer-let'
 import deMorganPlugin from 'eslint-plugin-de-morgan'
 import importXPlugin from 'eslint-plugin-import-x'
@@ -74,7 +73,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
       'eslint-comments': eslintCommentsPlugin,
       'import-x': importXPlugin,
       jsdoc: jsdocPlugin,
-      'prefer-arrow': preferArrowPlugin,
       'prefer-let': preferLetPlugin,
       promise: promisePlugin,
       regexp: regexpPlugin,
@@ -1062,18 +1060,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * TypeScript types.
        */
       'jsdoc/valid-types': 'error',
-
-      /**
-       * Require to use arrow functions.
-       */
-      'prefer-arrow/prefer-arrow-functions': [
-        'error',
-        {
-          classPropertiesAllowed: false,
-          disallowPrototype: true,
-          singleReturnOnly: false,
-        },
-      ],
 
       /**
        * Encourage semantic of usage of `let` and `const`.
