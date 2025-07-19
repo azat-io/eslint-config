@@ -15,7 +15,7 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let vue = async (config: ConfigOptions): Promise<Linter.Config> => {
+export async function vue(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.vue) {
     return {}
   }

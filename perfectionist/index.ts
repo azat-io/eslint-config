@@ -15,9 +15,9 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let perfectionist = async (
+export async function perfectionist(
   config: ConfigOptions,
-): Promise<Linter.Config> => {
+): Promise<Linter.Config> {
   if (!config.perfectionist) {
     return {}
   }

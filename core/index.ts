@@ -24,7 +24,7 @@ import globals from 'globals'
 
 import type { ConfigOptions } from '..'
 
-export let core = (config: ConfigOptions): Linter.Config => {
+export function core(config: ConfigOptions): Linter.Config {
   let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 
   if (config.typescript) {
@@ -160,6 +160,16 @@ export let core = (config: ConfigOptions): Linter.Config => {
        * Disallow named function expressions.
        */
       'func-names': ['error', 'never'],
+      /**
+       * Enforce the consistent use of function declarations to variables.
+       */
+      'func-style': [
+        'error',
+        'declaration',
+        {
+          allowTypeAnnotation: true,
+        },
+      ],
       /**
        * Enforce return statements in getters.
        */
@@ -812,7 +822,8 @@ export let core = (config: ConfigOptions): Linter.Config => {
        */
       'eslint-comments/disable-enable-pair': 'error',
       /**
-       * Disallow a `eslint-enable` comment for multiple `eslint-disable` comments.
+       * Disallow a `eslint-enable` comment for multiple `eslint-disable`
+       * comments.
        */
       'eslint-comments/no-aggregating-enable': 'error',
       /**

@@ -17,7 +17,7 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let astro = async (config: ConfigOptions): Promise<Linter.Config> => {
+export async function astro(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.astro) {
     return {}
   }

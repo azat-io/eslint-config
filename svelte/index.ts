@@ -15,7 +15,7 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let svelte = async (config: ConfigOptions): Promise<Linter.Config> => {
+export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.svelte) {
     return {}
   }

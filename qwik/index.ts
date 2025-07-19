@@ -15,7 +15,7 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let qwik = async (config: ConfigOptions): Promise<Linter.Config> => {
+export async function qwik(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.qwik) {
     return {}
   }

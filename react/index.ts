@@ -15,7 +15,7 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
+export async function react(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.react) {
     return {}
   }

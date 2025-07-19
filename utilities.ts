@@ -1,4 +1,4 @@
-export let interopDefault = async <T>(module: Promise<T> | T): Promise<T> => {
+export async function interopDefault<T>(module: T): Promise<T> {
   try {
     let resolved = await module
 

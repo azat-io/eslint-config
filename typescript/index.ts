@@ -15,9 +15,9 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let typescript = async (
+export async function typescript(
   config: ConfigOptions,
-): Promise<Linter.Config> => {
+): Promise<Linter.Config> {
   if (!config.typescript) {
     return {}
   }

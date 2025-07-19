@@ -15,7 +15,7 @@ import type { ConfigOptions } from '..'
 
 import { interopDefault } from '../utilities'
 
-export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
+export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.vitest) {
     return {}
   }
