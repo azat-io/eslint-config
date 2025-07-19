@@ -111,6 +111,10 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
      */
     'package-json/valid-bin': 'error',
     /**
+     * Validate the `license` property.
+     */
+    'package-json/valid-license': 'error',
+    /**
      * Validate the `name` property.
      */
     'package-json/valid-name': 'error',
