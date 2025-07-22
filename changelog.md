@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.40.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.39.0...v2.40.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([2907a16](https://github.com/azat-io/eslint-config/commit/2907a16))
+- **core:** Add prefer-class-fields rule ([945074b](https://github.com/azat-io/eslint-config/commit/945074b))
+- **core:** Add no-array-reverse rule ([59c1a32](https://github.com/azat-io/eslint-config/commit/59c1a32))
+- **core:** Add require-module-specifiers rule ([cd08ee6](https://github.com/azat-io/eslint-config/commit/cd08ee6))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.39.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.38.0...v2.39.0)
