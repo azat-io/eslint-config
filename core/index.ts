@@ -1593,6 +1593,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-array-method-this-argument': 'error',
       /**
+       * Prefer `Array#toReversed()` over `Array#reverse()`.
+       */
+      'unicorn/no-array-reverse': 'error',
+      /**
        * Disallow using `await` in Promise method parameters.
        */
       'unicorn/no-await-in-promise-methods': 'error',
