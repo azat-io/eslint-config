@@ -1770,6 +1770,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-blob-reading-methods': 'error',
       /**
+       * Prefer class field declarations over `this` assignments in constructors.
+       */
+      'unicorn/prefer-class-fields': 'error',
+      /**
        * Prefer `Date.now()` to get the number of milliseconds since the Unix
        * Epoch.
        */
