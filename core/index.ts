@@ -1964,6 +1964,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/require-array-join-separator': 'error',
       /**
+       * Require non-empty specifier list in import and export statements.
+       */
+      'unicorn/require-module-specifiers': 'error',
+      /**
        * Enforce using the digits argument with `Number#toFixed()`.
        */
       'unicorn/require-number-to-fixed-digits-argument': 'error',
