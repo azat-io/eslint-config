@@ -154,6 +154,7 @@ This config uses the following plugins:
 ## See also
 
 - [`@azat-io/stylelint-config`](https://github.com/azat-io/stylelint-config)
+- [`@azat-io/typescript-config`](https://github.com/azat-io/typescript-config)
 
 ## License
 
