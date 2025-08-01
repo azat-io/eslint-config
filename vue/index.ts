@@ -138,7 +138,7 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/jsx-uses-vars': 'error',
       /**
-       * Disallow asynchronous actions in computed properties
+       * Disallow asynchronous actions in computed properties.
        */
       'vue/no-async-in-computed-properties': 'error',
       /**
@@ -355,7 +355,7 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-textarea-mustache': 'error',
       /**
-       * Disallow `this` usage in a `beforeRouteEnter` method
+       * Disallow `this` usage in a `beforeRouteEnter` method.
        */
       'vue/no-this-in-before-route-enter': 'error',
       /**

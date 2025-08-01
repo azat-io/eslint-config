@@ -74,7 +74,7 @@ export default async ({
       ignores: [
         /**
          * Ignores files for benchmarks by ESLint Rule Benchmark:
-         * https://github.com/azat-io/eslint-rule-benchmark
+         * https://github.com/azat-io/eslint-rule-benchmark.
          */
         'benchmark/**/*',
       ],

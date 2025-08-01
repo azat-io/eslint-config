@@ -95,7 +95,7 @@ export async function node(config: ConfigOptions): Promise<Linter.Config> {
        */
       'node/no-unsupported-features/es-builtins': 'error',
       /**
-       * Enforce either `Buffer` or `require("buffer").Buffer`
+       * Enforce either `Buffer` or `require("buffer").Buffer`.
        */
       'node/prefer-global/buffer': ['error', 'always'],
       /**

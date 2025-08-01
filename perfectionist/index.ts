@@ -115,7 +115,7 @@ export async function perfectionist(
        */
       'perfectionist/sort-named-exports': ['error'],
       /**
-       * Enforce sorted named imports
+       * Enforce sorted named imports.
        */
       'perfectionist/sort-named-imports': ['error'],
       /**

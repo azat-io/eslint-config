@@ -150,7 +150,7 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/no-object-in-text-mustaches': 'error',
       /**
-       * Disallow define functions in reactive statements
+       * Disallow define functions in reactive statements.
        */
       'svelte/no-reactive-functions': 'error',
       /**

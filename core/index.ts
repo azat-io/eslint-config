@@ -110,7 +110,7 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
-       * Enforce capitalization of the first letter of a comment
+       * Enforce capitalization of the first letter of a comment.
        */
       'capitalized-comments': [
         'error',
@@ -706,7 +706,7 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
-       * Require assignment operator shorthand where possible
+       * Require assignment operator shorthand where possible.
        */
       'operator-assignment': ['error', 'always'],
       /**
@@ -727,7 +727,7 @@ export function core(config: ConfigOptions): Linter.Config {
       'prefer-named-capture-group': 'error',
       /**
        * Disallow `parseInt()` and `Number.parseInt()` in favor of binary,
-       * octal, and hexadecimal literals
+       * octal, and hexadecimal literals.
        */
       'prefer-numeric-literals': 'error',
       /**
@@ -945,12 +945,12 @@ export function core(config: ConfigOptions): Linter.Config {
       'jsdoc/check-types': 'error',
       /**
        * Check for expected content within some miscellaneous tags (`@version`,
-       * `@since`, `@license`, `@author`)
+       * `@since`, `@license`, `@author`).
        */
       'jsdoc/check-values': 'error',
       /**
        * Check tags that are expected to be empty (e.g., `@abstract` or
-       * `@async`), reporting if they have content
+       * `@async`), reporting if they have content.
        */
       'jsdoc/empty-tags': 'error',
       /**
@@ -1006,6 +1006,11 @@ export function core(config: ConfigOptions): Linter.Config {
        * JSDoc block have a description.
        */
       'jsdoc/require-description': 'error',
+      /**
+       * Requires that block description, explicit `@description`, and
+       * `@param/@returns` tag descriptions are written in complete sentences.
+       */
+      'jsdoc/require-description-complete-sentence': 'error',
       /**
        * Require a hyphen before the `@param` description.
        */
@@ -1714,7 +1719,7 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-switch-case': 'error',
       /**
-       * Disallow useless undefined
+       * Disallow useless undefined.
        */
       'unicorn/no-useless-undefined': [
         'error',

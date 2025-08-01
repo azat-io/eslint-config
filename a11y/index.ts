@@ -67,7 +67,7 @@ export function a11y(config: ConfigOptions): Linter.Config {
        */
       'jsx-a11y/aria-role': 'error',
       /**
-       * Check if `meta`, `html`, `script`, `style`, etc. has no `aria-*`
+       * Check if `meta`, `html`, `script`, `style`, etc. Has no `aria-*`
        * attributes.
        */
       'jsx-a11y/aria-unsupported-elements': 'error',

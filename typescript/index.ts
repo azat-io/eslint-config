@@ -67,6 +67,36 @@ export async function typescript(
 
     rules: {
       /**
+       * Report if block tag names are invalid.
+       */
+      'jsdoc/check-tag-names': [
+        'error',
+        {
+          typed: true,
+        },
+      ],
+      /**
+       * Report types being used on `@param` or `@returns`.
+       */
+      'jsdoc/no-types': 'error',
+      /**
+       * Disable checking that types in jsdoc comments are defined.
+       */
+      'jsdoc/no-undefined-types': 'off',
+      /**
+       * Disable requiring that each `@param` tag has a type value.
+       */
+      'jsdoc/require-param-type': 'off',
+      /**
+       * Disable requiring that each `@property` tag has a type value.
+       */
+      'jsdoc/require-property-type': 'off',
+      /**
+       * Disable requiring that `@returns` tag has a type value.
+       */
+      'jsdoc/require-returns-type': 'off',
+
+      /**
        * Require consistently using either `T[]` or `Array<T>` for arrays.
        */
       'typescript/array-type': [

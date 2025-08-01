@@ -95,7 +95,7 @@ export async function astro(config: ConfigOptions): Promise<Linter.Config> {
        */
       'astro/jsx-a11y/aria-role': 'error',
       /**
-       * Check if `meta`, `html`, `script`, `style`, etc. has no `aria-*`
+       * Check if `meta`, `html`, `script`, `style`, etc. Has no `aria-*`
        * attributes.
        */
       'astro/jsx-a11y/aria-unsupported-elements': 'error',
