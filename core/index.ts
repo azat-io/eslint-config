@@ -920,7 +920,12 @@ export function core(config: ConfigOptions): Linter.Config {
        * Ensure that parameter names in JSDoc are matched by corresponding items
        * in the function declaration.
        */
-      'jsdoc/check-param-names': 'error',
+      'jsdoc/check-param-names': [
+        'error',
+        {
+          checkDestructured: false,
+        },
+      ],
       /**
        * Ensure that property names in JSDoc are not duplicated on the same
        * block and that nested properties have defined roots.
@@ -1018,7 +1023,12 @@ export function core(config: ConfigOptions): Linter.Config {
       /**
        * Require that all function parameters are documented.
        */
-      'jsdoc/require-param': 'error',
+      'jsdoc/require-param': [
+        'error',
+        {
+          checkDestructured: false,
+        },
+      ],
       /**
        * Require that each `@param` tag has a description value.
        */
