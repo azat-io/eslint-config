@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.42.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.42.0...v2.42.1)
+
+### 🐞 Bug Fixes
+
+- Disable checking destructured jsdoc params ([b9ef575](https://github.com/azat-io/eslint-config/commit/b9ef575))
+
+### ❤️ Contributors
+
+- Azat S. <to@azat.io>
+
 ## v2.42.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.41.0...v2.42.0)
