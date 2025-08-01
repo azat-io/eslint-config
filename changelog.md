@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.42.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.41.0...v2.42.0)
+
+### 🚀 Features
+
+- Improve jsdoc usage in ts ([3bfa46f](https://github.com/azat-io/eslint-config/commit/3bfa46f))
+- Update eslint plugins ([110eb8f](https://github.com/azat-io/eslint-config/commit/110eb8f))
+- **vue:** Add no-negated-condition rules ([f332de2](https://github.com/azat-io/eslint-config/commit/f332de2))
+
+### ❤️ Contributors
+
+- Azat S. <to@azat.io>
+
 ## v2.41.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.40.0...v2.41.0)
