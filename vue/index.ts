@@ -292,6 +292,14 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-mutating-props': 'error',
       /**
+       * Disallow negated conditions in `<template>`.
+       */
+      'vue/no-negated-condition': 'error',
+      /**
+       * Disallow negated conditions in `v-if` / `v-else`.
+       */
+      'vue/no-negated-v-if-condition': 'error',
+      /**
        * Disallow parsing errors in `<template>`.
        */
       'vue/no-parsing-error': 'error',
