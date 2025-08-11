@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.44.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.43.0...v2.44.0)
+
+### 🚀 Features
+
+- **package-json:** Add valid-description rule ([8288fd0](https://github.com/azat-io/eslint-config/commit/8288fd0))
+- **package-json:** Add valid-dependencies rule ([5c78cd9](https://github.com/azat-io/eslint-config/commit/5c78cd9))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.43.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.42.1...v2.43.0)
