@@ -121,6 +121,10 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/valid-description': 'error',
       /**
+       * Validate the `directories` property.
+       */
+      'package-json/valid-directories': 'error',
+      /**
        * Validate the `license` property.
        */
       'package-json/valid-license': 'error',
