@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.46.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.45.0...v2.46.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([ef3c637](https://github.com/azat-io/eslint-config/commit/ef3c637))
+- **package-json:** Add valid-directories rule ([6541132](https://github.com/azat-io/eslint-config/commit/6541132))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.45.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.44.0...v2.45.0)
