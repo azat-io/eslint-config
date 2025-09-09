@@ -1788,6 +1788,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-at': 'error',
       /**
+       * Prefer `BigInt` literals over the constructor.
+       */
+      'unicorn/prefer-bigint-literals': 'error',
+      /**
        * Prefer `Blob#arrayBuffer()` over `FileReader#readAsArrayBuffer(…)` and
        * `Blob#text()` over `FileReader#readAsText(…)`.
        */
