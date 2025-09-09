@@ -1616,6 +1616,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-array-reverse': 'error',
       /**
+       * Prefer `Array#toSorted()` over `Array#sort()`.
+       */
+      'unicorn/no-array-sort': 'error',
+      /**
        * Disallow using `await` in Promise method parameters.
        */
       'unicorn/no-await-in-promise-methods': 'error',
