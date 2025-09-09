@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.47.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.46.0...v2.47.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([86301ce](https://github.com/azat-io/eslint-config/commit/86301ce))
+- **core:** Add preserve-caught-error rule ([1d08223](https://github.com/azat-io/eslint-config/commit/1d08223))
+- **core:** Add prefer-bigint-literals rule ([fee244b](https://github.com/azat-io/eslint-config/commit/fee244b))
+- **core:** Add prefer-classlist-toggle rule ([63e1588](https://github.com/azat-io/eslint-config/commit/63e1588))
+- **core:** Add require-module-attributes rule ([ab56d00](https://github.com/azat-io/eslint-config/commit/ab56d00))
+- **core:** Add no-array-sort rule ([c08d47d](https://github.com/azat-io/eslint-config/commit/c08d47d))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.46.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.45.0...v2.46.0)
