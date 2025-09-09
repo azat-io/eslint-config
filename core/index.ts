@@ -1991,6 +1991,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/require-array-join-separator': 'error',
       /**
+       * Require non-empty module attributes for imports and exports.
+       */
+      'unicorn/require-module-attributes': 'error',
+      /**
        * Require non-empty specifier list in import and export statements.
        */
       'unicorn/require-module-specifiers': 'error',
