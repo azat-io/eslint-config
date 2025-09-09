@@ -1801,6 +1801,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-class-fields': 'error',
       /**
+       * Prefer using `Element#classList.toggle()` to toggle class names.
+       */
+      'unicorn/prefer-classlist-toggle': 'error',
+      /**
        * Prefer `Date.now()` to get the number of milliseconds since the Unix
        * Epoch.
        */
