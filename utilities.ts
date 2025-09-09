@@ -11,6 +11,8 @@ export async function interopDefault<T>(module: T): Promise<T> {
 
     return resolved
   } catch (error) {
-    throw new Error(`Cannot import module: ${String(error)}`)
+    throw new Error(`Cannot import module: ${String(error)}`, {
+      cause: error,
+    })
   }
 }

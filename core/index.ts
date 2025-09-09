@@ -767,6 +767,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'prefer-template': 'error',
       /**
+       * Disallow losing originally caught error when re-throwing custom errors.
+       */
+      'preserve-caught-error': 'error',
+      /**
        * Disallow async functions which have no `await` expression.
        */
       'require-await': 'error',
