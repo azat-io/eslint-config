@@ -125,6 +125,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.8.1
         version: 19.8.1
+      '@commitlint/types':
+        specifier: ^19.8.1
+        version: 19.8.1
       '@eslint/config-inspector':
         specifier: ^1.2.0
         version: 1.2.0(eslint@9.35.0(jiti@2.5.1))
