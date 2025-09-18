@@ -63,7 +63,9 @@ export default async ({
   ]
 
   let configs = await Promise.all(
-    configFunctions.map(createConfigFunction => createConfigFunction(config)),
+    configFunctions.map(createConfigFunction =>
+      Promise.resolve(createConfigFunction(config)),
+    ),
   )
 
   return defineConfig([
