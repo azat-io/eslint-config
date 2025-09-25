@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { ESLint, Linter } from 'eslint'
 
 import gitignore from 'eslint-config-flat-gitignore'
 import { defineConfig } from 'eslint/config'
@@ -68,6 +68,41 @@ export default async ({
     ),
   )
 
+  let plugins = configs.reduce<Record<string, ESLint.Plugin>>(
+    (accumulator, current) =>
+      current.plugins
+        ? {
+            ...accumulator,
+            ...current.plugins,
+          }
+        : accumulator,
+    {},
+  )
+
+  function prepareExtends(
+    extendsConfig: RawConfigOptions['extends'],
+  ): Linter.Config[] {
+    if (!extendsConfig) {
+      return []
+    }
+
+    function prepareExtendedConfig(
+      currentConfig: Linter.Config,
+    ): Linter.Config {
+      return {
+        ...currentConfig,
+        plugins: {
+          ...plugins,
+          ...currentConfig.plugins,
+        },
+      }
+    }
+
+    return Array.isArray(extendsConfig)
+      ? extendsConfig.map(prepareExtendedConfig)
+      : [prepareExtendedConfig(extendsConfig)]
+  }
+
   return defineConfig([
     gitignore({
       strict: false,
@@ -83,13 +118,6 @@ export default async ({
       name: 'azat-io/benchmark/ignores',
     },
     ...configs,
-    ...(Array.isArray(customExtends)
-      ? customExtends
-      : [
-          {
-            name: 'azat-io/custom-extends',
-            ...customExtends,
-          },
-        ]),
+    ...prepareExtends(customExtends),
   ])
 }
