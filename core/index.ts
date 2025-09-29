@@ -1007,6 +1007,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/no-undefined-types': 'error',
       /**
+       * Prefer `@import` tags to inline `import()` statements.
+       */
+      'jsdoc/prefer-import-tag': 'error',
+      /**
        * Requires that each JSDoc line starts with an `*`.
        */
       'jsdoc/require-asterisk-prefix': 'error',
