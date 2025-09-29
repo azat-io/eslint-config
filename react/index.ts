@@ -370,6 +370,10 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/no-unstable-context-value': 'error',
       /**
+       * Warns component props that are defined but never used.
+       */
+      'react-x/no-unused-props': 'error',
+      /**
        * Warns unused class component state.
        */
       'react-x/no-unused-state': 'error',
