@@ -1,5 +1,28 @@
 # Changelog
 
+## v2.50.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.49.0...v2.50.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([2b1623a](https://github.com/azat-io/eslint-config/commit/2b1623a))
+- **core:** Add prefer-import-tag rule ([058cbba](https://github.com/azat-io/eslint-config/commit/058cbba))
+- **core:** Add require-template-description rule ([52369d2](https://github.com/azat-io/eslint-config/commit/52369d2))
+- Migrate to eslint react v2 ([0d1826e](https://github.com/azat-io/eslint-config/commit/0d1826e))
+- **react:** Add jsx-shorthand-boolean rule ([6421132](https://github.com/azat-io/eslint-config/commit/6421132))
+- **react:** Add jsx-shorthand-fragment rule ([65c4cff](https://github.com/azat-io/eslint-config/commit/65c4cff))
+- **react:** Add no-unnecessary-key rule ([a858607](https://github.com/azat-io/eslint-config/commit/a858607))
+- **react:** Add no-unused-props rule ([a7d8c0c](https://github.com/azat-io/eslint-config/commit/a7d8c0c))
+
+### 🐞 Bug Fixes
+
+- Merge default plugins into custom extends ([5c329d0](https://github.com/azat-io/eslint-config/commit/5c329d0))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.49.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.48.0...v2.49.0)
