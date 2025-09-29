@@ -293,6 +293,10 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/jsx-no-undef': 'error',
       /**
+       * Enforces the use of shorthand syntax for boolean attributes.
+       */
+      'react-x/jsx-shorthand-boolean': 'error',
+      /**
        * Marks React variables as used when JSX is used.
        */
       'react-x/jsx-uses-react': 'error',
