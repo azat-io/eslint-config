@@ -345,6 +345,10 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/no-nested-component-definitions': 'error',
       /**
+       * Disallow unnecessary usage of `key` props.
+       */
+      'react-x/no-unnecessary-key': 'error',
+      /**
        * Disallow unnecessary usage of `useCallback`.
        */
       'react-x/no-unnecessary-use-callback': 'error',
