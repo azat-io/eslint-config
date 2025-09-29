@@ -97,11 +97,11 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/no-add-event-listener': 'error',
       /**
-       * Disallow the use of `{@debug}`.
+       * Disallow the use of `@debug`.
        */
       'svelte/no-at-debug-tags': 'error',
       /**
-       * Disallow use of `{@html}` to prevent XSS attack.
+       * Disallow use of `@html` to prevent XSS attack.
        */
       'svelte/no-at-html-tags': 'error',
       /**
