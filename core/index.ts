@@ -1086,6 +1086,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/require-returns-type': 'error',
       /**
+       * Require that `@template` tag has a description.
+       */
+      'jsdoc/require-template-description': 'error',
+      /**
        * Ensure that if a `@yields` is present that a `yield`.
        */
       'jsdoc/require-yields-check': 'error',
