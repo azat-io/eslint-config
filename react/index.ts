@@ -69,10 +69,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
       'react-compiler/react-compiler': 'error',
 
       /**
-       * Disallow `children` in void DOM elements.
-       */
-      'react-dom/no-children-in-void-dom-elements': 'error',
-      /**
        * Disallow `dangerouslySetInnerHTML`.
        */
       'react-dom/no-dangerously-set-innerhtml': 'error',
@@ -150,32 +146,9 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
 
       /**
        * Disallow direct calls to the `set` function of `useState` in
-       * `useEffect`.
+       * `useEffect` or `useLayoutEffect`.
        */
       'react-hooks-extra/no-direct-set-state-in-use-effect': 'error',
-      /**
-       * Disallow direct calls to the `set` function of `useState` in
-       * `useLayoutEffect`.
-       */
-      'react-hooks-extra/no-direct-set-state-in-use-layout-effect': 'error',
-      /**
-       * Disallow unnecessary usage of `useCallback`.
-       */
-      'react-hooks-extra/no-unnecessary-use-callback': 'error',
-      /**
-       * Disallow unnecessary usage of `useMemo`.
-       */
-      'react-hooks-extra/no-unnecessary-use-memo': 'error',
-      /**
-       * Enforces that a function with the `use` prefix should use at least one
-       * hook inside of it.
-       */
-      'react-hooks-extra/no-unnecessary-use-prefix': 'error',
-      /**
-       * Enforces function calls made inside `useState` to be wrapped in an
-       * initializer function.
-       */
-      'react-hooks-extra/prefer-use-state-lazy-initialization': 'error',
 
       /**
        * Enforces naming conventions for components.
@@ -364,6 +337,19 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/no-nested-component-definitions': 'error',
       /**
+       * Disallow unnecessary usage of `useCallback`.
+       */
+      'react-x/no-unnecessary-use-callback': 'error',
+      /**
+       * Disallow unnecessary usage of `useMemo`.
+       */
+      'react-x/no-unnecessary-use-memo': 'error',
+      /**
+       * Enforces that a function with the `use` prefix should use at least one
+       * hook inside of it.
+       */
+      'react-x/no-unnecessary-use-prefix': 'error',
+      /**
        * Warns usage of UNSAFE_componentWillUpdate in class components.
        */
       'react-x/no-unsafe-component-will-update': 'error',
@@ -386,7 +372,12 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
       /**
        * Enforces React is imported via a namespace import.
        */
-      'react-x/prefer-react-namespace-import': 'error',
+      'react-x/prefer-namespace-import': 'error',
+      /**
+       * Enforces function calls made inside `useState` to be wrapped in an
+       * initializer function.
+       */
+      'react-x/prefer-use-state-lazy-initialization': 'error',
     },
 
     settings: {
