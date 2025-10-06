@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.51.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.50.0...v2.51.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([27eab5f](https://github.com/azat-io/eslint-config/commit/27eab5f))
+- **core:** Add escape-inline-tags rule ([8f80dde](https://github.com/azat-io/eslint-config/commit/8f80dde))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.50.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.49.0...v2.50.0)
