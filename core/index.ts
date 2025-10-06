@@ -963,6 +963,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/empty-tags': 'error',
       /**
+       * Report use of JSDoc tags in non-tag positions.
+       */
+      'jsdoc/escape-inline-tags': 'error',
+      /**
        * Report an issue with any non-constructor function using `@implements`.
        */
       'jsdoc/implements-on-classes': 'error',
@@ -1042,7 +1046,7 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/require-param-description': 'error',
       /**
-       * Require that all @param tags have names.
+       * Require that all `@param` tags have names.
        */
       'jsdoc/require-param-name': 'error',
       /**
@@ -1060,7 +1064,7 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/require-property-description': 'error',
       /**
-       * Require that all @property tags have names.
+       * Require that all `@property` tags have names.
        */
       'jsdoc/require-property-name': 'error',
       /**
