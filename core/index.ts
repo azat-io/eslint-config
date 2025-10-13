@@ -1108,6 +1108,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/ts-no-empty-object-type': 'error',
       /**
+       * Catches unnecessary template expressions such as string expressions
+       * within a template literal.
+       */
+      'jsdoc/ts-no-unnecessary-template-expression': 'error',
+      /**
        * Requires all types/namepaths to be valid JSDoc, Closure compiler, or
        * TypeScript types.
        */
