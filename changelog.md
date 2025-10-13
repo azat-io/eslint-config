@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.52.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.51.0...v2.52.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([9759274](https://github.com/azat-io/eslint-config/commit/9759274))
+- **core:** Add ts-method-signature-style rule ([4ab2189](https://github.com/azat-io/eslint-config/commit/4ab2189))
+- **core:** Add ts-no-empty-object-type rule ([cff26ac](https://github.com/azat-io/eslint-config/commit/cff26ac))
+- **core:** Add ts-no-unnecessary-template-expression rule ([2180f92](https://github.com/azat-io/eslint-config/commit/2180f92))
+- **core:** Add ts-prefer-function-type rule ([f53011a](https://github.com/azat-io/eslint-config/commit/f53011a))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.51.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.50.0...v2.51.0)
