@@ -1113,6 +1113,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/ts-no-unnecessary-template-expression': 'error',
       /**
+       * Chooses the more succinct function property over a call signature if
+       * there are no other properties on the signature.
+       */
+      'jsdoc/ts-prefer-function-type': 'error',
+      /**
        * Requires all types/namepaths to be valid JSDoc, Closure compiler, or
        * TypeScript types.
        */
