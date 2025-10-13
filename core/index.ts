@@ -1103,6 +1103,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/ts-method-signature-style': 'error',
       /**
+       * Warns against use of the empty object type which, in TypeScript, means
+       * "any value that is defined".
+       */
+      'jsdoc/ts-no-empty-object-type': 'error',
+      /**
        * Requires all types/namepaths to be valid JSDoc, Closure compiler, or
        * TypeScript types.
        */
