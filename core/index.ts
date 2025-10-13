@@ -1098,6 +1098,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'jsdoc/require-yields-check': 'error',
       /**
+       * See that rule for the rationale behind preferring the function
+       * property.
+       */
+      'jsdoc/ts-method-signature-style': 'error',
+      /**
        * Requires all types/namepaths to be valid JSDoc, Closure compiler, or
        * TypeScript types.
        */
