@@ -90,6 +90,7 @@ export default async ({
       currentConfig: Linter.Config,
     ): Linter.Config {
       return {
+        name: 'azat-io/custom-extends',
         ...currentConfig,
         plugins: {
           ...plugins,
@@ -105,6 +106,7 @@ export default async ({
 
   return defineConfig([
     gitignore({
+      name: 'azat-io/gitignore',
       strict: false,
     }),
     {
