@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.54.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.53.0...v2.54.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([e64fce6](https://github.com/azat-io/eslint-config/commit/e64fce6))
+- **package-json:** Add exports-subpaths-style rule ([7f94952](https://github.com/azat-io/eslint-config/commit/7f94952))
+- **core:** Add no-immediate-mutation rule ([afc3836](https://github.com/azat-io/eslint-config/commit/afc3836))
+- **core:** Add no-useless-collection-argument rule ([dce50ba](https://github.com/azat-io/eslint-config/commit/dce50ba))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.53.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.52.0...v2.53.0)
