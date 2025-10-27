@@ -1752,6 +1752,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unused-properties': 'error',
       /**
+       * Disallow useless values or fallbacks in `Set`, `Map`, `WeakSet`, or
+       * `WeakMap`.
+       */
+      'unicorn/no-useless-collection-argument': 'error',
+      /**
        * Disallow useless fallback when spreading in object literals.
        */
       'unicorn/no-useless-fallback-in-spread': 'error',
