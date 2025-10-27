@@ -1664,6 +1664,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-hex-escape': 'error',
       /**
+       * Disallow immediate mutation after variable assignment.
+       */
+      'unicorn/no-immediate-mutation': 'error',
+      /**
        * Require `Array.isArray()` instead of `instanceof Array`.
        */
       'unicorn/no-instanceof-builtins': 'error',
