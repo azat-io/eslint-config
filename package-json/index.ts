@@ -39,6 +39,15 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
       'depend/ban-dependencies': 'error',
 
       /**
+       * Enforce explicit style for `exports` fields in.
+       */
+      'package-json/exports-subpaths-style': [
+        'error',
+        {
+          prefer: 'explicit',
+        },
+      ],
+      /**
        * Verify that the values in `package.json` are not empty.
        */
       'package-json/no-empty-fields': 'error',
