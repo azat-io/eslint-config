@@ -106,6 +106,11 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/require-version': 'error',
       /**
+       * Enforce that the keys of the `scripts` object are in a kebab-case
+       * format.
+       */
+      'package-json/scripts-name-casing': 'error',
+      /**
        * Enforce a consistent order of dependencies in package.json.
        */
       'package-json/sort-collections': 'error',
