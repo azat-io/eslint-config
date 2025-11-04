@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.55.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.54.0...v2.55.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([f606263](https://github.com/azat-io/eslint-config/commit/f606263))
+- **package-json:** Add scripts-name-casing rule ([9cbec6d](https://github.com/azat-io/eslint-config/commit/9cbec6d))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.54.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.53.0...v2.54.0)
