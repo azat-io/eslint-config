@@ -62,6 +62,11 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/no-redundant-files': 'error',
       /**
+       * Checks that the `publishConfig.access` field is not used in unscoped
+       * packages, as it has no effect.
+       */
+      'package-json/no-redundant-publishConfig': 'error',
+      /**
        * Enforce the package.json ordering convention.
        */
       'package-json/order-properties': [
