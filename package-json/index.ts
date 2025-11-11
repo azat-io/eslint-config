@@ -39,6 +39,11 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
       'depend/ban-dependencies': 'error',
 
       /**
+       * Enforces that when your bin value is an object, its keys should be in
+       * kebab case.
+       */
+      'package-json/bin-name-casing': 'error',
+      /**
        * Enforce explicit style for `exports` fields in.
        */
       'package-json/exports-subpaths-style': [
