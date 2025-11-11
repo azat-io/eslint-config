@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.56.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.55.0...v2.56.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([39bc156](https://github.com/azat-io/eslint-config/commit/39bc156))
+- **package-json:** Add bin-name-casing rule ([22b41fd](https://github.com/azat-io/eslint-config/commit/22b41fd))
+- **package-json:** Add no-redundant-publishconfig rule ([63c9ea6](https://github.com/azat-io/eslint-config/commit/63c9ea6))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.55.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.54.0...v2.55.0)
