@@ -415,6 +415,10 @@ export async function typescript(
         },
       ],
       /**
+       * Disallow unused private class members.
+       */
+      'typescript/no-unused-private-class-members': 'error',
+      /**
        * Disallow unused variables.
        */
       'typescript/no-unused-vars': [
@@ -566,6 +570,7 @@ export async function typescript(
       'no-shadow': 'off',
       'no-undef': 'off',
       'no-unused-expressions': 'off',
+      'no-unused-private-class-members': 'off',
       'no-unused-vars': 'off',
       'no-use-before-define': 'off',
       'no-useless-constructor': 'off',
