@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.57.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.56.0...v2.57.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([5c272b3](https://github.com/azat-io/eslint-config/commit/5c272b3))
+- **typescript:** Add no-unused-private-class-members rule ([4201c3c](https://github.com/azat-io/eslint-config/commit/4201c3c))
+- **package-json:** Add valid-homepage rule ([24983da](https://github.com/azat-io/eslint-config/commit/24983da))
+- **package-json:** Add valid-files rule ([1150c28](https://github.com/azat-io/eslint-config/commit/1150c28))
+- **package-json:** Add valid-keywords rule ([c8ef8e8](https://github.com/azat-io/eslint-config/commit/c8ef8e8))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.56.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.55.0...v2.56.0)
