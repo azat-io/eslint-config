@@ -149,6 +149,10 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/valid-directories': 'error',
       /**
+       * Validate the `homepage` property.
+       */
+      'package-json/valid-homepage': 'error',
+      /**
        * Validate the `license` property.
        */
       'package-json/valid-license': 'error',
