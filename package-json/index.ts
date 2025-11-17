@@ -157,6 +157,10 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/valid-homepage': 'error',
       /**
+       * Validate the `keywords` property.
+       */
+      'package-json/valid-keywords': 'error',
+      /**
        * Validate the `license` property.
        */
       'package-json/valid-license': 'error',
