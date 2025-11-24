@@ -61,6 +61,10 @@ export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
 
     rules: {
       /**
+       * Enforce using `.each` or `.for` consistently.
+       */
+      'vitest/consistent-each-for': 'error',
+      /**
        * Enforce using it but not test.
        */
       'vitest/consistent-test-it': ['error', { fn: 'it' }],
