@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.58.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.57.0...v2.58.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([e0ca0de](https://github.com/azat-io/eslint-config/commit/e0ca0de))
+- **package-json:** Add specify-peers-locally rule ([83cbbce](https://github.com/azat-io/eslint-config/commit/83cbbce))
+- **vue:** Add no-duplicate-class-names rule ([8017776](https://github.com/azat-io/eslint-config/commit/8017776))
+- **vitest:** Add require-import-vi-mock rule ([1b65193](https://github.com/azat-io/eslint-config/commit/1b65193))
+- **vitest:** Add consistent-each-for rule ([029e28c](https://github.com/azat-io/eslint-config/commit/029e28c))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.57.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.56.0...v2.57.0)
