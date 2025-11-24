@@ -125,6 +125,12 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/sort-collections': 'error',
       /**
+       * Require that all dependencies declared in a package's
+       * `peerDependencies` are also declared in the package's
+       * `devDependencies`.
+       */
+      'package-json/specify-peers-locally': 'error',
+      /**
        * Disallow duplicates in dependencies.
        */
       'package-json/unique-dependencies': 'error',
