@@ -260,6 +260,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-duplicate-attributes': 'error',
       /**
+       * Disallow duplication of class names in class attributes.
+       */
+      'vue/no-duplicate-class-names': 'error',
+      /**
        * Disallow the `<template>`, `<script>`, `<style>` block to be empty.
        */
       'vue/no-empty-component-block': 'error',
