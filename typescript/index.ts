@@ -446,6 +446,10 @@ export async function typescript(
        */
       'typescript/no-useless-constructor': 'error',
       /**
+       * Disallow default values that will never be used.
+       */
+      'typescript/no-useless-default-assignment': 'error',
+      /**
        * Disallow empty exports that don't change anything in a module file.
        */
       'typescript/no-useless-empty-export': 'error',
