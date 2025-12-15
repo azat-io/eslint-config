@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.61.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.60.0...v2.61.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([2c75024](https://github.com/azat-io/eslint-config/commit/2c75024))
+- **typescript:** Add no-useless-default-assignment rule ([1005d9d](https://github.com/azat-io/eslint-config/commit/1005d9d))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.60.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.59.0...v2.60.0)
