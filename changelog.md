@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.62.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.62.0...v2.62.1)
+
+### 🐞 Bug Fixes
+
+- **vitest:** Remove require-import-vi-mock rule ([2d12b8d](https://github.com/azat-io/eslint-config/commit/2d12b8d))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.62.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.61.0...v2.62.0)
