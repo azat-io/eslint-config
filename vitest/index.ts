@@ -197,10 +197,6 @@ export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vitest/prefer-vi-mocked': 'error',
       /**
-       * Require usage of `import` in `vi.mock()`.
-       */
-      'vitest/require-import-vi-mock': 'error',
-      /**
        * Enforce that all tests are in a top-level describe.
        */
       'vitest/require-top-level-describe': 'error',
