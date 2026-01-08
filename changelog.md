@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.64.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.63.0...v2.64.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([12082ed](https://github.com/azat-io/eslint-config/commit/12082ed))
+- **package-json:** Add valid-module rule ([0aa488a](https://github.com/azat-io/eslint-config/commit/0aa488a))
+- **package-json:** Add require-homepage rule ([bef7beb](https://github.com/azat-io/eslint-config/commit/bef7beb))
+- **package-json:** Add require-repository rule ([f3da181](https://github.com/azat-io/eslint-config/commit/f3da181))
+- **package-json:** Add require-scripts rule ([c95b6f0](https://github.com/azat-io/eslint-config/commit/c95b6f0))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.63.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.62.1...v2.63.0)
