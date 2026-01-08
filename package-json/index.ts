@@ -117,6 +117,10 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/require-repository': 'error',
       /**
+       * Enforce the presence of a `scripts` property in a `package.json` file.
+       */
+      'package-json/require-scripts': 'error',
+      /**
        * Enforce the presence of a `type` property in a `package.json` file.
        */
       'package-json/require-type': 'error',
