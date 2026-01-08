@@ -112,6 +112,11 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/require-name': 'error',
       /**
+       * Enforce the presence of a `repository` property in a `package.json`
+       * file.
+       */
+      'package-json/require-repository': 'error',
+      /**
        * Enforce the presence of a `type` property in a `package.json` file.
        */
       'package-json/require-type': 'error',
