@@ -11,6 +11,7 @@
     "javascript",
     "typescript"
   ],
+  "homepage": "https://eslint.azat.io",
   "repository": "github:azat-io/eslint-config",
   "license": "MIT",
   "author": "Azat S. <to@azat.io>",

@@ -99,6 +99,10 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/require-engines': 'error',
       /**
+       * Enforce the presence of a `homepage` property in a `package.json` file.
+       */
+      'package-json/require-homepage': 'error',
+      /**
        * Enforce the presence of an `keywords` property in a `package.json`
        * file.
        */
