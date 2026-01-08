@@ -171,6 +171,10 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/valid-license': 'error',
       /**
+       * Validate the `module` property.
+       */
+      'package-json/valid-module': 'error',
+      /**
        * Validate the `name` property.
        */
       'package-json/valid-name': 'error',
