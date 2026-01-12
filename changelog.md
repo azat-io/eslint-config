@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.65.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.64.0...v2.65.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([a95657c](https://github.com/azat-io/eslint-config/commit/a95657c))
+- **typescript:** Add strict-void-return rule ([bd5cf97](https://github.com/azat-io/eslint-config/commit/bd5cf97))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.64.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.63.0...v2.64.0)
