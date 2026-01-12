@@ -548,6 +548,11 @@ export async function typescript(
        */
       'typescript/restrict-template-expressions': 'error',
       /**
+       * Disallow passing a value-returning function in a position accepting a
+       * void function.
+       */
+      'typescript/strict-void-return': 'error',
+      /**
        * Disallow certain triple slash directives in favor of ES6-style import
        * declarations.
        */
