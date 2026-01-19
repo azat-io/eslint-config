@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.66.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.65.0...v2.66.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([0d5c0e9](https://github.com/azat-io/eslint-config/commit/0d5c0e9))
+- **vue:** Add no-literals-in-template rule ([4a0c343](https://github.com/azat-io/eslint-config/commit/4a0c343))
+- **vue:** Add no-undef-directives rule ([010ae58](https://github.com/azat-io/eslint-config/commit/010ae58))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.65.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.64.0...v2.65.0)
