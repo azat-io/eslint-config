@@ -280,6 +280,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-lifecycle-after-await': 'error',
       /**
+       * Disallow object, array, and function literals in template.
+       */
+      'vue/no-literals-in-template': 'error',
+      /**
        * Disallow unnecessary `<template>`.
        */
       'vue/no-lone-template': 'error',
