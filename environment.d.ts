@@ -1,10 +1,3 @@
-declare module '@eslint-community/eslint-plugin-eslint-comments' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
 declare module '@vitest/eslint-plugin' {
   import type { ESLint } from 'eslint'
 
@@ -20,13 +13,6 @@ declare module 'eslint-plugin-import-x' {
 }
 
 declare module 'eslint-plugin-jsx-a11y' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
-declare module 'eslint-plugin-package-json' {
   import type { ESLint } from 'eslint'
 
   let plugin: ESLint.Plugin
@@ -115,15 +101,4 @@ declare module 'eslint-plugin-svelte' {
 
   let plugin: ESLint.Plugin
   export = plugin
-}
-
-declare module 'typescript-eslint' {
-  import type { ESLint } from 'eslint'
-
-  export let plugin: ESLint.Plugin
-  export let parser: ESLint.Parser
-  export = {
-    plugin,
-    parser,
-  }
 }
