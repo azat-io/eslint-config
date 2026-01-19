@@ -379,6 +379,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-undef-components': 'error',
       /**
+       * Disallow use of undefined custom directives.
+       */
+      'vue/no-undef-directives': 'error',
+      /**
        * Disallow undefined properties.
        */
       'vue/no-undef-properties': 'error',
