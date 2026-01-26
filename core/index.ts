@@ -543,8 +543,8 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'no-unassigned-vars': 'error',
       /**
-       * Disallow the use of undeclared variables unless mentioned in
-       * `\/*global *\/` comments.
+       * Disallow the use of undeclared variables unless mentioned in `\/*global
+       * \/` comments.
        */
       'no-undef': 'error',
       /**
@@ -1842,7 +1842,8 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-blob-reading-methods': 'error',
       /**
-       * Prefer class field declarations over `this` assignments in constructors.
+       * Prefer class field declarations over `this` assignments in
+       * constructors.
        */
       'unicorn/prefer-class-fields': 'error',
       /**
@@ -1977,11 +1978,13 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-string-replace-all': 'error',
       /**
-       * Prefer `String#slice()` over `String#substr()` and `String#substring()`.
+       * Prefer `String#slice()` over `String#substr()` and
+       * `String#substring()`.
        */
       'unicorn/prefer-string-slice': 'error',
       /**
-       * Prefer `String#startsWith()` & `String#endsWith()` over `RegExp#test()`.
+       * Prefer `String#startsWith()` & `String#endsWith()` over
+       * `RegExp#test()`.
        */
       'unicorn/prefer-string-starts-ends-with': 'error',
       /**

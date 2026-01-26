@@ -70,12 +70,12 @@ export default async ({
 
   let plugins = configs.reduce<Record<string, ESLint.Plugin>>(
     (accumulator, current) =>
-      current.plugins
-        ? {
-            ...accumulator,
-            ...current.plugins,
-          }
-        : accumulator,
+      current.plugins ?
+        {
+          ...accumulator,
+          ...current.plugins,
+        }
+      : accumulator,
     {},
   )
 
@@ -99,8 +99,8 @@ export default async ({
       }
     }
 
-    return Array.isArray(extendsConfig)
-      ? extendsConfig.map(prepareExtendedConfig)
+    return Array.isArray(extendsConfig) ?
+        extendsConfig.map(prepareExtendedConfig)
       : [prepareExtendedConfig(extendsConfig)]
   }
 

@@ -362,8 +362,8 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-template-shadow': 'error',
       /**
-       * Disallow `target="_blank"` attribute without
-       * `rel="noopener noreferrer"`.
+       * Disallow `target="_blank"` attribute without `rel="noopener
+       * noreferrer"`.
        */
       'vue/no-template-target-blank': 'error',
       /**

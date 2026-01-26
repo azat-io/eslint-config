@@ -163,8 +163,8 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/no-svelte-internal': 'error',
       /**
-       * Disallow `target="_blank"` attribute without
-       * `rel="noopener noreferrer"`.
+       * Disallow `target="_blank"` attribute without `rel="noopener
+       * noreferrer"`.
        */
       'svelte/no-target-blank': 'error',
       /**

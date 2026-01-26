@@ -11,9 +11,12 @@
 [![Version](https://img.shields.io/npm/v/@azat-io/eslint-config.svg?color=4a32c3&labelColor=26272b)](https://npmjs.com/package/@azat-io/eslint-config)
 [![GitHub License](https://img.shields.io/badge/license-MIT-232428.svg?color=4a32c3&labelColor=26272b)](https://github.com/azat-io/eslint-config/blob/main/license.md)
 
-A comprehensive and flexible ESLint configuration that supports a wide range of frameworks and environments. Easily integrate clean, consistent code standards across projects by enabling settings for specific tools and libraries.
+A comprehensive and flexible ESLint configuration that supports a wide range of
+frameworks and environments. Easily integrate clean, consistent code standards
+across projects by enabling settings for specific tools and libraries.
 
-This config covers multiple setups in a single, straightforward import, helping maintain consistency across different project types and frameworks.
+This config covers multiple setups in a single, straightforward import, helping
+maintain consistency across different project types and frameworks.
 
 ## Usage
 
@@ -48,7 +51,9 @@ export default eslintConfig({
 
 ## Configuration
 
-To configure the ESLint rules based on your project’s needs, import the config and pass an object with options for each framework or tool. By default, all options are disabled, so you can enable only what's relevant to your project.
+To configure the ESLint rules based on your project’s needs, import the config
+and pass an object with options for each framework or tool. By default, all
+options are disabled, so you can enable only what's relevant to your project.
 
 ```js
 import eslintConfig from '@azat-io/eslint-config'
@@ -68,39 +73,48 @@ export default eslintConfig({
 
 ### perfectionist
 
-Enables rules for sorting and organizing code structures for better readability and consistency.
+Enables rules for sorting and organizing code structures for better readability
+and consistency.
 
 ### typescript
 
-Adds TypeScript-specific linting rules to ensure type safety and maintain TypeScript best practices.
+Adds TypeScript-specific linting rules to ensure type safety and maintain
+TypeScript best practices.
 
 ### svelte
 
-Enables support for Svelte, including linting rules for Svelte components and files.
+Enables support for Svelte, including linting rules for Svelte components and
+files.
 
 ### vitest
 
-Adds support for Vitest, adjusting linting for testing files and practices within Vitest projects.
+Adds support for Vitest, adjusting linting for testing files and practices
+within Vitest projects.
 
 ### astro
 
-Configures ESLint for Astro projects, with adjustments for Astro’s file structure and conventions.
+Configures ESLint for Astro projects, with adjustments for Astro’s file
+structure and conventions.
 
 ### react
 
-Includes React-specific linting rules for JSX syntax, React hooks, and best practices within React environments.
+Includes React-specific linting rules for JSX syntax, React hooks, and best
+practices within React environments.
 
 ### qwik
 
-Adds support for Qwik, adjusting linting for Qwik-specific syntax and conventions.
+Adds support for Qwik, adjusting linting for Qwik-specific syntax and
+conventions.
 
 ### node
 
-Adjusts linting for Node.js environments, addressing Node-specific globals, imports, and common practices.
+Adjusts linting for Node.js environments, addressing Node-specific globals,
+imports, and common practices.
 
 ### vue
 
-Adds Vue-specific linting rules, supporting Vue's syntax and best practices for Vue components.
+Adds Vue-specific linting rules, supporting Vue's syntax and best practices for
+Vue components.
 
 ### extends
 
@@ -153,8 +167,9 @@ This config uses the following plugins:
 
 ## See also
 
-- [`@azat-io/stylelint-config`](https://github.com/azat-io/stylelint-config)
-- [`@azat-io/typescript-config`](https://github.com/azat-io/typescript-config)
+- [@azat-io/prettier-config](https://github.com/azat-io/prettier-config)
+- [@azat-io/stylelint-config](https://github.com/azat-io/stylelint-config)
+- [@azat-io/typescript-config](https://github.com/azat-io/typescript-config)
 
 ## License
 

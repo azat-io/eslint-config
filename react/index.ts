@@ -101,7 +101,8 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-dom/no-namespace': 'error',
       /**
-       * 	Replaces usages of `ReactDom.render()` with
+       * Replaces usages of `ReactDom.render()` with.
+       *
        * `createRoot(node).render()`.
        */
       'react-dom/no-render': 'error',
