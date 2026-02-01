@@ -1,7 +1,7 @@
 # ESLint Config
 
 <img
-  src="https://raw.githubusercontent.com/azat-io/eslint-config/main/assets/logo.png"
+  src="https://raw.githubusercontent.com/azat-io/eslint-config/main/assets/logo.svg"
   alt="ESLint Config Logo"
   align="right"
   height="160"
