@@ -9,7 +9,7 @@
   ]
 */
 
-import type { Linter, ESLint } from 'eslint'
+import type { Linter } from 'eslint'
 
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
 import preferLetPlugin from 'eslint-plugin-prefer-let'
@@ -76,7 +76,7 @@ export function core(config: ConfigOptions): Linter.Config {
       'prefer-let': preferLetPlugin,
       promise: promisePlugin,
       regexp: regexpPlugin,
-      sonarjs: sonarjsPlugin as ESLint.Plugin,
+      sonarjs: sonarjsPlugin,
       unicorn: unicornPlugin,
     },
 
