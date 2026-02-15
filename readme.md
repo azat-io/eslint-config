@@ -167,6 +167,7 @@ This config uses the following plugins:
 
 ## See also
 
+- [@azat-io/ai-config](https://github.com/azat-io/ai-config)
 - [@azat-io/prettier-config](https://github.com/azat-io/prettier-config)
 - [@azat-io/stylelint-config](https://github.com/azat-io/stylelint-config)
 - [@azat-io/typescript-config](https://github.com/azat-io/typescript-config)
