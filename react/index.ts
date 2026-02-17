@@ -161,6 +161,11 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-naming-convention/context-name': 'error',
       /**
+       * Enforces identifier names assigned from `useId` calls to be either `id`
+       * or end with `Id`.
+       */
+      'react-naming-convention/id-name': 'error',
+      /**
        * Enforces destructuring and symmetric naming of `useState` hook value
        * and setter.
        */
