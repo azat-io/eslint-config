@@ -100,7 +100,7 @@
     "clean-publish": "^6.0.1",
     "cross-env": "^10.1.0",
     "cspell": "^9.6.4",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "prettier": "^3.8.1",
     "simple-git-hooks": "^2.13.1",
     "svelte": "^5.51.3",
@@ -109,7 +109,7 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
-    "eslint": ">=9.35.0"
+    "eslint": ">=10.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
