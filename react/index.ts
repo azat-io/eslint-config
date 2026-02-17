@@ -161,10 +161,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-naming-convention/context-name': 'error',
       /**
-       * Enforces consistent use of the JSX file extension.
-       */
-      'react-naming-convention/filename-extension': 'error',
-      /**
        * Enforces destructuring and symmetric naming of `useState` hook value
        * and setter.
        */
