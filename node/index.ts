@@ -95,31 +95,35 @@ export async function node(config: ConfigOptions): Promise<Linter.Config> {
        */
       'node/no-unsupported-features/es-builtins': 'error',
       /**
-       * Enforce either `Buffer` or `require("buffer").Buffer`.
+       * Prefer global `Buffer` over `require("buffer").Buffer`.
        */
       'node/prefer-global/buffer': ['error', 'always'],
       /**
-       * Enforce either `console` or `require("console")`.
+       * Prefer global `console` over `require("console")`.
        */
       'node/prefer-global/console': ['error', 'always'],
       /**
-       * Enforce either `process` or `require("process")`.
+       * Prefer global `crypto` over `require("crypto")`.
+       */
+      'node/prefer-global/crypto': ['error', 'always'],
+      /**
+       * Prefer global `process` over `require("process")`.
        */
       'node/prefer-global/process': ['error', 'always'],
       /**
-       * Enforce either `TextDecoder` or `require("util").TextDecoder`.
+       * Prefer global `TextDecoder` over `require("util").TextDecoder`.
        */
       'node/prefer-global/text-decoder': ['error', 'always'],
       /**
-       * Enforce either `TextEncoder` or `require("util").TextEncoder`.
+       * Prefer global `TextEncoder` over `require("util").TextEncoder`.
        */
       'node/prefer-global/text-encoder': ['error', 'always'],
       /**
-       * Enforce either `URL` or `require("url").URL`.
+       * Prefer global `URL` over `require("url").URL`.
        */
       'node/prefer-global/url': ['error', 'always'],
       /**
-       * Enforce either `URLSearchParams` or `require("url").URLSearchParams`.
+       * Prefer global `URLSearchParams` over `require("url").URLSearchParams`.
        */
       'node/prefer-global/url-search-params': ['error', 'always'],
       /**
