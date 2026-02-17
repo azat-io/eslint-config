@@ -119,6 +119,10 @@ export async function node(config: ConfigOptions): Promise<Linter.Config> {
        */
       'node/prefer-global/text-encoder': ['error', 'always'],
       /**
+       * Prefer global `timers` over `require("timers")`.
+       */
+      'node/prefer-global/timers': ['error', 'always'],
+      /**
        * Prefer global `URL` over `require("url").URL`.
        */
       'node/prefer-global/url': ['error', 'always'],
