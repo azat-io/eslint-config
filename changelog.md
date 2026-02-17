@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.69.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.68.0...v2.69.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([ac42f9b](https://github.com/azat-io/eslint-config/commit/ac42f9b))
+- **react:** Add id-name rule
+  ([f659ed8](https://github.com/azat-io/eslint-config/commit/f659ed8))
+- **node:** Add prefer-global crypto rule
+  ([cf6803b](https://github.com/azat-io/eslint-config/commit/cf6803b))
+- **node:** Add prefer-global timers rule
+  ([94ef9a6](https://github.com/azat-io/eslint-config/commit/94ef9a6))
+- Upgrade eslint to v10
+  ([49114a9](https://github.com/azat-io/eslint-config/commit/49114a9))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.68.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.67.0...v2.68.0)
