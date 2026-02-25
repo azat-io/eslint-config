@@ -14,7 +14,7 @@ import type { Linter } from 'eslint'
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
 import preferLetPlugin from 'eslint-plugin-prefer-let'
 import deMorganPlugin from 'eslint-plugin-de-morgan'
-import importXPlugin from 'eslint-plugin-import-x'
+import importPlugin from 'eslint-plugin-import-lite'
 import promisePlugin from 'eslint-plugin-promise'
 import sonarjsPlugin from 'eslint-plugin-sonarjs'
 import unicornPlugin from 'eslint-plugin-unicorn'
@@ -71,7 +71,7 @@ export function core(config: ConfigOptions): Linter.Config {
     plugins: {
       'de-morgan': deMorganPlugin,
       'eslint-comments': eslintCommentsPlugin,
-      'import-x': importXPlugin,
+      import: importPlugin,
       jsdoc: jsdocPlugin,
       'prefer-let': preferLetPlugin,
       promise: promisePlugin,
@@ -851,65 +851,20 @@ export function core(config: ConfigOptions): Linter.Config {
        * Require that type-only named specifiers be written only as part of
        * high-level type-only imports and never with an embedded marker.
        */
-      'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
-      /**
-       * Forbid any invalid exports.
-       */
-      'import-x/export': 'error',
+      'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
       /**
        * Require all imports appear before other statements.
        */
-      'import-x/first': 'error',
+      'import/first': 'error',
       /**
        * Enforce having one or more empty lines after the last top-level import
        * statement or require call.
        */
-      'import-x/newline-after-import': 'error',
-      /**
-       * Forbid the import of modules using absolute paths.
-       */
-      'import-x/no-absolute-path': 'error',
-      /**
-       * Report `require([array], ...)` and `define([array], ...)` function
-       * calls at the module scope.
-       */
-      'import-x/no-amd': 'error',
-      /**
-       * Forbid empty named import blocks.
-       */
-      'import-x/no-empty-named-blocks': 'error',
-      /**
-       * Forbid the import of external modules that are not declared in the
-       * `package.json`.
-       */
-      'import-x/no-extraneous-dependencies': [
-        'error',
-        {
-          devDependencies: true,
-          optionalDependencies: false,
-          peerDependencies: false,
-        },
-      ],
-      /**
-       * Disallow usage of import declarations with CommonJS exports.
-       */
-      'import-x/no-import-module-exports': 'error',
+      'import/newline-after-import': 'error',
       /**
        * Forbid named default exports..
        */
-      'import-x/no-named-default': 'error',
-      /**
-       * Forbid a module from importing itself.
-       */
-      'import-x/no-self-import': 'error',
-      /**
-       * Forbid unnecessary path segments in import and require statements.
-       */
-      'import-x/no-useless-path-segments': 'error',
-      /**
-       * Forbid webpack loader syntax in imports.
-       */
-      'import-x/no-webpack-loader-syntax': 'error',
+      'import/no-named-default': 'error',
 
       /**
        * Check that `@access` tags use one of the following values: `"package"`,

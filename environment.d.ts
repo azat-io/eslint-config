@@ -5,13 +5,6 @@ declare module '@vitest/eslint-plugin' {
   export = plugin
 }
 
-declare module 'eslint-plugin-import-x' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
 declare module 'eslint-plugin-jsx-a11y' {
   import type { ESLint } from 'eslint'
 
