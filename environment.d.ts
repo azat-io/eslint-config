@@ -26,13 +26,6 @@ declare module 'eslint-plugin-promise' {
   export = plugin
 }
 
-declare module 'eslint-plugin-react-compiler' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
 declare module 'eslint-plugin-react-dom' {
   import type { ESLint } from 'eslint'
 
@@ -83,13 +76,6 @@ declare module 'eslint-plugin-react-x' {
 }
 
 declare module 'eslint-plugin-qwik' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
-declare module 'eslint-plugin-svelte' {
   import type { ESLint } from 'eslint'
 
   let plugin: ESLint.Plugin
