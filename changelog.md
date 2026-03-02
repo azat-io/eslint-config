@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.71.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.70.0...v2.71.0)
+
+### 🚀 Features
+
+- Migrate to eslint-plugin-import-lite
+  ([80ef84d](https://github.com/azat-io/eslint-config/commit/80ef84d))
+- Update eslint plugins
+  ([70078bb](https://github.com/azat-io/eslint-config/commit/70078bb))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.70.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.69.0...v2.70.0)
