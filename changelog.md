@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.72.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.71.0...v2.72.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([821c43d](https://github.com/azat-io/eslint-config/commit/821c43d))
+
+### 🐞 Bug Fixes
+
+- **core:** Remove deprecated no-unused-disable rule
+  ([a4c50cc](https://github.com/azat-io/eslint-config/commit/a4c50cc))
+
+### ❤️ Contributors
+
+- Azat S. <to@azat.io>
+
 ## v2.71.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.70.0...v2.71.0)
