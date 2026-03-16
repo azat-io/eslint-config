@@ -20,18 +20,21 @@ function removeComments(): Plugin {
 
 export default defineConfig({
   build: {
-    lib: {
-      entry: path.resolve(import.meta.dirname, 'index.ts'),
-      fileName: (_format, entryName) => `${entryName}.js`,
-      name: '@azat-io/eslint-config',
-      formats: ['es'],
-    },
-    rollupOptions: {
+    rolldownOptions: {
       output: {
         preserveModules: true,
         exports: 'auto',
       },
       external: (id: string) => !id.startsWith('.') && !path.isAbsolute(id),
+      experimental: {
+        attachDebugInfo: 'none',
+      },
+    },
+    lib: {
+      entry: path.resolve(import.meta.dirname, 'index.ts'),
+      fileName: (_format, entryName) => `${entryName}.js`,
+      name: '@azat-io/eslint-config',
+      formats: ['es'],
     },
     minify: false,
   },
