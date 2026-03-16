@@ -199,11 +199,6 @@ export async function typescript(
           selector: 'import',
         },
         {
-          format: ['UPPER_CASE'],
-          modifiers: ['const'],
-          selector: 'variable',
-        },
-        {
           format: ['PascalCase', 'UPPER_CASE'],
           selector: 'typeLike',
         },

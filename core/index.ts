@@ -1077,7 +1077,12 @@ export function core(config: ConfigOptions): Linter.Config {
       /**
        * Encourage semantic of usage of `let` and `const`.
        */
-      'prefer-let/prefer-let': 'error',
+      'prefer-let/prefer-let': [
+        'error',
+        {
+          forceUpperCaseConst: true,
+        },
+      ],
 
       /**
        * Enforce the use of `catch()` on un-returned promises.
