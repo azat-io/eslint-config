@@ -172,6 +172,10 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/valid-files': 'error',
       /**
+       * Validate the `funding` property.
+       */
+      'package-json/valid-funding': 'error',
+      /**
        * Validate the `homepage` property.
        */
       'package-json/valid-homepage': 'error',
