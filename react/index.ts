@@ -24,7 +24,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
     reactCompilerPlugin,
     reactDomPlugin,
     reactHooksPlugin,
-    reactHooksExtraPlugin,
     reactNamingConventionPlugin,
     reactPerfPlugin,
     reactWebApiPlugin,
@@ -33,7 +32,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
     interopDefault(import('eslint-plugin-react-compiler')),
     interopDefault(import('eslint-plugin-react-dom')),
     interopDefault(import('eslint-plugin-react-hooks')),
-    interopDefault(import('eslint-plugin-react-hooks-extra')),
     interopDefault(import('eslint-plugin-react-naming-convention')),
     interopDefault(import('eslint-plugin-react-perf')),
     interopDefault(import('eslint-plugin-react-web-api')),
@@ -55,7 +53,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
       'react-compiler': reactCompilerPlugin,
       'react-dom': reactDomPlugin,
       'react-hooks': reactHooksPlugin,
-      'react-hooks-extra': reactHooksExtraPlugin,
       'react-naming-convention': reactNamingConventionPlugin,
       'react-perf': reactPerfPlugin,
       'react-web-api': reactWebApiPlugin,
@@ -145,16 +142,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-hooks/rules-of-hooks': 'error',
 
-      /**
-       * Disallow direct calls to the `set` function of `useState` in
-       * `useEffect` or `useLayoutEffect`.
-       */
-      'react-hooks-extra/no-direct-set-state-in-use-effect': 'error',
-
-      /**
-       * Enforces naming conventions for components.
-       */
-      'react-naming-convention/component-name': 'error',
       /**
        * Enforces context name to be a valid component name with the suffix
        * `Context`.
@@ -283,18 +270,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/jsx-key-before-spread': 'error',
       /**
-       * Disallow duplicate props in JSX.
-       */
-      'react-x/jsx-no-duplicate-props': 'error',
-      /**
-       * Disallow IIFE in JSX.
-       */
-      'react-x/jsx-no-iife': 'error',
-      /**
-       * Disallow undefined variables in JSX.
-       */
-      'react-x/jsx-no-undef': 'error',
-      /**
        * Enforces the use of shorthand syntax for boolean attributes.
        */
       'react-x/jsx-shorthand-boolean': 'error',
@@ -302,14 +277,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        * Enforces the use of shorthand syntax for fragments.
        */
       'react-x/jsx-shorthand-fragment': 'error',
-      /**
-       * Marks React variables as used when JSX is used.
-       */
-      'react-x/jsx-uses-react': 'error',
-      /**
-       * Marks variables used in JSX elements as used.
-       */
-      'react-x/jsx-uses-vars': 'error',
       /**
        * Disallow access to state in setState updater.
        */
@@ -346,10 +313,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        * Disallow nested component definitions.
        */
       'react-x/no-nested-component-definitions': 'error',
-      /**
-       * Disallow unnecessary usage of `key` props.
-       */
-      'react-x/no-unnecessary-key': 'error',
       /**
        * Disallow unnecessary usage of `useCallback`.
        */
@@ -392,10 +355,10 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/prefer-namespace-import': 'error',
       /**
-       * Enforces function calls made inside `useState` to be wrapped in an
-       * initializer function.
+       * Disallow direct calls to the `set` function of `useState` in
+       * `useEffect` or `useLayoutEffect`.
        */
-      'react-x/prefer-use-state-lazy-initialization': 'error',
+      'react-x/set-state-in-effect': 'error',
     },
 
     settings: {
