@@ -1,5 +1,27 @@
 # Changelog
 
+## v2.73.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.72.0...v2.73.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([8b3cec1](https://github.com/azat-io/eslint-config/commit/8b3cec1))
+- **package-json:** Add valid-funding rule
+  ([15cf0a9](https://github.com/azat-io/eslint-config/commit/15cf0a9))
+- Use force upper case const option in prefer-let rule
+  ([b7e87a0](https://github.com/azat-io/eslint-config/commit/b7e87a0))
+
+### 🐞 Bug Fixes
+
+- **react:** Remove deprecated react rules
+  ([15bb20b](https://github.com/azat-io/eslint-config/commit/15bb20b))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.72.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.71.0...v2.72.0)
