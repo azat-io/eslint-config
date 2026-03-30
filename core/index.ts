@@ -1721,6 +1721,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-fallback-in-spread': 'error',
       /**
+       * Disallow unnecessary `.toArray()` on iterators.
+       */
+      'unicorn/no-useless-iterator-to-array': 'error',
+      /**
        * Disallow useless array length check.
        */
       'unicorn/no-useless-length-check': 'error',
