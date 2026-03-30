@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.75.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.74.0...v2.75.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([0ed3c98](https://github.com/azat-io/eslint-config/commit/0ed3c98))
+- **core:** Add consistent-template-literal-escape rule
+  ([9cf8376](https://github.com/azat-io/eslint-config/commit/9cf8376))
+- **core:** Add no-useless-iterator-to-array rule
+  ([a28e535](https://github.com/azat-io/eslint-config/commit/a28e535))
+- **core:** Add prefer-simple-condition-first rule
+  ([1bf95c4](https://github.com/azat-io/eslint-config/commit/1bf95c4))
+- **core:** Add switch-case-break-position rule
+  ([aa9c078](https://github.com/azat-io/eslint-config/commit/aa9c078))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.74.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.73.0...v2.74.0)
