@@ -1558,6 +1558,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/consistent-existence-index-check': 'error',
       /**
+       * Enforce consistent style for escaping `${` in template literals.
+       */
+      'unicorn/consistent-template-literal-escape': 'error',
+      /**
        * Enforce correct `Error` subclassing.
        */
       'unicorn/custom-error-definition': 'error',
