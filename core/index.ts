@@ -2019,6 +2019,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/require-number-to-fixed-digits-argument': 'error',
       /**
+       * Enforce consistent `break` / `return` / `continue` / `throw` position
+       * in case clauses.
+       */
+      'unicorn/switch-case-break-position': 'error',
+      /**
        * Fix whitespace-insensitive template indentation.
        */
       'unicorn/template-indent': 'error',
