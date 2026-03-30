@@ -1923,6 +1923,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-set-size': 'error',
       /**
+       * Prefer simple conditions first in logical expressions.
+       */
+      'unicorn/prefer-simple-condition-first': 'error',
+      /**
        * Enforce combining multiple `Array#push()`,
        * `Element#classList.{add,remove}()`, and `importScripts()` into one
        * call.
