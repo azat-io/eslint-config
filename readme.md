@@ -153,6 +153,7 @@ This config uses the following plugins:
 - [eslint-plugin-react-compiler](https://github.com/facebook/react/tree/main/compiler/packages/eslint-plugin-react-compiler)
 - [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks)
+- [eslint-plugin-react-jsx](https://github.com/Rel1cx/eslint-react)
 - [eslint-plugin-react-naming-convention](https://github.com/Rel1cx/eslint-react)
 - [eslint-plugin-react-perf](https://github.com/cvazac/eslint-plugin-react-perf)
 - [eslint-plugin-react-web-api](https://github.com/Rel1cx/eslint-react)

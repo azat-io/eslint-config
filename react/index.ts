@@ -23,6 +23,7 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
   let [
     reactCompilerPlugin,
     reactDomPlugin,
+    reactJsxPlugin,
     reactHooksPlugin,
     reactNamingConventionPlugin,
     reactPerfPlugin,
@@ -31,6 +32,7 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
   ] = await Promise.all([
     interopDefault(import('eslint-plugin-react-compiler')),
     interopDefault(import('eslint-plugin-react-dom')),
+    interopDefault(import('eslint-plugin-react-jsx')),
     interopDefault(import('eslint-plugin-react-hooks')),
     interopDefault(import('eslint-plugin-react-naming-convention')),
     interopDefault(import('eslint-plugin-react-perf')),
@@ -53,6 +55,7 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
       'react-compiler': reactCompilerPlugin,
       'react-dom': reactDomPlugin,
       'react-hooks': reactHooksPlugin,
+      'react-jsx': reactJsxPlugin,
       'react-naming-convention': reactNamingConventionPlugin,
       'react-perf': reactPerfPlugin,
       'react-web-api': reactWebApiPlugin,
@@ -93,10 +96,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        * Enforces explicit `sandbox` attribute for `iframe` elements.
        */
       'react-dom/no-missing-iframe-sandbox': 'error',
-      /**
-       * Enforces the absence of a `namespace` in React elements.
-       */
-      'react-dom/no-namespace': 'error',
       /**
        * Replaces usages of `ReactDom.render()` with.
        *
@@ -141,6 +140,15 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        * Check rules of Hooks.
        */
       'react-hooks/rules-of-hooks': 'error',
+
+      /**
+       * Enforces the absence of a `namespace` in React elements.
+       */
+      'react-jsx/no-namespace': 'error',
+      /**
+       * Disallow useless fragments.
+       */
+      'react-jsx/no-useless-fragment': 'error',
 
       /**
        * Enforces context name to be a valid component name with the suffix
@@ -265,19 +273,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
       'react-web-api/no-leaked-websocket': 'error',
 
       /**
-       * Enforces that the `key` attribute is placed before the spread attribute
-       * in JSX elements.
-       */
-      'react-x/jsx-key-before-spread': 'error',
-      /**
-       * Enforces the use of shorthand syntax for boolean attributes.
-       */
-      'react-x/jsx-shorthand-boolean': 'error',
-      /**
-       * Enforces the use of shorthand syntax for fragments.
-       */
-      'react-x/jsx-shorthand-fragment': 'error',
-      /**
        * Disallow access to state in setState updater.
        */
       'react-x/no-access-state-in-setstate': 'error',
@@ -309,6 +304,11 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        * Disallow duplicate key in JSX.
        */
       'react-x/no-duplicate-key': 'error',
+      /**
+       * Enforces that the `key` attribute is placed before the spread attribute
+       * in JSX elements.
+       */
+      'react-x/no-key-after-spread': 'error',
       /**
        * Disallow nested component definitions.
        */
@@ -346,10 +346,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        * Disallow usage of useContext; enforce use (React 19).
        */
       'react-x/no-use-context': 'error',
-      /**
-       * Disallow useless fragments.
-       */
-      'react-x/no-useless-fragment': 'error',
       /**
        * Enforces React is imported via a namespace import.
        */

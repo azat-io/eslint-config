@@ -40,6 +40,13 @@ declare module 'eslint-plugin-react-hooks' {
   export = plugin
 }
 
+declare module 'eslint-plugin-react-jsx' {
+  import type { ESLint } from 'eslint'
+
+  let plugin: ESLint.Plugin
+  export = plugin
+}
+
 declare module 'eslint-plugin-react-naming-convention' {
   import type { ESLint } from 'eslint'
 
