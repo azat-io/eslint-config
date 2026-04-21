@@ -39,7 +39,7 @@ type ConfigOptionFlags = Record<ConfigOptionKeys, boolean>
 type ConfigOptionKeys = (typeof CONFIG_OPTIONS)[number]
 
 export default async ({
-  extends: customExtends = {} as Linter.Config,
+  extends: customExtends = {},
   ...rawConfig
 }: RawConfigOptions = {}): Promise<Linter.Config[]> => {
   let config: Required<ConfigOptionFlags> = {} as Required<ConfigOptionFlags>
