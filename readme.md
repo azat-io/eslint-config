@@ -5,7 +5,6 @@
   alt="ESLint Config Logo"
   align="right"
   height="160"
-  width="160"
 />
 
 [![Version](https://img.shields.io/npm/v/@azat-io/eslint-config.svg?color=4a32c3&labelColor=26272b)](https://npmjs.com/package/@azat-io/eslint-config)
