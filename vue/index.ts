@@ -453,6 +453,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/prefer-separate-static-class': 'error',
       /**
+       * Enforce passing a single argument to custom event emissions.
+       */
+      'vue/prefer-single-event-payload': 'error',
+      /**
        * Require shorthand form attribute when `v-bind` value is `true`.
        */
       'vue/prefer-true-attribute-shorthand': 'error',
