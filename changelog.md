@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.79.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.78.0...v2.79.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([dba22cf](https://github.com/azat-io/eslint-config/commit/dba22cf))
+- **vue:** Add prefer-v-model rule
+  ([a714cb4](https://github.com/azat-io/eslint-config/commit/a714cb4))
+- **vue:** Add prefer-single-event-payload rule
+  ([02526e9](https://github.com/azat-io/eslint-config/commit/02526e9))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.78.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.77.0...v2.78.0)
