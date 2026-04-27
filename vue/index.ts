@@ -457,6 +457,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/prefer-true-attribute-shorthand': 'error',
       /**
+       * Enforce using `v-model` instead of `:prop/@update:prop` pair.
+       */
+      'vue/prefer-v-model': 'error',
+      /**
        * Enforce specific casing for the Prop name in Vue components.
        */
       'vue/prop-name-casing': ['error', 'camelCase'],
