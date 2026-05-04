@@ -1,5 +1,25 @@
 # Changelog
 
+## v2.80.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.79.0...v2.80.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([a87ab68](https://github.com/azat-io/eslint-config/commit/a87ab68))
+- **react:** Add no-leaked-fetch rule
+  ([9fdcb11](https://github.com/azat-io/eslint-config/commit/9fdcb11))
+
+### 🐞 Bug Fixes
+
+- **react:** Remove deprecated react rules
+  ([21eddcc](https://github.com/azat-io/eslint-config/commit/21eddcc))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.79.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.78.0...v2.79.0)
