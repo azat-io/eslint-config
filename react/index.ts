@@ -319,14 +319,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/no-nested-component-definitions': 'error',
       /**
-       * Disallow unnecessary usage of `useCallback`.
-       */
-      'react-x/no-unnecessary-use-callback': 'error',
-      /**
-       * Disallow unnecessary usage of `useMemo`.
-       */
-      'react-x/no-unnecessary-use-memo': 'error',
-      /**
        * Enforces that a function with the `use` prefix should use at least one
        * hook inside of it.
        */
@@ -344,22 +336,19 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-x/no-unused-props': 'error',
       /**
-       * Warns unused class component state.
-       */
-      'react-x/no-unused-state': 'error',
-      /**
        * Disallow usage of useContext; enforce use (React 19).
        */
       'react-x/no-use-context': 'error',
-      /**
-       * Enforces React is imported via a namespace import.
-       */
-      'react-x/prefer-namespace-import': 'error',
       /**
        * Disallow direct calls to the `set` function of `useState` in
        * `useEffect` or `useLayoutEffect`.
        */
       'react-x/set-state-in-effect': 'error',
+      /**
+       * Validates that `useMemo` is called with a callback that returns a
+       * value.
+       */
+      'react-x/use-memo': 'error',
     },
 
     settings: {
