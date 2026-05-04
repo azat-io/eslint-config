@@ -212,6 +212,11 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
        */
       'react-web-api/no-leaked-event-source': 'error',
       /**
+       * Enforces that every `fetch` in a component or custom hook has a
+       * corresponding `AbortController` abort in the cleanup function.
+       */
+      'react-web-api/no-leaked-fetch': 'error',
+      /**
        * Prevents leaked `Geolocation.watchPosition()`.
        */
       'react-web-api/no-leaked-geolocation': 'error',
