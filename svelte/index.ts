@@ -192,6 +192,10 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/prefer-class-directive': 'error',
       /**
+       * Disallow unnecessary `$derived.by()` when `$derived()` is sufficient.
+       */
+      'svelte/prefer-derived-over-derived-by': 'error',
+      /**
        * Destructure values from object stores for better change tracking &
        * fewer redraws.
        */
