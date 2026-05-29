@@ -1,15 +1,18 @@
-export async function interopDefault<T>(module: T): Promise<T> {
+export async function interopDefault<T>(
+  module: Promise<T>,
+): Promise<T extends { default: infer U } ? U : T> {
   try {
     let resolved = await module
 
-    if (typeof resolved === 'object' && resolved !== null) {
-      if ('default' in resolved) {
-        return (resolved as { default: unknown }).default as T
-      }
-      return resolved
+    if (
+      typeof resolved === 'object' &&
+      resolved !== null &&
+      'default' in resolved
+    ) {
+      return (resolved as { default: unknown }).default as never
     }
 
-    return resolved
+    return resolved as never
   } catch (error) {
     throw new Error(`Cannot import module: ${String(error)}`, {
       cause: error,
