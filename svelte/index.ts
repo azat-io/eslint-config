@@ -146,6 +146,10 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/no-inspect': 'error',
       /**
+       * Disallow `<style>` elements nested inside other elements or blocks.
+       */
+      'svelte/no-nested-style-tag': 'error',
+      /**
        * Disallow objects in text mustache interpolation.
        */
       'svelte/no-object-in-text-mustaches': 'error',
