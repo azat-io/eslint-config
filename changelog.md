@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.81.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.80.0...v2.81.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([99e44b0](https://github.com/azat-io/eslint-config/commit/99e44b0))
+- **svelte:** Add no-nested-style-tag rule
+  ([0554489](https://github.com/azat-io/eslint-config/commit/0554489))
+- **svelte:** Add prefer-derived-over-derived-by rule
+  ([40942d5](https://github.com/azat-io/eslint-config/commit/40942d5))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.80.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.79.0...v2.80.0)
