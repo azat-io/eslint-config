@@ -1608,6 +1608,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/new-for-builtins': 'error',
       /**
+       * Disallow using reference values as `Array#fill()` values.
+       */
+      'unicorn/no-array-fill-with-reference-type': 'error',
+      /**
        * Prefer `for…of` over the `forEach` method.
        */
       'unicorn/no-array-for-each': 'error',
