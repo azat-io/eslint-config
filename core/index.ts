@@ -1562,6 +1562,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/consistent-existence-index-check': 'error',
       /**
+       * Enforce consistent JSON file reads before `JSON.parse()`.
+       */
+      'unicorn/consistent-json-file-read': 'error',
+      /**
        * Enforce consistent style for escaping `${` in template literals.
        */
       'unicorn/consistent-template-literal-escape': 'error',
