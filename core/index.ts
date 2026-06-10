@@ -1541,6 +1541,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/catch-error-name': 'error',
       /**
+       * Enforce consistent spelling of compound words in identifiers.
+       */
+      'unicorn/consistent-compound-words': 'error',
+      /**
        * Prefer passing `Date` directly to the constructor when cloning.
        */
       'unicorn/consistent-date-clone': 'error',
