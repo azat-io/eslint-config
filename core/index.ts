@@ -1533,6 +1533,10 @@ export function core(config: ConfigOptions): Linter.Config {
       'sonarjs/reduce-initial-value': 'error',
 
       /**
+       * Prefer better DOM traversal APIs.
+       */
+      'unicorn/better-dom-traversing': 'error',
+      /**
        * Enforce a specific parameter name in catch clauses.
        */
       'unicorn/catch-error-name': 'error',
