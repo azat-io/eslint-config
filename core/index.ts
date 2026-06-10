@@ -1616,6 +1616,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-array-for-each': 'error',
       /**
+       * Disallow `.fill()` after `Array.from({length: …})`.
+       */
+      'unicorn/no-array-from-fill': 'error',
+      /**
        * Disallow using the `this` argument in array methods.
        */
       'unicorn/no-array-method-this-argument': 'error',
