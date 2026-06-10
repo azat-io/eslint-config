@@ -57,6 +57,11 @@ export function packageJson(_config: ConfigOptions): Linter.Config {
        */
       'package-json/no-empty-fields': 'error',
       /**
+       * Require that dependencies do not use local file paths, which will.
+       * Likely result in errors when installing from a registry.
+       */
+      'package-json/no-local-dependencies': 'error',
+      /**
        * Checks that the `files` property of a `package.json` doesn't contain
        * any redundant or unnecessary file entries.
        */
