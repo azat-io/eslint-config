@@ -1636,6 +1636,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-await-in-promise-methods': 'error',
       /**
+       * Disallow unnecessary `Blob` to `File` conversion.
+       */
+      'unicorn/no-blob-to-file': 'error',
+      /**
        * Disallow to use `for` loop.
        */
       'unicorn/no-for-loop': 'error',
