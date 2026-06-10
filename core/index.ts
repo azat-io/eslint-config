@@ -1533,10 +1533,6 @@ export function core(config: ConfigOptions): Linter.Config {
       'sonarjs/reduce-initial-value': 'error',
 
       /**
-       * Improve regexp by making them shorter, consistent, and safer.
-       */
-      'unicorn/better-regex': 'error',
-      /**
        * Enforce a specific parameter name in catch clauses.
        */
       'unicorn/catch-error-name': 'error',
@@ -1565,6 +1561,10 @@ export function core(config: ConfigOptions): Linter.Config {
        * Enforce correct `Error` subclassing.
        */
       'unicorn/custom-error-definition': 'error',
+      /**
+       * Prefer using `.dataset` on DOM elements over calling attribute methods.
+       */
+      'unicorn/dom-node-dataset': 'error',
       /**
        * Enforce passing a `message` value when creating a built-in error.
        */
@@ -1827,10 +1827,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * Prefer `Node#append()` over `Node#appendChild()`.
        */
       'unicorn/prefer-dom-node-append': 'error',
-      /**
-       * Prefer using `.dataset` on DOM elements over calling attribute methods.
-       */
-      'unicorn/prefer-dom-node-dataset': 'error',
       /**
        * Prefer `childNode.remove()` over `parentNode.removeChild(childNode)`.
        */
