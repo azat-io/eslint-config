@@ -1664,6 +1664,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-immediate-mutation': 'error',
       /**
+       * Disallow incorrect `querySelector()` and `querySelectorAll()` usage.
+       */
+      'unicorn/no-incorrect-query-selector': 'error',
+      /**
        * Require `Array.isArray()` instead of `instanceof Array`.
        */
       'unicorn/no-instanceof-builtins': 'error',
