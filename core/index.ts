@@ -1681,6 +1681,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-remove-event-listener': 'error',
       /**
+       * Disallow accessing `event.currentTarget` after the synchronous event
+       * dispatch has finished.
+       */
+      'unicorn/no-late-current-target-access': 'error',
+      /**
        * Disallow named usage of default import and export.
        */
       'unicorn/no-named-default': 'error',
