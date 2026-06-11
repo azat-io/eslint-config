@@ -1640,6 +1640,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-blob-to-file': 'error',
       /**
+       * Disallow confusing uses of `Array#{splice,toSpliced}()`.
+       */
+      'unicorn/no-confusing-array-splice': 'error',
+      /**
        * Disallow to use `for` loop.
        */
       'unicorn/no-for-loop': 'error',
