@@ -1648,6 +1648,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-duplicate-set-values': 'error',
       /**
+       * Disallow exports in scripts.
+       */
+      'unicorn/no-exports-in-scripts': 'error',
+      /**
        * Disallow to use `for` loop.
        */
       'unicorn/no-for-loop': 'error',
