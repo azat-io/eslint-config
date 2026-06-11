@@ -1723,6 +1723,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-this-assignment': 'error',
       /**
+       * Disallow `this` outside of classes.
+       */
+      'unicorn/no-this-outside-of-class': 'error',
+      /**
        * Disallow comparing `undefined` using `typeof`.
        */
       'unicorn/no-typeof-undefined': 'error',
