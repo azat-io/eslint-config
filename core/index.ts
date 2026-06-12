@@ -1925,6 +1925,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-includes': 'error',
       /**
+       * Prefer `.includes()` over repeated equality comparisons.
+       */
+      'unicorn/prefer-includes-over-repeated-comparisons': 'error',
+      /**
        * Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.
        */
       'unicorn/prefer-keyboard-event-key': 'error',
