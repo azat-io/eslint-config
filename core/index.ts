@@ -1744,6 +1744,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unnecessary-await': 'error',
       /**
+       * Disallow unnecessary nested ternary expressions.
+       */
+      'unicorn/no-unnecessary-nested-ternary': 'error',
+      /**
        * Disallow using `.length` or `Infinity` as the end argument of
        * `{Array,String,TypedArray}#slice()`.
        */
