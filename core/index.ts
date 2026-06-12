@@ -1906,6 +1906,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-export-from': 'error',
       /**
+       * Prefer `.getOrInsertComputed()` when the default value has side
+       * effects.
+       */
+      'unicorn/prefer-get-or-insert-computed': 'error',
+      /**
        * Prefer `globalThis` over `window`, `self`, and `global`.
        */
       'unicorn/prefer-global-this': 'error',
