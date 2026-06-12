@@ -1761,6 +1761,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unreadable-iife': 'error',
       /**
+       * Disallow ignoring the return value of selected array methods.
+       */
+      'unicorn/no-unused-array-method-return': 'error',
+      /**
        * Disallow unused object properties.
        */
       'unicorn/no-unused-properties': 'error',
