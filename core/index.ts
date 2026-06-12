@@ -1937,6 +1937,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-logical-operator-over-ternary': 'error',
       /**
+       * Prefer `Math.abs()` over manual absolute value expressions and
+       * symmetric range checks.
+       */
+      'unicorn/prefer-math-abs': 'error',
+      /**
        * Prefer `Math.min()` and `Math.max()` over ternaries for simple
        * comparisons.
        */
