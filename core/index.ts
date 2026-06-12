@@ -1845,6 +1845,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-array-index-of': 'error',
       /**
+       * Prefer last-oriented array methods over `Array#reverse()` or
+       * `Array#toReversed()` followed by a method.
+       */
+      'unicorn/prefer-array-last-methods': 'error',
+      /**
        * Prefer `.some(…)` over `.filter(…).length` check and
        * `.{find,findLast}(…)`.
        */
