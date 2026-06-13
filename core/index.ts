@@ -2014,6 +2014,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-spread': 'error',
       /**
+       * Prefer `String#matchAll()` over `RegExp#exec()` loops.
+       */
+      'unicorn/prefer-string-match-all': 'error',
+      /**
        * Prefer using the `String.raw` tag to avoid escaping `\`.
        */
       'unicorn/prefer-string-raw': 'error',
