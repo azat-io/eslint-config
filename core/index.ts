@@ -2018,6 +2018,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-string-match-all': 'error',
       /**
+       * Prefer `String#padStart()` and `String#padEnd()` over manual string
+       * padding.
+       */
+      'unicorn/prefer-string-pad-start-end': 'error',
+      /**
        * Prefer using the `String.raw` tag to avoid escaping `\`.
        */
       'unicorn/prefer-string-raw': 'error',
