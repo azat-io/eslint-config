@@ -2005,6 +2005,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-single-call': 'error',
       /**
+       * Prefer `String#split()` with a limit.
+       */
+      'unicorn/prefer-split-limit': 'error',
+      /**
        * Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`,
        * `Array#{slice,toSpliced}()` and `String#split('')`.
        */
