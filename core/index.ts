@@ -2096,6 +2096,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/require-array-join-separator': 'error',
       /**
+       * Require `CSS.escape()` for interpolated values in CSS selectors.
+       */
+      'unicorn/require-css-escape': 'error',
+      /**
        * Require non-empty module attributes for imports and exports.
        */
       'unicorn/require-module-attributes': 'error',
