@@ -2112,6 +2112,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/require-number-to-fixed-digits-argument': 'error',
       /**
+       * Require passive event listeners for high-frequency events.
+       */
+      'unicorn/require-passive-events': 'error',
+      /**
        * Enforce consistent `break` / `return` / `continue` / `throw` position
        * in case clauses.
        */
