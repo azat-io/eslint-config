@@ -2027,6 +2027,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-string-raw': 'error',
       /**
+       * Prefer `String#repeat()` for repeated whitespace.
+       */
+      'unicorn/prefer-string-repeat': 'error',
+      /**
        * Prefer `String#replaceAll()` over regex searches with the global flag.
        */
       'unicorn/prefer-string-replace-all': 'error',
