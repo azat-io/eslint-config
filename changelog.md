@@ -1,5 +1,68 @@
 # Changelog
 
+## v2.83.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.82.0...v2.83.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([012fe0b](https://github.com/azat-io/eslint-config/commit/012fe0b))
+- **package-json:** Add no-local-dependencies rule
+  ([874ffeb](https://github.com/azat-io/eslint-config/commit/874ffeb))
+- **core:** Add better-dom-traversing rule
+  ([17fca37](https://github.com/azat-io/eslint-config/commit/17fca37))
+- **core:** Add consistent-compound-words rule
+  ([6bdfe71](https://github.com/azat-io/eslint-config/commit/6bdfe71))
+- **core:** Add consistent-json-file-read rule
+  ([f8f30bb](https://github.com/azat-io/eslint-config/commit/f8f30bb))
+- **core:** Add no-array-fill-with-reference-type rule
+  ([0f07129](https://github.com/azat-io/eslint-config/commit/0f07129))
+- **core:** Add no-array-from-fill rule
+  ([c2d9885](https://github.com/azat-io/eslint-config/commit/c2d9885))
+- **core:** Add no-blob-to-file rule
+  ([6c2c3e6](https://github.com/azat-io/eslint-config/commit/6c2c3e6))
+- **core:** Add no-confusing-array-splice rule
+  ([0f8a502](https://github.com/azat-io/eslint-config/commit/0f8a502))
+- **core:** Add no-duplicate-set-values rule
+  ([2c8cf7b](https://github.com/azat-io/eslint-config/commit/2c8cf7b))
+- **core:** Add no-exports-in-scripts rule
+  ([9ae769b](https://github.com/azat-io/eslint-config/commit/9ae769b))
+- **core:** Add no-incorrect-query-selector rule
+  ([9384f55](https://github.com/azat-io/eslint-config/commit/9384f55))
+- **core:** Add no-late-current-target-access rule
+  ([44b9163](https://github.com/azat-io/eslint-config/commit/44b9163))
+- **core:** Add no-this-outside-of-class rule
+  ([6037cb1](https://github.com/azat-io/eslint-config/commit/6037cb1))
+- **core:** Add no-unnecessary-nested-ternary rule
+  ([0d0f9e3](https://github.com/azat-io/eslint-config/commit/0d0f9e3))
+- **core:** Add no-unused-array-method-return rule
+  ([c26bef7](https://github.com/azat-io/eslint-config/commit/c26bef7))
+- **core:** Add prefer-array-last-methods rule
+  ([aa90d73](https://github.com/azat-io/eslint-config/commit/aa90d73))
+- **core:** Add prefer-get-or-insert-computed rule
+  ([87b5a94](https://github.com/azat-io/eslint-config/commit/87b5a94))
+- **core:** Add prefer-includes-over-repeated-comparisons rule
+  ([44a8224](https://github.com/azat-io/eslint-config/commit/44a8224))
+- **core:** Add prefer-math-abs rule
+  ([56bc940](https://github.com/azat-io/eslint-config/commit/56bc940))
+- **core:** Add prefer-split-limit rule
+  ([39862b6](https://github.com/azat-io/eslint-config/commit/39862b6))
+- **core:** Add prefer-string-match-all rule
+  ([77d3c7b](https://github.com/azat-io/eslint-config/commit/77d3c7b))
+- **core:** Add prefer-string-pad-start-end rule
+  ([e6087fb](https://github.com/azat-io/eslint-config/commit/e6087fb))
+- **core:** Add prefer-string-repeat rule
+  ([1447d5e](https://github.com/azat-io/eslint-config/commit/1447d5e))
+- **core:** Add require-css-escape rule
+  ([e928361](https://github.com/azat-io/eslint-config/commit/e928361))
+- **core:** Add require-passive-events rule
+  ([3e0a2e1](https://github.com/azat-io/eslint-config/commit/3e0a2e1))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.82.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.81.0...v2.82.0)
