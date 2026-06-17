@@ -1658,6 +1658,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-declarations-before-early-exit': 'error',
       /**
+       * Disallow `.map()` and `.filter()` in `for…of` and for `await…of` loop
+       * headers.
+       */
+      'unicorn/no-duplicate-loops': 'error',
+      /**
        * Disallow duplicate values in `Set` constructor array literals.
        */
       'unicorn/no-duplicate-set-values': 'error',
