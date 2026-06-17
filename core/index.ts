@@ -1591,6 +1591,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/explicit-length-check': 'error',
       /**
+       * Enforce explicit `delay` argument for `setTimeout()` and
+       * `setInterval()`.
+       */
+      'unicorn/explicit-timer-delay': ['error', 'always'],
+      /**
        * Enforce kebab case style for filenames.
        */
       'unicorn/filename-case': [
