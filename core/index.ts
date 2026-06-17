@@ -1649,6 +1649,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-confusing-array-splice': 'error',
       /**
+       * Disallow confusing uses of `Array#with()`.
+       */
+      'unicorn/no-confusing-array-with': 'error',
+      /**
        * Disallow duplicate values in `Set` constructor array literals.
        */
       'unicorn/no-duplicate-set-values': 'error',
