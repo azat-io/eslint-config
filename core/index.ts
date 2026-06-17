@@ -1641,6 +1641,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-blob-to-file': 'error',
       /**
+       * Disallow dynamic object property existence checks.
+       */
+      'unicorn/no-computed-property-existence-check': 'error',
+      /**
        * Disallow confusing uses of `Array#{splice,toSpliced}()`.
        */
       'unicorn/no-confusing-array-splice': 'error',
