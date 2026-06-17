@@ -1612,10 +1612,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-array-fill-with-reference-type': 'error',
       /**
-       * Prefer `for…of` over the `forEach` method.
-       */
-      'unicorn/no-array-for-each': 'error',
-      /**
        * Disallow `.fill()` after `Array.from({length: …})`.
        */
       'unicorn/no-array-from-fill': 'error',
@@ -1651,6 +1647,10 @@ export function core(config: ConfigOptions): Linter.Config {
        * Disallow exports in scripts.
        */
       'unicorn/no-exports-in-scripts': 'error',
+      /**
+       * Prefer `for…of` over the `forEach` method.
+       */
+      'unicorn/no-for-each': 'error',
       /**
        * Disallow to use `for` loop.
        */
