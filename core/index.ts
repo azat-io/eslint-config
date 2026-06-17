@@ -1653,6 +1653,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-confusing-array-with': 'error',
       /**
+       * Disallow declarations before conditional early exits when they are only
+       * used after the exit.
+       */
+      'unicorn/no-declarations-before-early-exit': 'error',
+      /**
        * Disallow duplicate values in `Set` constructor array literals.
        */
       'unicorn/no-duplicate-set-values': 'error',
