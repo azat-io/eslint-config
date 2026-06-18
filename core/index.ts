@@ -1667,6 +1667,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-duplicate-set-values': 'error',
       /**
+       * Disallow assigning to built-in error properties.
+       */
+      'unicorn/no-error-property-assignment': 'error',
+      /**
        * Disallow exports in scripts.
        */
       'unicorn/no-exports-in-scripts': 'error',
