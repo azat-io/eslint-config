@@ -1755,6 +1755,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-redundant-comparison': 'error',
       /**
+       * Disallow using the return value of `Array#push()` and
+       * `Array#unshift()`.
+       */
+      'unicorn/no-return-array-push': 'error',
+      /**
        * Disallow passing single-element arrays to `Promise` methods.
        */
       'unicorn/no-single-promise-in-promise-methods': 'error',
