@@ -1750,6 +1750,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-process-exit': 'error',
       /**
+       * Disallow comparisons made redundant by an equality check in the same
+       * logical AND.
+       */
+      'unicorn/no-redundant-comparison': 'error',
+      /**
        * Disallow passing single-element arrays to `Promise` methods.
        */
       'unicorn/no-single-promise-in-promise-methods': 'error',
