@@ -1717,6 +1717,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-named-default': 'error',
       /**
+       * Disallow negated array predicate calls.
+       */
+      'unicorn/no-negated-array-predicate': 'error',
+      /**
        * Disallow negated conditions.
        */
       'unicorn/no-negated-condition': 'error',
