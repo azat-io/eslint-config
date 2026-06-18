@@ -1742,6 +1742,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-new-buffer': 'error',
       /**
+       * Disallow `Object` methods with `Map` or `Set`.
+       */
+      'unicorn/no-object-methods-with-collections': 'error',
+      /**
        * Disallow `process.exit()`.
        */
       'unicorn/no-process-exit': 'error',
