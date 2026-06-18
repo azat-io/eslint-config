@@ -1721,6 +1721,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-negated-array-predicate': 'error',
       /**
+       * Disallow negated comparisons.
+       */
+      'unicorn/no-negated-comparison': 'error',
+      /**
        * Disallow negated conditions.
        */
       'unicorn/no-negated-condition': 'error',
