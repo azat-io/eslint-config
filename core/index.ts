@@ -1784,6 +1784,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-typeof-undefined': 'error',
       /**
+       * Require class members to be declared.
+       */
+      'unicorn/no-undeclared-class-members': 'error',
+      /**
        * Disallow using `1` as the depth argument of `Array#flat()`.
        */
       'unicorn/no-unnecessary-array-flat-depth': 'error',
