@@ -1801,6 +1801,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unnecessary-await': 'error',
       /**
+       * Disallow unnecessary `globalThis` references.
+       */
+      'unicorn/no-unnecessary-global-this': 'error',
+      /**
        * Disallow unnecessary nested ternary expressions.
        */
       'unicorn/no-unnecessary-nested-ternary': 'error',
