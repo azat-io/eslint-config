@@ -1826,6 +1826,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unreadable-iife': 'error',
       /**
+       * Disallow unreadable `new` expressions.
+       */
+      'unicorn/no-unreadable-new-expression': 'error',
+      /**
        * Disallow ignoring the return value of selected array methods.
        */
       'unicorn/no-unused-array-method-return': 'error',
