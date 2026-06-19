@@ -1768,6 +1768,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-static-only-class': 'error',
       /**
+       * Prefer comparing values directly over subtracting and comparing to `0`.
+       */
+      'unicorn/no-subtraction-comparison': 'error',
+      /**
        * Disallow assigning `this` to a variable.
        */
       'unicorn/no-this-assignment': 'error',
