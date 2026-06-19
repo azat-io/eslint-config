@@ -1814,6 +1814,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unnecessary-slice-end': 'error',
       /**
+       * Disallow `Array#splice()` when simpler alternatives exist.
+       */
+      'unicorn/no-unnecessary-splice': 'error',
+      /**
        * Disallow unreadable array destructuring.
        */
       'unicorn/no-unreadable-array-destructuring': 'error',
