@@ -1830,6 +1830,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unreadable-new-expression': 'error',
       /**
+       * Disallow unreadable object destructuring.
+       */
+      'unicorn/no-unreadable-object-destructuring': 'error',
+      /**
        * Disallow ignoring the return value of selected array methods.
        */
       'unicorn/no-unused-array-method-return': 'error',
