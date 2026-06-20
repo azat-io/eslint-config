@@ -1863,6 +1863,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-concat': 'error',
       /**
+       * Disallow `else` after a statement that exits.
+       */
+      'unicorn/no-useless-else': 'error',
+      /**
        * Disallow useless fallback when spreading in object literals.
        */
       'unicorn/no-useless-fallback-in-spread': 'error',
