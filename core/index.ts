@@ -1859,6 +1859,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-collection-argument': 'error',
       /**
+       * Disallow useless concatenation of literals.
+       */
+      'unicorn/no-useless-concat': 'error',
+      /**
        * Disallow useless fallback when spreading in object literals.
        */
       'unicorn/no-useless-fallback-in-spread': 'error',
