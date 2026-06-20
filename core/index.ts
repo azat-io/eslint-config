@@ -1838,6 +1838,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unsafe-buffer-conversion': 'error',
       /**
+       * Disallow unsafe DOM HTML APIs.
+       */
+      'unicorn/no-unsafe-dom-html': 'error',
+      /**
        * Disallow ignoring the return value of selected array methods.
        */
       'unicorn/no-unused-array-method-return': 'error',
