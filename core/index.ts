@@ -1834,6 +1834,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unreadable-object-destructuring': 'error',
       /**
+       * Prevent unsafe use of ArrayBuffer view `.buffer`.
+       */
+      'unicorn/no-unsafe-buffer-conversion': 'error',
+      /**
        * Disallow ignoring the return value of selected array methods.
        */
       'unicorn/no-unused-array-method-return': 'error',
