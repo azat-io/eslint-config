@@ -1928,6 +1928,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-add-event-listener': 'error',
       /**
+       * Prefer an options object over a boolean in `.addEventListener()`.
+       */
+      'unicorn/prefer-add-event-listener-options': 'error',
+      /**
        * Prefer `.find(…)` and `.findLast(…)` over the first or last element
        * from `.filter(…)`.
        */
