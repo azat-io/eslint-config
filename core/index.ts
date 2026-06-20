@@ -1850,6 +1850,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unused-properties': 'error',
       /**
+       * Disallow unnecessary `Boolean()` casts in array predicate callbacks.
+       */
+      'unicorn/no-useless-boolean-cast': 'error',
+      /**
        * Disallow useless values or fallbacks in `Set`, `Map`, `WeakSet`, or
        * `WeakMap`.
        */
