@@ -1897,6 +1897,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-switch-case': 'error',
       /**
+       * Disallow useless template literal expressions.
+       */
+      'unicorn/no-useless-template-literals': 'error',
+      /**
        * Disallow useless undefined.
        */
       'unicorn/no-useless-undefined': [
