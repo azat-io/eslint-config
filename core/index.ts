@@ -1884,6 +1884,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-promise-resolve-reject': 'error',
       /**
+       * Disallow simple recursive function calls that can be replaced with a
+       * loop.
+       */
+      'unicorn/no-useless-recursion': 'error',
+      /**
        * Disallow unnecessary spread.
        */
       'unicorn/no-useless-spread': 'error',
