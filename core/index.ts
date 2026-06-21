@@ -2056,6 +2056,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-iterable-in-constructor': 'error',
       /**
+       * Prefer `Iterator#toArray()` over temporary arrays from iterator
+       * spreads.
+       */
+      'unicorn/prefer-iterator-to-array': 'error',
+      /**
        * Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.
        */
       'unicorn/prefer-keyboard-event-key': 'error',
