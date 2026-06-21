@@ -2051,6 +2051,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-includes-over-repeated-comparisons': 'error',
       /**
+       * Prefer passing iterables directly to constructors instead of filling
+       * empty collections.
+       */
+      'unicorn/prefer-iterable-in-constructor': 'error',
+      /**
        * Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.
        */
       'unicorn/prefer-keyboard-event-key': 'error',
