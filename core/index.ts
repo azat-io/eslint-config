@@ -2083,6 +2083,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-math-min-max': 'error',
       /**
+       * Prefer moving ternaries into the minimal varying part of an expression.
+       */
+      'unicorn/prefer-minimal-ternary': 'error',
+      /**
        * Prefer `.before()` over `.insertBefore()`, `.replaceWith()` over
        * `.replaceChild()`, prefer one of `.before()`, `.after()`, `.append()`
        * or `.prepend()` over `insertAdjacentText()` and
