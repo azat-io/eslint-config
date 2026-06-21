@@ -2065,6 +2065,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-keyboard-event-key': 'error',
       /**
+       * Prefer `location.assign()` over assigning to `location.href`.
+       */
+      'unicorn/prefer-location-assign': 'error',
+      /**
        * Prefer using a logical operator over a ternary.
        */
       'unicorn/prefer-logical-operator-over-ternary': 'error',
