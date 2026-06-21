@@ -2008,6 +2008,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-dom-node-append': 'error',
       /**
+       * Prefer `.getHTML()` and `.setHTML()` over `.innerHTML`.
+       */
+      'unicorn/prefer-dom-node-html-methods': 'error',
+      /**
        * Prefer `childNode.remove()` over `parentNode.removeChild(childNode)`.
        */
       'unicorn/prefer-dom-node-remove': 'error',
