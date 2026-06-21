@@ -2000,6 +2000,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-default-parameters': 'error',
       /**
+       * Prefer direct iteration over default iterator method calls.
+       */
+      'unicorn/prefer-direct-iteration': 'error',
+      /**
        * Prefer `Node#append()` over `Node#appendChild()`.
        */
       'unicorn/prefer-dom-node-append': 'error',
