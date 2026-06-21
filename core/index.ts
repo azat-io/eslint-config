@@ -1969,6 +1969,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-at': 'error',
       /**
+       * Prefer `await` over promise chaining.
+       */
+      'unicorn/prefer-await': 'error',
+      /**
        * Prefer `BigInt` literals over the constructor.
        */
       'unicorn/prefer-bigint-literals': 'error',
