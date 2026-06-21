@@ -1945,6 +1945,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-array-flat-map': 'error',
       /**
+       * Prefer using the `Array.from()` mapping function argument.
+       */
+      'unicorn/prefer-array-from-map': 'error',
+      /**
        * Prefer `Array#{indexOf,lastIndexOf}()` over
        * `Array#{findIndex,findLastIndex}()` when looking for the index of an
        * item.
