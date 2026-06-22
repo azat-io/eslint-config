@@ -2107,6 +2107,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-negative-index': 'error',
       /**
+       * Prefer `Number.isSafeInteger()` over integer checks.
+       */
+      'unicorn/prefer-number-is-safe-integer': 'error',
+      /**
        * Prefer `Number` static properties over global ones.
        */
       'unicorn/prefer-number-properties': 'error',
