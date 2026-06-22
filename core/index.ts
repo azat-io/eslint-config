@@ -2144,6 +2144,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-regexp-test': 'error',
       /**
+       * Prefer `:scope` when using element query selector methods.
+       */
+      'unicorn/prefer-scoped-selector': 'error',
+      /**
        * Prefer `Set#has()` over `Array#includes()` when checking for existence
        * or non-existence.
        */
