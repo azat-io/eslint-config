@@ -2176,6 +2176,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-single-call': 'error',
       /**
+       * Prefer a single object destructuring declaration per local const
+       * source.
+       */
+      'unicorn/prefer-single-object-destructuring': 'error',
+      /**
        * Prefer `String#split()` with a limit.
        */
       'unicorn/prefer-split-limit': 'error',
