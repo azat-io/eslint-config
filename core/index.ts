@@ -2130,6 +2130,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-object-from-entries': 'error',
       /**
+       * Prefer the most specific Object iterable method.
+       */
+      'unicorn/prefer-object-iterable-methods': 'error',
+      /**
        * Prefer `.querySelector()` over `.getElementById()`,
        * `.querySelectorAll()` over `.getElementsByClassName()` and
        * `.getElementsByTagName()` and `.getElementsByName()`.
