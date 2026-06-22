@@ -2165,6 +2165,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-simple-sort-comparator': 'error',
       /**
+       * Prefer a single `Array#some()` or `Array#every()` with a combined
+       * predicate.
+       */
+      'unicorn/prefer-single-array-predicate': 'error',
+      /**
        * Enforce combining multiple `Array#push()`,
        * `Element#classList.{add,remove}()`, and `importScripts()` into one
        * call.
