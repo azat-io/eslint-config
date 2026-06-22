@@ -2120,6 +2120,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-object-define-properties': 'error',
       /**
+       * Prefer object destructuring defaults over default object literals with
+       * spread.
+       */
+      'unicorn/prefer-object-destructuring-defaults': 'error',
+      /**
        * Prefer using `Object.fromEntries(…)` to transform a list of key-value
        * pairs into an object.
        */
