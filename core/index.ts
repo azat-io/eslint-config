@@ -2161,6 +2161,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-simple-condition-first': 'error',
       /**
+       * Prefer a simple comparison function for `Array#sort()`.
+       */
+      'unicorn/prefer-simple-sort-comparator': 'error',
+      /**
        * Enforce combining multiple `Array#push()`,
        * `Element#classList.{add,remove}()`, and `importScripts()` into one
        * call.
