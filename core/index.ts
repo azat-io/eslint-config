@@ -2115,6 +2115,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-number-properties': 'error',
       /**
+       * Prefer `Object.defineProperties()` over multiple
+       * `Object.defineProperty()` calls.
+       */
+      'unicorn/prefer-object-define-properties': 'error',
+      /**
        * Prefer using `Object.fromEntries(…)` to transform a list of key-value
        * pairs into an object.
        */
