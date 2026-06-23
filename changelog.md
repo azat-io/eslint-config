@@ -1,5 +1,108 @@
 # Changelog
 
+## v2.84.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.83.0...v2.84.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([b1972f0](https://github.com/azat-io/eslint-config/commit/b1972f0))
+- **core:** Add explicit-timer-delay rule
+  ([e4b990d](https://github.com/azat-io/eslint-config/commit/e4b990d))
+- **core:** Add no-computed-property-existence-check rule
+  ([82a9d2e](https://github.com/azat-io/eslint-config/commit/82a9d2e))
+- **core:** Add no-confusing-array-with rule
+  ([61fcb1b](https://github.com/azat-io/eslint-config/commit/61fcb1b))
+- **core:** Add no-declarations-before-early-exit rule
+  ([29d508f](https://github.com/azat-io/eslint-config/commit/29d508f))
+- **core:** Add no-duplicate-loops rule
+  ([afec40e](https://github.com/azat-io/eslint-config/commit/afec40e))
+- **core:** Add no-error-property-assignment rule
+  ([016a962](https://github.com/azat-io/eslint-config/commit/016a962))
+- **core:** Add no-negated-array-predicate rule
+  ([6f7a684](https://github.com/azat-io/eslint-config/commit/6f7a684))
+- **core:** Add no-negated-comparison rule
+  ([6ade6b4](https://github.com/azat-io/eslint-config/commit/6ade6b4))
+- **core:** Add no-object-methods-with-collections rule
+  ([d047ff8](https://github.com/azat-io/eslint-config/commit/d047ff8))
+- **core:** Add no-redundant-comparison rule
+  ([efcc10d](https://github.com/azat-io/eslint-config/commit/efcc10d))
+- **core:** Add no-return-array-push rule
+  ([7fa0b09](https://github.com/azat-io/eslint-config/commit/7fa0b09))
+- **core:** Add no-subtraction-comparison rule
+  ([4c6c5f1](https://github.com/azat-io/eslint-config/commit/4c6c5f1))
+- **core:** Add no-undeclared-class-members rule
+  ([dcbfb66](https://github.com/azat-io/eslint-config/commit/dcbfb66))
+- **core:** Add no-unnecessary-global-this rule
+  ([1d7b595](https://github.com/azat-io/eslint-config/commit/1d7b595))
+- **core:** Add no-unnecessary-splice rule
+  ([257ff1b](https://github.com/azat-io/eslint-config/commit/257ff1b))
+- **core:** Add no-unreadable-new-expression rule
+  ([74feff6](https://github.com/azat-io/eslint-config/commit/74feff6))
+- **core:** Add no-unreadable-object-destructuring rule
+  ([6234ada](https://github.com/azat-io/eslint-config/commit/6234ada))
+- **core:** Add no-unsafe-buffer-conversion rule
+  ([14ec349](https://github.com/azat-io/eslint-config/commit/14ec349))
+- **core:** Add no-unsafe-dom-html rule
+  ([e21f843](https://github.com/azat-io/eslint-config/commit/e21f843))
+- **core:** Add no-useless-boolean-cast rule
+  ([00d34eb](https://github.com/azat-io/eslint-config/commit/00d34eb))
+- **core:** Add no-useless-concat rule
+  ([39986af](https://github.com/azat-io/eslint-config/commit/39986af))
+- **core:** Add no-useless-else rule
+  ([1b2bfab](https://github.com/azat-io/eslint-config/commit/1b2bfab))
+- **core:** Add no-useless-recursion rule
+  ([f7ea769](https://github.com/azat-io/eslint-config/commit/f7ea769))
+- **core:** Add no-useless-template-literals rule
+  ([12d8ecf](https://github.com/azat-io/eslint-config/commit/12d8ecf))
+- **core:** Add prefer-add-event-listener-options rule
+  ([db685d7](https://github.com/azat-io/eslint-config/commit/db685d7))
+- **core:** Add prefer-array-from-map rule
+  ([5b7b831](https://github.com/azat-io/eslint-config/commit/5b7b831))
+- **core:** Add prefer-await rule
+  ([3267bb7](https://github.com/azat-io/eslint-config/commit/3267bb7))
+- **core:** Add prefer-direct-iteration rule
+  ([3fee3aa](https://github.com/azat-io/eslint-config/commit/3fee3aa))
+- **core:** Add prefer-dom-node-html-methods rule
+  ([ffd7c73](https://github.com/azat-io/eslint-config/commit/ffd7c73))
+- **core:** Add prefer-iterable-in-constructor rule
+  ([cba35b2](https://github.com/azat-io/eslint-config/commit/cba35b2))
+- **core:** Add prefer-iterator-to-array rule
+  ([b05d088](https://github.com/azat-io/eslint-config/commit/b05d088))
+- **core:** Add prefer-location-assign rule
+  ([fc96c8f](https://github.com/azat-io/eslint-config/commit/fc96c8f))
+- **core:** Add prefer-minimal-ternary rule
+  ([c9a4383](https://github.com/azat-io/eslint-config/commit/c9a4383))
+- **core:** Add prefer-number-is-safe-integer rule
+  ([e46131f](https://github.com/azat-io/eslint-config/commit/e46131f))
+- **core:** Add prefer-object-define-properties rule
+  ([4db4027](https://github.com/azat-io/eslint-config/commit/4db4027))
+- **core:** Add prefer-object-destructuring-defaults rule
+  ([fc0f939](https://github.com/azat-io/eslint-config/commit/fc0f939))
+- **core:** Add prefer-object-iterable-methods rule
+  ([5d80ba5](https://github.com/azat-io/eslint-config/commit/5d80ba5))
+- **core:** Add prefer-scoped-selector rule
+  ([e808631](https://github.com/azat-io/eslint-config/commit/e808631))
+- **core:** Add prefer-simple-sort-comparator rule
+  ([072bf72](https://github.com/azat-io/eslint-config/commit/072bf72))
+- **core:** Add prefer-single-array-predicate rule
+  ([d6457e0](https://github.com/azat-io/eslint-config/commit/d6457e0))
+- **core:** Add prefer-single-object-destructuring rule
+  ([997569b](https://github.com/azat-io/eslint-config/commit/997569b))
+- **core:** Add prefer-smaller-scope rule
+  ([c375e20](https://github.com/azat-io/eslint-config/commit/c375e20))
+- **core:** Add prefer-uint8array-base64 rule
+  ([68b1b99](https://github.com/azat-io/eslint-config/commit/68b1b99))
+- **core:** Add prefer-unicode-code-point-escapes rule
+  ([da52dec](https://github.com/azat-io/eslint-config/commit/da52dec))
+- **core:** Add prefer-url-href rule
+  ([e956f83](https://github.com/azat-io/eslint-config/commit/e956f83))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.83.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.82.0...v2.83.0)
