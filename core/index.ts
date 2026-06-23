@@ -2181,6 +2181,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-single-object-destructuring': 'error',
       /**
+       * Prefer declaring variables in the smallest possible scope.
+       */
+      'unicorn/prefer-smaller-scope': 'error',
+      /**
        * Prefer `String#split()` with a limit.
        */
       'unicorn/prefer-split-limit': 'error',
