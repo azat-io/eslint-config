@@ -2261,6 +2261,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-unicode-code-point-escapes': 'error',
       /**
+       * Prefer `URL#href` over stringifying a URL.
+       */
+      'unicorn/prefer-url-href': 'error',
+      /**
        * Prevent abbreviations.
        */
       'unicorn/prevent-abbreviations': [
