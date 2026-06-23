@@ -2257,6 +2257,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-uint8array-base64': 'error',
       /**
+       * Prefer Unicode code point escapes over legacy escape sequences.
+       */
+      'unicorn/prefer-unicode-code-point-escapes': 'error',
+      /**
        * Prevent abbreviations.
        */
       'unicorn/prevent-abbreviations': [
