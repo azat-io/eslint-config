@@ -2252,6 +2252,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-type-error': 'error',
       /**
+       * Prefer `Uint8Array#toBase64()` and `Uint8Array.fromBase64()` over
+       * `atob()`, `btoa()`, and `Buffer` base64 conversions.
+       */
+      'unicorn/prefer-uint8array-base64': 'error',
+      /**
        * Prevent abbreviations.
        */
       'unicorn/prevent-abbreviations': [
