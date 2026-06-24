@@ -2129,6 +2129,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-logical-operator-over-ternary': 'error',
       /**
+       * Prefer `new Map()` over `Object.fromEntries()` when using the result as
+       * a map.
+       */
+      'unicorn/prefer-map-from-entries': 'error',
+      /**
        * Prefer `Math.abs()` over manual absolute value expressions and
        * symmetric range checks.
        */
