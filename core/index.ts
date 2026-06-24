@@ -1723,6 +1723,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-instanceof-builtins': 'error',
       /**
+       * Disallow calling functions and constructors with an invalid number of
+       * arguments.
+       */
+      'unicorn/no-invalid-argument-count': 'error',
+      /**
        * Disallow invalid options in `fetch()` and `new Request()`.
        */
       'unicorn/no-invalid-fetch-options': 'error',
