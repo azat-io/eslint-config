@@ -2089,6 +2089,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-global-this': 'error',
       /**
+       * Prefer `.has()` when checking existence.
+       */
+      'unicorn/prefer-has-check': 'error',
+      /**
        * Prefer `import.meta.{dirname,filename}` over legacy techniques for
        * getting file paths.
        */
