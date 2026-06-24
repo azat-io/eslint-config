@@ -2068,6 +2068,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-dom-node-text-content': 'error',
       /**
+       * Prefer `else if` over adjacent `if` statements with related conditions.
+       */
+      'unicorn/prefer-else-if': 'error',
+      /**
        * Prefer `EventTarget` over `EventEmitter`.
        */
       'unicorn/prefer-event-target': 'error',
