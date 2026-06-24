@@ -2003,6 +2003,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-array-last-methods': 'error',
       /**
+       * Prefer `Array#slice()` over `Array#splice()` when reading from the
+       * returned array.
+       */
+      'unicorn/prefer-array-slice': 'error',
+      /**
        * Prefer `.some(…)` over `.filter(…).length` check and
        * `.{find,findLast}(…)`.
        */
