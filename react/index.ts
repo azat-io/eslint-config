@@ -26,7 +26,7 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
     reactJsxPlugin,
     reactHooksPlugin,
     reactNamingConventionPlugin,
-    reactPerfPlugin,
+    reactPerformancePlugin,
     reactWebApiPlugin,
     reactXPlugin,
   ] = await Promise.all([
@@ -57,7 +57,7 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
       'react-hooks': reactHooksPlugin,
       'react-jsx': reactJsxPlugin,
       'react-naming-convention': reactNamingConventionPlugin,
-      'react-perf': reactPerfPlugin,
+      'react-perf': reactPerformancePlugin,
       'react-web-api': reactWebApiPlugin,
       'react-x': reactXPlugin,
     },

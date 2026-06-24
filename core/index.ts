@@ -1608,6 +1608,26 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
+       * Enforce replacements for variable, property, and filenames.
+       */
+      'unicorn/name-replacements': [
+        'error',
+        {
+          allowList: {
+            attrs: true,
+            env: config.astro,
+            i: true,
+            Props: true,
+            props: true,
+            rel: (['astro', 'react', 'svelte', 'vue'] as const).some(
+              configName => config[configName],
+            ),
+            Var: true,
+            var: true,
+          },
+        },
+      ],
+      /**
        * Enforce the use of `new` for all builtins, except `String`, `Number`,
        * `Boolean`, `Symbol` and `BigInt`.
        */
@@ -2264,26 +2284,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * Prefer `URL#href` over stringifying a URL.
        */
       'unicorn/prefer-url-href': 'error',
-      /**
-       * Prevent abbreviations.
-       */
-      'unicorn/prevent-abbreviations': [
-        'error',
-        {
-          allowList: {
-            attrs: true,
-            env: config.astro,
-            i: true,
-            Props: true,
-            props: true,
-            rel: (['astro', 'react', 'svelte', 'vue'] as const).some(
-              configName => config[configName],
-            ),
-            Var: true,
-            var: true,
-          },
-        },
-      ],
       /**
        * Enforce using the separator argument with `Array#join()`.
        */
