@@ -1653,6 +1653,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-array-sort': 'error',
       /**
+       * Prefer `Array#toSpliced()` over `Array#splice()`.
+       */
+      'unicorn/no-array-splice': 'error',
+      /**
        * Disallow using `await` in Promise method parameters.
        */
       'unicorn/no-await-in-promise-methods': 'error',
