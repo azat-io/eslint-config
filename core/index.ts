@@ -1851,6 +1851,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unreadable-array-destructuring': 'error',
       /**
+       * Disallow unreadable iterable expressions in `for…of` and for `await…of`
+       * loop headers.
+       */
+      'unicorn/no-unreadable-for-of-expression': 'error',
+      /**
        * Disallow unreadable IIFEs.
        */
       'unicorn/no-unreadable-iife': 'error',
