@@ -1888,6 +1888,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-boolean-cast': 'error',
       /**
+       * Disallow useless type coercions of values that are already of the
+       * target type.
+       */
+      'unicorn/no-useless-coercion': 'error',
+      /**
        * Disallow useless values or fallbacks in `Set`, `Map`, `WeakSet`, or
        * `WeakMap`.
        */
