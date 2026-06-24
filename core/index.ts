@@ -1902,6 +1902,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-concat': 'error',
       /**
+       * Disallow useless `continue` statements.
+       */
+      'unicorn/no-useless-continue': 'error',
+      /**
        * Disallow `else` after a statement that exits.
        */
       'unicorn/no-useless-else': 'error',
