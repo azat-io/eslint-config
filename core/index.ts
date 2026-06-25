@@ -1545,6 +1545,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/consistent-compound-words': 'error',
       /**
+       * Enforce consistent conditional object spread style.
+       */
+      'unicorn/consistent-conditional-object-spread': 'error',
+      /**
        * Prefer passing `Date` directly to the constructor when cloning.
        */
       'unicorn/consistent-date-clone': 'error',
