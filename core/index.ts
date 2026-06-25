@@ -1637,6 +1637,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/new-for-builtins': 'error',
       /**
+       * Disallow bitwise operators where a logical operator was likely
+       * intended.
+       */
+      'unicorn/no-accidental-bitwise-operator': 'error',
+      /**
        * Disallow using reference values as `Array#fill()` values.
        */
       'unicorn/no-array-fill-with-reference-type': 'error',
