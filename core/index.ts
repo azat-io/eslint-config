@@ -1682,6 +1682,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-blob-to-file': 'error',
       /**
+       * Disallow boolean-returning sort comparators.
+       */
+      'unicorn/no-boolean-sort-comparator': 'error',
+      /**
        * Disallow dynamic object property existence checks.
        */
       'unicorn/no-computed-property-existence-check': 'error',
