@@ -1666,6 +1666,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-array-sort': 'error',
       /**
+       * Disallow sorting arrays to get the minimum or maximum value.
+       */
+      'unicorn/no-array-sort-for-min-max': 'error',
+      /**
        * Prefer `Array#toSpliced()` over `Array#splice()`.
        */
       'unicorn/no-array-splice': 'error',
