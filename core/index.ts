@@ -1642,6 +1642,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-accidental-bitwise-operator': 'error',
       /**
+       * Disallow array accumulation with `Array#concat()` in loops.
+       */
+      'unicorn/no-array-concat-in-loop': 'error',
+      /**
        * Disallow using reference values as `Array#fill()` values.
        */
       'unicorn/no-array-fill-with-reference-type': 'error',
