@@ -1712,6 +1712,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-declarations-before-early-exit': 'error',
       /**
+       * Disallow two comparisons of the same operands that can be combined into
+       * one.
+       */
+      'unicorn/no-double-comparison': 'error',
+      /**
        * Disallow `.map()` and `.filter()` in `for…of` and for `await…of` loop
        * headers.
        */
