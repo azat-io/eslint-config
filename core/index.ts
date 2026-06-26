@@ -1690,6 +1690,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-chained-comparison': 'error',
       /**
+       * Disallow accessing `Map`, `Set`, `WeakMap`, and `WeakSet` entries with
+       * bracket notation.
+       */
+      'unicorn/no-collection-bracket-access': 'error',
+      /**
        * Disallow dynamic object property existence checks.
        */
       'unicorn/no-computed-property-existence-check': 'error',
