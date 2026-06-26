@@ -1686,6 +1686,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-boolean-sort-comparator': 'error',
       /**
+       * Disallow chained comparisons such as `a < b < c`.
+       */
+      'unicorn/no-chained-comparison': 'error',
+      /**
        * Disallow dynamic object property existence checks.
        */
       'unicorn/no-computed-property-existence-check': 'error',
