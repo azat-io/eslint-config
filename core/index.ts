@@ -1758,6 +1758,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-immediate-mutation': 'error',
       /**
+       * Disallow impossible comparisons against `.length` or `.size`.
+       */
+      'unicorn/no-impossible-length-comparison': 'error',
+      /**
        * Disallow incorrect `querySelector()` and `querySelectorAll()` usage.
        */
       'unicorn/no-incorrect-query-selector': 'error',
