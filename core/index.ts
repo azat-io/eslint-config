@@ -1721,6 +1721,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-duplicate-if-branches': 'error',
       /**
+       * Disallow adjacent duplicate operands in logical expressions.
+       */
+      'unicorn/no-duplicate-logical-operands': 'error',
+      /**
        * Disallow `.map()` and `.filter()` in `for…of` and for `await…of` loop
        * headers.
        */
