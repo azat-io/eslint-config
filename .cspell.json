@@ -18,6 +18,7 @@
     "getentrybyslug",
     "innerhtml",
     "lookarounds",
+    "misrefactored",
     "nanostores",
     "nonconstructor",
     "nonoctal",

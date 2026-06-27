@@ -1798,6 +1798,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-loop-iterable-mutation': 'error',
       /**
+       * Disallow misrefactored compound assignments where the target is
+       * duplicated in the right-hand side.
+       */
+      'unicorn/no-misrefactored-assignment': 'error',
+      /**
        * Disallow named usage of default import and export.
        */
       'unicorn/no-named-default': 'error',
