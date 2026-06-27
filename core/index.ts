@@ -1895,6 +1895,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unnecessary-await': 'error',
       /**
+       * Disallow unnecessary comparisons against boolean literals.
+       */
+      'unicorn/no-unnecessary-boolean-comparison': 'error',
+      /**
        * Disallow unnecessary `globalThis` references.
        */
       'unicorn/no-unnecessary-global-this': 'error',
