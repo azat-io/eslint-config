@@ -1775,6 +1775,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-argument-count': 'error',
       /**
+       * Disallow comparing a single character from a string to a
+       * multi-character string.
+       */
+      'unicorn/no-invalid-character-comparison': 'error',
+      /**
        * Disallow invalid options in `fetch()` and `new Request()`.
        */
       'unicorn/no-invalid-fetch-options': 'error',
