@@ -1850,6 +1850,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-return-array-push': 'error',
       /**
+       * Disallow selector syntax in DOM names.
+       */
+      'unicorn/no-selector-as-dom-name': 'error',
+      /**
        * Disallow passing single-element arrays to `Promise` methods.
        */
       'unicorn/no-single-promise-in-promise-methods': 'error',
