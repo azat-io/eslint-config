@@ -1794,6 +1794,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-late-current-target-access': 'error',
       /**
+       * Disallow mutating a loop iterable during iteration.
+       */
+      'unicorn/no-loop-iterable-mutation': 'error',
+      /**
        * Disallow named usage of default import and export.
        */
       'unicorn/no-named-default': 'error',
