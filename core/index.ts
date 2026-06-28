@@ -2077,6 +2077,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-array-index-of': 'error',
       /**
+       * Prefer iterating an array directly or with `Array#keys()` over
+       * `Array#entries()` when the index or value is unused.
+       */
+      'unicorn/prefer-array-iterable-methods': 'error',
+      /**
        * Prefer last-oriented array methods over `Array#reverse()` or
        * `Array#toReversed()` followed by a method.
        */
