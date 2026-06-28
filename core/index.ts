@@ -1971,6 +1971,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-continue': 'error',
       /**
+       * Disallow unnecessary existence checks before deletion.
+       */
+      'unicorn/no-useless-delete-check': 'error',
+      /**
        * Disallow `else` after a statement that exits.
        */
       'unicorn/no-useless-else': 'error',
