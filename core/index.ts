@@ -1991,6 +1991,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-length-check': 'error',
       /**
+       * Disallow unnecessary operands in logical expressions involving boolean
+       * literals.
+       */
+      'unicorn/no-useless-logical-operand': 'error',
+      /**
        * Disallow returning/yielding `Promise.resolve/reject()` in async
        * functions or promise callbacks.
        */
