@@ -1750,10 +1750,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-for-loop': 'error',
       /**
-       * Enforce the use of Unicode escapes instead of hexadecimal escapes.
-       */
-      'unicorn/no-hex-escape': 'error',
-      /**
        * Disallow immediate mutation after variable assignment.
        */
       'unicorn/no-immediate-mutation': 'error',
