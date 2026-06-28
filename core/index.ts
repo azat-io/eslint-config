@@ -2181,6 +2181,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-has-check': 'error',
       /**
+       * Prefer moving code shared by all branches of an `if` statement out of
+       * the branches.
+       */
+      'unicorn/prefer-hoisting-branch-code': 'error',
+      /**
        * Prefer `import.meta.{dirname,filename}` over legacy techniques for
        * getting file paths.
        */
