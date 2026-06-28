@@ -2114,6 +2114,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-blob-reading-methods': 'error',
       /**
+       * Prefer directly returning boolean expressions over `if` statements.
+       */
+      'unicorn/prefer-boolean-return': 'error',
+      /**
        * Prefer class field declarations over `this` assignments in
        * constructors.
        */
