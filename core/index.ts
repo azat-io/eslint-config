@@ -2027,6 +2027,11 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
+       * Disallow the bitwise XOR operator where exponentiation was likely
+       * intended.
+       */
+      'unicorn/no-xor-as-exponentiation': 'error',
+      /**
        * Disallow number literals with zero fractions or dangling dots.
        */
       'unicorn/no-zero-fractions': ['error'],
