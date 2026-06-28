@@ -2232,6 +2232,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-math-abs': 'error',
       /**
+       * Prefer `Math` constants over their approximate numeric values.
+       */
+      'unicorn/prefer-math-constants': 'error',
+      /**
        * Prefer `Math.min()` and `Math.max()` over ternaries for simple
        * comparisons.
        */
