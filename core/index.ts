@@ -2335,6 +2335,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-single-object-destructuring': 'error',
       /**
+       * Enforce combining multiple single-character replacements into a single
+       * `String#replaceAll()` with a regular expression.
+       */
+      'unicorn/prefer-single-replace': 'error',
+      /**
        * Prefer declaring variables in the smallest possible scope.
        */
       'unicorn/prefer-smaller-scope': 'error',
