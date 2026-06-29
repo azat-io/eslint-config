@@ -2424,6 +2424,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-unicode-code-point-escapes': 'error',
       /**
+       * Prefer `URL.canParse()` over constructing a URL in a try/catch for
+       * validation.
+       */
+      'unicorn/prefer-url-can-parse': 'error',
+      /**
        * Prefer `URL#href` over stringifying a URL.
        */
       'unicorn/prefer-url-href': 'error',
