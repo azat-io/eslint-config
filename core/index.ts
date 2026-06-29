@@ -2433,6 +2433,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-url-href': 'error',
       /**
+       * Prefer putting the condition in the while statement.
+       */
+      'unicorn/prefer-while-loop-condition': 'error',
+      /**
        * Enforce using the separator argument with `Array#join()`.
        */
       'unicorn/require-array-join-separator': 'error',
