@@ -1,5 +1,94 @@
 # Changelog
 
+## v2.85.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.84.0...v2.85.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([e941baf](https://github.com/azat-io/eslint-config/commit/e941baf))
+- **core:** Add no-array-splice rule
+  ([a5c9311](https://github.com/azat-io/eslint-config/commit/a5c9311))
+- **core:** Add no-invalid-argument-count rule
+  ([8629cc4](https://github.com/azat-io/eslint-config/commit/8629cc4))
+- **core:** Add no-unreadable-for-of-expression rule
+  ([08d6792](https://github.com/azat-io/eslint-config/commit/08d6792))
+- **core:** Add no-useless-coercion rule
+  ([045bb58](https://github.com/azat-io/eslint-config/commit/045bb58))
+- **core:** Add no-useless-continue rule
+  ([116e432](https://github.com/azat-io/eslint-config/commit/116e432))
+- **core:** Add prefer-array-slice rule
+  ([7643755](https://github.com/azat-io/eslint-config/commit/7643755))
+- **core:** Add prefer-else-if rule
+  ([6dc8ce1](https://github.com/azat-io/eslint-config/commit/6dc8ce1))
+- **core:** Add prefer-has-check rule
+  ([35d2745](https://github.com/azat-io/eslint-config/commit/35d2745))
+- **core:** Add prefer-map-from-entries rule
+  ([fc5c670](https://github.com/azat-io/eslint-config/commit/fc5c670))
+- **core:** Add consistent-conditional-object-spread rule
+  ([4bba60f](https://github.com/azat-io/eslint-config/commit/4bba60f))
+- **core:** Add no-accidental-bitwise-operator rule
+  ([611ea0f](https://github.com/azat-io/eslint-config/commit/611ea0f))
+- **core:** Add no-array-concat-in-loop rule
+  ([3320ded](https://github.com/azat-io/eslint-config/commit/3320ded))
+- **core:** Add no-array-sort-for-min-max rule
+  ([d171955](https://github.com/azat-io/eslint-config/commit/d171955))
+- **core:** Add no-boolean-sort-comparator rule
+  ([0432be4](https://github.com/azat-io/eslint-config/commit/0432be4))
+- **core:** Add no-chained-comparison rule
+  ([252b125](https://github.com/azat-io/eslint-config/commit/252b125))
+- **core:** Add no-collection-bracket-access rule
+  ([20e0296](https://github.com/azat-io/eslint-config/commit/20e0296))
+- **core:** Add no-double-comparison rule
+  ([47e0d65](https://github.com/azat-io/eslint-config/commit/47e0d65))
+- **core:** Add no-duplicate-if-branches rule
+  ([70b6ed2](https://github.com/azat-io/eslint-config/commit/70b6ed2))
+- **core:** Add no-duplicate-logical-operands rule
+  ([a0aa947](https://github.com/azat-io/eslint-config/commit/a0aa947))
+- **core:** Add no-impossible-length-comparison rule
+  ([3ca78ea](https://github.com/azat-io/eslint-config/commit/3ca78ea))
+- **core:** Add no-invalid-character-comparison rule
+  ([9571886](https://github.com/azat-io/eslint-config/commit/9571886))
+- **core:** Add no-loop-iterable-mutation rule
+  ([cc5124e](https://github.com/azat-io/eslint-config/commit/cc5124e))
+- **core:** Add no-misrefactored-assignment rule
+  ([4c36b7a](https://github.com/azat-io/eslint-config/commit/4c36b7a))
+- **core:** Add no-selector-as-dom-name rule
+  ([c36441e](https://github.com/azat-io/eslint-config/commit/c36441e))
+- **core:** Add no-unnecessary-boolean-comparison rule
+  ([c9524a8](https://github.com/azat-io/eslint-config/commit/c9524a8))
+- **core:** Remove no-this-outside-of-class rule
+  ([4b867a7](https://github.com/azat-io/eslint-config/commit/4b867a7))
+- **core:** Add no-useless-delete-check rule
+  ([549362b](https://github.com/azat-io/eslint-config/commit/549362b))
+- **core:** Add no-useless-logical-operand rule
+  ([acd0e00](https://github.com/azat-io/eslint-config/commit/acd0e00))
+- **core:** Add no-xor-as-exponentiation rule
+  ([499fbcb](https://github.com/azat-io/eslint-config/commit/499fbcb))
+- **core:** Add prefer-array-iterable-methods rule
+  ([694cf59](https://github.com/azat-io/eslint-config/commit/694cf59))
+- **core:** Add prefer-boolean-return rule
+  ([0fea1cf](https://github.com/azat-io/eslint-config/commit/0fea1cf))
+- **core:** Add prefer-hoisting-branch-code rule
+  ([56519ca](https://github.com/azat-io/eslint-config/commit/56519ca))
+- **core:** Add prefer-math-constants rule
+  ([90098f0](https://github.com/azat-io/eslint-config/commit/90098f0))
+- **core:** Remove deprecated no-hex-escape rule
+  ([72d78f7](https://github.com/azat-io/eslint-config/commit/72d78f7))
+- **core:** Add prefer-single-replace rule
+  ([ffddf50](https://github.com/azat-io/eslint-config/commit/ffddf50))
+- **core:** Add prefer-unary-minus rule
+  ([67c56ec](https://github.com/azat-io/eslint-config/commit/67c56ec))
+- **core:** Add prefer-url-can-parse rule
+  ([b3820fe](https://github.com/azat-io/eslint-config/commit/b3820fe))
+- **core:** Add prefer-while-loop-condition rule
+  ([90db247](https://github.com/azat-io/eslint-config/commit/90db247))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.84.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.83.0...v2.84.0)
