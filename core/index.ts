@@ -1574,6 +1574,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/consistent-template-literal-escape': 'error',
       /**
+       * Enforce consistent labels on tuple type elements.
+       */
+      'unicorn/consistent-tuple-labels': 'error',
+      /**
        * Enforce correct `Error` subclassing.
        */
       'unicorn/custom-error-definition': 'error',
