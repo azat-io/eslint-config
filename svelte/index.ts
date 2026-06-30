@@ -97,6 +97,11 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/no-add-event-listener': 'error',
       /**
+       * Disallow the use of `{\@const}` in favor of `{const ...}` declaration
+       * tags.
+       */
+      'svelte/no-at-const-tags': 'error',
+      /**
        * Disallow the use of `@debug`.
        */
       'svelte/no-at-debug-tags': 'error',
