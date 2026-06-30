@@ -1794,6 +1794,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-late-current-target-access': 'error',
       /**
+       * Disallow event-control method calls after the synchronous event
+       * dispatch has finished.
+       */
+      'unicorn/no-late-event-control': 'error',
+      /**
        * Disallow mutating a loop iterable during iteration.
        */
       'unicorn/no-loop-iterable-mutation': 'error',
