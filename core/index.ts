@@ -2050,6 +2050,11 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
+       * Prefer `AbortSignal.timeout()` over manually aborting an
+       * `AbortController` with `setTimeout()`.
+       */
+      'unicorn/prefer-abort-signal-timeout': 'error',
+      /**
        * Prefer `.addEventListener()` and `.removeEventListener()` over
        * `on`-functions.
        */
