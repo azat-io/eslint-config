@@ -2334,6 +2334,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-set-has': 'error',
       /**
+       * Prefer `Set` methods for Set operations.
+       */
+      'unicorn/prefer-set-methods': 'error',
+      /**
        * Prefer using `Set#size` instead of `Array#length`.
        */
       'unicorn/prefer-set-size': 'error',
