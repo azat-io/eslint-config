@@ -2310,6 +2310,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-object-iterable-methods': 'error',
       /**
+       * Prefer observer APIs over resize and scroll listeners with layout
+       * reads.
+       */
+      'unicorn/prefer-observer-apis': 'error',
+      /**
        * Prefer `.querySelector()` over `.getElementById()`,
        * `.querySelectorAll()` over `.getElementsByClassName()` and
        * `.getElementsByTagName()` and `.getElementsByName()`.
