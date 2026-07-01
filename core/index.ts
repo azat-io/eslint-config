@@ -2064,6 +2064,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-add-event-listener-options': 'error',
       /**
+       * Prefer `AggregateError` when throwing collected errors.
+       */
+      'unicorn/prefer-aggregate-error': 'error',
+      /**
        * Prefer `.find(…)` and `.findLast(…)` over the first or last element
        * from `.filter(…)`.
        */
