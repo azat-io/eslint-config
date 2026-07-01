@@ -2166,6 +2166,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-dom-node-remove': 'error',
       /**
+       * Prefer `.replaceChildren()` when emptying DOM children.
+       */
+      'unicorn/prefer-dom-node-replace-children': 'error',
+      /**
        * Prefer `.textContent` over `.innerText`.
        */
       'unicorn/prefer-dom-node-text-content': 'error',
