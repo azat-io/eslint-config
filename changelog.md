@@ -1,5 +1,38 @@
 # Changelog
 
+## v2.86.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.85.0...v2.86.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([8ceb7b0](https://github.com/azat-io/eslint-config/commit/8ceb7b0))
+- **svelte:** Add no-at-const-tags rule
+  ([414f045](https://github.com/azat-io/eslint-config/commit/414f045))
+- **core:** Add consistent-tuple-labels rule
+  ([c40168f](https://github.com/azat-io/eslint-config/commit/c40168f))
+- **core:** Add no-late-event-control rule
+  ([d2a3e73](https://github.com/azat-io/eslint-config/commit/d2a3e73))
+- **core:** Add prefer-abort-signal-timeout rule
+  ([b6a1984](https://github.com/azat-io/eslint-config/commit/b6a1984))
+- **core:** Add prefer-aggregate-error rule
+  ([f7f8e1f](https://github.com/azat-io/eslint-config/commit/f7f8e1f))
+- **core:** Add prefer-dom-node-replace-children rule
+  ([7c0b678](https://github.com/azat-io/eslint-config/commit/7c0b678))
+- **core:** Add prefer-observer-apis rule
+  ([8f74049](https://github.com/azat-io/eslint-config/commit/8f74049))
+- **core:** Add prefer-set-methods rule
+  ([ea673b2](https://github.com/azat-io/eslint-config/commit/ea673b2))
+- **core:** Add prefer-toggle-attribute rule
+  ([c3e5106](https://github.com/azat-io/eslint-config/commit/c3e5106))
+- **core:** Add prefer-url-search-parameters rule
+  ([0907d03](https://github.com/azat-io/eslint-config/commit/0907d03))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.85.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.84.0...v2.85.0)
