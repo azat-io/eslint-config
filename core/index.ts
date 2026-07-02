@@ -2433,6 +2433,10 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
+       * Prefer using `Element#toggleAttribute()` to toggle attributes.
+       */
+      'unicorn/prefer-toggle-attribute': 'error',
+      /**
        * Prefer top-level await over top-level promises and async function
        * calls.
        */
