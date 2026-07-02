@@ -2468,6 +2468,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-url-href': 'error',
       /**
+       * Prefer `URLSearchParams` over manually splitting query strings.
+       */
+      'unicorn/prefer-url-search-parameters': 'error',
+      /**
        * Prefer putting the condition in the while statement.
        */
       'unicorn/prefer-while-loop-condition': 'error',
