@@ -2063,6 +2063,11 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
+       * Prefer `AbortSignal.any()` over manually forwarding abort events
+       * between signals.
+       */
+      'unicorn/prefer-abort-signal-any': 'error',
+      /**
        * Prefer `AbortSignal.timeout()` over manually aborting an
        * `AbortController` with `setTimeout()`.
        */
