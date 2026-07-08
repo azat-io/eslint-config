@@ -2150,6 +2150,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-blob-reading-methods': 'error',
       /**
+       * Prefer block statements over IIFEs used only for scoping.
+       */
+      'unicorn/prefer-block-statement-over-iife': 'error',
+      /**
        * Prefer directly returning boolean expressions over `if` statements.
        */
       'unicorn/prefer-boolean-return': 'error',
