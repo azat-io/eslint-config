@@ -1954,6 +1954,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unsafe-dom-html': 'error',
       /**
+       * Disallow reading `.value` from `Promise.allSettled()` results without a
+       * fulfilled status guard.
+       */
+      'unicorn/no-unsafe-promise-all-settled-values': 'error',
+      /**
        * Disallow ignoring the return value of selected array methods.
        */
       'unicorn/no-unused-array-method-return': 'error',
