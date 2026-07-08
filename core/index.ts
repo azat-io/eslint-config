@@ -1904,6 +1904,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unnecessary-boolean-comparison': 'error',
       /**
+       * Disallow unnecessary options in `fetch()` and `new Request()`.
+       */
+      'unicorn/no-unnecessary-fetch-options': 'error',
+      /**
        * Disallow unnecessary `globalThis` references.
        */
       'unicorn/no-unnecessary-global-this': 'error',
