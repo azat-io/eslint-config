@@ -1678,6 +1678,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-array-splice': 'error',
       /**
+       * Disallow async functions as `Promise#finally()` callbacks.
+       */
+      'unicorn/no-async-promise-finally': 'error',
+      /**
        * Disallow using `await` in Promise method parameters.
        */
       'unicorn/no-await-in-promise-methods': 'error',
