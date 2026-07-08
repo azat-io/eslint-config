@@ -2103,6 +2103,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-array-from-map': 'error',
       /**
+       * Prefer `Array.from({length}, …)` when creating range arrays.
+       */
+      'unicorn/prefer-array-from-range': 'error',
+      /**
        * Prefer `Array#{indexOf,lastIndexOf}()` over
        * `Array#{findIndex,findLastIndex}()` when looking for the index of an
        * item.
