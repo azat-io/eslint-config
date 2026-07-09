@@ -2249,6 +2249,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-iterable-in-constructor': 'error',
       /**
+       * Prefer iterator helpers over temporary arrays from iterators.
+       */
+      'unicorn/prefer-iterator-helpers': 'error',
+      /**
        * Prefer `Iterator#toArray()` over temporary arrays from iterator
        * spreads.
        */
