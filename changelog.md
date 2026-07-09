@@ -1,5 +1,32 @@
 # Changelog
 
+## v2.87.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.86.0...v2.87.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([b83cf13](https://github.com/azat-io/eslint-config/commit/b83cf13))
+- **core:** Add no-async-promise-finally rule
+  ([9f152f6](https://github.com/azat-io/eslint-config/commit/9f152f6))
+- **core:** Add no-unnecessary-fetch-options rule
+  ([b7c0c3b](https://github.com/azat-io/eslint-config/commit/b7c0c3b))
+- **core:** Add no-unsafe-promise-all-settled-values rule
+  ([e818239](https://github.com/azat-io/eslint-config/commit/e818239))
+- **core:** Add prefer-abort-signal-any rule
+  ([9e71386](https://github.com/azat-io/eslint-config/commit/9e71386))
+- **core:** Add prefer-array-from-range rule
+  ([ca5acdc](https://github.com/azat-io/eslint-config/commit/ca5acdc))
+- **core:** Add prefer-block-statement-over-iife rule
+  ([9dd682b](https://github.com/azat-io/eslint-config/commit/9dd682b))
+- **core:** Add prefer-iterator-helpers rule
+  ([ee973a9](https://github.com/azat-io/eslint-config/commit/ee973a9))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.86.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.85.0...v2.86.0)
