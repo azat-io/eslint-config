@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.88.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.87.0...v2.88.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([2d9863a](https://github.com/azat-io/eslint-config/commit/2d9863a))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.87.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.86.0...v2.87.0)
