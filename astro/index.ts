@@ -263,10 +263,6 @@ export async function astro(config: ConfigOptions): Promise<Linter.Config> {
           type: 'line-length',
         },
       ],
-      /**
-       * Disallow warnings when compiling.
-       */
-      'astro/valid-compile': 'error',
     },
   }
 }

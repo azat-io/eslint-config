@@ -272,11 +272,6 @@ export async function typescript(
        */
       'typescript/no-invalid-void-type': 'error',
       /**
-       * Disallow function declarations that contain unsafe references inside
-       * loop statements.
-       */
-      'typescript/no-loop-func': 'error',
-      /**
        * Disallow the `void` operator except when used to discard a value.
        */
       'typescript/no-meaningless-void-operator': 'error',
@@ -570,7 +565,6 @@ export async function typescript(
       'no-array-constructor': 'off',
       'no-dupe-class-members': 'off',
       'no-implied-eval': 'off',
-      'no-loop-func': 'off',
       'no-shadow': 'off',
       'no-undef': 'off',
       'no-unused-expressions': 'off',
