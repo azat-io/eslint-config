@@ -1812,6 +1812,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-misrefactored-assignment': 'error',
       /**
+       * Disallow calling Promise executor resolver functions more than once on
+       * the same execution path.
+       */
+      'unicorn/no-multiple-promise-resolver-calls': 'error',
+      /**
        * Disallow named usage of default import and export.
        */
       'unicorn/no-named-default': 'error',
