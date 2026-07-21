@@ -2029,6 +2029,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-promise-resolve-reject': 'error',
       /**
+       * Disallow redundant re-exports.
+       */
+      'unicorn/no-useless-re-export': 'error',
+      /**
        * Disallow simple recursive function calls that can be replaced with a
        * loop.
        */
