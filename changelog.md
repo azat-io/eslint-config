@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.89.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.88.0...v2.89.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([37a2366](https://github.com/azat-io/eslint-config/commit/37a2366))
+- Add no-multiple-promise-resolver-calls rule
+  ([c477918](https://github.com/azat-io/eslint-config/commit/c477918))
+- Add no-unnecessary-string-trim rule
+  ([92a2473](https://github.com/azat-io/eslint-config/commit/92a2473))
+- Add no-useless-re-export rule
+  ([7ad791c](https://github.com/azat-io/eslint-config/commit/7ad791c))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.88.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.87.0...v2.88.0)
