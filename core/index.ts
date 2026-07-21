@@ -1930,6 +1930,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unnecessary-splice': 'error',
       /**
+       * Disallow `String#trim()` before `String#startsWith()` or
+       * `String#endsWith()`.
+       */
+      'unicorn/no-unnecessary-string-trim': 'error',
+      /**
        * Disallow unreadable array destructuring.
        */
       'unicorn/no-unreadable-array-destructuring': 'error',
