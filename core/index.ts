@@ -1616,6 +1616,10 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
+       * Enforce a consistent style for optional loop sources.
+       */
+      'unicorn/iteration-fallback-style': ['error', 'guard'],
+      /**
        * Enforce replacements for variable, property, and filenames.
        */
       'unicorn/name-replacements': [
