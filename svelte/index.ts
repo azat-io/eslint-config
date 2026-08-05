@@ -110,6 +110,11 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/no-at-html-tags': 'error',
       /**
+       * Disallow useless `bind:value` on `<input type="checkbox">` and `<input
+       * type="radio">`.
+       */
+      'svelte/no-bind-value-on-checkable-inputs': 'error',
+      /**
        * Disallow DOM manipulating.
        */
       'svelte/no-dom-manipulating': 'error',
