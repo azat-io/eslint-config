@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.90.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.89.0...v2.90.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([3a21480](https://github.com/azat-io/eslint-config/commit/3a21480))
+- **svelte:** Add no-bind-value-on-checkable-inputs rule
+  ([40a22d7](https://github.com/azat-io/eslint-config/commit/40a22d7))
+- **core:** Add iteration-fallback-style rule
+  ([d1703fe](https://github.com/azat-io/eslint-config/commit/d1703fe))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.89.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.88.0...v2.89.0)
