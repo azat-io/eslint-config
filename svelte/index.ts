@@ -198,6 +198,10 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/no-useless-mustaches': 'error',
       /**
+       * Require attribute interpolation instead of template literals.
+       */
+      'svelte/prefer-attribute-interpolation': 'error',
+      /**
        * Require class directives instead of ternary expressions.
        */
       'svelte/prefer-class-directive': 'error',
