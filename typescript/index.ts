@@ -259,6 +259,10 @@ export async function typescript(
        */
       'typescript/no-for-in-array': 'error',
       /**
+       * Disallow type operations that resolve to the "empty object" type.
+       */
+      'typescript/no-generated-empty-object-type': 'error',
+      /**
        * Disallow the use of `eval()`-like methods.
        */
       'typescript/no-implied-eval': 'error',
