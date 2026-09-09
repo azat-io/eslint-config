@@ -345,6 +345,11 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-setup-props-reactivity-loss': 'error',
       /**
+       * Disallow the use of event names that collide with native web event
+       * names.
+       */
+      'vue/no-shadow-native-events': 'error',
+      /**
        * Enforce component's data property to be a function.
        */
       'vue/no-shared-component-data': 'error',
