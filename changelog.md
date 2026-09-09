@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.95.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.94.0...v2.95.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([aba4302](https://github.com/azat-io/eslint-config/commit/aba4302))
+- **vue:** Add no-shadow-native-events rule
+  ([32307b2](https://github.com/azat-io/eslint-config/commit/32307b2))
+- **typescript:** Add no-generated-empty-object-type rule
+  ([e9f6482](https://github.com/azat-io/eslint-config/commit/e9f6482))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.94.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.93.0...v2.94.0)
