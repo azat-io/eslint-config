@@ -20,6 +20,7 @@ import sonarjsPlugin from 'eslint-plugin-sonarjs'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import regexpPlugin from 'eslint-plugin-regexp'
 import jsdocPlugin from 'eslint-plugin-jsdoc'
+import slopPlugin from 'eslint-plugin-slop'
 import globals from 'globals'
 
 import type { ConfigOptions } from '..'
@@ -76,6 +77,7 @@ export function core(config: ConfigOptions): Linter.Config {
       'prefer-let': preferLetPlugin,
       promise: promisePlugin,
       regexp: regexpPlugin,
+      slop: slopPlugin,
       sonarjs: sonarjsPlugin,
       unicorn: unicornPlugin,
     },
@@ -120,7 +122,7 @@ export function core(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
-       * Enforce that class methods utilize `this` or use `static` methods.
+       * Enforce that class methods use `this` or use `static` methods.
        */
       'class-methods-use-this': 'error',
       /**
@@ -1437,6 +1439,42 @@ export function core(config: ConfigOptions): Linter.Config {
        * Use the `i` flag if it simplifies the pattern.
        */
       'regexp/use-ignore-case': 'error',
+
+      /**
+       * Limit logical comment blocks by word count.
+       */
+      'slop/max-comment-length': 'error',
+      /**
+       * Disallow nested TypeScript type assertions that discard type evidence.
+       */
+      'slop/no-chained-type-assertions': 'error',
+      /**
+       * Disallow literal em dashes in source text.
+       */
+      'slop/no-em-dash': 'error',
+      /**
+       * Disallow inflated vocabulary in comments.
+       */
+      'slop/no-jargon': 'error',
+      /**
+       * Disallow classes that group only static members.
+       */
+      'slop/no-static-only-class': 'error',
+      /**
+       * Disallow low-use top-level functions that only forward arguments or
+       * read a property.
+       */
+      'slop/no-trivial-functions': 'error',
+      /**
+       * Disallow top-level TypeScript aliases that add no structure to a
+       * primitive or `unknown`.
+       */
+      'slop/no-trivial-type-aliases': 'error',
+      /**
+       * Require `/** *\/` rather than `//` for the comment documenting an
+       * export or a member.
+       */
+      'slop/prefer-jsdoc': 'error',
 
       /**
        * Require parameters to be passed in the correct order.

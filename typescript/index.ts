@@ -115,7 +115,7 @@ export async function typescript(
        */
       'typescript/class-literal-property-style': 'error',
       /**
-       * Enforce that class methods utilize `this` or use `static` methods.
+       * Enforce that class methods use `this` or use `static` methods.
        */
       'typescript/class-methods-use-this': 'error',
       /**

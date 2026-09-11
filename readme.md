@@ -158,6 +158,7 @@ This config uses the following plugins:
 - [eslint-plugin-react-web-api](https://github.com/Rel1cx/eslint-react)
 - [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react)
 - [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp)
+- [eslint-plugin-slop](https://github.com/antfu/eslint-plugin-slop)
 - [eslint-plugin-sonarjs](https://github.com/SonarSource/SonarJS/tree/master/packages/jsts/src/rules)
 - [eslint-plugin-svelte](https://github.com/sveltejs/eslint-plugin-svelte)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
