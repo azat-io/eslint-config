@@ -2002,6 +2002,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unused-array-method-return': 'error',
       /**
+       * Disallow discarding lazy iterator helpers.
+       */
+      'unicorn/no-unused-iterator-helper': 'error',
+      /**
        * Disallow unused object properties.
        */
       'unicorn/no-unused-properties': 'error',
