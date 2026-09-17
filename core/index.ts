@@ -2075,6 +2075,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-useless-recursion': 'error',
       /**
+       * Disallow unnecessary `Set` construction around `Set` methods.
+       */
+      'unicorn/no-useless-set-construction': 'error',
+      /**
        * Disallow unnecessary spread.
        */
       'unicorn/no-useless-spread': 'error',
