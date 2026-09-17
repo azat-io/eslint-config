@@ -2002,6 +2002,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unused-array-method-return': 'error',
       /**
+       * Disallow ignoring the return value of selected built-in methods.
+       */
+      'unicorn/no-unused-builtin-method-return': 'error',
+      /**
        * Disallow discarding lazy iterator helpers.
        */
       'unicorn/no-unused-iterator-helper': 'error',
