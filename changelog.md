@@ -1,5 +1,30 @@
 # Changelog
 
+## v2.96.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.95.0...v2.96.0)
+
+### 🚀 Features
+
+- Add eslint-plugin-slop
+  ([e39648c](https://github.com/azat-io/eslint-config/commit/e39648c))
+- Update eslint plugins
+  ([df5a0b1](https://github.com/azat-io/eslint-config/commit/df5a0b1))
+- **core:** Add prefer-combined-guards rule
+  ([a7fdd40](https://github.com/azat-io/eslint-config/commit/a7fdd40))
+- **core:** Add no-unused-iterator-helper rule
+  ([a6d962b](https://github.com/azat-io/eslint-config/commit/a6d962b))
+- **core:** Add no-unused-builtin-method-return rule
+  ([c319bed](https://github.com/azat-io/eslint-config/commit/c319bed))
+- **core:** Add no-useless-set-construction rule
+  ([0a04285](https://github.com/azat-io/eslint-config/commit/0a04285))
+- **core:** Add prefer-json-import rule
+  ([f274b0d](https://github.com/azat-io/eslint-config/commit/f274b0d))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.95.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.94.0...v2.95.0)
