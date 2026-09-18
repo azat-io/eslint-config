@@ -2317,6 +2317,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-iterator-to-array': 'error',
       /**
+       * Prefer JSON imports over reading and parsing JSON files.
+       */
+      'unicorn/prefer-json-import': 'error',
+      /**
        * Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.
        */
       'unicorn/prefer-keyboard-event-key': 'error',
