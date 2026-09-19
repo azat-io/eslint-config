@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.96.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.96.0...v2.96.1)
+
+### 🐞 Bug Fixes
+
+- **core:** Remove prefer-combined-guards rule
+  ([42994a3](https://github.com/azat-io/eslint-config/commit/42994a3))
+- **core:** Remove no-immediate-mutation rule
+  ([0bb41d3](https://github.com/azat-io/eslint-config/commit/0bb41d3))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.96.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.95.0...v2.96.0)
