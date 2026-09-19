@@ -2222,10 +2222,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-classlist-toggle': 'error',
       /**
-       * Prefer combining consecutive guards with identical exit statements.
-       */
-      'unicorn/prefer-combined-guards': 'error',
-      /**
        * Prefer `Date.now()` to get the number of milliseconds since the Unix
        * Epoch.
        */
