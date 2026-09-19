@@ -22,7 +22,11 @@ export async function qwik(config: ConfigOptions): Promise<Linter.Config> {
 
   let qwikPlugin = await interopDefault(import('eslint-plugin-qwik'))
 
-  let files = ['**/*.jsx', ...(config.typescript ? ['**/*.tsx'] : [])]
+  let files = ['**/*.jsx']
+
+  if (config.typescript) {
+    files.push('**/*.tsx')
+  }
 
   return {
     name: 'azat-io/qwik/rules',

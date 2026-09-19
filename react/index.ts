@@ -40,7 +40,11 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
     interopDefault(import('eslint-plugin-react-x')),
   ] as const)
 
-  let files = ['**/*.jsx', ...(config.typescript ? ['**/*.tsx'] : [])]
+  let files = ['**/*.jsx']
+
+  if (config.typescript) {
+    files.push('**/*.tsx')
+  }
 
   return {
     name: 'azat-io/react/rules',

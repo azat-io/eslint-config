@@ -25,15 +25,23 @@ export async function typescript(
   let { parser: typescriptParser, plugin: typescriptPlugin } =
     await interopDefault(import('typescript-eslint'))
 
-  let files = [
-    '**/*.ts',
-    '**/*.cts',
-    '**/*.mts',
-    ...(config.react || config.qwik ? ['**/*.tsx'] : []),
-    ...(config.astro ? ['**/*.astro'] : []),
-    ...(config.svelte ? ['**/*.svelte'] : []),
-    ...(config.vue ? ['**/*.vue'] : []),
-  ]
+  let files = ['**/*.ts', '**/*.cts', '**/*.mts']
+
+  if (config.react || config.qwik) {
+    files.push('**/*.tsx')
+  }
+
+  if (config.astro) {
+    files.push('**/*.astro')
+  }
+
+  if (config.svelte) {
+    files.push('**/*.svelte')
+  }
+
+  if (config.vue) {
+    files.push('**/*.vue')
+  }
 
   return {
     name: 'azat-io/typescript/rules',

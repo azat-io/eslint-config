@@ -29,24 +29,26 @@ export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
     '**/*.test.js',
     '**/*.test.cjs',
     '**/*.test.mjs',
-    ...(config.typescript ?
-      [
-        '**/test/*.ts',
-        '**/test/*.cts',
-        '**/test/*.mts',
-        '**/*.test.ts',
-        '**/*.test.cts',
-        '**/*.test.mts',
-      ]
-    : []),
-    ...(config.react || config.qwik ?
-      [
-        '**/test/*.jsx',
-        '**/*.test.jsx',
-        ...(config.typescript ? ['**/test/*.tsx', '**/*.test.tsx'] : []),
-      ]
-    : []),
   ]
+
+  if (config.typescript) {
+    files.push(
+      '**/test/*.ts',
+      '**/test/*.cts',
+      '**/test/*.mts',
+      '**/*.test.ts',
+      '**/*.test.cts',
+      '**/*.test.mts',
+    )
+  }
+
+  if (config.react || config.qwik) {
+    files.push('**/test/*.jsx', '**/*.test.jsx')
+
+    if (config.typescript) {
+      files.push('**/test/*.tsx', '**/*.test.tsx')
+    }
+  }
 
   return {
     name: 'azat-io/vitest/rules',

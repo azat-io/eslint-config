@@ -26,18 +26,31 @@ export async function perfectionist(
     import('eslint-plugin-perfectionist'),
   )
 
-  let files = [
-    '**/*.js',
-    '**/*.cjs',
-    '**/*.mjs',
-    ...(config.typescript ? ['**/*.ts', '**/*.cts', '**/*.mts'] : []),
-    ...(config.react || config.qwik ?
-      ['**/*.jsx', ...(config.typescript ? ['**/*.tsx'] : [])]
-    : []),
-    ...(config.astro ? ['**/*.astro'] : []),
-    ...(config.svelte ? ['**/*.svelte'] : []),
-    ...(config.vue ? ['**/*.vue'] : []),
-  ]
+  let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
+
+  if (config.typescript) {
+    files.push('**/*.ts', '**/*.cts', '**/*.mts')
+  }
+
+  if (config.react || config.qwik) {
+    files.push('**/*.jsx')
+
+    if (config.typescript) {
+      files.push('**/*.tsx')
+    }
+  }
+
+  if (config.astro) {
+    files.push('**/*.astro')
+  }
+
+  if (config.svelte) {
+    files.push('**/*.svelte')
+  }
+
+  if (config.vue) {
+    files.push('**/*.vue')
+  }
 
   return {
     name: 'azat-io/perfectionist/rules',

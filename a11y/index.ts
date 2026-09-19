@@ -20,7 +20,11 @@ export function a11y(config: ConfigOptions): Linter.Config {
     return {}
   }
 
-  let files = ['**/*.jsx', ...(config.typescript ? ['**/*.tsx'] : [])]
+  let files = ['**/*.jsx']
+
+  if (config.typescript) {
+    files.push('**/*.tsx')
+  }
 
   return {
     name: 'azat-io/a11y/rules',
