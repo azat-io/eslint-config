@@ -1800,6 +1800,15 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-for-loop': 'error',
       /**
+       * Disallow immediate mutation after variable assignment.
+       */
+      'unicorn/no-immediate-mutation': [
+        'error',
+        {
+          checkConditionals: false,
+        },
+      ],
+      /**
        * Disallow impossible comparisons against `.length` or `.size`.
        */
       'unicorn/no-impossible-length-comparison': 'error',
