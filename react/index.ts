@@ -278,6 +278,10 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
       'react-web-api/no-leaked-websocket': 'error',
 
       /**
+       * Validate that values React treats as immutable are not mutated.
+       */
+      'react-x/immutability': 'error',
+      /**
        * Disallow access to state in setState updater.
        */
       'react-x/no-access-state-in-setstate': 'error',
