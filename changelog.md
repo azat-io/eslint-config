@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.97.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.96.1...v2.97.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([ec76120](https://github.com/azat-io/eslint-config/commit/ec76120))
+- **react:** Add immutability rule
+  ([d0ac8f7](https://github.com/azat-io/eslint-config/commit/d0ac8f7))
+- **core:** Remove deprecated no-unused-array-method-return rule
+  ([20404ba](https://github.com/azat-io/eslint-config/commit/20404ba))
+- **core:** Back no-immediate-mutation rule
+  ([8a046bc](https://github.com/azat-io/eslint-config/commit/8a046bc))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.96.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.96.0...v2.96.1)
