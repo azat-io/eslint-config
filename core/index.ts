@@ -2007,10 +2007,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unsafe-promise-all-settled-values': 'error',
       /**
-       * Disallow ignoring the return value of selected array methods.
-       */
-      'unicorn/no-unused-array-method-return': 'error',
-      /**
        * Disallow ignoring the return value of selected built-in methods.
        */
       'unicorn/no-unused-builtin-method-return': 'error',
