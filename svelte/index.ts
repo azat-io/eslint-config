@@ -258,5 +258,7 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        */
       'svelte/valid-each-key': 'error',
     },
+
+    processor: sveltePlugin.processors['.svelte'],
   }
 }
