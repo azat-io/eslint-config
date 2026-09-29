@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.98.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.97.0...v2.98.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([c9343d5](https://github.com/azat-io/eslint-config/commit/c9343d5))
+
+### 🐞 Bug Fixes
+
+- **svelte:** Add svelte processor
+  ([3a8c535](https://github.com/azat-io/eslint-config/commit/3a8c535))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.97.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.96.1...v2.97.0)
