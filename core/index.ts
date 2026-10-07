@@ -1902,6 +1902,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-object-methods-with-collections': 'error',
       /**
+       * Disallow ineffective `preventDefault()` calls in passive event
+       * listeners.
+       */
+      'unicorn/no-prevent-default-in-passive-listener': 'error',
+      /**
        * Disallow `process.exit()`.
        */
       'unicorn/no-process-exit': 'error',
