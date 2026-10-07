@@ -11,7 +11,7 @@
 
 import type { Linter } from 'eslint'
 
-import jsxA11y from 'eslint-plugin-jsx-a11y'
+import jsxA11y from 'eslint-plugin-jsx-a11y-x'
 
 import type { ConfigOptions } from '..'
 

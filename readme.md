@@ -142,7 +142,7 @@ This config uses the following plugins:
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
 - [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)
 - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
-- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
+- [eslint-plugin-jsx-a11y-x](https://github.com/eslint-community/eslint-plugin-jsx-a11y-x)
 - [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n)
 - [eslint-plugin-package-json](https://github.com/JoshuaKGoldberg/eslint-plugin-package-json)
 - [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist)
