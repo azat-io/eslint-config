@@ -1840,6 +1840,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-remove-event-listener': 'error',
       /**
+       * Disallow invalid options in new `Response()`, `Response.json()`, and
+       * `Response.redirect()`.
+       */
+      'unicorn/no-invalid-response-options': 'error',
+      /**
        * Disallow accessing `event.currentTarget` after the synchronous event
        * dispatch has finished.
        */
