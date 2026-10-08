@@ -1839,6 +1839,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-fetch-options': 'error',
       /**
+       * Disallow invalid property descriptors.
+       */
+      'unicorn/no-invalid-property-descriptor': 'error',
+      /**
        * Prevent calling `EventTarget#removeEventListener()` with the result of
        * an expression.
        */
