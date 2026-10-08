@@ -1826,6 +1826,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-argument-count': 'error',
       /**
+       * Disallow invalid values for HTML boolean attributes.
+       */
+      'unicorn/no-invalid-boolean-attribute-value': 'error',
+      /**
        * Disallow comparing a single character from a string to a
        * multi-character string.
        */
