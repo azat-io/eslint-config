@@ -2033,6 +2033,11 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unsafe-dom-html': 'error',
       /**
+       * Disallow known values that JSON serialization cannot represent
+       * faithfully.
+       */
+      'unicorn/no-unsafe-json-serialization': 'error',
+      /**
        * Disallow reading `.value` from `Promise.allSettled()` results without a
        * fulfilled status guard.
        */
