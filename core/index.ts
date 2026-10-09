@@ -1857,6 +1857,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-response-options': 'error',
       /**
+       * Disallow invalid protocol strings in comparisons with `URL#protocol`.
+       */
+      'unicorn/no-invalid-url-protocol-comparison': 'error',
+      /**
        * Disallow accessing `event.currentTarget` after the synchronous event
        * dispatch has finished.
        */
