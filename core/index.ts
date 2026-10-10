@@ -2059,6 +2059,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unused-properties': 'error',
       /**
+       * Disallow passing full URLs to `URLSearchParams`.
+       */
+      'unicorn/no-url-in-search-params': 'error',
+      /**
        * Disallow unnecessary `Boolean()` casts in array predicate callbacks.
        */
       'unicorn/no-useless-boolean-cast': 'error',
