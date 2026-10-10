@@ -1835,6 +1835,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-character-comparison': 'error',
       /**
+       * Disallow invalid DOM tokens.
+       */
+      'unicorn/no-invalid-dom-token': 'error',
+      /**
        * Disallow invalid options in `fetch()` and `new Request()`.
        */
       'unicorn/no-invalid-fetch-options': 'error',
