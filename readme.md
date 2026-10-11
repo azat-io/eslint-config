@@ -149,7 +149,6 @@ This config uses the following plugins:
 - [eslint-plugin-prefer-let](https://github.com/thefrontside/javascript/tree/v3/packages/eslint-plugin-prefer-let)
 - [eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise)
 - [eslint-plugin-qwik](https://github.com/QwikDev/qwik/tree/main/packages/eslint-plugin-qwik)
-- [eslint-plugin-react-compiler](https://github.com/facebook/react/tree/main/compiler/packages/eslint-plugin-react-compiler)
 - [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks)
 - [eslint-plugin-react-jsx](https://github.com/Rel1cx/eslint-react)

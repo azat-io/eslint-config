@@ -21,7 +21,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
   }
 
   let [
-    reactCompilerPlugin,
     reactDomPlugin,
     reactJsxPlugin,
     reactHooksPlugin,
@@ -30,7 +29,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
     reactWebApiPlugin,
     reactXPlugin,
   ] = await Promise.all([
-    interopDefault(import('eslint-plugin-react-compiler')),
     interopDefault(import('eslint-plugin-react-dom')),
     interopDefault(import('eslint-plugin-react-jsx')),
     interopDefault(import('eslint-plugin-react-hooks')),
@@ -52,7 +50,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
     files,
 
     plugins: {
-      'react-compiler': reactCompilerPlugin,
       'react-dom': reactDomPlugin,
       'react-hooks': reactHooksPlugin,
       'react-jsx': reactJsxPlugin,
@@ -63,11 +60,6 @@ export async function react(config: ConfigOptions): Promise<Linter.Config> {
     },
 
     rules: {
-      /**
-       * Find problematic React code by the React compiler.
-       */
-      'react-compiler/react-compiler': 'error',
-
       /**
        * Disallow `dangerouslySetInnerHTML`.
        */

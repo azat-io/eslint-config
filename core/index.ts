@@ -273,10 +273,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'no-constructor-return': 'error',
       /**
-       * Disallow control characters in regular expressions.
-       */
-      'no-control-regex': 'error',
-      /**
        * Disallow the use of `debugger`.
        */
       'no-debugger': 'error',
@@ -305,10 +301,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'no-duplicate-case': 'error',
       /**
-       * Disallow `else` blocks after return statements in `if` statements.
-       */
-      'no-else-return': 'error',
-      /**
        * Disallow empty block statements.
        */
       'no-empty': [
@@ -317,10 +309,6 @@ export function core(config: ConfigOptions): Linter.Config {
           allowEmptyCatch: true,
         },
       ],
-      /**
-       * Disallow empty character classes in regular expressions.
-       */
-      'no-empty-character-class': 'error',
       /**
        * Disallow empty destructuring patterns.
        */
@@ -373,10 +361,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * Disallow assigning to imported bindings.
        */
       'no-import-assign': 'error',
-      /**
-       * Disallow invalid regular expression strings in `RegExp` constructors.
-       */
-      'no-invalid-regexp': 'error',
       /**
        * Disallow irregular whitespace.
        */
@@ -491,10 +475,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'no-redeclare': 'error',
       /**
-       * Disallow multiple spaces in regular expressions.
-       */
-      'no-regex-spaces': 'error',
-      /**
        * Disallow assignment operators in return statements.
        */
       'no-return-assign': ['error', 'except-parens'],
@@ -550,10 +530,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'no-undef': 'error',
       /**
-       * Disallow initializing variables to undefined.
-       */
-      'no-undef-init': 'error',
-      /**
        * Disallow confusing multiline expressions.
        */
       'no-unexpected-multiline': 'error',
@@ -567,7 +543,7 @@ export function core(config: ConfigOptions): Linter.Config {
       'no-unneeded-ternary': [
         'error',
         {
-          defaultAssignment: false,
+          defaultAssignment: true,
         },
       ],
       /**
@@ -656,10 +632,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'no-useless-computed-key': 'error',
       /**
-       * Disallow unnecessary concatenation of literals or template literals.
-       */
-      'no-useless-concat': 'error',
-      /**
        * Disallow unnecessary constructors.
        */
       'no-useless-constructor': 'error',
@@ -723,10 +695,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * Disallow the use of `Math.pow` in favor of the `**` operator.
        */
       'prefer-exponentiation-operator': 'error',
-      /**
-       * Enforce using named capture group in regular expression.
-       */
-      'prefer-named-capture-group': 'error',
       /**
        * Disallow `parseInt()` and `Number.parseInt()` in favor of binary,
        * octal, and hexadecimal literals.
@@ -859,10 +827,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * statement or require call.
        */
       'import/newline-after-import': 'error',
-      /**
-       * Forbid named default exports..
-       */
-      'import/no-named-default': 'error',
 
       /**
        * Check that `@access` tags use one of the following values: `"package"`,
@@ -1094,10 +1058,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * Disallow calling `cb()` inside of a `then()`.
        */
       'promise/no-callback-in-promise': 'error',
-      /**
-       * Disallow to create new promises with paths that resolve multiple times.
-       */
-      'promise/no-multiple-resolved': 'error',
       /**
        * Disallow nested then() or catch() statements.
        */
@@ -1481,10 +1441,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'sonarjs/arguments-order': 'error',
       /**
-       * Require callbacks of array methods to have return statements.
-       */
-      'sonarjs/array-callback-without-return': 'error',
-      /**
        * Require `for...in` loops to be filtered before acting on them.
        */
       'sonarjs/for-in': 'error',
@@ -1507,11 +1463,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'sonarjs/no-gratuitous-expressions': 'error',
       /**
-       * Disallow to add identical conditions in if-else-if and switch-case
-       * statements.
-       */
-      'sonarjs/no-identical-conditions': 'error',
-      /**
        * Disallow to add identical expressions.
        */
       'sonarjs/no-identical-expressions': 'error',
@@ -1527,14 +1478,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * Disallow to add functions that doesn't have no side effects.
        */
       'sonarjs/no-ignored-return': 'error',
-      /**
-       * Disallow to add inverted boolean check.
-       */
-      'sonarjs/no-inverted-boolean-check': 'error',
-      /**
-       * Disallow array mutations with variable assigning.
-       */
-      'sonarjs/no-misleading-array-reverse': 'error',
       /**
        * Disallow redundant boolean check.
        */
@@ -1560,11 +1503,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * Prefer to use shorthand syntax for promises.
        */
       'sonarjs/prefer-promise-shorthand': 'error',
-      /**
-       * Return of boolean literal statements wrapped into `if-then-else` flow
-       * should be simplified.
-       */
-      'sonarjs/prefer-single-boolean-return': 'error',
       /**
        * Require to have initial value in array `reduce` method.
        */
@@ -1961,10 +1899,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-single-promise-in-promise-methods': 'error',
       /**
-       * Disallow classes that only have static members.
-       */
-      'unicorn/no-static-only-class': 'error',
-      /**
        * Prefer comparing values directly over subtracting and comparing to `0`.
        */
       'unicorn/no-subtraction-comparison': 'error',
@@ -2062,10 +1996,6 @@ export function core(config: ConfigOptions): Linter.Config {
        * fulfilled status guard.
        */
       'unicorn/no-unsafe-promise-all-settled-values': 'error',
-      /**
-       * Disallow ignoring the return value of selected built-in methods.
-       */
-      'unicorn/no-unused-builtin-method-return': 'error',
       /**
        * Disallow discarding lazy iterator helpers.
        */

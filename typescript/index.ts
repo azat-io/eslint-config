@@ -166,17 +166,6 @@ export async function typescript(
        */
       'typescript/explicit-member-accessibility': 'error',
       /**
-       * Require explicit return and argument types on exported functions' and
-       * classes' public class methods.
-       */
-      'typescript/explicit-module-boundary-types': [
-        'error',
-        {
-          // https://github.com/withastro/compiler/issues/554
-          allowedNames: config.astro ? ['getStaticPaths'] : [],
-        },
-      ],
-      /**
        * Enforce a maximum number of parameters in function definitions.
        */
       'typescript/max-params': [
@@ -318,10 +307,6 @@ export async function typescript(
        * outer scope.
        */
       'typescript/no-shadow': 'error',
-      /**
-       * Disallow aliasing `this`.
-       */
-      'typescript/no-this-alias': 'error',
       /**
        * Disallow unnecessary equality comparisons against boolean literals.
        */
@@ -472,11 +457,6 @@ export async function typescript(
        */
       'typescript/prefer-enum-initializers': 'error',
       /**
-       * Enforce the use of `for-of` loop over the standard `for` loop where
-       * possible.
-       */
-      'typescript/prefer-for-of': 'error',
-      /**
        * Enforce using function types instead of interfaces with call
        * signatures.
        */
@@ -563,21 +543,46 @@ export async function typescript(
        */
       'class-methods-use-this': 'off',
       'consistent-return': 'off',
+      'constructor-super': 'off',
       'default-param-last': 'off',
       'dot-notation': 'off',
+      'getter-return': 'off',
       'max-params': 'off',
       'no-array-constructor': 'off',
+      'no-class-assign': 'off',
+      'no-const-assign': 'off',
+      'no-dupe-args': 'off',
       'no-dupe-class-members': 'off',
+      'no-dupe-keys': 'off',
+      'no-func-assign': 'off',
       'no-implied-eval': 'off',
+      'no-import-assign': 'off',
+      'no-new-native-nonconstructor': 'off',
+      'no-obj-calls': 'off',
+      'no-setter-return': 'off',
       'no-shadow': 'off',
+      'no-this-before-super': 'off',
+      'no-throw-literal': 'off',
       'no-undef': 'off',
+      'no-unreachable': 'off',
+      'no-unsafe-negation': 'off',
       'no-unused-expressions': 'off',
       'no-unused-private-class-members': 'off',
       'no-unused-vars': 'off',
       'no-use-before-define': 'off',
       'no-useless-constructor': 'off',
+      'no-with': 'off',
       'prefer-destructuring': 'off',
+      'prefer-promise-reject-errors': 'off',
       'require-await': 'off',
+
+      'promise/valid-params': 'off',
+
+      'unicorn/no-invalid-argument-count': 'off',
+      'unicorn/no-undeclared-class-members': 'off',
+      'unicorn/no-unnecessary-await': 'off',
+      'unicorn/no-unnecessary-boolean-comparison': 'off',
+      'unicorn/no-useless-template-literals': 'off',
     },
 
     settings: {
