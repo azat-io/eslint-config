@@ -169,21 +169,18 @@ export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vitest/prefer-spy-on': 'error',
       /**
+       * Enforce using `toBe(true)` and `toBe(false)` over matchers that coerce
+       * types to boolean.
+       */
+      'vitest/prefer-strict-boolean-matchers': 'error',
+      /**
        * Enforce using `toBe()`.
        */
       'vitest/prefer-to-be': 'error',
       /**
-       * Enforce using `toBeFalsy()`.
-       */
-      'vitest/prefer-to-be-falsy': 'error',
-      /**
        * Enforce using `toBeObject()`.
        */
       'vitest/prefer-to-be-object': 'error',
-      /**
-       * Enforce using `toBeTruthy()`.
-       */
-      'vitest/prefer-to-be-truthy': 'error',
       /**
        * Enforce using `toContain()`.
        */
