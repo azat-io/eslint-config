@@ -85,7 +85,7 @@ describe('createRuntimeGate', () => {
       baseRules,
     })
     expect(fallback.settings['node']).toBeUndefined()
-    expect(fallback.settings['azat-io/runtime-targets']).toMatchObject({
+    expect(fallback.settings['azat-io/runtime']).toMatchObject({
       off: {
         'unicorn/prefer-uint8array-base64': [
           'node >=22.0.0 is not within >=25.0.0',
@@ -107,7 +107,7 @@ describe('createRuntimeGate', () => {
       quiet: true,
       baseRules,
     })
-    let { warnings } = gate.settings['azat-io/runtime-targets'] as {
+    let { warnings } = gate.settings['azat-io/runtime'] as {
       warnings: string[]
     }
     expect(
@@ -152,7 +152,7 @@ describe('createRuntimeGate', () => {
       expect.stringMatching(
         /^Runtime targets:\n {2}- .+engines\.node "latest"/u,
       ),
-      { code: 'AZAT_IO_ESLINT_RUNTIME_TARGETS' },
+      { code: 'AZAT_IO_ESLINT_RUNTIME' },
     )
   })
 })

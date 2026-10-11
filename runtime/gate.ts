@@ -75,7 +75,7 @@ interface GateResult extends RuntimeGate {
   warnings: string[]
 }
 
-const WARNING_CODE = 'AZAT_IO_ESLINT_RUNTIME_TARGETS'
+const WARNING_CODE = 'AZAT_IO_ESLINT_RUNTIME'
 
 /**
  * Environment variable with hashes of printed warnings. Worker threads copy the
@@ -108,7 +108,7 @@ export function createRuntimeConfigs({
   let project = computeGate(baseRules, options)
   let configs: Linter.Config[] = [
     {
-      name: 'azat-io/runtime-targets',
+      name: 'azat-io/runtime/rules',
       settings: project.settings,
       rules: project.rules,
     },
@@ -172,7 +172,7 @@ export function createRuntimeConfigs({
     configs.push({
       files: getNodeToolingFiles(toolingExtensions),
       settings: getNodeSettings(tooling.targets),
-      name: 'azat-io/runtime-targets/tooling',
+      name: 'azat-io/runtime/tooling',
       rules: toolingRules,
     })
   }
@@ -251,7 +251,7 @@ function computeGate(
 
   return {
     settings: {
-      'azat-io/runtime-targets': {
+      'azat-io/runtime': {
         sources: targets.sources,
         warnings,
         off,
