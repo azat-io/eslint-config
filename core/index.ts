@@ -1813,6 +1813,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-impossible-length-comparison': 'error',
       /**
+       * Disallow class accessors that hide an inherited getter or setter.
+       */
+      'unicorn/no-incomplete-accessor-override': 'error',
+      /**
        * Disallow incorrect `querySelector()` and `querySelectorAll()` usage.
        */
       'unicorn/no-incorrect-query-selector': 'error',
