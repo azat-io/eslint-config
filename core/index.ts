@@ -2324,6 +2324,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-else-if': 'error',
       /**
+       * Prefer escape sequences for irregular whitespace characters.
+       */
+      'unicorn/prefer-escaped-irregular-whitespace': 'error',
+      /**
        * Prefer `EventTarget` over `EventEmitter`.
        */
       'unicorn/prefer-event-target': 'error',
