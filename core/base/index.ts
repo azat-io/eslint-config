@@ -25,7 +25,7 @@ import globals from 'globals'
 
 import type { ConfigOptions } from '../..'
 
-export function core(config: ConfigOptions): Linter.Config {
+export function base(config: ConfigOptions): Linter.Config {
   let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 
   if (config.typescript) {
@@ -53,7 +53,7 @@ export function core(config: ConfigOptions): Linter.Config {
   }
 
   return {
-    name: 'azat-io/core/rules',
+    name: 'azat-io/base/rules',
 
     files,
 

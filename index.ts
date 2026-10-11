@@ -12,7 +12,7 @@ import { react } from './core/react'
 import { astro } from './core/astro'
 import { qwik } from './core/qwik'
 import { a11y } from './core/a11y'
-import { core } from './core/base'
+import { base } from './core/base'
 import { node } from './core/node'
 import { vue } from './core/vue'
 
@@ -48,7 +48,7 @@ export default async ({
   }
 
   let configFunctions = [
-    core,
+    base,
     a11y,
     react,
     node,
