@@ -11,9 +11,9 @@
 
 import type { Linter } from 'eslint'
 
-import type { ConfigOptions } from '..'
+import type { ConfigOptions } from '../..'
 
-import { interopDefault } from '../utilities'
+import { interopDefault } from '../../utilities'
 
 export async function node(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.node) {

@@ -13,9 +13,9 @@ import type { Linter } from 'eslint'
 
 import path from 'node:path'
 
-import type { ConfigOptions } from '..'
+import type { ConfigOptions } from '../..'
 
-import { interopDefault } from '../utilities'
+import { interopDefault } from '../../utilities'
 
 export async function astro(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.astro) {

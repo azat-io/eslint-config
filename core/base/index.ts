@@ -23,7 +23,7 @@ import jsdocPlugin from 'eslint-plugin-jsdoc'
 import slopPlugin from 'eslint-plugin-slop'
 import globals from 'globals'
 
-import type { ConfigOptions } from '..'
+import type { ConfigOptions } from '../..'
 
 export function core(config: ConfigOptions): Linter.Config {
   let files = ['**/*.js', '**/*.cjs', '**/*.mjs']

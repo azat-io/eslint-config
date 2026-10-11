@@ -15,7 +15,7 @@ import packageJsonPlugin from 'eslint-plugin-package-json'
 import * as jsoncParser from 'jsonc-eslint-parser'
 import depend from 'eslint-plugin-depend'
 
-import type { ConfigOptions } from '..'
+import type { ConfigOptions } from '../..'
 
 export function packageJson(_config: ConfigOptions): Linter.Config {
   return {
