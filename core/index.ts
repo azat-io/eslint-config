@@ -118,7 +118,10 @@ export function core(config: ConfigOptions): Linter.Config {
         'error',
         'always',
         {
-          ignorePattern: 'c8|v8|spell-checker',
+          ignoreConsecutiveComments: true,
+          ignoreInlineComments: true,
+          ignorePattern:
+            'prettier-ignore|biome-ignore|oxlint-|webpack[A-Z]|vite-ignore|turbopack|cspell|spell-checker|c8|v8|@ts-|tslint|stylelint|noinspection|language=|https?:',
         },
       ],
       /**
@@ -1018,7 +1021,7 @@ export function core(config: ConfigOptions): Linter.Config {
        * See that rule for the rationale behind preferring the function
        * property.
        */
-      'jsdoc/ts-method-signature-style': 'error',
+      'jsdoc/ts-method-signature-style': ['error', 'method'],
       /**
        * Warns against use of the empty object type which, in TypeScript, means
        * "any value that is defined".
@@ -1491,10 +1494,6 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'sonarjs/no-small-switch': 'error',
       /**
-       * Disallow to use `undefined` in function arguments.
-       */
-      'sonarjs/no-undefined-argument': 'error',
-      /**
        * Local variables should not be declared and then immediately returned or
        * thrown.
        */
@@ -1960,7 +1959,12 @@ export function core(config: ConfigOptions): Linter.Config {
       /**
        * Disallow unreadable array destructuring.
        */
-      'unicorn/no-unreadable-array-destructuring': 'error',
+      'unicorn/no-unreadable-array-destructuring': [
+        'error',
+        {
+          maximumIgnoredElements: 3,
+        },
+      ],
       /**
        * Disallow unreadable iterable expressions in `for…of` and for `await…of`
        * loop headers.

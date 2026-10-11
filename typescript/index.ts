@@ -273,15 +273,6 @@ export async function typescript(
        */
       'typescript/no-misused-new': 'error',
       /**
-       * Disallow Promises in places not designed to handle them.
-       */
-      'typescript/no-misused-promises': [
-        'error',
-        {
-          checksVoidReturn: false,
-        },
-      ],
-      /**
        * Disallow enums from having both number and string members.
        */
       'typescript/no-mixed-enums': 'error',

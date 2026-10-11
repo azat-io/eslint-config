@@ -19,20 +19,21 @@
     "innerhtml",
     "lookarounds",
     "misrefactored",
+    "namepaths",
     "nanostores",
     "nonconstructor",
     "nonoctal",
     "nums",
+    "nuxt",
     "proptypes",
+    "qwik",
     "scopedslots",
     "setstate",
     "sonarjs",
     "stringifying",
     "subclassing",
-    "namepaths",
-    "nuxt",
-    "qwik",
     "textnodes",
-    "thenables"
+    "thenables",
+    "turbopack"
   ]
 }

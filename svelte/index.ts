@@ -257,6 +257,11 @@ export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
        * Enforce keys to use variables defined in the `{#each}` block.
        */
       'svelte/valid-each-key': 'error',
+
+      /**
+       * Do not enforce `addEventListener` usage.
+       */
+      'unicorn/prefer-add-event-listener': 'off',
     },
 
     processor: sveltePlugin.processors['.svelte'],
