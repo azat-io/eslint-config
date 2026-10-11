@@ -1865,6 +1865,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-invalid-style-set-property': 'error',
       /**
+       * Disallow statically known invalid Temporal arithmetic.
+       */
+      'unicorn/no-invalid-temporal-arithmetic': 'error',
+      /**
        * Disallow invalid protocol strings in comparisons with `URL#protocol`.
        */
       'unicorn/no-invalid-url-protocol-comparison': 'error',
