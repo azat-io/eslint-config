@@ -2386,6 +2386,10 @@ export function core(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-keyboard-event-key': 'error',
       /**
+       * Prefer literal printable ASCII characters over escape sequences.
+       */
+      'unicorn/prefer-literal-ascii': 'error',
+      /**
        * Prefer `location.assign()` over assigning to `location.href`.
        */
       'unicorn/prefer-location-assign': 'error',
