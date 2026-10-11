@@ -70,6 +70,34 @@ describe('createRuntimeGate', () => {
     ])
   })
 
+  it.each([
+    {
+      expected: ['warn', { checkFromLast: false }],
+      name: 'no options',
+      entry: ['warn'],
+    },
+    {
+      expected: [2, { checkFromLast: false }, 'extra'],
+      entry: [2, { checkFromLast: true }, 'extra'],
+      name: 'extra items',
+    },
+    { entry: ['error', 'always'], name: 'string options', expected: 'off' },
+    { entry: ['error', null], name: 'null options', expected: 'off' },
+    { entry: ['error', ['option']], name: 'array options', expected: 'off' },
+  ])('downgrades a rule with $name', ({ expected, entry }) => {
+    let gate = createRuntimeGate({
+      root: project({
+        browserslist: ['safari 15'],
+        engines: { node: '>=22' },
+      }),
+      baseRules: {
+        'unicorn/prefer-array-find': entry as Linter.RuleEntry,
+      },
+      quiet: true,
+    })
+    expect(gate.rules).toStrictEqual({ 'unicorn/prefer-array-find': expected })
+  })
+
   it('shares only explicit or browserslist Node.js ranges with eslint-plugin-n', () => {
     let explicit = createRuntimeGate({
       targets: { node: '>=22' },
@@ -154,6 +182,17 @@ describe('createRuntimeGate', () => {
       ),
       { code: 'AZAT_IO_ESLINT_RUNTIME' },
     )
+  })
+
+  it('prints nothing without warnings', () => {
+    let emit = vi.spyOn(process, 'emitWarning').mockImplementation(() => {})
+    let gate = createRuntimeGate({
+      root: project({ engines: { node: '>=22' } }),
+      baseRules,
+    })
+    expect(gate.settings['azat-io/runtime']).toHaveProperty('warnings', [])
+    expect(emit).not.toHaveBeenCalled()
+    expect(process.env['AZAT_IO_ESLINT_RUNTIME_WARNED']).toBeUndefined()
   })
 })
 
@@ -262,5 +301,52 @@ describe('createRuntimeConfigs', () => {
       quiet: true,
     })
     expect(configs).toHaveLength(1)
+  })
+
+  it.each([
+    {
+      warnings: [
+        /^ {2}- .+engines\.node "latest" is not a valid semver range$/u,
+      ],
+      name: 'the project gate without a tooling gate',
+      packageJson: { engines: { node: 'latest' } },
+      options: {},
+    },
+    {
+      warnings: [
+        /^ {2}- .+engines\.node "latest" is not a valid semver range$/u,
+        /^ {2}- targets are older than this config supports \(node >=10\.0\.0 /u,
+      ],
+      name: 'warnings of the project and tooling gates',
+      packageJson: { engines: { node: 'latest' } },
+      options: { toolingNode: '>=10' },
+    },
+    {
+      warnings: [
+        /^ {2}- targets are older than this config supports \(node >=10\.0\.0 /u,
+      ],
+      options: { targets: { browsers: false } } as const,
+      packageJson: { engines: { node: '>=10' } },
+      name: 'a warning of both gates once',
+    },
+  ])('prints $name unless quiet', ({ packageJson, warnings, options }) => {
+    let emit = vi.spyOn(process, 'emitWarning').mockImplementation(() => {})
+    let gateOptions = {
+      baseRules: { 'unicorn/prefer-at': 'error' },
+      root: project(packageJson),
+      ...options,
+    } as const
+
+    createRuntimeConfigs({ ...gateOptions, quiet: true })
+    expect(emit).not.toHaveBeenCalled()
+
+    createRuntimeConfigs(gateOptions)
+    expect(emit).toHaveBeenCalledExactlyOnceWith(expect.any(String), {
+      code: 'AZAT_IO_ESLINT_RUNTIME',
+    })
+    expect(String(emit.mock.calls[0]?.[0]).split('\n')).toStrictEqual([
+      'Runtime targets:',
+      ...warnings.map((warning): unknown => expect.stringMatching(warning)),
+    ])
   })
 })

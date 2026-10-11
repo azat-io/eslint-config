@@ -1,5 +1,6 @@
 import { writeFileSync, mkdtempSync, mkdirSync } from 'node:fs'
-import { describe, expect, it } from 'vitest'
+import { getAllVersions } from 'baseline-browser-mapping'
+import { describe, expect, it, vi } from 'vitest'
 import { pathToFileURL } from 'node:url'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
@@ -8,10 +9,12 @@ import type {
   ResolveRuntimeTargetsOptions,
   RuntimeTargetsOption,
   RuleSupport,
+  RuleScope,
 } from '../../runtime/targets'
 
 import {
   resolveRuntimeTargets,
+  DEFAULT_NODE_FLOOR,
   explainRuleSupport,
   normalizeNodeRange,
   pinBaselineQueries,
@@ -41,6 +44,10 @@ function isEnabled(
   options: ResolveRuntimeTargetsOptions,
 ): boolean {
   return enabledRules(options).includes(rule)
+}
+
+function sharedConfig(name: string, source: string): Record<string, string> {
+  return { [`node_modules/${name}/index.js`]: source }
 }
 
 describe('node targets', () => {
@@ -764,5 +771,394 @@ describe('round 2', () => {
     expect(enabled).not.toContain('prefer-object-has-own')
     expect(enabled).not.toContain('unicorn/prefer-string-replace-all')
     expect(enabled).not.toContain('unicorn/prefer-array-find')
+  })
+})
+
+describe('explanations without matching targets', () => {
+  it.each([
+    ['universal', ['no targets']],
+    ['browser', ['no browser targets']],
+    ['node', ['no node targets']],
+    ['syntax', []],
+  ] as [RuleScope, string[]][])(
+    'explains a %s rule when nothing is targeted',
+    (scope, blockers) => {
+      let root = project({ 'package.json': '{}' })
+      let targets = resolveRuntimeTargets({
+        targets: { browsers: false, node: false },
+        root,
+      })
+      expect(
+        explainRuleSupport(
+          { browsers: { chrome: '1' }, node: ['>=0.10'], scope },
+          targets,
+        ),
+      ).toStrictEqual({ enabled: blockers.length === 0, blockers })
+    },
+  )
+
+  it('blocks a rule whose API Node.js lacks', () => {
+    let root = project({ 'package.json': '{}' })
+    let targets = resolveRuntimeTargets({
+      targets: { browsers: false, node: '22' },
+      root,
+    })
+    expect(
+      explainRuleSupport(
+        { browsers: { chrome: '1' }, scope: 'universal', node: null },
+        targets,
+      ),
+    ).toStrictEqual({
+      blockers: ['node >=22.0.0: not supported'],
+      enabled: false,
+    })
+  })
+})
+
+describe('options', () => {
+  it.each<unknown>([null, [], '/'])(
+    'rejects options that are not an object: %j',
+    options => {
+      expect(() =>
+        resolveRuntimeTargets(options as ResolveRuntimeTargetsOptions),
+      ).toThrow(new TypeError('Runtime targets: options must be an object'))
+    },
+  )
+
+  it.each([
+    [
+      { targets: { browsers: [] } },
+      'targets.browsers must be false or non-empty browserslist queries',
+    ],
+    [
+      { targets: { browsers: ['chrome 100', ' '] } },
+      'targets.browsers must be false or non-empty browserslist queries',
+    ],
+    [
+      { targets: { node: '>=24 <22' } },
+      'targets.node ">=24 <22" is not a satisfiable semver range',
+    ],
+    [
+      { fallback: { node: 'latest' } },
+      'fallback.node "latest" is not a satisfiable semver range',
+    ],
+  ] as [Omit<ResolveRuntimeTargetsOptions, 'root'>, string][])(
+    'rejects %j',
+    (options, message) => {
+      let root = project({ 'package.json': '{}' })
+      expect(() => resolveRuntimeTargets({ ...options, root })).toThrow(
+        new TypeError(`Runtime targets: ${message}`),
+      )
+    },
+  )
+
+  it('lets an explicit targets.node win over engines.node', () => {
+    let root = project({
+      'package.json': JSON.stringify({ engines: { node: '>=18' } }),
+    })
+    let targets = resolveRuntimeTargets({
+      targets: { browsers: false, node: '22.12' },
+      root,
+    })
+    expect(targets.node).toStrictEqual({
+      source: 'explicit',
+      minimum: '22.12.0',
+      range: '>=22.12.0',
+    })
+    expect(targets.sources).toContain('node: targets.node "22.12"')
+  })
+
+  it.each([
+    ['^20.9', '>=20.9.0 <21.0.0-0'],
+    ['>=22 <24', '>=22.0.0 <24.0.0-0'],
+    ['>=24 <22', undefined],
+    ['latest', undefined],
+  ])('normalizes the Node.js range %j', (value, range) => {
+    expect(normalizeNodeRange(value)).toBe(range)
+  })
+})
+
+describe('project files', () => {
+  it('warns when no package.json exists in or above the root', () => {
+    let root = project({ '.browserslistrc': 'chrome 120\n' })
+    let targets = resolveRuntimeTargets({ root })
+    expect(targets.warnings).toStrictEqual([
+      `no package.json in or above ${root}; is "root" correct?`,
+    ])
+    expect(targets.browsers).toStrictEqual({ chrome: '120' })
+    expect(targets.node?.source).toBe('fallback')
+  })
+
+  it('throws when package.json cannot be read', () => {
+    let root = project({ 'package.json/.gitkeep': '' })
+    expect(() => resolveRuntimeTargets({ root })).toThrow(
+      `Runtime targets: cannot read ${path.join(root, 'package.json')}: EISDIR`,
+    )
+  })
+
+  it.each(['[]', 'null', '"app"'])(
+    'falls back when package.json is %s',
+    content => {
+      let root = project({ 'package.json': content })
+      let targets = resolveRuntimeTargets({
+        targets: { browsers: false },
+        root,
+      })
+      expect(targets.node).toStrictEqual({
+        range: `>=${DEFAULT_NODE_FLOOR}`,
+        minimum: DEFAULT_NODE_FLOOR,
+        source: 'fallback',
+      })
+      expect(targets.unknown).toStrictEqual([])
+    },
+  )
+
+  it.each([
+    [
+      { browserlist: ['chrome 100'] },
+      '`browserlist` key instead of `browserslist`',
+    ],
+    [
+      { browserslist: { production: 100 } },
+      'Browserslist config should be a string or an array of strings',
+    ],
+  ])('throws on the invalid browserslist config %j', (content, message) => {
+    let root = project({ 'package.json': JSON.stringify(content) })
+    expect(() => resolveRuntimeTargets({ root })).toThrow(
+      `Runtime targets: invalid browserslist config in or above ${root}: ${message}`,
+    )
+  })
+
+  it('does not warn about a config below the nearest package.json', () => {
+    let root = project({
+      'src/.browserslistrc': 'chrome 120\n',
+      'package.json': '{}',
+    })
+    let targets = resolveRuntimeTargets({ root: path.join(root, 'src') })
+    expect(targets.browsers).toStrictEqual({ chrome: '120' })
+    expect(targets.warnings).toStrictEqual([])
+  })
+
+  it.each([
+    ['without a browserslist config', {}],
+    ['with a config without node entries', { browserslist: ['firefox 120'] }],
+    ['with an empty config section', { browserslist: { production: ' ' } }],
+  ])('falls back for explicit browsers in a project %s', (_label, content) => {
+    let root = project({ 'package.json': JSON.stringify(content) })
+    let targets = resolveRuntimeTargets({
+      targets: { browsers: ['chrome 130'] },
+      root,
+    })
+    expect(targets.node?.source).toBe('fallback')
+    expect(targets.sources).toStrictEqual([
+      'browsers: targets.browsers (production)',
+      `node: no engines.node, fallback "${DEFAULT_NODE_FLOOR}"`,
+    ])
+  })
+})
+
+describe('browserslist queries', () => {
+  it('warns that "current node" depends on the Node.js running ESLint', () => {
+    let root = project({ 'package.json': '{}' })
+    let targets = resolveRuntimeTargets({
+      targets: { browsers: ['current node'] },
+      root,
+    })
+    expect(targets.warnings).toContain(
+      'targets.browsers: "current node" depends on the Node.js that runs ESLint',
+    )
+    expect(targets.node).toMatchObject({
+      minimum: `${process.versions.node.split('.', 1)[0]}.0.0`,
+      source: 'browserslist',
+    })
+  })
+
+  it('warns without blocking rules when explicit queries select nothing', () => {
+    let root = project({ 'package.json': '{}' })
+    let targets = resolveRuntimeTargets({
+      targets: { browsers: '> 50%', node: false },
+      root,
+    })
+    expect(targets.warnings).toStrictEqual([
+      'targets.browsers: queries select no browsers',
+    ])
+    expect(targets.unknown).toStrictEqual([])
+    expect(targets.browsers).toStrictEqual({})
+  })
+
+  it('keeps a lower upstream version over an engine-mapped browser', () => {
+    let root = project({ 'package.json': '{}' })
+    let targets = resolveRuntimeTargets({
+      targets: { browsers: ['and_chr 90', 'and_uc 15.5'], node: false },
+      root,
+    })
+    expect(Object.entries(targets.browsers ?? {})).toStrictEqual([
+      ['chrome_android', '90'],
+    ])
+    expect(Object.entries(targets.browserOrigins)).toStrictEqual([
+      ['chrome_android', 'and_chr 90'],
+    ])
+  })
+
+  it.each([
+    [['op_mob 12', 'op_mob >= 46'], [['opera_android', '12']]],
+    [['op_mob >= 46', 'not op_mob 80'], []],
+    [['and_uc < 15'], []],
+  ])(
+    '%j: single-version agents that lose no versions are known',
+    (queries, browsers) => {
+      let root = project({ 'package.json': '{}' })
+      let targets = resolveRuntimeTargets({
+        targets: { browsers: queries, node: false },
+        root,
+      })
+      expect(targets.unknown).toStrictEqual([])
+      expect(Object.entries(targets.browsers ?? {})).toStrictEqual(browsers)
+    },
+  )
+
+  it.each([
+    'not extends browserslist-config-legacy',
+    'not browserslist config',
+  ])('skips collapsed agents of negated queries in %j', query => {
+    let root = project({
+      ...sharedConfig(
+        'browserslist-config-legacy',
+        "module.exports = ['op_mob < 50']\n",
+      ),
+      '.browserslistrc': 'op_mob < 50\n',
+      'package.json': '{}',
+    })
+    let targets = resolveRuntimeTargets({
+      targets: {
+        browsers: ['chrome >= 120', 'op_mob >= 80', query],
+        node: false,
+      },
+      root,
+    })
+    expect(targets.browsers).toHaveProperty('opera_android', '80')
+    expect(targets.unknown).toStrictEqual([])
+  })
+
+  it.each([
+    [
+      'browserslist-config-level9',
+      '"op_mob >= 46": browserslist has no data for op_mob older than 80',
+    ],
+    [
+      'browserslist-config-level0',
+      'op_mob 80: cannot check the queries behind it for older versions',
+    ],
+  ])('marks collapsed agents behind %s as unknown', (name, reason) => {
+    let levels = Array.from({ length: 10 }, (_value, index) =>
+      sharedConfig(
+        `browserslist-config-level${index}`,
+        index === 9 ?
+          "module.exports = ['chrome >= 120', 'op_mob >= 46', 'and_uc >= 12']\n"
+        : `module.exports = ['extends browserslist-config-level${index + 1}']\n`,
+      ),
+    )
+    let root = project(
+      Object.assign({ 'package.json': '{}' }, ...levels) as Record<
+        string,
+        string
+      >,
+    )
+    let targets = resolveRuntimeTargets({
+      targets: { browsers: `extends ${name}`, node: false },
+      ignoreBrowsers: ['and_uc'],
+      root,
+    })
+    expect(targets.unknown).toStrictEqual([{ runtime: 'browser', reason }])
+    expect(targets.ignoredBrowsers).toStrictEqual(['and_uc 15.5'])
+  })
+
+  it('passes other warnings of shareable configs through', () => {
+    let root = project({
+      ...sharedConfig(
+        'browserslist-config-deprecated',
+        "console.warn('browserslist-config-deprecated is deprecated')\nmodule.exports = ['chrome >= 120']\n",
+      ),
+      'package.json': '{}',
+    })
+    let warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
+    try {
+      let targets = resolveRuntimeTargets({
+        targets: { browsers: 'extends browserslist-config-deprecated' },
+        root,
+      })
+      expect(warn).toHaveBeenCalledWith(
+        'browserslist-config-deprecated is deprecated',
+      )
+      expect(console.warn).toBe(warn)
+      expect(targets.warnings).toStrictEqual([])
+      expect(targets.unknown).toStrictEqual([])
+    } finally {
+      warn.mockRestore()
+    }
+  })
+
+  it('reports values thrown by a broken shareable config', () => {
+    let root = project({
+      ...sharedConfig('browserslist-config-broken', "throw 'not built'\n"),
+      'package.json': '{}',
+    })
+    expect(() =>
+      resolveRuntimeTargets({
+        targets: { browsers: 'extends browserslist-config-broken' },
+        root,
+      }),
+    ).toThrow(
+      'Runtime targets: cannot resolve browsers from targets.browsers: not built',
+    )
+  })
+
+  it.each([undefined, 'false'])(
+    'restores BROWSERSLIST_IGNORE_OLD_DATA (%j)',
+    value => {
+      let root = project({ 'package.json': '{}' })
+      vi.stubEnv('BROWSERSLIST_IGNORE_OLD_DATA', value)
+      try {
+        resolveRuntimeTargets({ targets: { browsers: 'chrome 120' }, root })
+        expect(process.env.BROWSERSLIST_IGNORE_OLD_DATA).toBe(value)
+      } finally {
+        vi.unstubAllEnvs()
+      }
+    },
+  )
+
+  it('treats downstream releases missing from baseline data as unknown', async () => {
+    vi.resetModules()
+    vi.doMock('baseline-browser-mapping', () => ({
+      getAllVersions: (options: Parameters<typeof getAllVersions>[0]) =>
+        (
+          getAllVersions(options) as { browser: string; version: string }[]
+        ).filter(
+          release =>
+            release.browser !== 'uc_android' || release.version !== '15.5',
+        ),
+    }))
+    try {
+      let { resolveRuntimeTargets: resolveWithOldData } =
+        await import('../../runtime/targets')
+      let root = project({ 'package.json': '{}' })
+      let options: ResolveRuntimeTargetsOptions = {
+        targets: { browsers: ['and_uc 15.5', 'kaios 2.5'], node: false },
+        root,
+      }
+      let off = resolveWithOldData(options)
+      let ignore = resolveWithOldData({ ...options, unknownBrowsers: 'ignore' })
+      expect(Object.entries(off.browsers ?? {})).toStrictEqual([
+        ['firefox_android', '48'],
+      ])
+      expect(off.unknown).toStrictEqual([
+        { reason: 'and_uc 15.5: no compatibility data', runtime: 'browser' },
+      ])
+      expect(ignore.unknown).toStrictEqual([])
+      expect(ignore.ignoredBrowsers).toStrictEqual(['and_uc 15.5'])
+    } finally {
+      vi.doUnmock('baseline-browser-mapping')
+      vi.resetModules()
+    }
   })
 })

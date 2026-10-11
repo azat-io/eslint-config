@@ -1,3 +1,5 @@
+import type { Linter } from 'eslint'
+
 import { describe, expect, it } from 'vitest'
 
 import createConfig from '../index'
@@ -58,4 +60,38 @@ describe('index', () => {
     expect(customConfigs[0]).toMatchObject(custom)
     expect(customConfigs[0]?.plugins).toHaveProperty('unicorn')
   })
+
+  it('keeps the name and plugins of a single custom config', async () => {
+    let plugin = { rules: {} }
+    let custom = {
+      rules: { 'custom/rule': 'error' },
+      plugins: { custom: plugin },
+      name: 'custom/config',
+    } as const
+    let configs = await createConfig({ extends: custom })
+    let lastConfig = configs.at(-1)
+
+    expect(
+      configs.filter(config => config.name === 'azat-io/custom-extends'),
+    ).toStrictEqual([])
+    expect(lastConfig).toMatchObject(custom)
+    expect(lastConfig?.plugins).toHaveProperty('unicorn')
+  })
+
+  it.each([null, false])(
+    'adds no custom config for %s extends from javascript configs',
+    async customExtends => {
+      let createJavaScriptConfig: (
+        options: object,
+      ) => Promise<Linter.Config[]> = createConfig
+      let configs = await createJavaScriptConfig({ extends: customExtends })
+
+      expect(configs.map(config => config.name).filter(Boolean)).toStrictEqual([
+        'azat-io/gitignore',
+        'azat-io/benchmark/ignores',
+        'azat-io/base/rules',
+        'azat-io/package-json/rules',
+      ])
+    },
+  )
 })
