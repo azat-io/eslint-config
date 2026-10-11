@@ -43,6 +43,7 @@
     "release:prepare:changelog": "prettier --write changelog.md",
     "release:prepare:package-json": "prettier --write package.json",
     "release:version": "changelogen --output changelog.md --release --no-commit --no-tag",
+    "runtime:support": "tsx scripts/generate-runtime-support.ts",
     "test": "pnpm run /^test:/",
     "test:format": "prettier --check \"**/*.{js,ts,json,md,yml}\"",
     "test:js": "eslint --concurrency auto .",

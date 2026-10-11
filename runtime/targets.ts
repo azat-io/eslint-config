@@ -1008,7 +1008,7 @@ function readConfigNodeVersions(context: {
 
   /**
    * Browser problems of this config go to a scratch result, so they cannot
-   * block explicit or untargeted browsers.
+   * block browsers that are explicit or not targeted.
    */
   let scratch: ResolvedRuntimeTargets = {
     ignoredBrowsers: [],

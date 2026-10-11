@@ -290,7 +290,7 @@ function reportWarnings(warnings: string[]): void {
 }
 
 /**
- * Checks the targets against older APIs that ungated rules write.
+ * Checks the targets against older APIs that rules without a gate write.
  *
  * @param floor - Merged support row of those APIs.
  * @param targets - Resolved targets.

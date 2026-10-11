@@ -5,6 +5,9 @@ import type {
 } from '@mdn/browser-compat-data'
 
 import bcd from '@mdn/browser-compat-data' with { type: 'json' }
+import { writeFileSync } from 'node:fs'
+import prettier from 'prettier'
+import path from 'node:path'
 
 import type { RuleSupport, BcdBrowser, RuleScope } from '../runtime/targets'
 
@@ -69,7 +72,7 @@ function builtins(object: string, members: string[]): string[] {
  * Rules gated by runtime support. Every list contains all APIs the rule may
  * introduce, because the strictest one decides.
  */
-export const RULE_DEFINITIONS: Record<string, RuleDefinition> = {
+const RULE_DEFINITIONS: Record<string, RuleDefinition> = {
   'unicorn/prefer-top-level-await': {
     /**
      * Top-level await cannot be lowered by bundlers, so browsers count too. MDN
@@ -354,8 +357,8 @@ export const RULE_DEFINITIONS: Record<string, RuleDefinition> = {
  * @param definition - Features, hand-written data and scope of the rule.
  * @returns Generated support data.
  */
-export function getRuleSupport(definition: RuleDefinition): RuleSupport {
-  let compats = (definition.features ?? []).map(featurePath =>
+function getRuleSupport(definition: RuleDefinition): RuleSupport {
+  let statements = (definition.features ?? []).map(featurePath =>
     getCompat(featurePath),
   )
   let browsers: RuleSupport['browsers'] = { ...definition.manual?.browsers }
@@ -363,10 +366,10 @@ export function getRuleSupport(definition: RuleDefinition): RuleSupport {
 
   if (definition.scope === 'universal' || definition.scope === 'browser') {
     for (let browser of BROWSERS) {
-      if (compats.length === 0) {
+      if (statements.length === 0) {
         break
       }
-      let versions = compats.map(compat =>
+      let versions = statements.map(compat =>
         getBrowserVersion(compat.support[browser]),
       )
       browsers[browser] =
@@ -379,7 +382,7 @@ export function getRuleSupport(definition: RuleDefinition): RuleSupport {
   Object.assign(browsers, definition.manual?.browsers)
 
   if (definition.scope !== 'browser') {
-    for (let compat of compats) {
+    for (let compat of statements) {
       let range = getNodeRange(compat.support.nodejs)
       if (range === null) {
         nodeRanges = null
@@ -412,7 +415,7 @@ export function getRuleSupport(definition: RuleDefinition): RuleSupport {
  * @param statement - MDN support statement of one runtime.
  * @returns Versions in which the feature was added and, if so, removed.
  */
-export function getStableEntries(
+function getStableEntries(
   statement: SupportStatement | undefined,
 ): { removed?: string; added: string }[] {
   let entries: SimpleSupportStatement[] =
@@ -450,7 +453,7 @@ export function getStableEntries(
  * @param featurePath - Path such as `javascript.builtins.Array.at`.
  * @returns The compat statement.
  */
-export function getCompat(featurePath: string): CompatStatement {
+function getCompat(featurePath: string): CompatStatement {
   let node: unknown = bcd
 
   for (let key of featurePath.split('.')) {
@@ -472,9 +475,7 @@ export function getCompat(featurePath: string): CompatStatement {
  * @param statement - MDN support statement of Node.js.
  * @returns A semver range, or `null` without stable support.
  */
-export function getNodeRange(
-  statement: SupportStatement | undefined,
-): string | null {
+function getNodeRange(statement: SupportStatement | undefined): string | null {
   let ranges = getStableEntries(statement).map(entry =>
     entry.removed === undefined ?
       `>=${entry.added}`
@@ -485,11 +486,11 @@ export function getNodeRange(
 }
 
 /**
- * Older APIs that ungated rules write in fixes, for example `Array#flat()` from
- * `unicorn/prefer-array-flat`. Targets that lack them are below the floor this
- * config supports, which is reported as a warning.
+ * Older APIs that rules without a gate write in fixes, for example
+ * `Array#flat()` from `unicorn/prefer-array-flat`. Targets that lack them are
+ * below the floor this config supports, which is reported as a warning.
  */
-export const FLOOR_DEFINITIONS: RuleDefinition[] = [
+const FLOOR_DEFINITIONS: RuleDefinition[] = [
   {
     features: [
       ...builtins('Array', ['flat', 'flatMap', 'includes']),
@@ -518,7 +519,7 @@ export const FLOOR_DEFINITIONS: RuleDefinition[] = [
  * @param rows - Rows computed by {@link getRuleSupport}.
  * @returns A row with the strictest browser versions and all Node.js ranges.
  */
-export function mergeSupport(rows: RuleSupport[]): RuleSupport {
+function mergeSupport(rows: RuleSupport[]): RuleSupport {
   let browsers: RuleSupport['browsers'] = {}
   let node: string[] | null = []
 
@@ -556,7 +557,7 @@ export function mergeSupport(rows: RuleSupport[]): RuleSupport {
  * @param date - Data date that pins Baseline queries.
  * @returns Support per rule, the floor of the config and the data date.
  */
-export function buildRuntimeSupport(date: string): {
+function buildRuntimeSupport(date: string): {
   rules: Record<string, RuleSupport>
   floor: RuleSupport
   date: string
@@ -582,7 +583,7 @@ export function buildRuntimeSupport(date: string): {
  * @param statement - MDN support statement of one browser.
  * @returns The version, or `null` without stable support.
  */
-export function getBrowserVersion(
+function getBrowserVersion(
   statement: SupportStatement | undefined,
 ): string | null {
   return (
@@ -593,3 +594,16 @@ export function getBrowserVersion(
       .at(0) ?? null
   )
 }
+
+let now = new Date()
+let date = process.env['RUNTIME_SUPPORT_DATE'] ?? now.toISOString().slice(0, 10)
+let file = path.join(import.meta.dirname, '../runtime/support.json')
+let options = await prettier.resolveConfig(file)
+
+writeFileSync(
+  file,
+  await prettier.format(JSON.stringify(buildRuntimeSupport(date), null, 2), {
+    ...options,
+    filepath: file,
+  }),
+)

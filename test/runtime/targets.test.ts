@@ -322,11 +322,11 @@ describe('browser targets', () => {
 
   it('[#18] invalid queries throw with their origin', () => {
     let root = project({
-      '.browserslistrc': 'chrom 100\n',
+      '.browserslistrc': 'navigator 100\n',
       'package.json': '{}',
     })
     expect(() => resolveRuntimeTargets({ root })).toThrow(
-      /\.browserslistrc.*Unknown browser chrom/u,
+      /\.browserslistrc.*Unknown browser navigator/u,
     )
   })
 
