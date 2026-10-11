@@ -49,7 +49,8 @@
     "test:js": "eslint --concurrency auto .",
     "test:packages": "pnpm dedupe --check",
     "test:spelling": "cspell \"**/*\"",
-    "test:types": "tsc --noEmit --pretty"
+    "test:types": "tsc --noEmit --pretty",
+    "test:unit": "vitest --run --coverage"
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.8.1",
