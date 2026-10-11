@@ -9,7 +9,9 @@
     "pnpm-lock.yaml",
     "tsconfig.json",
     "audit",
-    "runtime-targets"
+    "runtime",
+    "scripts",
+    "test"
   ],
   "words": [
     "azat",

@@ -8,10 +8,10 @@ import type {
   ResolvedRuntimeTargets,
   RuntimeTargetsOption,
   RuleSupport,
-} from './runtime-targets'
+} from './targets'
 
-import { resolveRuntimeTargets, explainRuleSupport } from './runtime-targets'
-import support from './runtime-support.json' with { type: 'json' }
+import { resolveRuntimeTargets, explainRuleSupport } from './targets'
+import support from './support.json' with { type: 'json' }
 
 /**
  * Files that run on Node.js even in browser projects, without extensions.

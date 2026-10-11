@@ -6,9 +6,9 @@ import type {
 
 import bcd from '@mdn/browser-compat-data' with { type: 'json' }
 
-import type { RuleSupport, BcdBrowser, RuleScope } from './runtime-targets'
+import type { RuleSupport, BcdBrowser, RuleScope } from '../runtime/targets'
 
-import { compareVersions } from './runtime-targets'
+import { compareVersions } from '../runtime/targets'
 
 /**
  * How the support of one rule is computed.

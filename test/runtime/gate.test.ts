@@ -5,7 +5,7 @@ import { writeFileSync, mkdtempSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 
-import { createRuntimeConfigs, createRuntimeGate } from '../runtime-gate'
+import { createRuntimeConfigs, createRuntimeGate } from '../../runtime/gate'
 
 function project(packageJson: object): string {
   let root = mkdtempSync(path.join(tmpdir(), 'gate-'))

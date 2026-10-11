@@ -20,8 +20,8 @@ export default [
      * The prototype has its own dependencies, which the root package does not
      * install.
      */
-    ignores: ['runtime-targets/**'],
-    name: 'runtime-targets/ignores',
+    ignores: ['runtime/**', 'scripts/**', 'test/**'],
+    name: 'runtime/ignores',
   },
   ...config,
 ] satisfies Linter.Config[]

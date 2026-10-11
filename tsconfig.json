@@ -1,5 +1,5 @@
 {
   "include": ["**/*.ts", "environment.d.ts"],
-  "exclude": ["node_modules", "runtime-targets"],
+  "exclude": ["node_modules", "runtime", "scripts", "test"],
   "extends": "@azat-io/typescript-config"
 }

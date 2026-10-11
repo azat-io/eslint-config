@@ -8,15 +8,15 @@ import type {
   ResolveRuntimeTargetsOptions,
   RuntimeTargetsOption,
   RuleSupport,
-} from '../runtime-targets'
+} from '../../runtime/targets'
 
 import {
   resolveRuntimeTargets,
   explainRuleSupport,
   normalizeNodeRange,
   pinBaselineQueries,
-} from '../runtime-targets'
-import data from '../runtime-support.json' with { type: 'json' }
+} from '../../runtime/targets'
+import data from '../../runtime/support.json' with { type: 'json' }
 
 let table = data.rules as Record<string, RuleSupport>
 
