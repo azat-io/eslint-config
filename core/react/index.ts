@@ -13,7 +13,7 @@ import type { Linter } from 'eslint'
 
 import type { ConfigOptions } from '../..'
 
-import { interopDefault } from '../../utilities'
+import { interopDefault } from '../../utils/interop-default'
 
 export async function react(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.react) {
