@@ -7,7 +7,9 @@
     "changelog.md",
     "license",
     "pnpm-lock.yaml",
-    "tsconfig.json"
+    "tsconfig.json",
+    "audit",
+    "runtime-targets"
   ],
   "words": [
     "azat",

@@ -2,7 +2,7 @@ import type { Linter } from 'eslint'
 
 import eslintConfig from '.'
 
-export default eslintConfig({
+let config = await eslintConfig({
   perfectionist: true,
   typescript: true,
   svelte: true,
@@ -12,4 +12,16 @@ export default eslintConfig({
   qwik: true,
   node: true,
   vue: true,
-}) satisfies Promise<Linter.Config[]>
+})
+
+export default [
+  {
+    /**
+     * The prototype has its own dependencies, which the root package does not
+     * install.
+     */
+    ignores: ['runtime-targets/**'],
+    name: 'runtime-targets/ignores',
+  },
+  ...config,
+] satisfies Linter.Config[]

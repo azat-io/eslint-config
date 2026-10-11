@@ -1,4 +1,5 @@
 {
   "include": ["**/*.ts", "environment.d.ts"],
+  "exclude": ["node_modules", "runtime-targets"],
   "extends": "@azat-io/typescript-config"
 }
