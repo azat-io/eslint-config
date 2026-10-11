@@ -1,5 +1,50 @@
 # Changelog
 
+## v2.99.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.98.0...v2.99.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([3b4c31b](https://github.com/azat-io/eslint-config/commit/3b4c31b))
+- Move to eslint-plugin-jsx-a11y-x
+  ([49def21](https://github.com/azat-io/eslint-config/commit/49def21))
+- **core:** Add no-invalid-response-options rule
+  ([09b4a55](https://github.com/azat-io/eslint-config/commit/09b4a55))
+- **core:** Add no-prevent-default-in-passive-listener rule
+  ([a849710](https://github.com/azat-io/eslint-config/commit/a849710))
+- **core:** Add no-invalid-boolean-attribute-value rule
+  ([d785789](https://github.com/azat-io/eslint-config/commit/d785789))
+- **core:** Add no-invalid-property-descriptor rule
+  ([90f4df2](https://github.com/azat-io/eslint-config/commit/90f4df2))
+- Add no-invalid-intl-options rule
+  ([1357037](https://github.com/azat-io/eslint-config/commit/1357037))
+- **core:** Add no-unsafe-json-serialization rule
+  ([b4e7474](https://github.com/azat-io/eslint-config/commit/b4e7474))
+- **core:** Add no-invalid-url-protocol-comparison rule
+  ([6c29b0d](https://github.com/azat-io/eslint-config/commit/6c29b0d))
+- **core:** Add no-url-in-search-params rule
+  ([cfc3368](https://github.com/azat-io/eslint-config/commit/cfc3368))
+- **core:** Add no-invalid-style-set-property rule
+  ([d21a45d](https://github.com/azat-io/eslint-config/commit/d21a45d))
+- **core:** Add no-invalid-dom-token rule
+  ([3b60871](https://github.com/azat-io/eslint-config/commit/3b60871))
+- **core:** Add no-invalid-temporal-arithmetic rule
+  ([54bd7e6](https://github.com/azat-io/eslint-config/commit/54bd7e6))
+- **core:** Add no-incomplete-accessor-override rule
+  ([b85d4d7](https://github.com/azat-io/eslint-config/commit/b85d4d7))
+- **core:** Add prefer-literal-ascii rule
+  ([56da560](https://github.com/azat-io/eslint-config/commit/56da560))
+- **core:** Add prefer-short-escape-sequences rule
+  ([d4f5d44](https://github.com/azat-io/eslint-config/commit/d4f5d44))
+- **core:** Add prefer-escaped-irregular-whitespace rule
+  ([a5b4efe](https://github.com/azat-io/eslint-config/commit/a5b4efe))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.98.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.97.0...v2.98.0)
