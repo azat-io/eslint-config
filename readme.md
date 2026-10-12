@@ -19,6 +19,10 @@ maintain consistency across different project types and frameworks.
 
 ## Usage
 
+Running ESLint requires Node.js `^22.22.3 || ^24.16.0 || >=26.3.0`, matching the
+requirements of the included plugins. The code you lint can target older
+runtimes.
+
 1. Install package:
 
 ```sh
@@ -31,6 +35,7 @@ pnpm add --save-dev eslint @azat-io/eslint-config
 import eslintConfig from '@azat-io/eslint-config'
 
 export default eslintConfig({
+  root: import.meta.dirname,
   perfectionist: true,
   typescript: true,
   react: true,
@@ -51,8 +56,9 @@ export default eslintConfig({
 ## Configuration
 
 To configure the ESLint rules based on your project’s needs, import the config
-and pass an object with options for each framework or tool. By default, all
-options are disabled, so you can enable only what's relevant to your project.
+and pass an object with options for each framework or tool. Framework and tool
+flags are disabled by default. Runtime compatibility checks are enabled
+automatically.
 
 ```js
 import eslintConfig from '@azat-io/eslint-config'
@@ -115,6 +121,59 @@ imports, and common practices.
 Adds Vue-specific linting rules, supporting Vue's syntax and best practices for
 Vue components.
 
+### Runtime targets
+
+The config reads the nearest `package.json` and Browserslist configuration to
+disable rules that would introduce unsupported APIs. Runtime overrides apply to
+source files supported by the enabled configs, leaving JSON files unaffected.
+
+```js
+import eslintConfig from '@azat-io/eslint-config'
+
+export default eslintConfig({
+  root: import.meta.dirname,
+  targets: {
+    browsers: 'baseline widely available',
+    node: '>=22',
+  },
+  toolingNode: '>=24',
+  typescript: true,
+})
+```
+
+`root` is the directory or file URL used for runtime target discovery. It
+defaults to `process.cwd()`; set it explicitly in monorepos or when running
+ESLint from another directory.
+
+`targets` defaults to `'auto'`. Its `node` and `browsers` keys override
+automatic discovery independently; omitted keys are still detected, and `false`
+excludes that runtime. Node.js targets come from `engines.node`, then
+Browserslist Node.js queries, then the Node.js 22 fallback. A bare explicit
+version such as `'22.12'` means that version or newer. The `node: true` flag
+enables Node.js lint rules and is separate from `targets.node`.
+
+`toolingNode` sets a different Node.js target for config files and files in
+`scripts/`, `bin/` and `tools/`. Only extensions already enabled in the config
+are included. Otherwise tooling uses the detected project Node.js target,
+including in browser-only projects.
+
+Additional runtime options:
+
+| Option            | Default              | Purpose                                                    |
+| ----------------- | -------------------- | ---------------------------------------------------------- |
+| `browserslistEnv` | `'production'`       | Select the Browserslist environment.                       |
+| `pinnedDate`      | Support data date    | Pin relative Baseline queries, including shared configs.   |
+| `fallback`        | `{ node: '22.0.0' }` | Choose a fallback Node.js target, or disable with `false`. |
+| `missingBrowsers` | `'ignore'`           | Ignore missing browser targets, use `'off'`, or queries.   |
+| `unknownBrowsers` | `'off'`              | Disable dependent rules or `'ignore'` unknown browsers.    |
+| `ignoreBrowsers`  | `['op_mini']`        | Replace the list of ignored Browserslist agents.           |
+| `quiet`           | `false`              | Keep warnings in config settings without printing them.    |
+
+Resolved target sources, warnings and disabled rules are available under
+`settings['azat-io/runtime']` in ESLint's `--print-config` output. Custom
+`extends` configs run after the runtime overrides, so explicit rule choices take
+priority.
+
 ### extends
 
 You can add your own configs. Example:
@@ -125,7 +184,9 @@ import eslintConfig from '@azat-io/eslint-config'
 export default eslintConfig({
   extends: [
     {
-      'no-undef': 'off',
+      rules: {
+        'no-undef': 'off',
+      },
     },
   ],
 })
@@ -140,7 +201,7 @@ This config uses the following plugins:
 - [eslint-plugin-astro](https://github.com/ota-meshi/eslint-plugin-astro)
 - [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan)
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
-- [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)
+- [eslint-plugin-import-lite](https://github.com/9romise/eslint-plugin-import-lite)
 - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
 - [eslint-plugin-jsx-a11y-x](https://github.com/eslint-community/eslint-plugin-jsx-a11y-x)
 - [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n)

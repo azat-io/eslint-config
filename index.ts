@@ -3,18 +3,23 @@ import type { ESLint, Linter } from 'eslint'
 import gitignore from 'eslint-config-flat-gitignore'
 import { defineConfig } from 'eslint/config'
 
-import { perfectionist } from './perfectionist'
-import { packageJson } from './package-json'
-import { typescript } from './typescript'
-import { svelte } from './svelte'
-import { vitest } from './vitest'
-import { react } from './react'
-import { astro } from './astro'
-import { qwik } from './qwik'
-import { a11y } from './a11y'
-import { core } from './core'
-import { node } from './node'
-import { vue } from './vue'
+import type { RuntimeGateOptions } from './runtime/gate.js'
+
+import { createRuntimeConfigs } from './runtime/gate.js'
+import { perfectionist } from './core/perfectionist'
+import { packageJson } from './core/package-json'
+import { typescript } from './core/typescript'
+import { svelte } from './core/svelte'
+import { vitest } from './core/vitest'
+import { react } from './core/react'
+import { astro } from './core/astro'
+import { qwik } from './core/qwik'
+import { a11y } from './core/a11y'
+import { base } from './core/base'
+import { node } from './core/node'
+import { vue } from './core/vue'
+
+export type { RuntimeTargetsOption } from './runtime/targets.js'
 
 const CONFIG_OPTIONS = [
   'perfectionist',
@@ -28,11 +33,24 @@ const CONFIG_OPTIONS = [
   'vue',
 ] as const
 
-export type ConfigOptions = Required<ConfigOptionFlags>
-
-type RawConfigOptions = {
+export type RawConfigOptions = {
   extends?: Linter.Config[] | Linter.Config
-} & Partial<ConfigOptionFlags>
+
+  /**
+   * Node.js range for config files and scripts, when different from the
+   * project.
+   */
+  toolingNode?: string
+
+  /**
+   * Project directory or file URL used to resolve runtime targets. Defaults to
+   * the current working directory; pass `import.meta.dirname` in monorepos.
+   */
+  root?: string | URL
+} & Omit<RuntimeGateOptions, 'baseRules' | 'root'> &
+  Partial<ConfigOptionFlags>
+
+export type ConfigOptions = Required<ConfigOptionFlags>
 
 type ConfigOptionFlags = Record<ConfigOptionKeys, boolean>
 
@@ -40,15 +58,17 @@ type ConfigOptionKeys = (typeof CONFIG_OPTIONS)[number]
 
 export default async ({
   extends: customExtends = {},
+  root = process.cwd(),
   ...rawConfig
 }: RawConfigOptions = {}): Promise<Linter.Config[]> => {
   let config: Required<ConfigOptionFlags> = {} as Required<ConfigOptionFlags>
   for (let configName of CONFIG_OPTIONS) {
     config[configName] = rawConfig[configName] ?? false
+    delete rawConfig[configName]
   }
 
+  let baseConfig = base(config)
   let configFunctions = [
-    core,
     a11y,
     react,
     node,
@@ -63,10 +83,30 @@ export default async ({
   ]
 
   let configs = await Promise.all(
-    configFunctions.map(createConfigFunction =>
+    [() => baseConfig, ...configFunctions].map(createConfigFunction =>
       Promise.resolve(createConfigFunction(config)),
     ),
   )
+
+  let toolingExtensions = [
+    'js',
+    'cjs',
+    'mjs',
+    'jsx',
+    'ts',
+    'cts',
+    'mts',
+    'tsx',
+  ].filter(extension => baseConfig.files!.includes(`**/*.${extension}`))
+  let runtimeConfigs = createRuntimeConfigs({
+    ...rawConfig,
+    baseRules: baseConfig.rules!,
+    toolingExtensions,
+    root,
+  }).map(runtimeConfig => ({
+    ...runtimeConfig,
+    files: runtimeConfig.files ?? baseConfig.files,
+  }))
 
   let plugins = configs.reduce<Record<string, ESLint.Plugin>>(
     (accumulator, current) =>
@@ -120,6 +160,7 @@ export default async ({
       name: 'azat-io/benchmark/ignores',
     },
     ...configs,
+    ...runtimeConfigs,
     ...prepareExtends(customExtends),
   ])
 }

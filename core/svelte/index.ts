@@ -1,0 +1,269 @@
+/*
+  eslint perfectionist/sort-objects: [
+    'error',
+    {
+      type: 'alphabetical',
+      order: 'asc',
+      partitionByNewLine: true
+    }
+  ]
+*/
+
+import type { Linter } from 'eslint'
+
+import type { ConfigOptions } from '../..'
+
+import { interopDefault } from '../../utils/interop-default'
+
+export async function svelte(config: ConfigOptions): Promise<Linter.Config> {
+  if (!config.svelte) {
+    return {}
+  }
+
+  let files = ['**/*.svelte']
+
+  let [sveltePlugin, svelteParser] = await Promise.all([
+    interopDefault(import('eslint-plugin-svelte')),
+    interopDefault(import('svelte-eslint-parser')),
+  ] as const)
+
+  let additionalParserOptions = {}
+
+  if (config.typescript) {
+    let { parser: typescriptParser } = await interopDefault(
+      import('typescript-eslint'),
+    )
+
+    additionalParserOptions = {
+      ...additionalParserOptions,
+      parser: typescriptParser,
+      projectService: true,
+      tsconfigRootDir: process.cwd(),
+    }
+  }
+
+  return {
+    name: 'azat-io/svelte/rules',
+
+    files,
+
+    languageOptions: {
+      parser: svelteParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        extraFileExtensions: ['.svelte'],
+        sourceType: 'module',
+        ...additionalParserOptions,
+      },
+    },
+
+    plugins: {
+      svelte: sveltePlugin,
+    },
+
+    rules: {
+      /**
+       * Disallow usage of languages other than those specified in the
+       * configuration for the lang attribute of `<script>` and `<style>`
+       * blocks.
+       */
+      'svelte/block-lang': [
+        'error',
+        {
+          enforceScriptPresent: true,
+          enforceStylePresent: false,
+          script: ['ts', null],
+        },
+      ],
+      /**
+       * Disallow usage of button without an explicit type attribute.
+       */
+      'svelte/button-has-type': 'error',
+      /**
+       * Svelte plugin system rules.
+       */
+      'svelte/comment-directive': 'error',
+      /**
+       * Require that derived store use same variable names between values and
+       * callback.
+       */
+      'svelte/derived-has-same-inputs-outputs': 'error',
+      /**
+       * Prevent calling the same reactive statement twice in a microtask.
+       */
+      'svelte/infinite-reactive-loop': 'error',
+      /**
+       * Warns against the use of `addEventListener`.
+       */
+      'svelte/no-add-event-listener': 'error',
+      /**
+       * Disallow the use of `{\@const}` in favor of `{const ...}` declaration
+       * tags.
+       */
+      'svelte/no-at-const-tags': 'error',
+      /**
+       * Disallow the use of `@debug`.
+       */
+      'svelte/no-at-debug-tags': 'error',
+      /**
+       * Disallow use of `@html` to prevent XSS attack.
+       */
+      'svelte/no-at-html-tags': 'error',
+      /**
+       * Disallow useless `bind:value` on `<input type="checkbox">` and `<input
+       * type="radio">`.
+       */
+      'svelte/no-bind-value-on-checkable-inputs': 'error',
+      /**
+       * Disallow DOM manipulating.
+       */
+      'svelte/no-dom-manipulating': 'error',
+      /**
+       * Disallow duplicate conditions in `{#if}` / `{:else if}` chains.
+       */
+      'svelte/no-dupe-else-if-blocks': 'error',
+      /**
+       * Disallow duplicate on: directives.
+       */
+      'svelte/no-dupe-on-directives': 'error',
+      /**
+       * Disallow duplicate style properties.
+       */
+      'svelte/no-dupe-style-properties': 'error',
+      /**
+       * Disallow duplicate use: directives.
+       */
+      'svelte/no-dupe-use-directives': 'error',
+      /**
+       * Disallow wrapping single reactive statements in curly braces.
+       */
+      'svelte/no-extra-reactive-curlies': 'error',
+      /**
+       * Disallow ignoring the unsubscribe method returned by the `subscribe()`
+       * on Svelte stores.
+       */
+      'svelte/no-ignored-unsubscribe': 'error',
+      /**
+       * Disallow reactive statements that don’t reference reactive values.
+       */
+      'svelte/no-immutable-reactive-statements': 'error',
+      /**
+       * Disallow variable or `function` declarations in nested blocks.
+       */
+      'svelte/no-inner-declarations': 'error',
+      /**
+       * Warns against the use of `$inspect` directive.
+       */
+      'svelte/no-inspect': 'error',
+      /**
+       * Disallow `<style>` elements nested inside other elements or blocks.
+       */
+      'svelte/no-nested-style-tag': 'error',
+      /**
+       * Disallow objects in text mustache interpolation.
+       */
+      'svelte/no-object-in-text-mustaches': 'error',
+      /**
+       * Disallow define functions in reactive statements.
+       */
+      'svelte/no-reactive-functions': 'error',
+      /**
+       * Disallow shorthand style properties that override related longhand
+       * properties.
+       */
+      'svelte/no-shorthand-style-property-overrides': 'error',
+      /**
+       * Disallow import `svelte/internal`.
+       */
+      'svelte/no-svelte-internal': 'error',
+      /**
+       * Disallow `target="_blank"` attribute without `rel="noopener
+       * noreferrer"`.
+       */
+      'svelte/no-target-blank': 'error',
+      /**
+       * Disallow using top-level browser global variables.
+       */
+      'svelte/no-top-level-browser-globals': 'error',
+      /**
+       * Disallow unknown `style:property`.
+       */
+      'svelte/no-unknown-style-directive-property': 'error',
+      /**
+       * Disallow unused `svelte-ignore` comments.
+       */
+      'svelte/no-unused-svelte-ignore': 'error',
+      /**
+       * Disallow unnecessary mustache interpolations.
+       */
+      'svelte/no-useless-mustaches': 'error',
+      /**
+       * Require attribute interpolation instead of template literals.
+       */
+      'svelte/prefer-attribute-interpolation': 'error',
+      /**
+       * Require class directives instead of ternary expressions.
+       */
+      'svelte/prefer-class-directive': 'error',
+      /**
+       * Disallow unnecessary `$derived.by()` when `$derived()` is sufficient.
+       */
+      'svelte/prefer-derived-over-derived-by': 'error',
+      /**
+       * Destructure values from object stores for better change tracking &
+       * fewer redraws.
+       */
+      'svelte/prefer-destructured-store-props': 'error',
+      /**
+       * Require style directives instead of style attribute.
+       */
+      'svelte/prefer-style-directive': 'error',
+      /**
+       * Disallow using mutable instances of built-in classes where a reactive
+       * alternative is provided by svelte/reactivity.
+       */
+      'svelte/prefer-svelte-reactivity': 'error',
+      /**
+       * Prefer using writable `$derived` instead of `$state` and `$effect`.
+       */
+      'svelte/prefer-writable-derived': 'error',
+      /**
+       * Require keyed `{#each}` blocks.
+       */
+      'svelte/require-each-key': 'error',
+      /**
+       * Require component event names to start with “on”.
+       */
+      'svelte/require-event-prefix': 'error',
+      /**
+       * Disallow to use of the store itself as an operand. Need to use $ prefix
+       * or get function.
+       */
+      'svelte/require-store-reactive-access': 'error',
+      /**
+       * Require initial value in store.
+       */
+      'svelte/require-stores-init': 'error',
+      /**
+       * Enforce use of shorthand syntax in attribute.
+       */
+      'svelte/shorthand-attribute': 'error',
+      /**
+       * Enforce use of shorthand syntax in directives.
+       */
+      'svelte/shorthand-directive': 'error',
+      'svelte/system': 'error',
+      /**
+       * Enforce keys to use variables defined in the `{#each}` block.
+       */
+      'svelte/valid-each-key': 'error',
+
+      /**
+       * Do not enforce `addEventListener` usage.
+       */
+      'unicorn/prefer-add-event-listener': 'off',
+    },
+
+    processor: sveltePlugin.processors['.svelte'],
+  }
+}
