@@ -42,6 +42,7 @@ export default defineConfig({
     dts({
       include: [
         path.join(import.meta.dirname, 'environment.d.ts'),
+        path.join(import.meta.dirname, 'runtime/**/*.ts'),
         path.join(import.meta.dirname, 'index.ts'),
       ],
     }),

@@ -1,0 +1,748 @@
+{
+  "rules": {
+    "logical-assignment-operators": {
+      "node": [">=15.0.0"],
+      "scope": "syntax",
+      "browsers": {}
+    },
+    "prefer-object-has-own": {
+      "node": [">=16.9.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "17.0",
+        "firefox_android": "92",
+        "webview_android": "93",
+        "chrome_android": "93",
+        "opera_android": "66",
+        "safari_ios": "15.4",
+        "firefox": "92",
+        "chrome": "93",
+        "safari": "15.4",
+        "opera": "79",
+        "edge": "93",
+        "ie": null
+      }
+    },
+    "preserve-caught-error": {
+      "node": [">=16.9.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "17.0",
+        "firefox_android": "91",
+        "webview_android": "93",
+        "chrome_android": "93",
+        "opera_android": "66",
+        "safari_ios": "15",
+        "firefox": "91",
+        "chrome": "93",
+        "safari": "15",
+        "opera": "79",
+        "edge": "93",
+        "ie": null
+      }
+    },
+    "regexp/prefer-lookaround": {
+      "node": [">=8.10.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "8.0",
+        "firefox_android": "79",
+        "webview_android": "62",
+        "chrome_android": "62",
+        "opera_android": "46",
+        "safari_ios": "16.4",
+        "firefox": "78",
+        "chrome": "62",
+        "safari": "16.4",
+        "opera": "49",
+        "edge": "79",
+        "ie": null
+      }
+    },
+    "regexp/prefer-named-capture-group": {
+      "node": [">=10.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "9.0",
+        "firefox_android": "79",
+        "webview_android": "64",
+        "chrome_android": "64",
+        "opera_android": "47",
+        "safari_ios": "11.3",
+        "firefox": "78",
+        "chrome": "64",
+        "safari": "11.1",
+        "opera": "51",
+        "edge": "79",
+        "ie": null
+      }
+    },
+    "unicorn/custom-error-definition": {
+      "node": [">=16.9.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "17.0",
+        "firefox_android": "91",
+        "webview_android": "93",
+        "chrome_android": "93",
+        "opera_android": "66",
+        "safari_ios": "15",
+        "firefox": "91",
+        "chrome": "93",
+        "safari": "15",
+        "opera": "79",
+        "edge": "93",
+        "ie": null
+      }
+    },
+    "unicorn/dom-node-dataset": {
+      "node": null,
+      "scope": "browser",
+      "browsers": {
+        "samsunginternet_android": "17.0",
+        "firefox_android": "92",
+        "webview_android": "93",
+        "chrome_android": "93",
+        "opera_android": "66",
+        "safari_ios": "15.4",
+        "firefox": "92",
+        "chrome": "93",
+        "safari": "15.4",
+        "opera": "79",
+        "edge": "93",
+        "ie": null
+      }
+    },
+    "unicorn/no-array-reverse": {
+      "node": [">=20.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "21.0",
+        "firefox_android": "115",
+        "webview_android": "110",
+        "chrome_android": "110",
+        "opera_android": "74",
+        "safari_ios": "16",
+        "firefox": "115",
+        "chrome": "110",
+        "safari": "16",
+        "opera": "96",
+        "edge": "110",
+        "ie": null
+      }
+    },
+    "unicorn/no-array-sort": {
+      "node": [">=20.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "21.0",
+        "firefox_android": "115",
+        "webview_android": "110",
+        "chrome_android": "110",
+        "opera_android": "74",
+        "safari_ios": "16",
+        "firefox": "115",
+        "chrome": "110",
+        "safari": "16",
+        "opera": "96",
+        "edge": "110",
+        "ie": null
+      }
+    },
+    "unicorn/no-array-splice": {
+      "node": [">=20.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "21.0",
+        "firefox_android": "115",
+        "webview_android": "110",
+        "chrome_android": "110",
+        "opera_android": "74",
+        "safari_ios": "16",
+        "firefox": "115",
+        "chrome": "110",
+        "safari": "16",
+        "opera": "96",
+        "edge": "110",
+        "ie": null
+      }
+    },
+    "unicorn/no-computed-property-existence-check": {
+      "node": [">=16.9.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "17.0",
+        "firefox_android": "92",
+        "webview_android": "93",
+        "chrome_android": "93",
+        "opera_android": "66",
+        "safari_ios": "15.4",
+        "firefox": "92",
+        "chrome": "93",
+        "safari": "15.4",
+        "opera": "79",
+        "edge": "93",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-abort-signal-any": {
+      "node": [">=20.3.0 || >=18.17.0 <19.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "24.0",
+        "firefox_android": "124",
+        "webview_android": "116",
+        "chrome_android": "116",
+        "opera_android": "78",
+        "safari_ios": "17.4",
+        "firefox": "124",
+        "chrome": "116",
+        "safari": "17.4",
+        "opera": "102",
+        "edge": "116",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-abort-signal-timeout": {
+      "node": [">=17.3.0 || >=16.14.0 <17.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "27.0",
+        "firefox_android": "100",
+        "webview_android": "124",
+        "chrome_android": "124",
+        "opera_android": "82",
+        "safari_ios": "16",
+        "firefox": "100",
+        "chrome": "124",
+        "safari": "16",
+        "opera": "110",
+        "edge": "124",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-aggregate-error": {
+      "node": [">=15.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "14.0",
+        "firefox_android": "79",
+        "webview_android": "85",
+        "chrome_android": "85",
+        "opera_android": "60",
+        "safari_ios": "14",
+        "firefox": "79",
+        "chrome": "85",
+        "safari": "14",
+        "opera": "71",
+        "edge": "85",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-array-find": {
+      "unsupportedOptions": {
+        "checkFromLast": false
+      },
+      "node": [">=18.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "18.0",
+        "firefox_android": "104",
+        "webview_android": "97",
+        "chrome_android": "97",
+        "opera_android": "68",
+        "safari_ios": "15.4",
+        "firefox": "104",
+        "chrome": "97",
+        "safari": "15.4",
+        "opera": "83",
+        "edge": "97",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-array-from-async": {
+      "node": [">=22.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "25.0",
+        "firefox_android": "115",
+        "webview_android": "121",
+        "chrome_android": "121",
+        "opera_android": "81",
+        "safari_ios": "16.4",
+        "firefox": "115",
+        "chrome": "121",
+        "safari": "16.4",
+        "opera": "107",
+        "edge": "121",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-array-last-methods": {
+      "node": [">=18.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "18.0",
+        "firefox_android": "104",
+        "webview_android": "97",
+        "chrome_android": "97",
+        "opera_android": "68",
+        "safari_ios": "15.4",
+        "firefox": "104",
+        "chrome": "97",
+        "safari": "15.4",
+        "opera": "83",
+        "edge": "97",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-at": {
+      "node": [">=16.6.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "16.0",
+        "firefox_android": "90",
+        "webview_android": "92",
+        "chrome_android": "92",
+        "opera_android": "65",
+        "safari_ios": "15.4",
+        "firefox": "90",
+        "chrome": "92",
+        "safari": "15.4",
+        "opera": "78",
+        "edge": "92",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-dom-node-html-methods": {
+      "node": null,
+      "scope": "browser",
+      "browsers": {
+        "samsunginternet_android": "27.0",
+        "firefox_android": "128",
+        "webview_android": "125",
+        "chrome_android": "125",
+        "opera_android": "83",
+        "safari_ios": "18",
+        "firefox": "128",
+        "chrome": "125",
+        "safari": "18",
+        "opera": "111",
+        "edge": "125",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-dom-node-replace-children": {
+      "node": null,
+      "scope": "browser",
+      "browsers": {
+        "samsunginternet_android": "14.0",
+        "firefox_android": "79",
+        "webview_android": "86",
+        "chrome_android": "86",
+        "opera_android": "61",
+        "safari_ios": "14",
+        "firefox": "78",
+        "chrome": "86",
+        "safari": "14",
+        "opera": "72",
+        "edge": "86",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-error-is-error": {
+      "node": [">=24.3.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "29.0",
+        "firefox_android": "138",
+        "webview_android": "134",
+        "chrome_android": "134",
+        "opera_android": "88",
+        "safari_ios": null,
+        "firefox": "138",
+        "chrome": "134",
+        "safari": null,
+        "opera": "119",
+        "edge": "134",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-export-from": {
+      "node": [">=13.2.0"],
+      "scope": "syntax",
+      "browsers": {}
+    },
+    "unicorn/prefer-get-or-insert-computed": {
+      "node": [">=26.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": null,
+        "firefox_android": "144",
+        "webview_android": "145",
+        "chrome_android": "145",
+        "opera_android": "96",
+        "safari_ios": "26.2",
+        "firefox": "144",
+        "chrome": "145",
+        "safari": "26.2",
+        "opera": "129",
+        "edge": "145",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-group-by": {
+      "node": [">=21.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "24.0",
+        "firefox_android": "119",
+        "webview_android": "117",
+        "chrome_android": "117",
+        "opera_android": "78",
+        "safari_ios": "17.4",
+        "firefox": "119",
+        "chrome": "117",
+        "safari": "17.4",
+        "opera": "103",
+        "edge": "117",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-import-meta-properties": {
+      "node": ["^20.11.0 || >=21.2.0"],
+      "scope": "node",
+      "browsers": {}
+    },
+    "unicorn/prefer-iterator-concat": {
+      "node": [">=26.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": null,
+        "firefox_android": "147",
+        "webview_android": "146",
+        "chrome_android": "146",
+        "opera_android": "97",
+        "safari_ios": "26.4",
+        "firefox": "147",
+        "chrome": "146",
+        "safari": "26.4",
+        "opera": "130",
+        "edge": "146",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-iterator-helpers": {
+      "node": [">=22.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "26.0",
+        "firefox_android": "131",
+        "webview_android": "122",
+        "chrome_android": "122",
+        "opera_android": "81",
+        "safari_ios": "18.4",
+        "firefox": "131",
+        "chrome": "122",
+        "safari": "18.4",
+        "opera": "108",
+        "edge": "122",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-iterator-to-array": {
+      "node": [">=22.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "26.0",
+        "firefox_android": "131",
+        "webview_android": "122",
+        "chrome_android": "122",
+        "opera_android": "81",
+        "safari_ios": "18.4",
+        "firefox": "131",
+        "chrome": "122",
+        "safari": "18.4",
+        "opera": "108",
+        "edge": "122",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-json-import": {
+      "node": [">=20.10.0 || >=18.20.0 <19.0.0"],
+      "scope": "node",
+      "browsers": {}
+    },
+    "unicorn/prefer-modern-dom-apis": {
+      "node": null,
+      "scope": "browser",
+      "browsers": {
+        "samsunginternet_android": "14.0",
+        "firefox_android": "79",
+        "webview_android": "86",
+        "chrome_android": "86",
+        "opera_android": "61",
+        "safari_ios": "14",
+        "firefox": "78",
+        "chrome": "86",
+        "safari": "14",
+        "opera": "72",
+        "edge": "86",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-promise-try": {
+      "node": [">=23.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "28.0",
+        "firefox_android": "134",
+        "webview_android": "128",
+        "chrome_android": "128",
+        "opera_android": "85",
+        "safari_ios": "18.2",
+        "firefox": "134",
+        "chrome": "128",
+        "safari": "18.2",
+        "opera": "114",
+        "edge": "128",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-promise-with-resolvers": {
+      "node": [">=22.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "25.0",
+        "firefox_android": "121",
+        "webview_android": "119",
+        "chrome_android": "119",
+        "opera_android": "79",
+        "safari_ios": "17.4",
+        "firefox": "121",
+        "chrome": "119",
+        "safari": "17.4",
+        "opera": "105",
+        "edge": "119",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-regexp-escape": {
+      "node": [">=24.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "29.0",
+        "firefox_android": "134",
+        "webview_android": "136",
+        "chrome_android": "136",
+        "opera_android": "90",
+        "safari_ios": "18.2",
+        "firefox": "134",
+        "chrome": "136",
+        "safari": "18.2",
+        "opera": "121",
+        "edge": "136",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-set-methods": {
+      "node": [">=22.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "26.0",
+        "firefox_android": "127",
+        "webview_android": "122",
+        "chrome_android": "122",
+        "opera_android": "81",
+        "safari_ios": "17",
+        "firefox": "127",
+        "chrome": "122",
+        "safari": "17",
+        "opera": "108",
+        "edge": "122",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-single-replace": {
+      "node": [">=15.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "14.0",
+        "firefox_android": "79",
+        "webview_android": "85",
+        "chrome_android": "85",
+        "opera_android": "60",
+        "safari_ios": "13.4",
+        "firefox": "77",
+        "chrome": "85",
+        "safari": "13.1",
+        "opera": "71",
+        "edge": "85",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-string-match-all": {
+      "node": [">=12.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "11.0",
+        "firefox_android": "67",
+        "webview_android": "73",
+        "chrome_android": "73",
+        "opera_android": "52",
+        "safari_ios": "13",
+        "firefox": "67",
+        "chrome": "73",
+        "safari": "13",
+        "opera": "60",
+        "edge": "79",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-string-replace-all": {
+      "node": [">=15.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "14.0",
+        "firefox_android": "79",
+        "webview_android": "85",
+        "chrome_android": "85",
+        "opera_android": "60",
+        "safari_ios": "13.4",
+        "firefox": "77",
+        "chrome": "85",
+        "safari": "13.1",
+        "opera": "71",
+        "edge": "85",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-structured-clone": {
+      "node": [">=17.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "18.0",
+        "firefox_android": "94",
+        "webview_android": "98",
+        "chrome_android": "98",
+        "opera_android": "68",
+        "safari_ios": "15.4",
+        "firefox": "94",
+        "chrome": "98",
+        "safari": "15.4",
+        "opera": "84",
+        "edge": "98",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-top-level-await": {
+      "node": [">=14.8.0"],
+      "scope": "universal",
+      "browsers": {
+        "safari_ios": "15",
+        "safari": "15",
+        "samsunginternet_android": "15.0",
+        "firefox_android": "89",
+        "webview_android": "89",
+        "chrome_android": "89",
+        "opera_android": "63",
+        "firefox": "89",
+        "chrome": "89",
+        "opera": "75",
+        "edge": "89",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-uint8array-base64": {
+      "node": [">=25.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "30.0",
+        "firefox_android": "133",
+        "webview_android": "140",
+        "chrome_android": "140",
+        "opera_android": "92",
+        "safari_ios": "18.2",
+        "firefox": "133",
+        "chrome": "140",
+        "safari": "18.2",
+        "opera": "124",
+        "edge": "140",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-uint8array-hex": {
+      "node": [">=25.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "30.0",
+        "firefox_android": "133",
+        "webview_android": "140",
+        "chrome_android": "140",
+        "opera_android": "92",
+        "safari_ios": "18.2",
+        "firefox": "133",
+        "chrome": "140",
+        "safari": "18.2",
+        "opera": "124",
+        "edge": "140",
+        "ie": null
+      }
+    },
+    "unicorn/prefer-url-can-parse": {
+      "node": [">=19.9.0 || >=18.17.0 <19.0.0"],
+      "scope": "universal",
+      "browsers": {
+        "samsunginternet_android": "25.0",
+        "firefox_android": "115",
+        "webview_android": "120",
+        "chrome_android": "120",
+        "opera_android": "80",
+        "safari_ios": "17",
+        "firefox": "115",
+        "chrome": "120",
+        "safari": "17",
+        "opera": "106",
+        "edge": "120",
+        "ie": null
+      }
+    },
+    "unicorn/require-css-escape": {
+      "node": null,
+      "scope": "browser",
+      "browsers": {
+        "samsunginternet_android": "5.0",
+        "firefox_android": "31",
+        "webview_android": "46",
+        "chrome_android": "46",
+        "opera_android": "33",
+        "safari_ios": "10.3",
+        "firefox": "31",
+        "chrome": "46",
+        "safari": "10.1",
+        "opera": "33",
+        "edge": "79",
+        "ie": null
+      }
+    }
+  },
+  "floor": {
+    "scope": "universal",
+    "browsers": {
+      "samsunginternet_android": "11.0",
+      "firefox_android": "65",
+      "webview_android": "73",
+      "chrome_android": "73",
+      "opera_android": "52",
+      "safari_ios": "12.2",
+      "firefox": "65",
+      "chrome": "73",
+      "safari": "12.1",
+      "opera": "60",
+      "edge": "79",
+      "ie": null
+    },
+    "node": [">=11.0.0", ">=6.0.0", ">=10.0.0", ">=12.0.0"]
+  },
+  "date": "2026-10-11"
+}

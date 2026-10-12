@@ -1,0 +1,20 @@
+import { defineConfig, mergeConfig } from 'vitest/config'
+
+import viteConfig from './vite.config.ts'
+
+export default defineConfig(
+  mergeConfig(viteConfig, {
+    test: {
+      coverage: {
+        thresholds: {
+          statements: 100,
+          functions: 100,
+          branches: 100,
+          lines: 100,
+        },
+        include: ['core/**', 'runtime/**', 'utils/**', 'index.ts'],
+        provider: 'v8',
+      },
+    },
+  }),
+)
