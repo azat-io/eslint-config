@@ -2415,6 +2415,11 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-observer-apis': 'error',
       /**
+       * Prefer `Promise.withResolvers()` when extracting resolver functions
+       * from `new Promise()`.
+       */
+      'unicorn/prefer-promise-with-resolvers': 'error',
+      /**
        * Prefer `.querySelector()` over `.getElementById()`,
        * `.querySelectorAll()` over `.getElementsByClassName()` and
        * `.getElementsByTagName()` and `.getElementsByName()`.
