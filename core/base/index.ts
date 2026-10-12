@@ -2567,6 +2567,10 @@ export function base(config: ConfigOptions): Linter.Config {
         },
       ],
       /**
+       * Prefer `Temporal` over `Date`.
+       */
+      'unicorn/prefer-temporal': 'error',
+      /**
        * Prefer using `Element#toggleAttribute()` to toggle attributes.
        */
       'unicorn/prefer-toggle-attribute': 'error',

@@ -2,12 +2,11 @@
   "rules": {
     "logical-assignment-operators": {
       "node": [">=15.0.0"],
-      "scope": "syntax",
-      "browsers": {}
+      "browsers": {},
+      "scope": "syntax"
     },
     "prefer-object-has-own": {
       "node": [">=16.9.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "17.0",
         "firefox_android": "92",
@@ -21,11 +20,11 @@
         "opera": "79",
         "edge": "93",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "preserve-caught-error": {
       "node": [">=16.9.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "17.0",
         "firefox_android": "91",
@@ -39,11 +38,11 @@
         "opera": "79",
         "edge": "93",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "regexp/prefer-lookaround": {
       "node": [">=8.10.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "8.0",
         "firefox_android": "79",
@@ -57,11 +56,11 @@
         "opera": "49",
         "edge": "79",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "regexp/prefer-named-capture-group": {
       "node": [">=10.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "9.0",
         "firefox_android": "79",
@@ -75,11 +74,11 @@
         "opera": "51",
         "edge": "79",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/custom-error-definition": {
       "node": [">=16.9.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "17.0",
         "firefox_android": "91",
@@ -93,11 +92,11 @@
         "opera": "79",
         "edge": "93",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/dom-node-dataset": {
       "node": null,
-      "scope": "browser",
       "browsers": {
         "samsunginternet_android": "17.0",
         "firefox_android": "92",
@@ -111,11 +110,11 @@
         "opera": "79",
         "edge": "93",
         "ie": null
-      }
+      },
+      "scope": "browser"
     },
     "unicorn/no-array-reverse": {
       "node": [">=20.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "21.0",
         "firefox_android": "115",
@@ -129,11 +128,11 @@
         "opera": "96",
         "edge": "110",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/no-array-sort": {
       "node": [">=20.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "21.0",
         "firefox_android": "115",
@@ -147,11 +146,11 @@
         "opera": "96",
         "edge": "110",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/no-array-splice": {
       "node": [">=20.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "21.0",
         "firefox_android": "115",
@@ -165,11 +164,11 @@
         "opera": "96",
         "edge": "110",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/no-computed-property-existence-check": {
       "node": [">=16.9.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "17.0",
         "firefox_android": "92",
@@ -183,11 +182,11 @@
         "opera": "79",
         "edge": "93",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-abort-signal-any": {
       "node": [">=20.3.0 || >=18.17.0 <19.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "24.0",
         "firefox_android": "124",
@@ -201,11 +200,11 @@
         "opera": "102",
         "edge": "116",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-abort-signal-timeout": {
       "node": [">=17.3.0 || >=16.14.0 <17.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "27.0",
         "firefox_android": "100",
@@ -219,11 +218,11 @@
         "opera": "110",
         "edge": "124",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-aggregate-error": {
       "node": [">=15.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "14.0",
         "firefox_android": "79",
@@ -237,14 +236,14 @@
         "opera": "71",
         "edge": "85",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-array-find": {
       "unsupportedOptions": {
         "checkFromLast": false
       },
       "node": [">=18.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "18.0",
         "firefox_android": "104",
@@ -258,11 +257,11 @@
         "opera": "83",
         "edge": "97",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-array-from-async": {
       "node": [">=22.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "25.0",
         "firefox_android": "115",
@@ -276,11 +275,11 @@
         "opera": "107",
         "edge": "121",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-array-last-methods": {
       "node": [">=18.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "18.0",
         "firefox_android": "104",
@@ -294,11 +293,11 @@
         "opera": "83",
         "edge": "97",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-at": {
       "node": [">=16.6.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "16.0",
         "firefox_android": "90",
@@ -312,11 +311,11 @@
         "opera": "78",
         "edge": "92",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-dom-node-html-methods": {
       "node": null,
-      "scope": "browser",
       "browsers": {
         "samsunginternet_android": "27.0",
         "firefox_android": "128",
@@ -330,11 +329,11 @@
         "opera": "111",
         "edge": "125",
         "ie": null
-      }
+      },
+      "scope": "browser"
     },
     "unicorn/prefer-dom-node-replace-children": {
       "node": null,
-      "scope": "browser",
       "browsers": {
         "samsunginternet_android": "14.0",
         "firefox_android": "79",
@@ -348,11 +347,11 @@
         "opera": "72",
         "edge": "86",
         "ie": null
-      }
+      },
+      "scope": "browser"
     },
     "unicorn/prefer-error-is-error": {
       "node": [">=24.3.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "29.0",
         "firefox_android": "138",
@@ -366,16 +365,16 @@
         "opera": "119",
         "edge": "134",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-export-from": {
       "node": [">=13.2.0"],
-      "scope": "syntax",
-      "browsers": {}
+      "browsers": {},
+      "scope": "syntax"
     },
     "unicorn/prefer-get-or-insert-computed": {
       "node": [">=26.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": null,
         "firefox_android": "144",
@@ -389,11 +388,11 @@
         "opera": "129",
         "edge": "145",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-group-by": {
       "node": [">=21.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "24.0",
         "firefox_android": "119",
@@ -407,16 +406,16 @@
         "opera": "103",
         "edge": "117",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-import-meta-properties": {
       "node": ["^20.11.0 || >=21.2.0"],
-      "scope": "node",
-      "browsers": {}
+      "browsers": {},
+      "scope": "node"
     },
     "unicorn/prefer-iterator-concat": {
       "node": [">=26.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": null,
         "firefox_android": "147",
@@ -430,11 +429,11 @@
         "opera": "130",
         "edge": "146",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-iterator-helpers": {
       "node": [">=22.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "26.0",
         "firefox_android": "131",
@@ -448,11 +447,11 @@
         "opera": "108",
         "edge": "122",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-iterator-to-array": {
       "node": [">=22.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "26.0",
         "firefox_android": "131",
@@ -466,16 +465,16 @@
         "opera": "108",
         "edge": "122",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-json-import": {
       "node": [">=20.10.0 || >=18.20.0 <19.0.0"],
-      "scope": "node",
-      "browsers": {}
+      "browsers": {},
+      "scope": "node"
     },
     "unicorn/prefer-modern-dom-apis": {
       "node": null,
-      "scope": "browser",
       "browsers": {
         "samsunginternet_android": "14.0",
         "firefox_android": "79",
@@ -489,11 +488,11 @@
         "opera": "72",
         "edge": "86",
         "ie": null
-      }
+      },
+      "scope": "browser"
     },
     "unicorn/prefer-promise-try": {
       "node": [">=23.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "28.0",
         "firefox_android": "134",
@@ -507,11 +506,11 @@
         "opera": "114",
         "edge": "128",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-promise-with-resolvers": {
       "node": [">=22.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "25.0",
         "firefox_android": "121",
@@ -525,11 +524,11 @@
         "opera": "105",
         "edge": "119",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-regexp-escape": {
       "node": [">=24.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "29.0",
         "firefox_android": "134",
@@ -543,11 +542,29 @@
         "opera": "121",
         "edge": "136",
         "ie": null
-      }
+      },
+      "scope": "universal"
+    },
+    "unicorn/prefer-response-static-json": {
+      "node": [">=18.3.0"],
+      "browsers": {
+        "samsunginternet_android": "20.0",
+        "firefox_android": "115",
+        "webview_android": "105",
+        "chrome_android": "105",
+        "opera_android": "72",
+        "safari_ios": "17",
+        "firefox": "115",
+        "chrome": "105",
+        "safari": "17",
+        "opera": "91",
+        "edge": "105",
+        "ie": null
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-set-methods": {
       "node": [">=22.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "26.0",
         "firefox_android": "127",
@@ -561,11 +578,11 @@
         "opera": "108",
         "edge": "122",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-single-replace": {
       "node": [">=15.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "14.0",
         "firefox_android": "79",
@@ -579,11 +596,11 @@
         "opera": "71",
         "edge": "85",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-string-match-all": {
       "node": [">=12.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "11.0",
         "firefox_android": "67",
@@ -597,11 +614,11 @@
         "opera": "60",
         "edge": "79",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-string-replace-all": {
       "node": [">=15.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "14.0",
         "firefox_android": "79",
@@ -615,11 +632,11 @@
         "opera": "71",
         "edge": "85",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-structured-clone": {
       "node": [">=17.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "18.0",
         "firefox_android": "94",
@@ -633,11 +650,47 @@
         "opera": "84",
         "edge": "98",
         "ie": null
-      }
+      },
+      "scope": "universal"
+    },
+    "unicorn/prefer-temporal": {
+      "node": [">=26.0.0"],
+      "browsers": {
+        "samsunginternet_android": null,
+        "firefox_android": "139",
+        "webview_android": "144",
+        "chrome_android": "144",
+        "opera_android": "95",
+        "safari_ios": null,
+        "firefox": "139",
+        "chrome": "144",
+        "safari": null,
+        "opera": "128",
+        "edge": "144",
+        "ie": null
+      },
+      "scope": "universal"
+    },
+    "unicorn/prefer-temporal-conversion": {
+      "node": [">=26.0.0"],
+      "browsers": {
+        "samsunginternet_android": null,
+        "firefox_android": "139",
+        "webview_android": "144",
+        "chrome_android": "144",
+        "opera_android": "95",
+        "safari_ios": null,
+        "firefox": "139",
+        "chrome": "144",
+        "safari": null,
+        "opera": "128",
+        "edge": "144",
+        "ie": null
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-top-level-await": {
       "node": [">=14.8.0"],
-      "scope": "universal",
       "browsers": {
         "safari_ios": "15",
         "safari": "15",
@@ -651,11 +704,11 @@
         "opera": "75",
         "edge": "89",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-uint8array-base64": {
       "node": [">=25.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "30.0",
         "firefox_android": "133",
@@ -669,11 +722,11 @@
         "opera": "124",
         "edge": "140",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-uint8array-hex": {
       "node": [">=25.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "30.0",
         "firefox_android": "133",
@@ -687,11 +740,11 @@
         "opera": "124",
         "edge": "140",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/prefer-url-can-parse": {
       "node": [">=19.9.0 || >=18.17.0 <19.0.0"],
-      "scope": "universal",
       "browsers": {
         "samsunginternet_android": "25.0",
         "firefox_android": "115",
@@ -705,11 +758,11 @@
         "opera": "106",
         "edge": "120",
         "ie": null
-      }
+      },
+      "scope": "universal"
     },
     "unicorn/require-css-escape": {
       "node": null,
-      "scope": "browser",
       "browsers": {
         "samsunginternet_android": "5.0",
         "firefox_android": "31",
@@ -723,11 +776,11 @@
         "opera": "33",
         "edge": "79",
         "ie": null
-      }
+      },
+      "scope": "browser"
     }
   },
   "floor": {
-    "scope": "universal",
     "browsers": {
       "samsunginternet_android": "11.0",
       "firefox_android": "65",
@@ -742,7 +795,8 @@
       "edge": "79",
       "ie": null
     },
+    "scope": "universal",
     "node": [">=11.0.0", ">=6.0.0", ">=10.0.0", ">=12.0.0"]
   },
-  "date": "2026-10-11"
+  "date": "2026-10-12"
 }

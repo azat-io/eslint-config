@@ -282,7 +282,7 @@ let ruleDefinitions: Record<string, RuleDefinition> = {
     scope: 'universal',
   },
   'unicorn/prefer-response-static-json': {
-    features: ['api.Response.json_static,'],
+    features: ['api.Response.json_static'],
     scope: 'universal',
   },
   'unicorn/prefer-string-match-all': {
@@ -313,6 +313,10 @@ let ruleDefinitions: Record<string, RuleDefinition> = {
     features: [`${BUILTINS}.Error.isError`],
     scope: 'universal',
   },
+  'unicorn/prefer-temporal-conversion': {
+    features: [`${BUILTINS}.Temporal`],
+    scope: 'universal',
+  },
   'unicorn/prefer-regexp-escape': {
     features: [`${BUILTINS}.RegExp.escape`],
     scope: 'universal',
@@ -340,6 +344,10 @@ let ruleDefinitions: Record<string, RuleDefinition> = {
   'unicorn/require-css-escape': {
     features: ['api.CSS.escape_static'],
     scope: 'browser',
+  },
+  'unicorn/prefer-temporal': {
+    features: [`${BUILTINS}.Temporal`],
+    scope: 'universal',
   },
 }
 
