@@ -2419,6 +2419,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-observer-apis': 'error',
       /**
+       * Prefer `Promise.try()` over promise-wrapping boilerplate.
+       */
+      'unicorn/prefer-promise-try': 'error',
+      /**
        * Prefer `Promise.withResolvers()` when extracting resolver functions
        * from `new Promise()`.
        */
