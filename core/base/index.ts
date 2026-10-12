@@ -2571,6 +2571,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-temporal': 'error',
       /**
+       * Prefer direct Temporal conversion methods.
+       */
+      'unicorn/prefer-temporal-conversion': 'error',
+      /**
        * Prefer using `Element#toggleAttribute()` to toggle attributes.
        */
       'unicorn/prefer-toggle-attribute': 'error',
