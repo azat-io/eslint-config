@@ -2319,6 +2319,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-iterable-in-constructor': 'error',
       /**
+       * Prefer `Iterator.concat(…)` over temporary spread arrays.
+       */
+      'unicorn/prefer-iterator-concat': 'error',
+      /**
        * Prefer iterator helpers over temporary arrays from iterators.
        */
       'unicorn/prefer-iterator-helpers': 'error',
