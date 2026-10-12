@@ -2262,6 +2262,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-else-if': 'error',
       /**
+       * Prefer `Error.isError()` when checking for errors.
+       */
+      'unicorn/prefer-error-is-error': 'error',
+      /**
        * Prefer escape sequences for irregular whitespace characters.
        */
       'unicorn/prefer-escaped-irregular-whitespace': 'error',
