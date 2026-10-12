@@ -2434,6 +2434,11 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-query-selector': 'error',
       /**
+       * Prefer `RegExp.escape()` for escaping strings to use in regular
+       * expressions.
+       */
+      'unicorn/prefer-regexp-escape': 'error',
+      /**
        * Prefer `RegExp#test()` over `String#match()` and `RegExp#exec()`.
        */
       'unicorn/prefer-regexp-test': 'error',
