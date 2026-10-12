@@ -2421,6 +2421,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-regexp-test': 'error',
       /**
+       * Prefer `Response.json()` over `new Response(JSON.stringify())`.
+       */
+      'unicorn/prefer-response-static-json': 'error',
+      /**
        * Prefer `:scope` when using element query selector methods.
        */
       'unicorn/prefer-scoped-selector': 'error',
