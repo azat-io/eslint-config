@@ -2279,6 +2279,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-global-this': 'error',
       /**
+       * Prefer `Object.groupBy()` or `Map.groupBy()` over manual grouping.
+       */
+      'unicorn/prefer-group-by': 'error',
+      /**
        * Prefer `.has()` when checking existence.
        */
       'unicorn/prefer-has-check': 'error',
