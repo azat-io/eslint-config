@@ -281,6 +281,10 @@ let ruleDefinitions: Record<string, RuleDefinition> = {
     features: [`${BUILTINS}.Iterator.toArray`],
     scope: 'universal',
   },
+  'unicorn/prefer-response-static-json': {
+    features: ['api.Response.json_static,'],
+    scope: 'universal',
+  },
   'unicorn/prefer-string-match-all': {
     features: [`${BUILTINS}.String.matchAll`],
     scope: 'universal',
