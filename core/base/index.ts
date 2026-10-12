@@ -2153,6 +2153,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-array-flat-map': 'error',
       /**
+       * Prefer `Array.fromAsync()` over array accumulation loops.
+       */
+      'unicorn/prefer-array-from-async': 'error',
+      /**
        * Prefer using the `Array.from()` mapping function argument.
        */
       'unicorn/prefer-array-from-map': 'error',
