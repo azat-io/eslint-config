@@ -1943,6 +1943,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/no-unnecessary-nested-ternary': 'error',
       /**
+       * Disallow parameters that receive the same value at every call.
+       */
+      'unicorn/no-unnecessary-parameters': 'error',
+      /**
        * Disallow using `.length` or `Infinity` as the end argument of
        * `{Array,String,TypedArray}#slice()`.
        */
