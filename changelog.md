@@ -1,5 +1,51 @@
 # Changelog
 
+## v2.100.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.99.0...v2.100.0)
+
+### 🚀 Features
+
+- Remove duplicate rules
+  ([5babd19](https://github.com/azat-io/eslint-config/commit/5babd19))
+- **vitest:** Perform a strict boolean check
+  ([b8e02a9](https://github.com/azat-io/eslint-config/commit/b8e02a9))
+- Add runtime compatibility helpers and unit tests
+  ([244ce90](https://github.com/azat-io/eslint-config/commit/244ce90))
+- **base:** Add prefer-response-static-json rule
+  ([63d079e](https://github.com/azat-io/eslint-config/commit/63d079e))
+- **base:** Add prefer-group-by rule
+  ([7592222](https://github.com/azat-io/eslint-config/commit/7592222))
+- **base:** Add prefer-promise-with-resolvers rule
+  ([a2e1b68](https://github.com/azat-io/eslint-config/commit/a2e1b68))
+- **base:** Add prefer-array-from-async rule
+  ([eecdf1a](https://github.com/azat-io/eslint-config/commit/eecdf1a))
+- **base:** Add prefer-promise-try rule
+  ([75f785b](https://github.com/azat-io/eslint-config/commit/75f785b))
+- **base:** Add prefer-regexp-escape rule
+  ([5f0b78e](https://github.com/azat-io/eslint-config/commit/5f0b78e))
+- **base:** Add prefer-error-is-error rule
+  ([752c0b1](https://github.com/azat-io/eslint-config/commit/752c0b1))
+- **base:** Add prefer-iterator-concat rule
+  ([8c1e736](https://github.com/azat-io/eslint-config/commit/8c1e736))
+- **base:** Add prefer-temporal rule
+  ([521e1fb](https://github.com/azat-io/eslint-config/commit/521e1fb))
+- **base:** Add prefer-temporal-conversion rule
+  ([38ea4fa](https://github.com/azat-io/eslint-config/commit/38ea4fa))
+- **base:** Add no-unnecessary-parameters rule
+  ([bdeb757](https://github.com/azat-io/eslint-config/commit/bdeb757))
+- Update eslint plugins
+  ([e0987f7](https://github.com/azat-io/eslint-config/commit/e0987f7))
+
+### 🐞 Bug Fixes
+
+- Fix rules conflicts
+  ([f67c484](https://github.com/azat-io/eslint-config/commit/f67c484))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.99.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.98.0...v2.99.0)
