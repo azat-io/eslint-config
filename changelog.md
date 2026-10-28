@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.102.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.101.0...v2.102.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([0ad5623](https://github.com/azat-io/eslint-config/commit/0ad5623))
+- **vue:** Add no-content-outside-block rule
+  ([a29d6bf](https://github.com/azat-io/eslint-config/commit/a29d6bf))
+- **vue:** Add no-define-model-default rule
+  ([7dd17df](https://github.com/azat-io/eslint-config/commit/7dd17df))
+- **vue:** Add no-props-shadow rule
+  ([8d6deab](https://github.com/azat-io/eslint-config/commit/8d6deab))
+
+### ❤️ Contributors
+
+- Azat S. <to@azat.io>
+
 ## v2.101.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.100.0...v2.101.0)
