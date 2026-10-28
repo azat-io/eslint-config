@@ -211,6 +211,8 @@ let optionKeys = new Set([
   'root',
 ])
 
+let unknownBrowsersValues = new Set<unknown>([undefined, 'ignore', 'off'])
+
 let browserslistToBcd = new Map<string, BcdBrowser>([
   ['samsung', 'samsunginternet_android'],
   ['android', 'webview_android'],
@@ -532,11 +534,7 @@ function validateOptions(options: unknown): void {
     )
   }
 
-  if (
-    unknownBrowsers !== undefined &&
-    unknownBrowsers !== 'off' &&
-    unknownBrowsers !== 'ignore'
-  ) {
+  if (!unknownBrowsersValues.has(unknownBrowsers)) {
     throw new TypeError(
       `${ERROR_PREFIX}: unknownBrowsers must be "off" or "ignore", got ${JSON.stringify(unknownBrowsers)}`,
     )
