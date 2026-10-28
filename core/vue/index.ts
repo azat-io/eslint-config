@@ -151,6 +151,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-computed-properties-in-data': 'error',
       /**
+       * Disallow content outside of the top-level blocks.
+       */
+      'vue/no-content-outside-block': 'error',
+      /**
        * Disallow using deprecated object declaration on data (in Vue.js
        * 3.0.0+).
        */
