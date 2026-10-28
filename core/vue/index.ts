@@ -155,6 +155,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-content-outside-block': 'error',
       /**
+       * Disallow default values in defineModel.
+       */
+      'vue/no-define-model-default': 'error',
+      /**
        * Disallow using deprecated object declaration on data (in Vue.js
        * 3.0.0+).
        */
