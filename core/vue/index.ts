@@ -324,6 +324,10 @@ export async function vue(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vue/no-potential-component-option-typo': 'error',
       /**
+       * Disallow declarations that shadow props in `<script setup>`.
+       */
+      'vue/no-props-shadow': 'error',
+      /**
        * Disallow use of value wrapped by `ref()` (Composition API) as an
        * operand.
        */
