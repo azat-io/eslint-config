@@ -9,9 +9,13 @@ import { writeFileSync } from 'node:fs'
 import prettier from 'prettier'
 import path from 'node:path'
 
-import type { RuleSupport, BcdBrowser, RuleScope } from '../runtime/targets'
+import type {
+  RuleSupport,
+  BcdBrowser,
+  RuleScope,
+} from '../runtime/resolve-runtime-targets'
 
-import { compareVersions } from '../runtime/targets'
+import { compareVersions } from '../runtime/resolve-runtime-targets'
 
 /**
  * How the support of one rule is computed.

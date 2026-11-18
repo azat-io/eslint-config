@@ -12,7 +12,7 @@ import type {
   RuntimeTargetsOption,
   RuleSupport,
   RuleScope,
-} from '../../runtime/targets'
+} from '../../runtime/resolve-runtime-targets'
 
 import {
   resolveRuntimeTargets,
@@ -20,7 +20,7 @@ import {
   explainRuleSupport,
   normalizeNodeRange,
   pinBaselineQueries,
-} from '../../runtime/targets'
+} from '../../runtime/resolve-runtime-targets'
 import data from '../../runtime/support.json' with { type: 'json' }
 
 let table = data.rules as Record<string, RuleSupport>
@@ -248,7 +248,7 @@ describe('dependency failures', () => {
     }))
     try {
       let { resolveRuntimeTargets: resolveWithBrokenFilesystem } =
-        await import('../../runtime/targets')
+        await import('../../runtime/resolve-runtime-targets')
       expect(() => resolveWithBrokenFilesystem({ root })).toThrow(
         expect.objectContaining({
           message: `Runtime targets: cannot read ${path.join(root, 'package.json')}: storage unavailable`,
@@ -319,7 +319,7 @@ describe('dependency failures', () => {
     }))
     try {
       let { resolveRuntimeTargets: resolveWithoutBaselineData } =
-        await import('../../runtime/targets')
+        await import('../../runtime/resolve-runtime-targets')
       let options: ResolveRuntimeTargetsOptions = {
         targets: { browsers: ['chrome 120', 'and_uc 15.5'], node: false },
         root,
@@ -1577,7 +1577,7 @@ describe('browserslist queries', () => {
     }))
     try {
       let { resolveRuntimeTargets: resolveWithOldData } =
-        await import('../../runtime/targets')
+        await import('../../runtime/resolve-runtime-targets')
       let root = project({ 'package.json': '{}' })
       let options: ResolveRuntimeTargetsOptions = {
         targets: { browsers: ['and_uc 15.5', 'kaios 2.5'], node: false },

@@ -3,9 +3,9 @@ import type { ESLint, Linter } from 'eslint'
 import gitignore from 'eslint-config-flat-gitignore'
 import { defineConfig } from 'eslint/config'
 
-import type { RuntimeGateOptions } from './runtime/gate.js'
+import type { RuntimeGateOptions } from './runtime/create-runtime-configs.js'
 
-import { createRuntimeConfigs } from './runtime/gate.js'
+import { createRuntimeConfigs } from './runtime/create-runtime-configs.js'
 import { perfectionist } from './core/perfectionist'
 import { packageJson } from './core/package-json'
 import { typescript } from './core/typescript'
@@ -19,7 +19,7 @@ import { base } from './core/base'
 import { node } from './core/node'
 import { vue } from './core/vue'
 
-export type { RuntimeTargetsOption } from './runtime/targets.js'
+export type { RuntimeTargetsOption } from './runtime/resolve-runtime-targets.js'
 
 const CONFIG_OPTIONS = [
   'perfectionist',

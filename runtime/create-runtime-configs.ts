@@ -8,9 +8,12 @@ import type {
   ResolvedRuntimeTargets,
   RuntimeTargetsOption,
   RuleSupport,
-} from './targets.js'
+} from './resolve-runtime-targets.js'
 
-import { resolveRuntimeTargets, explainRuleSupport } from './targets.js'
+import {
+  resolveRuntimeTargets,
+  explainRuleSupport,
+} from './resolve-runtime-targets.js'
 import support from './support.json' with { type: 'json' }
 
 /**

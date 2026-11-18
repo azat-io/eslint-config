@@ -6,13 +6,19 @@ export default defineConfig(
   mergeConfig(viteConfig, {
     test: {
       coverage: {
+        include: [
+          'core/**',
+          'rules/**/*.ts',
+          'runtime/**',
+          'utils/**',
+          'index.ts',
+        ],
         thresholds: {
           statements: 100,
           functions: 100,
           branches: 100,
           lines: 100,
         },
-        include: ['core/**', 'runtime/**', 'utils/**', 'index.ts'],
         provider: 'v8',
       },
     },

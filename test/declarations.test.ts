@@ -7,7 +7,11 @@ import ts from 'typescript'
 describe('published declarations', () => {
   it('resolves relative declaration imports in NodeNext ESM consumers', () => {
     let root = mkdtempSync(path.join(tmpdir(), 'config-declarations-'))
-    let files = ['index.ts', 'runtime/gate.ts', 'runtime/targets.ts']
+    let files = [
+      'index.ts',
+      'runtime/create-runtime-configs.ts',
+      'runtime/resolve-runtime-targets.ts',
+    ]
     writeFileSync(path.join(root, 'package.json'), '{"type":"module"}')
 
     for (let file of files) {

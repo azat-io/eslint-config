@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest'
 import type { ConfigOptions } from '../../../index'
 
 import { base } from '../../../core/base/index'
+import azatIoPlugin from '../../../rules'
 
 function findUnknownRules(config: Linter.Config): string[] {
   let plugins = config.plugins ?? {}
@@ -117,6 +118,119 @@ describe('base', () => {
       ).toMatchObject(['error', { allowList: { env, rel } }])
     },
   )
+
+  let httpMethods = [
+    'DELETE',
+    'GET',
+    'HEAD',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'QUERY',
+  ]
+
+  it.each([
+    [{}, httpMethods],
+    [{ perfectionist: true, typescript: true, vue: true }, httpMethods],
+    [
+      { react: true },
+      [
+        ...httpMethods,
+        'Route',
+        'action',
+        'generateStaticParams',
+        'loader',
+        'onRequestError',
+        'onRouterTransitionStart',
+        'register',
+        'useMDXComponents',
+      ],
+    ],
+    [
+      { node: true },
+      [
+        ...httpMethods,
+        'activate',
+        'deactivate',
+        'globalSetup',
+        'globalTeardown',
+        'initialize',
+        'load',
+        'resolve',
+      ],
+    ],
+    [
+      { astro: true },
+      [
+        'ALL',
+        'CONNECT',
+        'DELETE',
+        'GET',
+        'HEAD',
+        'OPTIONS',
+        'PATCH',
+        'POST',
+        'PUT',
+        'QUERY',
+        'TRACE',
+        'collections',
+        'getStaticPaths',
+        'onRequest',
+        'prerender',
+      ],
+    ],
+    [
+      { qwik: true },
+      [
+        ...httpMethods,
+        'onDelete',
+        'onGet',
+        'onHead',
+        'onOptions',
+        'onPatch',
+        'onPost',
+        'onPut',
+        'onRequest',
+      ],
+    ],
+    [
+      { svelte: true },
+      [
+        ...httpMethods,
+        'handle',
+        'handleError',
+        'handleFetch',
+        'handleValidationError',
+        'init',
+        'match',
+        'reroute',
+        'transport',
+      ],
+    ],
+    [{ vitest: true }, [...httpMethods, 'setup', 'teardown']],
+  ])(
+    'allows the export names that the configs %o dictate',
+    (enabled, allow) => {
+      expect(
+        base(options(enabled)).rules?.['azat-io/filename-matches-export'],
+      ).toStrictEqual(['error', { allow }])
+    },
+  )
+
+  it('allows every dictated export name once and in order', () => {
+    let [, { allow }] = base(allOptions).rules?.[
+      'azat-io/filename-matches-export'
+    ] as [string, { allow: string[] }]
+
+    expect(allow).toStrictEqual([...new Set(allow)].toSorted())
+    expect(allow.filter(name => name === 'onRequest')).toHaveLength(1)
+  })
+
+  it('registers the azat-io plugin of the package', () => {
+    expect(base(options()).plugins?.['azat-io']).toBe(azatIoPlugin)
+    expect(base(allOptions).plugins?.['azat-io']).toBe(azatIoPlugin)
+  })
 
   it('keeps globals, plugins and settings independent of the flags', () => {
     let defaultConfig = base(options())

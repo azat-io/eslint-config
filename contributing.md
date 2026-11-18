@@ -43,6 +43,7 @@ eslint-config/
 ├── core/              # Configs, one folder per option
 │   ├── base/          # Rules for every project
 │   └── react/         # Rules for the react option, and so on
+├── rules/             # Own rules and their docs, the azat-io plugin
 ├── runtime/           # Rule downgrades by Node.js and browser targets
 ├── scripts/           # Development scripts, not published
 ├── test/              # Tests (Vitest), at the path of the file under test
@@ -63,6 +64,18 @@ pnpm test:spelling    # Spell check (cspell)
 pnpm test:packages    # Dependency dedupe check
 pnpm runtime:support  # Regenerate runtime/support.json
 ```
+
+## Own Rules
+
+Rules that no plugin provides live in `rules/`. To add one:
+
+1. Write the rule in `rules/<rule-name>.ts` and register it in `rules/index.ts`.
+2. Document it in `rules/<rule-name>.md` and link the page from `meta.docs.url`
+   and from the readme.
+3. Enable it as `azat-io/<rule-name>` in the config of the option it belongs to,
+   with a comment like the other rules.
+4. Test it in `test/rules/<rule-name>.test.ts` with a filename in every case.
+   Coverage must stay at 100%.
 
 ## Runtime Support Data
 

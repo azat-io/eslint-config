@@ -25,6 +25,8 @@ import globals from 'globals'
 
 import type { ConfigOptions } from '../..'
 
+import azatIoPlugin from '../../rules'
+
 export function base(config: ConfigOptions): Linter.Config {
   let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 
@@ -70,6 +72,7 @@ export function base(config: ConfigOptions): Linter.Config {
     },
 
     plugins: {
+      'azat-io': azatIoPlugin,
       'de-morgan': deMorganPlugin,
       'eslint-comments': eslintCommentsPlugin,
       import: importPlugin,
@@ -782,6 +785,17 @@ export function base(config: ConfigOptions): Linter.Config {
        * Disallow "Yoda" conditions.
        */
       yoda: ['error', 'never'],
+
+      /**
+       * Require the filename to match the main export of a module. Export names
+       * that runtimes and frameworks dictate do not have to match.
+       */
+      'azat-io/filename-matches-export': [
+        'error',
+        {
+          allow: getDictatedExportNames(config),
+        },
+      ],
 
       /**
        * Transforms the negation of a conjunction into the equivalent
@@ -2683,4 +2697,118 @@ export function base(config: ConfigOptions): Linter.Config {
       },
     },
   }
+}
+
+/**
+ * Collects export names that runtimes and frameworks require a module to use,
+ * whatever its filename.
+ *
+ * @param config - Enabled config options.
+ * @returns Sorted names without duplicates.
+ */
+function getDictatedExportNames(config: ConfigOptions): string[] {
+  /**
+   * HTTP method handlers of Astro, Next.js and SvelteKit endpoints and Vercel
+   * functions.
+   */
+  let names = [
+    'DELETE',
+    'GET',
+    'HEAD',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'QUERY',
+  ]
+
+  if (config.node) {
+    names.push(
+      /**
+       * Module customization hooks for `module.register()`.
+       */
+      'initialize',
+      'load',
+      'resolve',
+      /**
+       * Global setup and teardown of `node --test`.
+       */
+      'globalSetup',
+      'globalTeardown',
+      /**
+       * Entry points of VS Code extensions.
+       */
+      'activate',
+      'deactivate',
+    )
+  }
+
+  if (config.astro) {
+    names.push(
+      'ALL',
+      'CONNECT',
+      'TRACE',
+      'collections',
+      'getStaticPaths',
+      'onRequest',
+      'prerender',
+    )
+  }
+
+  if (config.qwik) {
+    names.push(
+      'onDelete',
+      'onGet',
+      'onHead',
+      'onOptions',
+      'onPatch',
+      'onPost',
+      'onPut',
+      'onRequest',
+    )
+  }
+
+  if (config.react) {
+    /**
+     * Next.js route handlers, instrumentation and MDX components, React Router
+     * resource routes and TanStack Router file routes. Constants such as
+     * `runtime` next to them need no names.
+     */
+    names.push(
+      'Route',
+      'action',
+      'generateStaticParams',
+      'loader',
+      'onRequestError',
+      'onRouterTransitionStart',
+      'register',
+      'useMDXComponents',
+    )
+  }
+
+  if (config.svelte) {
+    /**
+     * SvelteKit hooks and parameter matchers. Route files that start with `+`
+     * are skipped by the rule itself.
+     */
+    names.push(
+      'handle',
+      'handleError',
+      'handleFetch',
+      'handleValidationError',
+      'init',
+      'match',
+      'reroute',
+      'transport',
+    )
+  }
+
+  if (config.vitest) {
+    /**
+     * Global setup files of Vitest.
+     */
+    names.push('setup', 'teardown')
+  }
+
+  return [...new Set(names)].toSorted()
 }

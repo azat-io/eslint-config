@@ -192,6 +192,31 @@ export default eslintConfig({
 })
 ```
 
+## Rules
+
+The config also has its own rules, registered as the `azat-io` plugin and
+enabled for every project:
+
+- [filename-matches-export](https://github.com/azat-io/eslint-config/blob/main/rules/filename-matches-export.md)
+  — require the filename to match the main export of a module.
+
+To turn a rule off for some files, add a config to `extends`:
+
+```js
+import eslintConfig from '@azat-io/eslint-config'
+
+export default eslintConfig({
+  extends: [
+    {
+      rules: {
+        'azat-io/filename-matches-export': 'off',
+      },
+      files: ['src/components/ui/**'],
+    },
+  ],
+})
+```
+
 ## Plugins
 
 This config uses the following plugins:
