@@ -354,6 +354,11 @@ export async function typescript(
        */
       'typescript/no-unsafe-call': 'error',
       /**
+       * Disallow assigning non-instance values to class instance typed
+       * locations.
+       */
+      'typescript/no-unsafe-class-instance-assignment': 'error',
+      /**
        * Disallow unsafe declaration merging.
        */
       'typescript/no-unsafe-declaration-merging': 'error',
