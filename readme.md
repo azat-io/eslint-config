@@ -194,13 +194,16 @@ export default eslintConfig({
 
 ## Rules
 
-The config also has its own rules, registered as the `azat-io` plugin and
-enabled for every project:
+The config also has its own rules, registered as the `azat-io` plugin. Every
+project gets them, except `test-describe-matches-subject`, which comes with the
+`vitest` option:
 
 - [filename-matches-export](https://github.com/azat-io/eslint-config/blob/main/rules/docs/filename-matches-export.md)
   — require the filename to match the main export of a module.
 - [prefer-jsdoc-comments](https://github.com/azat-io/eslint-config/blob/main/rules/docs/prefer-jsdoc-comments.md)
   — require JSDoc comments instead of line comments.
+- [test-describe-matches-subject](https://github.com/azat-io/eslint-config/blob/main/rules/docs/test-describe-matches-subject.md)
+  — require top-level describes to name exports of the module under test.
 
 To turn a rule off for some files, add a config to `extends`:
 

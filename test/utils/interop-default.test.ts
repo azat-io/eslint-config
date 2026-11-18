@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { interopDefault } from '../../utils/interop-default'
 
-describe('interop-default', () => {
+describe('interopDefault', () => {
   it('returns the default export', async () => {
     await expect(
       interopDefault(Promise.resolve({ default: 'value' })),

@@ -1,5 +1,6 @@
 import type { ESLint } from 'eslint'
 
+import testDescribeMatchesSubject from './test-describe-matches-subject'
 import filenameMatchesExport from './filename-matches-export'
 import preferJsdocComments from './prefer-jsdoc-comments'
 import { version, name } from '../package.json'
@@ -10,6 +11,7 @@ import { version, name } from '../package.json'
  */
 export default {
   rules: {
+    'test-describe-matches-subject': testDescribeMatchesSubject,
     'filename-matches-export': filenameMatchesExport,
     'prefer-jsdoc-comments': preferJsdocComments,
   },

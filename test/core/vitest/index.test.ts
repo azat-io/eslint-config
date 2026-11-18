@@ -1,10 +1,14 @@
+import { writeFileSync, mkdtempSync, mkdirSync, rmSync } from 'node:fs'
+import { onTestFinished, describe, expect, it } from 'vitest'
 import vitestPlugin from '@vitest/eslint-plugin'
-import { describe, expect, it } from 'vitest'
+import { tmpdir } from 'node:os'
 import { Linter } from 'eslint'
+import path from 'node:path'
 
 import type { ConfigOptions } from '../../../index'
 
 import { vitest as vitestConfig } from '../../../core/vitest'
+import azatIoPlugin from '../../../rules'
 
 let disabled: ConfigOptions = {
   perfectionist: false,
@@ -73,7 +77,10 @@ describe('vitest', () => {
     let config = await vitestConfig(options())
 
     expect(config.name).toBe('azat-io/vitest/rules')
-    expect(config.plugins).toStrictEqual({ vitest: vitestPlugin })
+    expect(config.plugins).toStrictEqual({
+      'azat-io': azatIoPlugin,
+      vitest: vitestPlugin,
+    })
     expect(config.settings).toStrictEqual({ vitest: { typecheck: true } })
   })
 
@@ -133,16 +140,68 @@ describe('vitest', () => {
 
     expect(rules.length).toBeGreaterThan(0)
     expect(
-      rules.filter(
-        rule =>
-          !Object.hasOwn(
-            vitestPlugin.rules ?? {},
-            rule.replace(/^vitest\//u, ''),
-          ),
-      ),
+      rules.filter(rule => {
+        let [prefix, name = ''] = rule.split('/', 2)
+        let plugin = prefix === 'azat-io' ? azatIoPlugin : vitestPlugin
+        return !Object.hasOwn(plugin.rules ?? {}, name)
+      }),
     ).toStrictEqual([])
     expect(everyOption.rules).toStrictEqual(config.rules)
     expect(everyOption.settings).toStrictEqual(config.settings)
+  })
+
+  it('names a describe after the export under test without lowercase checks', async () => {
+    let root = mkdtempSync(path.join(tmpdir(), 'vitest-config-'))
+    onTestFinished(() => {
+      rmSync(root, { recursive: true, force: true })
+    })
+    mkdirSync(path.join(root, 'core'))
+    mkdirSync(path.join(root, 'test/core'), { recursive: true })
+    writeFileSync(
+      path.join(root, 'core/host-runner.js'),
+      'export class HostRunner {}\n',
+    )
+
+    let config = await vitestConfig(options())
+    let linter = new Linter({ cwd: root })
+
+    /**
+     * Builds a test file. Its describe with a variable title makes
+     * `ignoreTopLevelDescribe` of `vitest/prefer-lowercase-title` check the
+     * top-level describe after it.
+     *
+     * @param title - Title of the top-level describe.
+     * @returns Source code of the test file.
+     */
+    function code(title: string): string {
+      return [
+        "import { describe, it } from 'vitest'",
+        '',
+        'function startsWith(name) {',
+        '  describe(name, () => {',
+        "    it('starts', () => {})",
+        '  })',
+        '}',
+        '',
+        `describe('${title}', () => {`,
+        "  describe('Locally', () => {",
+        "    startsWith('local')",
+        '  })',
+        '})',
+        '',
+      ].join('\n')
+    }
+
+    expect(
+      linter.verifyAndFix(
+        code('host-runner'),
+        [config],
+        path.join(root, 'test/core/host-runner.test.js'),
+      ),
+    ).toMatchObject({
+      output: code('HostRunner'),
+      messages: [],
+    })
   })
 
   it.each(['math.test.js', 'src/test/math.mjs'])(

@@ -14,6 +14,7 @@ import type { Linter } from 'eslint'
 import type { ConfigOptions } from '../..'
 
 import { interopDefault } from '../../utils/interop-default'
+import azatIoPlugin from '../../rules'
 
 export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
   if (!config.vitest) {
@@ -56,10 +57,18 @@ export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
     files,
 
     plugins: {
+      'azat-io': azatIoPlugin,
       vitest: vitestPlugin,
     },
 
     rules: {
+      /**
+       * Require top-level describes to name exports of the module under test,
+       * which the path of a test file gives: `test/x/y.test.ts` tests
+       * `x/y.ts`.
+       */
+      'azat-io/test-describe-matches-subject': 'error',
+
       /**
        * Enforce using `.each` or `.for` consistently.
        */
@@ -157,9 +166,17 @@ export async function vitest(config: ConfigOptions): Promise<Linter.Config> {
        */
       'vitest/prefer-importing-vitest-globals': 'error',
       /**
-       * Enforce lowercase titles.
+       * Enforce lowercase titles of tests. Describes are skipped: a top-level
+       * describe names the export under test, such as a class, and
+       * `ignoreTopLevelDescribe` misses top-level describes after a describe
+       * with a variable title.
        */
-      'vitest/prefer-lowercase-title': 'error',
+      'vitest/prefer-lowercase-title': [
+        'error',
+        {
+          ignore: ['describe'],
+        },
+      ],
       /**
        * Enforce mock resolved/rejected shorthands for promises.
        */

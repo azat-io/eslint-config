@@ -56,7 +56,7 @@ let packageWithoutDescription = Object.fromEntries(
   Object.entries(validPackage).filter(([key]) => key !== 'description'),
 )
 
-describe('package-json', () => {
+describe('packageJson', () => {
   it.each([
     { name: 'every option', flags: enabled },
     { flags: { typescript: true, node: true }, name: 'some options' },

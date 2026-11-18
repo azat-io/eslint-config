@@ -24,6 +24,7 @@ export default defineConfig({
     'nuxt',
     'opengraph',
     'proptypes',
+    'quasis',
     'qwik',
     'samsunginternet',
     'scopedslots',
