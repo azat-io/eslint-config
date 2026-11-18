@@ -2455,6 +2455,11 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-regexp-escape': 'error',
       /**
+       * Prefer `RegExp#exec()` over `String#match()` for non-global regular
+       * expressions.
+       */
+      'unicorn/prefer-regexp-exec': 'error',
+      /**
        * Prefer `RegExp#test()` over `String#match()` and `RegExp#exec()`.
        */
       'unicorn/prefer-regexp-test': 'error',
