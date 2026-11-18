@@ -70,8 +70,8 @@ pnpm runtime:support  # Regenerate runtime/support.json
 Rules that no plugin provides live in `rules/`. To add one:
 
 1. Write the rule in `rules/<rule-name>.ts` and register it in `rules/index.ts`.
-2. Document it in `rules/<rule-name>.md` and link the page from `meta.docs.url`
-   and from the readme.
+2. Document it in `rules/docs/<rule-name>.md` and link the page from
+   `meta.docs.url` and from the readme.
 3. Enable it as `azat-io/<rule-name>` in the config of the option it belongs to,
    with a comment like the other rules.
 4. Test it in `test/rules/<rule-name>.test.ts` with a filename in every case.

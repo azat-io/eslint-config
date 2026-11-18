@@ -197,8 +197,10 @@ export default eslintConfig({
 The config also has its own rules, registered as the `azat-io` plugin and
 enabled for every project:
 
-- [filename-matches-export](https://github.com/azat-io/eslint-config/blob/main/rules/filename-matches-export.md)
+- [filename-matches-export](https://github.com/azat-io/eslint-config/blob/main/rules/docs/filename-matches-export.md)
   — require the filename to match the main export of a module.
+- [prefer-jsdoc-comments](https://github.com/azat-io/eslint-config/blob/main/rules/docs/prefer-jsdoc-comments.md)
+  — require JSDoc comments instead of line comments.
 
 To turn a rule off for some files, add a config to `extends`:
 

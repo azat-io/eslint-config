@@ -18,7 +18,9 @@ describe('published declarations', () => {
       let source = path.join(import.meta.dirname, '..', file)
       let declaration = path.join(root, file.replace(/\.ts$/u, '.d.ts'))
       mkdirSync(path.dirname(declaration), { recursive: true })
-      // Declaration-only transpilation does not run type checking.
+      /**
+       * Declaration-only transpilation does not run type checking.
+       */
       let { outputText } = ts.transpileDeclaration(
         readFileSync(source, 'utf8'),
         { fileName: source },

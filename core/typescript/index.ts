@@ -153,7 +153,9 @@ export async function typescript(
       'typescript/explicit-function-return-type': [
         'error',
         {
-          // https://github.com/withastro/compiler/issues/554
+          /**
+           * @see https://github.com/withastro/compiler/issues/554
+           */
           allowedNames: config.astro ? ['getStaticPaths'] : [],
           allowExpressions: true,
           allowHigherOrderFunctions: true,
@@ -347,7 +349,9 @@ export async function typescript(
        * Disallow assigning a value with type `any` to variables and properties.
        */
       'typescript/no-unsafe-assignment':
-        // https://github.com/ota-meshi/eslint-plugin-astro/issues/341
+        /**
+         * @see https://github.com/ota-meshi/eslint-plugin-astro/issues/341
+         */
         config.astro ? 'off' : 'error',
       /**
        * Disallow calling a value with type `any`.

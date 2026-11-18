@@ -15,13 +15,15 @@ describe('rules', () => {
   })
 
   it.each(Object.entries(plugin.rules))(
-    'documents %s next to its source',
+    'documents %s in the docs folder',
     (name, rule) => {
       expect(rule.meta?.docs?.url).toBe(
-        `https://github.com/azat-io/eslint-config/blob/main/rules/${name}.md`,
+        `https://github.com/azat-io/eslint-config/blob/main/rules/docs/${name}.md`,
       )
       expect(
-        existsSync(path.join(import.meta.dirname, '../../rules', `${name}.md`)),
+        existsSync(
+          path.join(import.meta.dirname, '../../rules/docs', `${name}.md`),
+        ),
       ).toBe(true)
     },
   )

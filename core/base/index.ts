@@ -798,6 +798,13 @@ export function base(config: ConfigOptions): Linter.Config {
       ],
 
       /**
+       * Require JSDoc comments instead of line comments. Directives for tools,
+       * such as `eslint-disable-next-line` and `@ts-expect-error`, stay line
+       * comments.
+       */
+      'azat-io/prefer-jsdoc-comments': 'error',
+
+      /**
        * Transforms the negation of a conjunction into the equivalent
        * disjunction of negations according to De Morgan’s first law.
        */
@@ -1447,11 +1454,6 @@ export function base(config: ConfigOptions): Linter.Config {
        * primitive or `unknown`.
        */
       'slop/no-trivial-type-aliases': 'error',
-      /**
-       * Require `/** *\/` rather than `//` for the comment documenting an
-       * export or a member.
-       */
-      'slop/prefer-jsdoc': 'error',
 
       /**
        * Require parameters to be passed in the correct order.

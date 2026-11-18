@@ -309,7 +309,7 @@ let rule: Rule.RuleModule = {
         'Filename `{{ filename }}` does not match the export `{{ name }}`',
     },
     docs: {
-      url: 'https://github.com/azat-io/eslint-config/blob/main/rules/filename-matches-export.md',
+      url: 'https://github.com/azat-io/eslint-config/blob/main/rules/docs/filename-matches-export.md',
       description: 'Require the filename to match the main export of a module',
     },
     defaultOptions: [

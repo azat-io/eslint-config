@@ -1,6 +1,7 @@
 import type { ESLint } from 'eslint'
 
 import filenameMatchesExport from './filename-matches-export'
+import preferJsdocComments from './prefer-jsdoc-comments'
 import { version, name } from '../package.json'
 
 /**
@@ -10,6 +11,7 @@ import { version, name } from '../package.json'
 export default {
   rules: {
     'filename-matches-export': filenameMatchesExport,
+    'prefer-jsdoc-comments': preferJsdocComments,
   },
   meta: {
     namespace: 'azat-io',
