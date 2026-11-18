@@ -1,5 +1,32 @@
 # Changelog
 
+## v2.105.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.104.0...v2.105.0)
+
+### 🚀 Features
+
+- Update eslint plugins
+  ([07875ca](https://github.com/azat-io/eslint-config/commit/07875ca))
+- **typescript:** Add no-unsafe-class-instance-assignment rule
+  ([9e4cb17](https://github.com/azat-io/eslint-config/commit/9e4cb17))
+- **base:** Add require-spread-parentheses rule
+  ([bf146c7](https://github.com/azat-io/eslint-config/commit/bf146c7))
+- **base:** Add prefer-options-parameter rule
+  ([b410499](https://github.com/azat-io/eslint-config/commit/b410499))
+- **base:** Add prefer-regexp-exec rule
+  ([1873b73](https://github.com/azat-io/eslint-config/commit/1873b73))
+- Add filename-matches-export rule
+  ([c582d30](https://github.com/azat-io/eslint-config/commit/c582d30))
+- Add prefer-jsdoc-comment rule
+  ([0283653](https://github.com/azat-io/eslint-config/commit/0283653))
+- Add test-describe-matches-subject rule
+  ([a8269d9](https://github.com/azat-io/eslint-config/commit/a8269d9))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](https://github.com/azat-io))
+
 ## v2.104.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.103.0...v2.104.0)
