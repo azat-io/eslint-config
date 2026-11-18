@@ -2431,6 +2431,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/prefer-observer-apis': 'error',
       /**
+       * Prefer an options object over optional positional parameters.
+       */
+      'unicorn/prefer-options-parameter': 'error',
+      /**
        * Prefer `Promise.try()` over promise-wrapping boilerplate.
        */
       'unicorn/prefer-promise-try': 'error',
