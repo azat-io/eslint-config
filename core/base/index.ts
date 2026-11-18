@@ -2646,6 +2646,10 @@ export function base(config: ConfigOptions): Linter.Config {
        */
       'unicorn/require-passive-events': 'error',
       /**
+       * Require parentheses around complex spread arguments.
+       */
+      'unicorn/require-spread-parentheses': 'error',
+      /**
        * Enforce consistent `break` / `return` / `continue` / `throw` position
        * in case clauses.
        */
